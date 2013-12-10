@@ -1,6 +1,6 @@
 <snippet>
 	<content><![CDATA[
-\be{ ${1:tag} ${2:\in ${3:set} } }{ ${4:definition} }${5:[ ${6:such that} ]} 
+\be{ ${1:tag} }{ ${2:definition} } ${3:\in ${4:set }} 
 ]]>
 	</content>
 	<tabTrigger>be</tabTrigger>
