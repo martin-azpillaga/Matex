@@ -1,19 +1,23 @@
 <snippet>
 	<content><![CDATA[
-\$ Switch \$ ${1:variable}:
+\$ Separate ${1:number of cases} cases: \$
 
-	\case{ ${2:condition} }
-	{
-		${3:sentence.}
-	}
-	\case{ ${4:condition} }
-	{
-		${5:sentence.}
-	}
+\case{ ${2:condition} }
+{
+	${3:sentence.}
+}
+\case{ ${4:condition} }
+{
+	${5:sentence.}
+}
+${6:\case{ ${7:condition} }
+{
+	${8:sentence.}
+}
 ]]>
 	</content>
 	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
-	<tabTrigger>switch</tabTrigger>
+	<tabTrigger>cases</tabTrigger>
 	<!-- Optional: Set a scope to limit where the snippet will trigger -->
 	<!-- <scope>source.python</scope> -->
 </snippet>
