@@ -144,15 +144,7 @@
 
 \newcommand{\isomorph}{\simeq}
 
-\NewDocumentCommand{\be}{ m m o }
-{
-	\IfValueTF{#3}
-	{
-		#1 \; := \; #2 \suchthat #3
-	}{
-		{#1 \; := \; #2}
-	}	
-}
+\newcommand{ \be }[2]{ #1 \; := \; #2 }
 
 \newcommand{\function}[3]{#1 \; : \; #2 \to #3}
 
