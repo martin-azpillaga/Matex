@@ -1,0 +1,13 @@
+<snippet>
+	<content><![CDATA[
+\rightway
+{
+	${1:right way.}
+}
+\leftway
+{
+	${2:left way.}
+}	
+]]></content>
+	<tabTrigger>doubleway</tabTrigger>
+</snippet>

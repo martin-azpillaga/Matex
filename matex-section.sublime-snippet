@@ -1,0 +1,11 @@
+<snippet>
+	<content><![CDATA[
+\section{ \$ ${1:section name} \$ }
+{
+	
+	${2:go}
+
+}
+]]></content>
+	<tabTrigger>section</tabTrigger>
+</snippet>

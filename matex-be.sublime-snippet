@@ -1,0 +1,7 @@
+<snippet>
+	<content><![CDATA[
+\be{ ${1:tag} ${2:\in ${3:set} } }{ ${4:definition} }${5:[ ${6:such that} ]} 
+]]>
+	</content>
+	<tabTrigger>be</tabTrigger>
+</snippet>

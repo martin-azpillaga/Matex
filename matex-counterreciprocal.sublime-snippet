@@ -1,0 +1,11 @@
+<snippet>
+	<content><![CDATA[
+\counterreciprocal{ ${1:Supposition} }{ ${2:Result} }
+{
+	${3:Prove.}	
+}
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>counter</tabTrigger>
+
+</snippet>

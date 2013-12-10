@@ -1,0 +1,7 @@
+<snippet>
+	<content><![CDATA[
+\vect{ ${1:general item} }{ ${2:varying} }${3:[ ${4:until} ]}${5:[ ${6:from} ]} ${7:\subset ${8:set} }
+]]>
+	</content>
+	<tabTrigger>vect</tabTrigger>
+</snippet>

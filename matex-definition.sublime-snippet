@@ -1,0 +1,24 @@
+<snippet>
+	<content><![CDATA[
+\subsection{ \$ ${1:name} \$ }
+
+\letbe
+{
+	${2:let.}
+}
+\then{ ${3:object} }{ \$ ${4:a/an name} ${5:over} \$ ${6:this }}
+{
+	${7:condition.}
+}
+${8:\denote
+{
+	${9:property} \as ${10:notation.}
+\}}
+]]>
+	</content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>def</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<!-- <scope>source.python</scope> -->
+</snippet>
+

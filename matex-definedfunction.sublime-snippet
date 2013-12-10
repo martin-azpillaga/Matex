@@ -1,0 +1,6 @@
+<snippet>
+	<content><![CDATA[
+\definedfunction{ ${1:f} }{ ${2:from} }{ ${3:to} }{ ${4:x} }{ ${5:f(x)} }
+]]></content>
+	<tabTrigger>df</tabTrigger>
+</snippet>

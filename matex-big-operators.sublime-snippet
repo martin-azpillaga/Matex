@@ -1,0 +1,7 @@
+<snippet>
+	<content><![CDATA[
+\\${1:operation}{ ${2:general item} }{ ${3:varying} }${4:[ ${5:from} ]}${6:[ ${7:until} ]}
+]]>
+	</content>
+	<tabTrigger>big</tabTrigger>
+</snippet>

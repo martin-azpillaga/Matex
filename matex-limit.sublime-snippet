@@ -1,0 +1,7 @@
+<snippet>
+	<content><![CDATA[
+\limit{ ${1:term} }{ ${2:over} }${3:[ ${4:near} ]}
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>lim</tabTrigger>
+</snippet>

@@ -1,0 +1,9 @@
+<snippet>
+	<content><![CDATA[
+\multiple${1:[ ${2:\\\{} ]}${3:[ ${4:\\\}} ]}
+{
+	${5:rows.} 
+}
+]]></content>
+	<tabTrigger>multiple</tabTrigger>
+</snippet>

@@ -1,0 +1,12 @@
+[
+	{ "keys": ["shift+f12"], "command": "show_panel", "args": {"panel": "console", "toggle":true} },
+	{ "keys": ["shift+f4"], "command": "show_panel", "args": {"panel": "console", "toggle":true} },
+	{ "keys": ["ctrl+space"], "command": "insert_best_completion", "args": {"default": "\t", "exact": true} },
+
+	{ "keys": ["tab"], "command": "insert_best_completion", "args": {"default": "\t", "exact": true} },
+	{ "keys": ["tab"], "command": "next_field", "context":
+		[
+			{ "key": "has_next_field", "operator": "equal", "operand": true }
+		]
+	}
+]

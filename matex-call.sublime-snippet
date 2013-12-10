@@ -1,0 +1,23 @@
+<snippet>
+	<content><![CDATA[
+\subsection{ \$ ${1:name} \$ }
+
+\letbe
+{
+	${2:let.}
+}
+\call{ \$ ${3:what} of \$ ${4:${5:smthg} }}
+{
+	${6:property.}
+}
+${7:\denote
+{
+	${8:property} \as ${9:notation.}
+}}
+]]>
+	</content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>call</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<!-- <scope>source.python</scope> -->
+</snippet>

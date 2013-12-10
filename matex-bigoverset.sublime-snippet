@@ -1,0 +1,7 @@
+<snippet>
+	<content><![CDATA[
+\\${1:operator}overset{ ${2:term} }{ ${3:varying} }{ ${4:over set} }
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>bigs</tabTrigger>
+</snippet>
