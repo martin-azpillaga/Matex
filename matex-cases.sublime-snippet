@@ -1,6 +1,6 @@
 <snippet>
 	<content><![CDATA[
-\$ Separate ${1:number of cases} cases: \$
+\$ Separate ${1:number of cases} cases: \$.
 
 \case{ ${2:condition} }
 {
@@ -10,10 +10,10 @@
 {
 	${5:sentence.}
 }
-${6:\case{ ${7:condition} }
+${6:\case{ ${7:condition} \}
 {
 	${8:sentence.}
-}
+\}}
 ]]>
 	</content>
 	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
