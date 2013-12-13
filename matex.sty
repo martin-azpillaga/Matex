@@ -16,7 +16,7 @@
 \RequirePackage{fancyhdr}
 \RequirePackage{xparse}
 \RequirePackage{hyperref}
-
+\RequirePackage{tikz}
 
 %---------------- Page Style ---------------------
 
@@ -309,7 +309,8 @@
 \newcommand{ \disjunctunionoverset }[3]{ \displaystyle\bigcupdot_{ #2 \in #3 } #1 }
 \newcommand{ \sumatoryoverset }[3]{ \displaystyle\sum_{ #2 \in #3 } #1 }
 \newcommand{ \productoryoverset }[3]{ \displaystyle\prod_{ #2 \in #3 } #1 }
-
+ % xypic
+ % substack para acumular cosas debajo de intersection etc
 %--------------------------------------------------------
 
 %\end{}
@@ -352,5 +353,8 @@
 % arithmetica
 
 %\newcommand{ \divides }{ \; | \; }
+\newcommand{\congruent}[1]{\overset{#1}{\equiv}}
+% Probability
 
+\newcommand{\combinatory}[2]{\binom{#1}{#2}}
 \endinput
