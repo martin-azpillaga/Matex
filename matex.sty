@@ -23,14 +23,17 @@
 \title{$#1$}
 \author{$#2$}
 \maketitle
-\tableofcontents
-\cleardoublepage
-\setlength{\baselineskip}{18pt}
 }
 
-\newcommand{\introduction}[1]{
-$#1$
+\newcommand{\contents}{
+\tableofcontents
 \cleardoublepage
+}
+
+\newcommand{\introduction}[1]{ 
+\begin{math}#1\end{math}
+\cleardoublepage
+\baselineskip=22pt
 }
 
 
@@ -70,7 +73,7 @@ $#1$
 
 \newcommand{\definition}[1]{
 \addcontentsline{toc}{section}{ $#1$ }
-{\bf $#1$}\\ \\
+{\bf $#1$} \\
 }
 
 \newcommand{\proposition}[1]{
@@ -90,25 +93,14 @@ $#1$\\
 % Custom Environments
 
 
-\newif\iffirstitem
-\firstitemtrue
-\newif\ifnonested
-\nonestedtrue
-\newcommand\myitem[1]{%
-  \iffirstitem
-  	\ifnonested
-  		\hspace*{1cm}\begin{math}#1\end{math}%
-  		\nonestedfalse%
-  	\else
-  		\hspace*{2cm}\begin{math}#1\end{math}%
-	\fi
-	\addtocounter{tabspace}{1}%
-    \firstitemfalse%
-  \else
-    \\ \hspace*{\value{tabspace}cm}\begin{math}#1\end{math}%
-  \fi
-  }
+%\leftskip=1.5in
 
+\newcommand\myitem[1]{
+\\ \hspace*{\value{tabspace}cm} \begin{math} \cdot \; #1 \end{math}
+}
+\newcommand\nodotentry[1]{
+\\ \hspace*{\value{tabspace}cm} \begin{math} #1 \end{math}
+}
 
 
 
@@ -117,9 +109,8 @@ $#1$\\
 
 \newcounter{tabspace}
 
-\newcommand{\arrayEntry}[1]{ #1 \\  }%
-\newcommand{\listEntry}[1]{  #1 \par }
-
+\newcommand{\arrayEntry}[1]{ #1 \\  }
+\newcommand{\columnEntry}[1]{ #1 \\  }
 
 \NewDocumentCommand{\multiple}{O{.}O{.} >{\SplitList{.}} m}{
 \left #1
@@ -130,20 +121,17 @@ $#1$\\
 }
 
 \NewDocumentCommand{\tabtext}{ m >{\SplitList{.}} m }{%
-#1: \\
-\firstitemtrue%
-\ProcessList{ #2 }{ \myitem }%
-\nonestedtrue
-\addtocounter{tabspace}{-1}%
+#1:
+\addtocounter{tabspace}{1}
+\ProcessList{ #2 }{ \myitem }
+\addtocounter{tabspace}{-1}
 \\
-\\
-}%
+}
 
 \NewDocumentCommand{\tabmath}{ m >{\SplitList{.}} m }{%
-#1: \\
-\firstitemtrue%
-\ProcessList{ #2 }{ \myitem }%
-\nonestedtrue
+#1:
+\addtocounter{tabspace}{1}%
+\ProcessList{ #2 }{ \nodotentry }%
 \addtocounter{tabspace}{-1}%
 }%
 
