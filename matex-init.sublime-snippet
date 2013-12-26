@@ -15,23 +15,22 @@
 
 
 
-\part{ \$ ${3:Definitions/Propositions/Examples} \$ }
+\block{ \$ ${3:Definitions/Propositions/Examples} \$ }
 
-\chapter{ \$ ${4:Generally the names of the involved sections} \$ }
 
-\introduction
-{ 
-	\$ 
-	${5:chapter introduction\\} 
-	\$ 
+
+\unit{ \$ ${4:first unit} \$ }
+{
+	
+	${5:lets rock}
+
 }
 
 
 
 
-\section{ \$ ${6:first section} \$ }
 
-${7:lets rock}
+
 
 \end{document}
 

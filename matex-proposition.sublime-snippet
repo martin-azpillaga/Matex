@@ -1,14 +1,14 @@
 <snippet>
 	<content><![CDATA[
-\subsection{ \$ ${1:name} \$ }
+\proposition{ \$${1:name}\$ }
 
 \letbe
 {
 	${2:let.}
 }
-\proposition
+\holds
 {
-	${3:proposition.}
+	${3:then, holds.}
 }
 \demonstration
 {

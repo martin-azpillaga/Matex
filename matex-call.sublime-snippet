@@ -1,6 +1,6 @@
 <snippet>
 	<content><![CDATA[
-\subsection{ \$ ${1:name} \$ }
+\definition{ \$ ${1:name} \$ }
 
 \letbe
 {

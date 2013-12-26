@@ -1,12 +1,12 @@
 <snippet>
 	<content><![CDATA[
-\subsection{ \$ ${1:name} \$ }
+\definition{ \$ ${1:name} \$ }
 
 \letbe
 {
 	${2:let.}
 }
-\then{ ${3:object} }{ \$ ${4:a/an name} ${5:over} \$ ${6:this }}
+\then{ ${3:object} }{ \$${4:a/an name} ${5:over}\$ ${6:this }}
 {
 	${7:condition.}
 }
