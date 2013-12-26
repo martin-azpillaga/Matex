@@ -9,6 +9,7 @@
 \RequirePackage{fancyhdr}
 \RequirePackage{xparse}
 \RequirePackage{MnSymbol}
+\RequirePackage{hyperref}
 
 
 % Hacks
@@ -96,10 +97,10 @@ $#1$\\
 %\leftskip=1.5in
 
 \newcommand\myitem[1]{
-\\ \hspace*{\value{tabspace}cm} \begin{math} \cdot \; #1 \end{math}
+\\ \hspace*{\value{tabspace}pt} \begin{math} \cdot \; #1 \end{math}
 }
 \newcommand\nodotentry[1]{
-\\ \hspace*{\value{tabspace}cm} \begin{math} #1 \end{math}
+\\ \hspace*{\value{tabspace}pt} \begin{math} #1 \end{math}
 }
 
 
@@ -122,17 +123,17 @@ $#1$\\
 
 \NewDocumentCommand{\tabtext}{ m >{\SplitList{.}} m }{%
 #1:
-\addtocounter{tabspace}{1}
+\addtocounter{tabspace}{15}
 \ProcessList{ #2 }{ \myitem }
-\addtocounter{tabspace}{-1}
+\addtocounter{tabspace}{-15}
 \\
 }
 
 \NewDocumentCommand{\tabmath}{ m >{\SplitList{.}} m }{%
 #1:
-\addtocounter{tabspace}{1}%
+\addtocounter{tabspace}{15}%
 \ProcessList{ #2 }{ \nodotentry }%
-\addtocounter{tabspace}{-1}%
+\addtocounter{tabspace}{-15}%
 }%
 
 
@@ -150,7 +151,7 @@ $#1$\\
 
 \newcommand{\holds}[1] {\tabtext{Then, holds}{#1}}
 
-\newcommand{\demonstration}[1]{\tabtext[]{Demonstration}{#1}}
+\newcommand{\demonstration}[1]{\tabmath{Demonstration}{#1}}
 
 
 % Demonstration Structures
