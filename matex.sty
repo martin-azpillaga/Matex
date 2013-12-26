@@ -15,7 +15,15 @@
 % Hacks
 \setlength{\parindent}{0cm} % disable paragraph indentation
 \endlinechar=-1\relax % disable new paragraph with 2 line breaks
-
+\newenvironment{absolutelynopagebreak}
+  {\par\nobreak\vfil\penalty0\vfilneg
+   \vtop\bgroup}
+  {\par\xdef\tpd{\the\prevdepth}\egroup
+   \prevdepth=\tpd}
+\newcommand*\cleartoleftpage{%
+  \clearpage
+  \ifodd\value{page}\hbox{}\newpage\fi
+}
 
 
 % Title and introduction
@@ -34,7 +42,7 @@
 \newcommand{\introduction}[1]{ 
 \begin{math}#1\end{math}
 \cleardoublepage
-\baselineskip=22pt
+\baselineskip=20pt
 }
 
 
@@ -48,17 +56,27 @@
 \newcommand{\blockname}{block}
 
 \newcommand{\block}[1]{
+\setcounter{unitcounter}{0}
 \addtocounter{blockcounter}{1}
 \renewcommand{\blockname}{ $#1$ }
 \addcontentsline{toc}{part}{ \Roman{blockcounter} $#1$ }
-{\bf \huge{ $#1$ } }
-\newpage
+\cleardoublepage{}
+\vspace*{\fill}
+\begin{center}
+{\bf \Huge{ Block \Roman{blockcounter} } }
+\end{center}
+\vspace*{1cm}
+\begin{center}
+{\bf \Huge{ $#1$ } }
+\end{center}
+\vspace*{\fill}
 }
 
 \newcommand{\unit}[1]{
 \addtocounter{unitcounter}{1}
 \renewcommand{\unitname}{ $#1$ }
 \addcontentsline{toc}{chapter}{ \arabic{unitcounter} $#1$ }
+\cleartoleftpage{}
 \begin{center}
 \fbox{{ \bf \arabic{unitcounter}. $#1$ }}
 \end{center}
@@ -67,14 +85,18 @@
 \newcommand{\annex}[1]{
 \addtocounter{annexcounter}{1}
 \addcontentsline{toc}{chapter}{ Annex \arabic{annexcounter}. $#1$ }
+\cleartoleftpage{}
 \begin{center}
 \fbox{ {\bf Annex \arabic{annexcounter}. $#1$ }}
 \end{center}
 }
 
-\newcommand{\definition}[1]{
+\newcommand{\definition}[2]{
+\begin{absolutelynopagebreak}
 \addcontentsline{toc}{section}{ $#1$ }
 {\bf $#1$} \\
+#2
+\end{absolutelynopagebreak}
 }
 
 \newcommand{\proposition}[1]{
