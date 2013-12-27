@@ -1,0 +1,17 @@
+<snippet>
+	<content><![CDATA[
+\$Sandwitch \$ ${1:homelet} \$ with \$ ${2:bread} \$ :\$.
+
+\lowerbound
+{
+	${3: homelet <= bread .}
+}.
+
+\upperbound
+{
+	${4: bread <= homelet .}
+}
+]]>
+	</content>
+	<tabTrigger>sandwitch</tabTrigger>
+</snippet>

@@ -12,7 +12,7 @@
 
 	// Fold contents between brackets
     {
-        "keys": ["ctrl+f"],
+        "keys": ["ctrl+shift+f"],
         "command": "bh_key",
         "args":
         {
