@@ -4,14 +4,19 @@
 \block{ \$ ${1:Definitions} \$ }
 
 
-\unit{ \$ ${2:unit name} \$ }
-{
-	
-	\introduction{ \$ ${3:introduction \\\\} \$ }
+\input{"../${1:Definitions}/1. ${2:unit 1}.tex"}
 
-	${4:lets rock}
+${3:\input{"../${1:Definitions}/1. ${4:unit 2}.tex"}
 
-}
+${5:\input{"../${1:Definitions}/1. ${6:unit 3}.tex"}
+
+${7:\input{"../${1:Definitions}/1. ${8:unit 4}.tex"}
+
+${9:\input{"../${1:Definitions}/1. ${10:unit 5}.tex"}
+
+${11:\input{"../${1:Definitions}/1. ${12:unit 6}.tex"}
+
+${13:\input{"../${1:Definitions}/1. ${14:unit 7}.tex"}
 ]]></content>
 	<tabTrigger>block</tabTrigger>
 </snippet>

@@ -1,7 +1,7 @@
 <snippet>
 	<content><![CDATA[
 \definition{ \$ ${1:name} \$ }
-
+{
 \letbe
 {
 	${2:let.}
@@ -13,7 +13,7 @@
 ${8:\denote
 {
 	${9:property} \as ${10:notation.}
-\}}
+\}\}}
 ]]>
 	</content>
 	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->

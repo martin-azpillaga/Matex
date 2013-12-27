@@ -8,5 +8,18 @@
 		[
 			{ "key": "has_next_field", "operator": "equal", "operand": true }
 		]
-	}
+	},
+
+	// Fold contents between brackets
+    {
+        "keys": ["ctrl+f"],
+        "command": "bh_key",
+        "args":
+        {
+            "plugin": {
+                "type": ["__all__"],
+                "command" : "bh_modules.foldbracket"
+            }
+        }
+    }
 ]

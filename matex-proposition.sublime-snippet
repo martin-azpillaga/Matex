@@ -1,7 +1,7 @@
 <snippet>
 	<content><![CDATA[
 \proposition{ \$${1:name}\$ }
-
+{
 \letbe
 {
 	${2:let.}
@@ -13,12 +13,8 @@
 \demonstration
 {
 	${4:demonstration.}
-}
-${5:\newpage}
+}}
 ]]>
 	</content>
-	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
 	<tabTrigger>prop</tabTrigger>
-	<!-- Optional: Set a scope to limit where the snippet will trigger -->
-	<!-- <scope>source.python</scope> -->
 </snippet>
