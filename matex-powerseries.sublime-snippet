@@ -1,6 +1,6 @@
 <snippet>
 	<content><![CDATA[
-\sumatory{ a_nx^n }{ n }[ 1 ] \$ power series \$
+\sumatory{ a_nx^n }{ n }[ 0 ] \$ power series \$
 ]]></content>
 	<tabTrigger>ps</tabTrigger>
 </snippet>
