@@ -99,9 +99,11 @@
 \end{absolutelynopagebreak}
 }
 
-\newcommand{\proposition}[1]{
+\newcommand{\proposition}[2]{
 \addcontentsline{toc}{section}{ $#1$ }
-$#1$\\
+{\bf $#1$} \\
+#2
+\newpage
 }
 
 
@@ -292,6 +294,8 @@ $#1$\\
 	}
 }
 
+\newcommand{\minuszero}{ \setminus \{0\} }
+
 
 
 % Big Operators 
@@ -424,6 +428,8 @@ $#1$\\
 
 \NewDocumentCommand{ \integral }{ m m m O{} }{ \int_{ #3 }^{ #4 } #1 #2 }
 \newcommand{ \riemann }[1]{ \mathcal{ R }( #1 ) }
+
+\newcommand{ \partialderivative }[1]{ \frac{ \partial }{ \partial #1 } }
 
 
 
