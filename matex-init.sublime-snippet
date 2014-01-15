@@ -6,34 +6,21 @@
 \usepackage{matex}
 
 
-
-
 \begin{document}
 
-\titlePage{ \$ ${1:title} \$ }{ \$ ${2:author} \$ }
+\titlePage{ \$ Probability \$ }{ \$ Martin Azpillaga \$ }
 
 
+\input{../Definitions/Definitions.tex}
 
+\input{../Propositions/Propositions.tex}
 
-\block{ \$ ${3:Definitions/Propositions/Examples} \$ }
+\input{../Examples/Examples.tex}
 
-
-
-\unit{ \$ ${4:first unit} \$ }
-{
-	
-	${5:lets rock}
-
-}
-
-
-
-
-
+\input{../Exercises/Exercises.tex}
 
 
 \end{document}
-
 ]]></content>
 	<tabTrigger>init</tabTrigger>
 </snippet>

@@ -2,12 +2,14 @@ import os
 
 def main(path,units):
 
-    blockNames = ["Definitions","Propositions","Examples","Exercises"]
+    blockNames = ["Definitions","Propositions","Examples","Exercises","Main"]
 
     for blockName in blockNames:
 
         if not os.path.exists(path+"\\"+blockName): os.makedirs( path+"\\"+blockName )
-
+        f = open( path+"\\"+blockName + "\\" + blockName + ".tex" ,"w" )
+        f.close()
+        
         for unit in range(units):
 
             f = open( path+"\\"+blockName + "\\" + "unit " + str(unit+1) + ".tex" ,"w" )
