@@ -2,7 +2,7 @@
 	"shell" : true,
 	"windows":
 	{
-		"cmd": ["taskkill", "/Im", "AcroRd32.exe", "&", "del", "$file_base_name.aux", "&", "del", "$file_base_name.log", "&", "del", "$file_base_name.toc", "&", "pdflatex", "$file", "&&", "pdflatex", "$file", "&&", "AcroRd32", "$file_base_name.pdf"],
+		"cmd": ["taskkill", "/Im", "AcroRd32.exe", "&", "del", "$file_base_name.aux", "&", "del", "$file_base_name.log", "&", "del", "$file_base_name.toc", "&", "pdflatex", "$file", "&&", "pdflatex", "$file", "&&", "del", "$file_base_name.aux", "&", "del", "$file_base_name.log", "&", "del", "$file_base_name.toc","&","del","$file_base_name.out","&","AcroRd32", "$file_base_name.pdf"],
 		"selector": "source.latex"
 	}
 }
