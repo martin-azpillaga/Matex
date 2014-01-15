@@ -1,0 +1,7 @@
+<snippet>
+	<content><![CDATA[
+\convergesuniformlyto 
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>cu</tabTrigger>
+</snippet>
