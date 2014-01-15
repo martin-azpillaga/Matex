@@ -13,8 +13,8 @@
 
 
 % Hacks
-%\setlength{\parindent}{0cm} % disable paragraph indentation
-%\endlinechar=-1\relax % disable new paragraph with 2 line breaks
+\setlength{\parindent}{0cm} % disable paragraph indentation
+\endlinechar=-1\relax % disable new paragraph with 2 line breaks
 \newenvironment{absolutelynopagebreak}
   {\par\nobreak\vfil\penalty0\vfilneg
    \vtop\bgroup}
@@ -206,13 +206,59 @@
 
 % Abbreviations
 
+\newcommand{\A}{\mathbb{A}}
+\newcommand{\B}{\mathbb{B}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\D}{\mathbb{D}}
+\newcommand{\E}{\mathbb{E}}
+\newcommand{\F}{\mathbb{F}}
+\newcommand{\G}{\mathbb{G}}
+\renewcommand{\H}{\mathbb{H}}
+\newcommand{\I}{\mathbb{I}}
+\newcommand{\J}{\mathbb{J}}
+\newcommand{\K}{\mathbb{K}}
+\renewcommand{\L}{\mathbb{L}}
+\newcommand{\M}{\mathbb{M}}
 \newcommand{\N}{\mathbb{N}}
-\newcommand{\Z}{\mathbb{Z}}
+\renewcommand{\O}{\mathbb{O}}
+\renewcommand{\P}{\mathbb{P}}
 \newcommand{\Q}{\mathbb{Q}}
 \newcommand{\R}{\mathbb{R}}
-\newcommand{\C}{\mathbb{C}}
+\renewcommand{\S}{\mathbb{S}}
+\newcommand{\T}{\mathbb{T}}
+\newcommand{\U}{\mathbb{U}}
+\newcommand{\V}{\mathbb{V}}
+\newcommand{\W}{\mathbb{W}}
+\newcommand{\X}{\mathbb{X}}
+\newcommand{\Y}{\mathbb{Y}}
+\newcommand{\Z}{\mathbb{Z}}
 
+\newcommand{\Ac}{\mathcal{A}}
+\newcommand{\Bc}{\mathcal{B}}
+\newcommand{\Cc}{\mathcal{C}}
+\newcommand{\Dc}{\mathcal{D}}
+\newcommand{\Ec}{\mathcal{E}}
+\newcommand{\Fc}{\mathcal{F}}
+\newcommand{\Gc}{\mathcal{G}}
+\newcommand{\Hc}{\mathcal{H}}
+\newcommand{\Ic}{\mathcal{I}}
+\newcommand{\Jc}{\mathcal{J}}
+\newcommand{\Kc}{\mathcal{K}}
+\newcommand{\Lc}{\mathcal{L}}
+\newcommand{\Mc}{\mathcal{M}}
+\newcommand{\Nc}{\mathcal{N}}
+\newcommand{\Oc}{\mathcal{O}}
 \newcommand{\Pc}{\mathcal{P}}
+\newcommand{\Qc}{\mathcal{Q}}
+\newcommand{\Rc}{\mathcal{R}}
+\newcommand{\Sc}{\mathcal{S}}
+\newcommand{\Tc}{\mathcal{T}}
+\newcommand{\Uc}{\mathcal{U}}
+\newcommand{\Vc}{\mathcal{V}}
+\newcommand{\Wc}{\mathcal{W}}
+\newcommand{\Xc}{\mathcal{X}}
+\newcommand{\Yc}{\mathcal{Y}}
+\newcommand{\Zc}{\mathcal{Z}}
 
 \newcommand{\phin}{\varphi}
 \newcommand{\eps}{\varepsilon}
@@ -388,70 +434,4 @@
 \newcommand{ \productoryoverset }[3]{ \displaystyle\prod_{ #2 \in #3 } #1 }
 
 
-
-
-%------------------ Document specific -------------------
-
-% Analysis
-
-\newcommand{ \K }{ \mathbb{K} }
-\newcommand{ \succesion }[2]{ ( #1 )_{ #2 \in \N } }
-\NewDocumentCommand{ \limit }{ m m o }
-{
-	\IfValueTF {#3}
-	{
-		\displaystyle\lim_{ #2 \to #3 } \; #1
-	}{
-		\displaystyle\lim_{ #2 } \; #1 
-	}
-}
-\NewDocumentCommand{ \superiorlimit }{ m m o }
-{
-	\IfValueTF {#3}
-	{
-		\displaystyle\overline{\lim_{ #2 \to #3 }} \; #1
-	}{
-		\displaystyle\overline{\lim_{ #2 }} \; #1 
-	}
-}
-\NewDocumentCommand{ \inferiorlimit }{ m m o }
-{
-	\IfValueTF {#3}
-	{
-		\displaystyle\underline{\lim_{ #2 \to #3 }} \; #1
-	}{
-		\displaystyle\underline{\lim_{ #2 }} \; #1 
-	}
-}
-\newcommand{ \Cc }{ \mathcal{C} }
-\newcommand{ \open }[1]{ \mathring{ #1 }}
-\newcommand{ \closed }[1]{ \overline{ #1 }}
-\newcommand{ \disjoint }[2]{ #1 \cap #2 \neq \emptyset }
-
-\NewDocumentCommand{ \convergesto }{ O{n} }{ \overset{ #1 }{ \longrightarrow } }
-\NewDocumentCommand{ \convergesuniformlyto }{ O{n} }{ \overset{ #1 }{ \rightrightarrows } }
-
-\newcommand{ \functionspace }[2]{ \mathcal{ F }( #1, #2 ) }
-
-\NewDocumentCommand{ \integral }{ m m m O{} }{ \int_{ #3 }^{ #4 } #1 #2 }
-\newcommand{ \riemann }[1]{ \mathcal{ R }( #1 ) }
-
-\newcommand{ \partialderivative }[1]{ \frac{ \partial }{ \partial #1 } }
-\newcommand{ \partialsuccesion  }{ \vdash }
-
-
-% Algebra 
-
-\newcommand{ \order 		}[1]{ o( #1 ) }
-\newcommand{ \F 			}	{ \mathbb{ F } }
-\newcommand{ \normal 		}	{ \triangleleft }
-\newcommand{ \substructure 	}	{ \; < \; }
-\newcommand{ \extends 		}	{ \; | \; }
-
-% arithmetica
-
-\newcommand{\congruent}[1]{\overset{#1}{\equiv}}
-% Probability
-
-\newcommand{\combinatory}[2]{\binom{#1}{#2}}
 \endinput
