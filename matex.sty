@@ -5,16 +5,18 @@
 \ProvidesPackage{matex} [2013/11/30 v0.10 LaTeX package for my own ]
 
 \RequirePackage{amsmath,amssymb}
-\RequirePackage[tmargin=20mm,bmargin=20mm,lmargin=25mm,rmargin=25mm]{geometry}
+\RequirePackage[tmargin=20mm,bmargin=20mm,lmargin=22mm,rmargin=22mm]{geometry}
 \RequirePackage{fancyhdr}
 \RequirePackage{xparse}
 \RequirePackage{MnSymbol}
 \RequirePackage{hyperref}
+\RequirePackage[spanish]{babel}
+\RequirePackage[utf8]{inputenc}
 
 
 % Hacks
-\setlength{\parindent}{0cm} % disable paragraph indentation
-\endlinechar=-1\relax % disable new paragraph with 2 line breaks
+%\setlength{\parindent}{0cm} % disable paragraph indentation
+%\endlinechar=-1\relax % disable new paragraph with 2 line breaks
 \newenvironment{absolutelynopagebreak}
   {\par\nobreak\vfil\penalty0\vfilneg
    \vtop\bgroup}
@@ -192,6 +194,8 @@
 \newcommand{\induction}[2]{\end{math}\tabmath{Induction over $#1$}{ #2 }\begin{math}}
 
 \newcommand{\counterreciprocal}[3]{\end{math}\tabmath{Counter-reciprocal: $#1 \imp #2$ }{ #3 }\begin{math}}
+
+\newcommand{\absurd}[2]{\end{math}\tabmath{Absurd: $#1$}{#2}\begin{math}}
 
 \newcommand{\case}[2]{\end{math}\tabmath{Case $#1$}{#2}\begin{math}}
 
