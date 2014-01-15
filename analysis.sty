@@ -1,0 +1,46 @@
+% Analysis
+
+\newcommand{ \K }{ \mathbb{K} }
+\newcommand{ \succesion }[2]{ ( #1 )_{ #2 \in \N } }
+\NewDocumentCommand{ \limit }{ m m o }
+{
+	\IfValueTF {#3}
+	{
+		\displaystyle\lim_{ #2 \to #3 } \; #1
+	}{
+		\displaystyle\lim_{ #2 } \; #1 
+	}
+}
+\NewDocumentCommand{ \superiorlimit }{ m m o }
+{
+	\IfValueTF {#3}
+	{
+		\displaystyle\overline{\lim_{ #2 \to #3 }} \; #1
+	}{
+		\displaystyle\overline{\lim_{ #2 }} \; #1 
+	}
+}
+\NewDocumentCommand{ \inferiorlimit }{ m m o }
+{
+	\IfValueTF {#3}
+	{
+		\displaystyle\underline{\lim_{ #2 \to #3 }} \; #1
+	}{
+		\displaystyle\underline{\lim_{ #2 }} \; #1 
+	}
+}
+\newcommand{ \Cc }{ \mathcal{C} }
+\newcommand{ \open }[1]{ \mathring{ #1 }}
+\newcommand{ \closed }[1]{ \overline{ #1 }}
+\newcommand{ \disjoint }[2]{ #1 \cap #2 \neq \emptyset }
+
+\NewDocumentCommand{ \convergesto }{ O{n} }{ \overset{ #1 }{ \longrightarrow } }
+\NewDocumentCommand{ \convergesuniformlyto }{ O{n} }{ \overset{ #1 }{ \rightrightarrows } }
+
+\newcommand{ \functionspace }[2]{ \mathcal{ F }( #1, #2 ) }
+
+\NewDocumentCommand{ \integral }{ m m m O{} }{ \int_{ #3 }^{ #4 } #1 #2 }
+\newcommand{ \riemann }[1]{ \mathcal{ R }( #1 ) }
+
+\newcommand{ \partialderivative }[1]{ \frac{ \partial }{ \partial #1 } }
+\newcommand{ \partialsuccesion  }{ \vdash }
