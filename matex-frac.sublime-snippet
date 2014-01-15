@@ -1,0 +1,6 @@
+<snippet>
+	<content><![CDATA[
+\frac{ ${1:denominator} }{ ${2:numerator} }
+]]></content>
+	<tabTrigger>frac</tabTrigger>
+</snippet>
