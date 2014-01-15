@@ -307,6 +307,7 @@
 % Sets 
 
 \newcommand{\indexes}[2]{[#1,#2]_\N}
+\newcommand{\countable}{ \stackrel{ \subset }{ \sim } \N }
 \NewDocumentCommand{\set}{ m o }
 {
 	\IfValueTF {#2}
@@ -433,5 +434,5 @@
 \newcommand{ \sumatoryoverset }[3]{ \displaystyle\sum_{ #2 \in #3 } #1 }
 \newcommand{ \productoryoverset }[3]{ \displaystyle\prod_{ #2 \in #3 } #1 }
 
-
+\newcommand{ \functionspace }[2]{ \mathcal{ F }( #1, #2 ) }
 \endinput
