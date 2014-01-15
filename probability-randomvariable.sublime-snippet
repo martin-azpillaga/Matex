@@ -1,0 +1,6 @@
+<snippet>
+	<content><![CDATA[
+\function{ ${1:X} }{ \Omega }{ \R } \$ random variable \$
+]]></content>
+	<tabTrigger>rv</tabTrigger>
+</snippet>
