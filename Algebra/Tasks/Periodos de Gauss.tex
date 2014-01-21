@@ -1,0 +1,310 @@
+
+\documentclass[a5paper]{article}
+\renewcommand{\baselinestretch}{1.5}
+\usepackage{matex}
+\usepackage{titlesec}
+\renewcommand{\C}{\mathcal{C}}
+\titleformat{\section}{\bfseries\filcenter}{}{0pt}{\bfseries\filcenter}
+
+
+
+
+\begin{document}
+\titlePage{ $ Estructura algebraica de los periodos de Gauss $ }{ $ Martin Azpillaga $ }
+\renewcommand{\blockname}{ Estructura algebraica de los periodos de Gauss }
+
+\abstract
+{
+	Lo que prosigue es un análisis sobre la estructura algebraica de los números complejos conocidos como periodos de Gauss. El contenido parte de un resumen de los resultados hallados en:\\
+	Travesa, Artur: {\it El teorema de Kronecker-Weber}. \\ CSIC Madrid, 2008. \href{http://atlas.mat.ub.es/personals/travesa/Kr-W.pdf}{link}\\
+	y continúa con la abstracción de los periodos de Gauss presente en:
+
+	N.J. Wildberger: {\it On the algebraic structure of Gaussian periods}. University of South Wales, 2003. \href{http://web.maths.unsw.edu.au/~norman/papers/GaussianPeriods.pdf}{link}\\
+
+	El objetivo es mostrar la importancia de los periodos de Gauss en la teoria algebraica de números y dar una abstracción para su análisis desde el punto de vista del álgebra abstracta.
+}
+\newpage
+\begin{center} {\bf Motivación} \end{center}
+{
+Sea $H$ un subgrupo de $(\Z/p\Z)^*$ de índice $n$. Como $(\Z/p\Z)^*$ es abeliano, $H$ es normal y el cociente $(\Z/p\Z)^*/H$ está bien definido. El subgrupo $H$ particiona el conjunto $(\Z/p\Z)^*$ en $n$ clases laterales, las denotaremos por $C_1,...C_n$.\\
+Definamos ahora los objetos de nuestro estudio:\\
+{\bf Definición.} Periodos de Gauss.
+
+Sea:
+\begin{itemize}
+\item $H$ subgrupo de $\Z/p\Z^*$ de índice $n$
+\item $\{C_1,...,C_n\}$ las clases laterales de $\Z/p\Z^*/H$
+\item $i \in \{1,...,n\}$
+
+\end{itemize}
+Llamamos $i$-ésimo $n$-periodo de Gauss al numero complejo:
+\begin{itemize}
+\item $\sumatoryoverset{\zeta^x}{x}{C_i}$
+\end{itemize}
+donde $\zeta$ es la raiz n-ésima primitiva: $e^{\frac{i\pi}{n}}$.\\
+Cuando el valor de $n$ se sobreentienda, denotaremos por $\eta_i$ al $i$-ésimo $n$-periodo de Gauss.\\
+El interes por los periodos de Gauss viene razonado por el siguiente teorema:\\
+{\bf Teorema.} Determinación de los subcuerpos ciclotómicos.
+
+Sea:
+\begin{itemize}
+\item $p$ primo impar
+\item $\zeta$ raíz p-ésima de la unidad
+\item $K$ subcuerpo de $\Q(\zeta)$ tal que $[K:\Q] = n$
+\end{itemize}
+Entonces, se cumple:
+
+$ K = \Q(\eta_i) \hspace{1cm}	\forall i \in \{1,...,n\}$.\\
+En otras palabras, los $n$-periodos de Gauss son elementos primitivos de la única subextensión de $K|\Q$ de grado $n$.
+
+}
+\newpage
+{
+Comenzaremos recordando tres resultados previos:
+
+{\bf Resultado I.} 
+
+Sea:
+\begin{itemize}
+\item $p$ primo impar
+\item $n$ divisor de $p-1$
+\end{itemize}
+
+Entonces, se cumple:
+\begin{itemize}
+\item $\exists !\; H < (\Z/p\Z)^* $ tq $ |(\Z/p\Z)^*:H| = n$.
+\end{itemize}
+
+{\bf Resultado II.} 
+
+Sea:
+\begin{itemize}
+\item $L|k$ extensión de Galois
+\item $\theta \in L$ elemento primitivo de $L|k$
+\item $K \subset L$ subcuerpo que contiene $k$
+\item $a_0,...,a_n$ coeficientes de $Irr(\theta,K)$
+\end{itemize}
+
+Entonces, se cumple:
+\begin{itemize}
+\item $K = k(a_0,...,a_n)$
+\end{itemize}
+
+{\bf Resultado III.} 
+
+Sean:
+\begin{itemize}
+\item $n \in N$
+\item $s_k(X_1,...,X_n)$ el k-ésimo polinomio simétrico
+\item $t_k(X_1,...,X_n)$ el k-ésimo polinomio de Newton
+\item $x_1,...,x_n$ elementos algebraicos sobre $\Q$
+\end{itemize}
+
+Entonces, se cumple:
+\begin{itemize}
+\item $\Q(s_1(x_1,...,x_n),...,s_n(x_1,...,x_n)) = \Q(t_1(x_1,...,x_n),...,t_n(x_1,...,x_n))$
+\end{itemize}
+}
+\newpage
+{
+	Empecemos ahora con la demostración del teorema:\\
+	Sabemos que Gal$(Q(\zeta)|Q)$ es isomorfo a $(\Z/p\Z)^*$ que tiene orden $p-1$. Aplicando el resultado I, sabemos que existe un único subgrupo $H$  de Gal$(Q(\zeta)|Q)$ con índice $n$, y por la correspondencia de Artin, $K$ ha de ser $\Q^H$.\\
+
+	Por el resultado II, el cuerpo $K$ está generado sobre $\Q$ por los coeficientes
+	del polinomio $Irr(\zeta,K)(X)$.\\
+	Como $Gal (Q(\zeta)|Q)$ es cíclico, $H$ también. Sea $\sigma$ un generador de $H$. Podemos expresar:
+	$$ Irr(\zeta,K)(X) = \productoryoverset{(X-\tau(\zeta)}{\tau}{H} = \productory{ (X-\sigma^{jn}(\zeta) }{ j }[ 1 ][ d ] $$
+	donde $d$ es $p-1/n$. \\
+
+	Para cada $j \in \{1,...,d\}$, denotemos por $a_j$ a $\sigma^{jn}(\zeta)$. Los coeficientes del polinomio irreductible vienen dados por los polinomios simétricos elementales evaluados sobre los $a_j$, esto es, son los valores: $s_1(a_1,...,a_d),...,s_d(a_1,...,a_d)$.\\
+	Por el resultado III, los valores $t_1(a_1,...,a_d),...,t_d(a_1,...,a_d)$ generan el mismo cuerpo sobre $\Q$ y resulta que cada uno de estos es un $n$-periodos de Gauss. Visualmente:
+	$$ K = \Q(a_j)_j = \Q(s_j(a_1,...,a_d))_j = \Q(t_j(a_1,...a_d))_j \subset \Q(\eta_j)_j$$
+
+	Ahora, por la definición de periodos de Gauss se sigue que $\sigma(\eta_i) = \eta_i$ de manera que $\eta_i \in K$ para todo $i$ y obtenemos la igualdad: $K = Q(\eta_1, . . . , \eta_n)$\\
+	Finalmente, para todo $i,j$ enteros, se satisface la igualdad $\sigma^j(\eta_i) = \eta_{i+j}$. Concluimos que todos los periodos $\eta_i$ son conjugados entre sí y efectivamente: $$K = Q(\eta_i)$$}
+{
+Nuestro interes en estas paginas es estudiar la estructura de los periodos de Gauss. Para ello, analizaremos las propiedades que los caracterizan para despues abstraerlas y presentar una forma de estudiar los periodos de Gauss mediante álgebra abstracta. Volvamos a empezar:
+
+Sea $H$ el subgrupo de $\Z/p\Z^*$ de índice $n$. Como $(\Z/p\Z)^*$ es abeliano, H es normal y el cociente $(\Z/p\Z)^*/H$ está bien definido. El subgrupo $H$ particiona el conjunto $(\Z/p\Z)^*$ en $n$ clases laterales, las denotaremos por $C_1,...C_n$.
+
+Ahora, podemos considerar $C_1 = H$. Dado un generador $g$ de $\Z/p\Z^*$, para todo conjunto $C \in \{C_1,...,C_n\}$ existe un $k$ natural menor que $n$ de manera que $C = g^kC_1$, y por ello podemos ordenar los conjuntos $C_1,...,C_n$ mediante la regla:
+$$C_i = g^iC_1 < C_j = g^jC_j \leftrightarrow i < j$$
+
+Si añadimos el conjunto $C_0 = \{0\}$, definiendo $C_0 < C_i$ para todo $i$, obtenemos una particion totalmente ordenada de $\Z/p\Z$: $\{C_0,...,C_n\}$. Denotaremos esta partición por $\C$.\\
+
+Escojamos tres conjuntos $C_i,C_j,C_k \in \C$ y fijemos un $x_k$ en $C_k$. Podemos considerar la cantidad de veces que $x_k$ aparece como resultado de $x_i+x_j$ donde $x_i$ y $x_j$ varian en $ C_i $ y $ C_j $ respectivamente. El resultado no depende del $x_k$ elegido y por ello tiene sentido denotar por $N_{ij}^k$ a dicha cantidad.
+
+Para todo $i,j$, se cumple la ecuación:
+
+$$ C_iC_j = \sum_{k=0}^n N_{ij}^kC_k $$
+
+que llamaremos la ecuación característica de $\C$.
+
+\newpage
+
+Consideremos ahora, $\Z\C$ el span de $\C$ por $\Z$, es decir:
+
+$$ \Z\C = \{\sum_{i=0}^n z_iC_i | z_i \in \Z, C_i \in \C \} $$
+
+Gracias a la ecuación característica, $\Z\C$ con la suma y el producto ordinarios definidos sobre los coeficientes $z_i$, tiene estructura de anillo abeliano con unidad $C_0$.\\
+Podemos considerar para cada $C_i$ su inverso respecto la suma en $\Z\C$. Denotemoslo por $C_i^*$. Todos los $C_i^*$ pertenecen a $\C$ y podemos considerar la aplicación:
+
+$$\definedfunction{ * }{ \C }{ \C }{ C_i }{ C_i^* }$$
+
+que resulta ser un automorfismo sobre $\C$.
+
+Hemos sido capaces de definir un conjunto de numeros naturales $\{N_{ij}^k\}$ que definen la ecuación carácterística y un automorfismo $*$ sobre $\C$. Estos dos conceptos quedan relacionados mediante la siguiente propiedad:
+$$N_{ij}^0 > 0 \leftrightarrow C_j = C_i^*$$
+
+Ahora, podemos abstraer estas propiedades y construir una nueva estructura algebraica del cual los periodos de Gauss formaran un ejemplo importante. 
+}
+\newpage
+{
+\begin{center}{\bf Ensamblajes}\end{center}
+
+Abstraeremos las propiedades vistas bajo la definición de ensamblaje, {\it assembly} según el autor original:
+
+{\bf Ensamblaje}
+
+Sea:
+\begin{itemize}
+
+\item $\C = \{C_i\}_{i=0}^n$ un conjunto totalmente ordenado.
+\item $N = \{N_{ij}^k\}_{i,j,k=0}^n \subset \N$.
+
+\item $* :  \C \longrightarrow \C $.
+
+\end{itemize}
+
+Entonces, $(\C,N,*)$ es un ensamblaje de orden $n$ si:
+\begin{itemize}
+
+\item $\Z\C$ es un anillo abeliano con unidad $C_0$.
+
+\item $N_{ij}^k > 0 \leftrightarrow C_j = C_i^*$.
+
+\item $*$ es un automorfismo sobre $\C$.
+
+\item Se cumple la ecuación característica:
+
+$$ C_iC_j = \sum_{k=0}^n N_{ij}^kC_k $$
+
+\item {\it Conservación de la masa:}
+
+$$ m(C_i)m(C_j) = \sum_{k=0}^n N_{ij}^kC_k $$
+
+donde $m(C_i) = \displaystyle\sum_{j=0}^n N_{ij}^0$.
+
+\end{itemize}
+
+Nos referiremos con $\C$ a la terna $(\C,N,*)$ siempre que no cause confusión.\\
+
+LLamamos {\bf carácter masa } a la aplicación:
+
+$$ \definedfunction{ m }{ \C }{ \N }{ C_i }{ m(C_i) = \displaystyle\sum_{j=0}^n N_{ij}^0 }$$
+
+}
+\newpage
+Antes de adentrarnos en el teorema principal, nos quedan unas cuantas definiciones más por considerar:
+
+{\bf Masa Total}
+
+Sea:
+\begin{itemize}
+
+\item $(\C,N,*)$ un ensamblaje de orden $n$.
+
+\end{itemize}
+
+LLamamos masa total del ensamblaje $(\C,N,*)$ al natural:
+\begin{itemize}
+\item $\displaystyle\sum_{i=0}^n m(C_i)$
+\end{itemize}
+
+y lo denotamos por $m(\C)$.
+
+{\bf Ensamblaje Hermitiano}
+
+Sea:
+\begin{itemize}
+
+\item $(\C,N,*)$ un ensamblaje de orden $n$.
+
+\end{itemize}
+
+Entonces, $\C$ es un ensamblaje hermitiano si:
+\begin{itemize}
+
+\item $\forall i \in \{0,...,n\}: C_i = C_i^*$.
+
+\end{itemize}
+
+{\bf Ensamblaje Ciclotómico}
+
+Sea:
+\begin{itemize}
+
+\item $(\C,N,*)$ un ensamblaje de orden $n$.
+\item $ \sigma : \{0,..,n\} \longrightarrow \{0,...,n\} $ una permutación definida por $\sigma(0) = 0, \sigma(n) = 1, \sigma(i) = i+1$.
+
+\end{itemize}
+
+Entonces, $\C$ es un ensamblaje ciclotómico si:
+\begin{itemize}
+
+\item $\forall i,j,k \in \{0,...,n\}:\hspace{10pt} N_{\sigma(i)\sigma(j)}^{\sigma(k)} = N_{ij}^k$.
+
+\end{itemize}
+
+{\bf Ensamblajes isomorfos }
+
+Sea:
+\begin{itemize}
+
+\item $(\C_1,N_1,*_1),(\C_2,N_2,*_2)$ ensamblajes de orden $n$.
+
+\end{itemize}
+
+Entonces, $\C_1,\C_2$ son isomorfos si $\exists \; \phi : \C_1 \longrightarrow \C_2$ cumpliendo:
+\begin{itemize}
+
+\item $\phi(C_iC_j) = \phi(C_i)\phi(C_j)$.
+
+\item $\phi(C_i^*) = \phi(C_i)^*$
+
+\end{itemize}
+
+
+\section{ Teorema Principal }
+
+
+Retomemos los periodos Gaussianos. Sea $\C = \{\eta_0 = 1, \eta_1,...,\eta_n\}$. Definamos $N_{ij}^k$ como las apariciones de un elemento de $C_k$ como suma de elementos de $C_i$ y $C_j$ y $*$ como la aplicación que asigna a cada periodo gaussiano su opuesto respecto la suma. Resulta que la terna $(\C,N,*)$ es un ensamblaje ciclotómico de orden $n$ y masa total $p$.
+
+El teorema principal asegura que, salvo isomorfismos, éste es el único ensamblaje que cumple estas condiciones:
+
+{\bf Teorema Principal }
+
+Sea:
+\begin{itemize}
+
+\item $p$ un primo.
+
+\item $n$ un natural divisor de $p-1$.
+
+\end{itemize}
+
+Entonces, se cumple salvo isomorfismos:
+\begin{itemize}
+\item $\exists ! \; \C$ ensamblaje ciclotómico de orden $n$ y masa total $p$
+\end{itemize}
+
+Esto permite establecer una correspondencia entre el único subcuerpo de grado $n$ de $\Q(\zeta_p)$ y el único ensamblaje ciclotómico de orden $n$ y masa total $p$.
+
+Así, el estudio de periodos gaussianos se traslada al álgebra abstracta, ofreciendo la capacidad de  analizar las propiedades de los periodos Gaussianos mediante los resultados obtenidos para los ensamblajes ciclotómicos.
+
+La demostración de este teorema, así como el desarrollo de todos los conceptos colaterales que aparecen por el camino se encuentra en el artículo previamente citado:
+
+N.J. Wildberger: {\it On the algebraic structure of Gaussian periods}. University of South Wales, 2003. \href{http://web.maths.unsw.edu.au/~norman/papers/GaussianPeriods.pdf}{link}
+\end{document}
+
+
