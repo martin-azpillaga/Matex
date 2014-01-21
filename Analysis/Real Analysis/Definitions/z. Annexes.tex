@@ -1,0 +1,267 @@
+\annex{ $Set Theory$ }
+{
+	\introduction{ $ introduction $ }
+
+	\definition{ $Order$ }
+	{
+	\letbe
+	{
+		A $ set$.
+		R \subset A \times A
+	}
+
+	\then{ R }{ $an order over $ A }
+	{
+		\all{ x \in A }
+		{
+			(x,x) \in R
+		}.
+		\all{ x,y \in A }[ (x,y) \in R \logicand (y,x) \in R ]
+		{
+			x = y
+		}.
+		\all{ x,y,z \in A }[ (x,y) \in R \logicand (y,z) \in R ]
+		{
+			(x,z) \in R
+		}
+	}
+
+	\denote
+	{
+		(x,y) \in R \as x \leq y.
+
+		(x,y) \in R \logicand x \neq y \as x < y
+	}	}
+
+	\definition{ $Total Order$ }
+	{
+	\letbe
+	{
+		A $ set$.
+		R $ order over $ A
+	}
+	\then{ R }{ $a total order over $ A }
+	{
+		\all{ x,y \in A }
+		{
+			(x,y) \in R \logicor (y,x) \in R
+		}
+	}
+
+	}
+
+	\definition{ $Bounds$ }
+	{
+	\letbe
+	{
+		\K $ ordered commutative field $.
+		A \subset K
+	}
+	\then{ x \in K }{ $an upper bound of $ A }
+	{
+		\all{ a \in A }
+		{
+			a \leq x
+		}
+	}	
+	\then{ x \in K }{ $a lower bound of $ A }
+	{
+		\all{ a \in A }
+		{
+			x \leq a
+		}
+	}
+	\denote
+	{
+		A $ superiorly bounded $ \as \ex{ x \in K }{ x $ upper bound of $ A }.
+		A $ inferiorly bounded $ \as \ex{ x \in K }{ x $ upper bound of $ A }.
+		A $ bounded $ \as A $ inferiorly bounded  and superiorly bounded $
+	}
+
+	}
+
+	\definition{ $Supremum and Infimum$ }
+	{
+	\letbe
+	{
+		\K $ ordered commutative field $.
+		A \subset K
+	}
+	\then{ x \in K }{ $the supremum of $ A }
+	{
+		x $ upper bound of $ A.
+		\all{ y \in K }[ y $ upper bound of $ A ]
+		{
+			x \leq y
+		}
+	}	
+	\then{ x \in K }{ $the infimum of $ A }
+	{
+		\all{ y \in K }[ y $ lower bound of $ A ]
+		{
+			y \leq x
+		}
+	}
+	\denote
+	{
+		$ supremum of A $ \as sup A.
+		$ infimum of A $  \as inf A.
+		sup A \in A \as max A.
+		inf A \in A \as min A.
+	}
+
+	}
+
+	\definition{ $Bounded function$ }
+	{
+	\letbe
+	{
+		(A_1,d_1), (A_2,d_2) $ metric spaces $.
+		B \subset A.
+		\function{ f }{ B }{ A_2 }
+	}
+	\then{ f }{ $bounded$ }
+	{
+		f(B) $ bounded $
+	}	}
+
+	\definition{ $Succession$ }
+	{
+	\letbe
+	{
+		A $ set $
+	}
+	\then{ \vect{ a_n }{ n } \subset A }{ $sucesion of elements of $ A }
+	{
+		\ex{ \function{ \phi }{ \N }{ A } }{ Im \phi = \family{ a_n }{ n } }
+	}
+	\denote
+	{
+		\vect{ a_n }{ n } \as \succesion{ a_n }{ n } 
+	}
+	
+	}
+}
+
+
+
+\annex{ $Algebraic Structures$ }
+{
+	\introduction{ $ introduction $ }
+
+	\definition{ $Commutative Field$ }
+	{
+	\letbe
+	{
+		A $ set $.
+		\function{ \star_1, \star_2 }{ A \times A }{ A }
+	}
+
+	\then{ (A,\phi_1,\phi_2) }{ $a commutative field$ }
+	{
+		(A,\star_1) $ abelian group $.
+		(A,\star_2) $ abelian group $.
+		\all{ x,y,z \in A }
+		{
+			x \star_1 ( y \star_2 z ) = ( x \star_1 y ) \star_2 ( x \star_1 z )
+		}
+	}
+	\denote
+	{
+		\star_1 \as +.
+		\star_2 \as \cdot.
+		(A,+,\cdot) $ commutative field $ \as \K
+	}
+	}
+}
+
+
+
+\annex{ $Riemann Integral$ }
+{
+	\introduction{ $ introduction $ }
+
+	\definition{ $Partition$ }
+	{
+	\letbe
+	{
+		a,b \in \R.
+		\family{ x_i }{ i }[ 1 ][ n ] \subset [a,b] 
+	}
+	\then{ \family{ x_i }{ i }[ 1 ][ n ] }{ $a partition of $ [a,b] }
+	{
+		x_1 = a.
+		x_n = b.
+		\all{ x_i,x_j \in \family{ x_i }{ i }[ 1 ][ n ] }[ i < j ]
+		{
+			x_i < x_j
+		}
+	}	}
+
+	\definition{ $Superior/Inferior sum of partitions$ }
+	{
+	\letbe
+	{
+		a,b \in \R.
+		f \in \functionspace{ [a,b] }{ \R }.
+		P = \family{ x_i }{ i }[ 1 ][ n ] $ partition of $ [a,b]
+	}
+	\call{ $ superior sum of the partition $ P $ over $ f }
+	{
+		\sumatory{ \sup_{x \in [x_{i-1},x_i]} f(x)(x_i - x_{i-1}) }{ i }[ 1 ][ n ] 
+	}
+
+	\call{ $ superior sum of the partition $ P $ over $ f }
+	{
+		\sumatory{ \inf_{x \in [x_{i-1},x_i]} f(x)(x_i - x_{i-1}) }{ i }[ 1 ][ n ] 
+	}
+
+	\denote
+	{
+		$ the superior sum of the partition $ P $ over $ f \as S( f, P ).
+		$ the inferior sum of the partition $ P $ over $ f \as s( f, P )
+	}
+
+	}
+
+	\definition{ $Superior/Inferior integral$ }
+	{
+	\letbe
+	{
+		a,b \in \R.
+		f \in \functionspace{ [a,b] }{ \R }.
+		I \in \R
+	}
+	\then{ I }{ $the superior integral of $ f $ over $ [a,b] }
+	{
+		I = \inf_{P \in \Pc_f([a,b])} S(f,P)
+	}
+	\then{ I }{ $the inferior integral of $ f $ over $ [a,b] }
+	{
+		I = \sup_{P \in \Pc_f([a,b])} s(f,P)
+	}
+	\denote
+	{
+		$ the superior integral of $ f \as \overline{\int_a^b} f(x) dx.
+		$ the inferior integral of $ f \as \underline{\int_a^b} f(x) dx
+	}
+	}
+
+	\definition{ $Riemann Integrability$ }
+	{
+	\letbe
+	{
+		a,b \in \R.
+		f \in \functionspace{ [a,b] }{ \R }
+	}
+	\then{ f }{ $Riemann integrable$ }
+	{
+		\overline{\int_a^b} f(x) dx = \underline{\int_a^b} f(x) dx
+	}
+	\denote
+	{
+		\set{ f \in \functionspace{ [a,b] }{ \R } }[ f $ Riemman integrable $ ]\as \riemann{ [a,b] }.
+		\overline{\int_a^b} f(x) dx = \underline{\int_a^b} f(x) dx \as \integral{ f(x) }{ dx }{ a }[ b ]
+	}
+	}	
+}

@@ -1,0 +1,289 @@
+\documentclass[a5paper]{article}
+\renewcommand{\baselinestretch}{1.5}
+\usepackage{matex}
+\usepackage{titlesec}
+\usepackage[spanish]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{bbm}
+\usepackage{courier}
+\usepackage[pdftex]{graphicx} % PDFLaTeX
+\DeclareGraphicsExtensions{.png,.pdf,.jpg}
+
+\renewcommand{\C}{\mathcal{C}}
+\newcommand{\ind}[1]{\mathbbm{1}_{#1}}
+\titleformat{\section}{\bfseries\filcenter}{}{0pt}{\bfseries\filcenter}
+\NewDocumentCommand{ \integral }{ m m m O{} }{ \displaystyle\int_{ #3 }^{ #4 } #1 #2 }
+
+
+
+
+\begin{document}
+\titlePage{ $ Simulación del teorema central del límite $ }{ $ Martin Azpillaga $ }
+\renewcommand{\blockname}{ Simulación del teorema central del límite }
+
+\abstract
+{
+	
+	{\bf Teorema} del límite central
+
+	Sea:
+	\begin{itemize}
+	\item $\family{ X_i }{ i }[ 1 ] $ variables aleatorias i.i.d con momento de segundo orden finito.
+	\item $\mu = E[X]$
+	\item $\sigma^2 = Var(X) > 0$
+	\end{itemize}
+
+	Entonces, se cumple:
+	$$\frac{ \sumatory{ X_i }{ i }[ 1 ][ n ] - n\mu }{ \sigma\sqrt{n} } \overset{\mathcal{L}}{\longrightarrow} N(0,1)$$
+
+	Este trabajo consiste en la simulación del teorema del límite central para tres leyes. Una ley con densidad simétrica:
+	\begin{itemize}
+	\item$ f_1(x) = c|\sin(x)| \ind{(0,3\pi)}$ \hspace{15pt} $ c = \frac{1}{6} $
+	\end{itemize}
+	Una ley con densidad no simétrica:
+	\begin{itemize}
+	\item $f_2(x) = c\sin(x) \ind{(0,1)}$ \hspace{15pt} $ c = \frac{1}{1-\cos(1)} $
+	\end{itemize}
+	Y la distribución de Cauchy ordinaria dada por la densidad:
+	\begin{itemize}
+	\item $f_3(x) = \frac{ 1 }{ \pi(1+x^2) }$
+	\end{itemize}
+}
+
+\section{ Consideraciones previas }
+
+Para calcular los momentos de primer y segundo orden, necesitaremos encontrar las siguientes primitivas:
+
+$ \displaystyle\int x\sin(x) = \sin(x) - x\cos(x) + c$
+
+$ \displaystyle\int x^2\sin(x) = -x^2\cos(x) + 2x\sin(x) + 2\cos(x) + c$
+
+Llamamos:
+
+$ g(x) = \sin(x) - x\cos(x) $
+
+$ h(x) = -x^2\cos(x) + 2x\sin(x) + 2\cos(x) $
+
+
+\section{ Ley con densidad simétrica }
+
+{\bf Esperanza }
+
+Veamos que $f_1$ tiene esperanza finita:
+
+$\integral{ |x|f_1(x) }{ dx }{ \R } = c \integral{ x |\sin(x)| }{ dx }{ 0 }[ 3\pi ] = $
+
+$c\left ( \integral{ x \sin(x) }{ dx }{ 0 }[ \pi ] - \integral{ x\sin(x) }{ dx }{ \pi }[ 2\pi ] + \integral{ x \sin(x) }{ dx }{ 2\pi }[ 3\pi ]\right ) = $
+
+$ c\left ( [g(x)]_0^\pi - [g(x)]_\pi^{2\pi} + [g(x)]_{2\pi}^{3\pi} \right ) = 9\pi c$
+
+Como $|x| = x$ en $(0,3\pi)$, $\mu = 9\pi c$.\\
+
+{\bf Variancia }
+
+Veamos que $f_1$ tiene momento de segundo orden finito:
+
+$\integral{ |x^2|f_1(x) }{ dx }{ \R } = c \integral{ x^2 |\sin(x)| }{ dx }{ 0 }[ 3\pi ] = $
+
+$c\left ( \integral{ x^2 \sin(x) }{ dx }{ 0 }[ \pi ] - \integral{ x^2\sin(x) }{ dx }{ \pi }[ 2\pi ] + \integral{ x^2 \sin(x) }{ dx }{ 2\pi }[ 3\pi ]\right ) = $
+
+$ c\left ( [h(x)]_0^\pi - [h(x)]_\pi^{2\pi} + [h(x)]_{2\pi}^{3\pi} \right ) = (19\pi^2 -12)c $
+
+Como $|x| = x$ en $(0,3\pi)$, $E[X^2] = (19\pi^2 -12)c$.
+
+$\sigma^2 = (19\pi^2 -12)c - 81\pi^2c^2$\\
+
+{\bf Función de distribución e inversa}
+
+$F_1(x) = ((2[\frac{ x }{ \pi }]+1 + (-1)^{[\frac{ x }{ \pi }]+1}\cos(x))c)\ind{(0,3\pi)} + \ind{(3\pi,\infty)}$
+
+$F_1^{-1}(y) = ([3y]\pi + \arccos(2[3y]+1 - \frac{ y }{ c }))\ind{(0,1)}$ en $(0,1)$
+
+
+\section{ Ley con densidad no simétrica }
+
+{\bf Esperanza }
+
+Veamos que $f_2$ tiene esperanza finita:
+
+$\integral{ |x|f_2(x) }{ dx }{ \R } = c \integral{ x \sin(x) }{ dx }{ 0 }[ 1 ] = $
+
+$ c[g(x)]_0^1 = (\sin(1) - \cos(1)) c$
+
+Como $|x| = x$ en $(0,1)$, $\mu = (\sin(1) - \cos(1)) c$.\\
+
+{\bf Variancia }
+
+Veamos que $f_2$ tiene momento de segundo orden finito:
+
+$\integral{ |x^2|f_2(x) }{ dx }{ \R } = c \integral{ x^2 \sin(x) }{ dx }{ 0 }[ 1 ] = $
+
+$ c [h(x)]_0^1 = (2\sin(1) - \cos(1))c $
+
+Como $|x| = x$ en $(0,3\pi)$, $E[X^2] = (2\sin(1)+\cos(1)-2)c$.
+
+$\sigma^2 = (2\sin(1)+\cos(1)-2)c - (\sin(1) - \cos(1))^2 c^2$.\\
+
+{\bf Función de distribución e inversa}
+
+$F_2(x) = (1-\cos(x))\ind{(0,1)}+\ind{(1,\infty)}$
+
+$F_2^{-1}(y) = \arccos(1-y)\ind{(0,1)}$ en ${0,1}$
+
+\section{ Ley de Cauchy }
+
+{\bf Esperanza y Variancia}
+
+$\integral{ |x|f_3(x) }{ dx }{ \R }$
+
+$\integral{ \frac{ x }{ \pi(1+x^2) } }{ dx }{ \R^+ } = \lim_{x\to\infty} \integral{ \frac{ x }{ \pi(1+x^2) } }{ dx }{ 0 }[ \infty ] = $
+
+$ \lim_{x\to\infty} \frac{ \ln(1+x^2) }{ 2\pi } \nin \R $
+
+Por tanto, no tiene esperanza ni variancia.\\
+
+{\bf Función de distribución e inversa}
+
+$F_3(x) = \frac{ 1 }{ \pi }$arctg$(x) + \frac{ 1 }{ 2 }$
+
+$F_X^{-1}(y) = \tan(\pi(y- \frac{ 1 }{ 2 }))$
+
+\newpage
+
+
+
+\section{ Anexo. Script R}
+
+{\bf Ley con densidad simétrica}
+
+\ttfamily{
+
+N<-2000
+
+n<-50
+
+random<-runif(N*n)
+
+dim(random)<-c(N,n)
+
+inversa<-floor(3*random)*pi+acos(2*floor(3*random)+1 -6*random)
+
+y<-apply(inversa,1,sum)
+
+esperanza<-n*9*pi/6
+
+desviacion<-(n*((19*pi\textasciicircum2 -12)/6 - 81*pi\textasciicircum2/36))\textasciicircum(1/2)
+
+y<-(y-esperanza)/desviacion
+
+hist(y,freq=FALSE,ylim=range(0,0.5))
+
+x<-seq(-3,3,by=0.01)
+
+normal<-dnorm(x,0,1)
+
+lines(x,normal,col="blue")
+
+}
+
+{\bf Ley con densidad no simétrica}
+
+\ttfamily{N<-2000
+n<-50
+
+random<-runif(N*n)
+
+dim(random)<-c(N,n)
+
+inversa<-acos(1-random)
+
+y<-apply(inversa,1,sum)
+
+esperanza<-n*(sin(1)-cos(1))/(1-cos(1))
+
+desviacion<-(n*((2*sin(1)+cos(1)-2)/(1-cos(1)) - ((sin(1)-cos(1))\textasciicircum2)/((1-cos(1))\textasciicircum2)))\textasciicircum(1/2)
+
+y<-(y-esperanza)/desviacion
+
+hist(y,freq=FALSE,ylim=range(0,0.5))
+
+x<-seq(-3,3,by=0.01)
+
+normal<-dnorm(x,0,1)
+
+lines(x,normal,col="blue")}
+
+{\bf Distribución de Cauchy}
+
+\ttfamily{N<-2000
+n<-500
+
+random<-rcauchy(N*n)
+
+dim(random)<-c(N,n)
+
+y<-apply(random,1,sum)
+
+y<-y/n
+
+hist(y,freq=FALSE,ylim=range(0,0.1))
+
+x<-seq(-100,100,by=0.1)
+
+normal<-dnorm(x,0,1)
+
+lines(x,normal)}
+
+\newpage
+
+\section{ Resultados de la simulación }
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.3]{simetrica.png}%ext=pdf,jpg,png
+\caption{Ley con densidad simétrica. n=50}
+\label{contexto:figura}
+\end{figure}
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.3]{cauchy.png}%ext=pdf,jpg,png
+\caption{Distribución de Cauchy. n=500}
+\label{contexto:figura}
+
+\end{figure}
+
+\newpage
+
+\end{document}
+
+
+
+
+%$\forall x \in (-\infty,0):$
+
+% $F_1(x) = 0$
+
+% $\forall x \in (0,\pi):$
+
+% $F_1(x) = \integral{ c\sin(t) }{ dt }{ 0 }[ x ] = (1-\cos(x))c $
+
+% $\forall x \in (\pi,2\pi):$
+
+% $F_1(x) = (1-cos(\pi))c - \integral{ c\sin(t) }{ dt }{ \pi }[ x ] = (3 + \cos(x))c$
+
+% $\forall x \in (2\pi,3\pi):$
+
+% $F_1(x) = 4c + \integral{ c\sin(t) }{ dt }{ 2\pi }[ x ] = (5-\cos(x))c$
+
+% $\forall x \in (3\pi,\infty):$
+
+% $F_1(x) = 1$
+
+% $F_1(x) = (2[\frac{ x }{ \pi }]+1 + (-1)^{[\frac{ x }{ \pi }]+1}\cos(x))c$
+
+% $F_1^{-1}(y) = [3y]\pi + $arccos$(2[3y]+1 - \frac{ y }{ c })$
+
+% $F_2(x) = 1-\cos(x)$
+
+% $F_2^{-1}(y) = $arccos$(1-y)$

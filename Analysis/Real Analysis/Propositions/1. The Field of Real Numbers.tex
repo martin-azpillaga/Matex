@@ -1,0 +1,297 @@
+\unit{ $The Field of Real Numbers$ }
+{
+ 	\introduction
+	{
+ 		$
+ 			4 propositions and 2 theorems.
+ 		$
+ 	}
+
+ 	\proposition{ $Field Properties$ }
+	{
+ 	\letbe
+ 	{
+ 		\K $ field $
+ 	}
+ 	\holds
+ 	{
+ 		\all{ x \in \K }
+ 		{
+ 			x\cdot 0 = 0
+ 		}.
+ 		\all{ x,y \in K }[ x \cdot y = 0 ]
+ 		{
+ 			\ex{ z \in \set{ x,y } }{ z = 0 } 
+ 		}
+ 	}
+ 	\demonstration
+ 	{
+ 		x \cdot 0 = x \cdot (0+0) = (x\cdot 0) + (x \cdot 0).
+
+ 		( x \cdot 0 ) + [-( x \cdot 0 )] = (x\cdot 0) + (x \cdot 0) + [-(x \cdot 0)].
+
+ 		0 = x \cdot 0.
+
+ 		.
+
+ 		\case{ x = 0 }
+ 		{
+ 			x = 0
+ 		}
+ 		\case{ x \neq 0 }
+ 		{
+ 			x^{-1} \cdot x \cdot y = x^{-1} \cdot 0 = 0.
+
+ 			y = 0
+ 		}
+
+ 		\ex{ z \in \set{ x,y } }{ z = 0 }
+ 	}
+	}
+
+
+
+	\proposition{ $Order Properties$ }
+	{
+	\letbe
+	{
+		\K $ ordered commutative field $
+	}
+	\holds
+	{
+		\all{ x,y,u,v \in \K }[ x \leq y \logicand u \leq v  ]
+		{
+			x+u \leq y+v
+		}.
+
+		\all{ x,y \in \K }[ x \leq 0 \logicand y \leq 0 ]
+		{
+			xy \geq 0
+		}
+	}
+	\demonstration
+	{
+		x \leq y \imp x + u \leq y + u.
+
+		u \leq v \imp u + y \leq v + y.
+
+		\conclude x+u \leq y+u \leq v+y.
+
+		.
+
+		(-1)x + x = x(-1+1) = 0 \imp (-1)x = -x.
+
+		$ In particular, $ (-1)(-1) = -(-1) = 1.
+
+		x \leq 0 \imp x + (-x) \leq 0 + (-x) \imp -x \geq 0.
+
+		$ In particular, $ y \leq 0 \imp -y \geq 0.
+
+		\multiple[\{][\}]{ -x \geq 0. -y \geq 0} \imp (-x)(-y) \geq 0 \imp (-1)(-1)xy \geq 0 \imp xy \geq 0 
+	}
+	}
+
+
+
+	\proposition{ $Inyection of the rationals in commutative ordered fields$ }
+	{
+	\letbe
+	{
+		\K $ ordered commutative field $
+	}
+	\holds
+	{
+		\ex{ \function{ \phi }{ \Q }{ \K } }{ \phi $ inyective$ }
+	}
+	\demonstration
+	{
+		$ Follow 2 steps: $.
+			
+		\step{ 1 }{ $Existence$ }
+		{
+			\definedfunction{ f }{ \N }{ \K^+ }{ n }{ \sumatory{ 1_\K }{ i }[ 1 ][ n ]}.
+
+			\definedfunction{ \phi }{ \Q }{ \K }{ \frac{n}{m} }{ \multiple[ \{ ]
+			{
+				f(n)  \cdot f(m)^{-1} , n \geq 0.
+				-f(n) \cdot f(m)^{-1} , n < 0
+			}}
+		}.
+		
+		\step{ 2 }{ $Inyectivity$ }
+		{
+			\all{ \frac{n}{m}, \frac{p}{q} \in \Q }[ \phi(\frac{n}{m}) = \phi(\frac{p}{q}) ]
+			{
+				f(n)f(m)^{-1} = f(p)f(q)^{-1}.
+				f(n)f(q) = f(p)f(m).
+				
+				\sumatory{ 1_\K }{ i }[ 1 ][ n ] \cdot \sumatory{ 1_\K }{ i }[ 1 ][ q ] = \sumatory{ 1_\K }{ i }[ 1 ][ p ] \cdot \sumatory{ 1_\K }{ i }[ 1 ][ m ].
+
+				\sumatory{ 1_\K }{ i }[ 1 ][ nq ] = \sumatory{ 1_\K }{ i }[ 1 ][ pm ].
+
+				\sumatory{ 1_\K }{ i }[ 1 ][ nq - pm ] = 0.
+
+				nq - pm = 0.
+
+				\frac{n}{m} = \frac{p}{q}
+			}
+		}	
+	}
+	}
+
+
+
+	\proposition{ $Inclusion of Convergent succesions in Cauchy succesions$ }
+	{
+	\letbe
+	{
+		\succesion{ a_n }{ n } $ convergent succesion over $ \K^+
+	}
+	\holds
+	{
+		\succesion{ a_n }{ n } $ Cauchy succesion $
+	}
+	\demonstration
+	{
+		\all{ \eps \in \K^+ }
+		{
+			\ex{ n_0 \in \N }{ \all{ n \in \N }[ n \geq n_0 ]
+			{
+				| a_n - l | < \eps
+			} }
+
+			\all{ n,m \in \N }[ n,m \geq n_0 ]
+			{
+				| a_n - a_m | \leq | a_n - l | + | a_m - l | < 2\eps
+			}
+		}
+
+		\conclude \succesion{ a_n }{ n } $ Cauchy succesion $
+	}
+	}
+
+
+
+	\proposition{ $Supremum Theorem$ }
+	{
+	\letbe
+	{
+		A \subset \R \suchthat $ superiorly bounded $ \logicand A \neq \emptyset
+	}
+	\holds
+	{
+		\ex{ s \in \R }{ s = sup A }
+	}
+	\demonstration
+	{
+		$ Follow 3 steps $.
+
+		\step{ 1 }{ $Find $ s }
+		{
+			A $ superiorly bounded $ \imp \ex{ b_0 \in \R }{ b_0 $ upper bound of $ A }.
+
+			A \neq \emptyset \imp \ex{ a_0 \in \R }{ a_0 \in A }.
+
+			\all{ x,y \in \R }
+			{
+				\be{ [x,y]'  \subset \R }{ [x,\frac{x+y}{2}] }.
+				\be{ [x,y]'' \subset \R }{ [\frac{x+y}{2},y] }.
+			}
+		
+			\all{ n \in \N }
+			{
+				\be{ [a_n,b_n] \subset \R }{ I \in \set{ [a_{n-1},b_{n-1}]',[a_{n-1},b_{n-1}]'' } }[ \disjoint{I}{A} ].
+
+				[a_n,b_n] \neq \emptyset \imp \ex{ \succesion{ c_n }{ n } \subset \R }{ \all{ n \in \N }
+				{
+					c_n \in [a_n,b_n] 
+				}}
+			}
+
+
+			\all{ \eps \in \R^+ }
+			{
+				\ex{ n_0 \in \N }{ \all{ n \in \N }[ n \geq n_0 ]
+				{
+					b_n - a_n < \eps
+				} }.
+
+				\all{ n,m \in \N }[ n,m \geq n_0 \logicand n \leq m ]
+				{
+					| c_n - c_m | < b_n - a_n < \eps
+				}
+			}
+			
+
+			\conclude \succesion{ c_n }{ n } $ Cauchy succesion $.
+
+			\R $ complete $ \imp \succesion{ c_n }{ n } $ convergent succesion $ \imp \ex{ s \in \R }{ c_n \convergesto s }.	
+		}
+
+		\step{ 2 }{ s $ upper bound of $ A }
+		{
+			\all{ n \in \N }
+			{
+				a_n \leq c_n \leq b_n \imp 0 \leq b_n - s \leq b_n - a_n	
+			}.
+
+			\multiple[ \{ ][ \} ]
+			{
+				0 \convergesto 0.
+				b_n - a_n \convergesto 0 
+			}
+			$ Sandwitch Theorem $ \imp  b_n - s \convergesto 0 \imp b_n \convergesto s..
+
+			\all{ d \in \R }[ d > s ]
+			{
+				\multiple[ \{ ][ \} ]
+				{
+					b_n \convergesto s. 
+					\eps = d - s
+				}
+				\imp \ex{ n_0 \in \N }{ \all{ n \in \N }[ n \geq n_0 ]
+				{
+					b_n - s < d - s \imp b_n < d
+				} }.
+
+				b_n $ upper bound of $ A \imp d \nin A.
+
+				\conclude s $ upper bound of $ A
+			}
+		}
+		
+		\step{ 3 }{ s$ minimum upper bound of $ A }
+		{
+			\all{ n \in \N }
+			{
+				a_n \leq c_n \leq b_n \imp a_n - b_n \leq a_n - s \leq 0	
+			}.
+
+			\multiple[ \{ ][ \} ]
+			{
+				0 \convergesto 0.
+				a_n - b_n \convergesto 0 
+			}
+			$ Sandwitch Theorem $ \imp  a_n - s \convergesto 0 \imp a_n \convergesto s..
+
+			\all{ e \in \R }[ e < s ]
+			{
+				\multiple[ \{ ][ \} ]
+				{
+					a_n \convergesto s. 
+					\eps = s - e
+				}
+				\imp \ex{ n_0 \in \N }{ \all{ n \in \N }[ n \geq n_0 ]
+				{
+					| a_n - s | = s - a_n < s - e \imp a_n > e
+				} }.
+
+				\disjoint{I_n}{A} \imp \ex{ x \in A }{ x > e } \imp e $ not upper bound of $ A.
+
+				\conclude s $ minimum upper bound of $ A
+			}
+		}
+	}
+		
+	}
+}

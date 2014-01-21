@@ -1,0 +1,196 @@
+\unit{ $ Random Variables $ }
+{
+	
+	\introduction{ $ The study of probabilities was started by Blaise Pascal. $ }
+
+	\definition{ $ Probability Space $ }
+	{
+	\letbe
+	{
+		\Omega $ set $.
+		\Ac \sigma$-algebra$.
+		\function{ \Pc }{ \Ac }{ [0,1] }
+	}
+	\then{ (\Omega, \Ac, \Pc) }{ $a probability space $ }
+	{
+		\Pc(\Omega) = 1.
+		\all{ \family{ A_i }{ i }[ 0 ] \subset \Ac }[ \family{ A_i }{ i }[ 0 ] $ mutually disjoint $ ]
+		{
+			\Pc( \union{ A_i }{ i }[ 0 ] ) = \sumatory{ \Pc(A_i) }{ i }[ 0 ]
+		}
+	}}
+
+	\definition{ $ Conditioned Probability $ }
+	{
+	\letbe
+	{
+		(\Omega,\Ac,\Pc) $ probability space $
+		B \in \Ac
+	}
+	\call{ $ probability conditioned by $ B $ over $ (\Omega,\Ac,\Pc) }
+	{
+		\definedfunction{ \Pc|_B }{ \Ac }{ [0,1] }{ A }{ \frac{\Pc(A \cap B)}{\Pc(B)} }
+	}}
+
+	\definition{ $ Independency $ }
+	{
+	\letbe
+	{
+		(\Omega,\Ac,\Pc) $ probability space $
+		\family{ A_i }{ i }[ 1 ][ n ] \subset \Ac 
+	}
+	\then{ \family{ A_i }{ i }[ 1 ][ n ] }{ $an independent family$ }
+	{
+		\all{ \family{ k_i }{ i }[ 1 ][ r ] \subset \indexes{0}{n} }
+		{
+			\Pc(\intersection{ A_{k_i} }{ i }[ 1 ][ r ]) = \productory{ A_{k_i} }{ i }[ 1 ][ n ]
+		}
+	}}
+
+	\definition{ $ Random Variable $ }
+	{
+	\letbe
+	{
+		(\Omega,\Ac,\Pc) $ probability space $.
+		\function{ X }{ \Omega }{ \R }
+	}
+	\then{ X }{ $a random variable $ }
+	{
+		\all{ A \in \B(\R) }
+		{
+			X^{-1}(A) \in \Ac
+		}
+	}}
+
+	\definition{ $ Law $ }
+	{
+	\letbe
+	{
+		(\Omega,\Ac,\Pc) $ probability space $.
+		\function{ X }{ \Omega }{ \R } $ random variable $
+	}
+	\call{ $ law of $ X }
+	{
+		\definedfunction{ \Pc_X }{ \B(\R) }{ [0,1] }{ A }{ \Pc(X^{-1}(A)) }
+	}
+	%\denote
+	{
+	%	\Pc_X((-\infty,x)) \as \Pc(X \leq x)
+	}}	
+
+	\definition{ $ Distribution Function $ }
+	{
+	\letbe
+	{
+		(\Omega,\Ac,\Pc) $ probability space $.
+		\function{ X }{ \Omega }{ \R } $ random variable $
+	}
+	\call{ $ cumulative distribution function of $ X }
+	{
+		\definedfunction{ F_x }{ \R }{ [0,1] }{ x }{ \Pc(X \leq x) }
+	}}
+
+	\definition{ $ Discrete Random Variable $ }
+	{
+	\letbe
+	{
+		(\Omega,\Ac,\Pc) $ probability space $.
+		\function{ X }{ \Omega }{ \R } $ random variable $
+	}
+	\then{ X }{ $a discrete random variable$ }
+	{
+		X(\Omega) \countable
+	}}
+
+	\definition{ $ Probability Mass function $ }
+	{
+	\letbe
+	{
+		(\Omega,\Ac,\Pc) $ probability space $.
+		\function{ X }{ \Omega }{ \R } $ discrete random variable $
+	}
+	\call{ $probability mass function of $ X }
+	{
+		\definedfunction{ p }{ X(\Omega) }{ [0,1] }{ x }{ P(X=x) }
+	}}
+	\newpage
+	\definition{ $ Density function $ }
+	{
+	\letbe
+	{
+		\function{ f }{ \R }{ \R }
+	}
+	\then{ f }{ $a density function$ }
+	{
+		f \geq 0.
+		f \Rc(\R).
+		\integral{ f(x) }{ dx }{ \R } = 1
+	}}
+
+	\definition{ $ Absolutely Continuous random variable $ }
+	{
+	\letbe
+	{
+		(\Omega,\Ac,\Pc) $ probability space $.
+		\function{ X }{ \Omega }{ \R } $ random variable $.
+		F_X $ distribution function of $ X
+	}
+	\then{ X }{ $an absolutely continuous random variable$ }
+	{
+		\ex{ f \in \functionspace{ \R }{ \R } }{ \all{ x \in \R }
+		{
+			F_x(x) = \integral{ f(x) }{ dx }{ -\infty }[ x ]
+		} }
+	}
+	\denote
+	{
+		X $an absolutely continuous random variable$ \as X $ abs cont $
+	}}
+
+	\definition{ $ Expected Value $ }
+	{
+	\letbe
+	{
+		(\Omega,\Ac,\Pc) $ probability space $.
+		\function{ X }{ \Omega }{ \R } $ discrete random variable $.
+		p $ probability mass function of $ X.
+		\function{ X' }{ \Omega }{ \R } $ abs cont $.
+		f_X $ density function of $ X'
+	}
+	\then{ X }{ $expectable$ }
+	{
+		\sumatoryoverset{ |x|p(x) }{ x }{ X(\Omega) } \in \R
+	}
+	\call{ $expected value of $ X }
+	{
+		\sumatoryoverset{ xp(x) }{ x }{ X(\Omega) } 
+	}
+	\then{ X' }{ $expectable$ }
+	{
+		\integral{ |x|f(x) }{ dx }{ \R } \in \R
+	}
+	\call{ $expected value of $ X' }
+	{
+		\integral{ xf(x) }{ dx }{ \R }
+	}
+	\denote
+	{
+		$expected value of $ X \as E(X)
+	}}
+
+	\definition{ $ Varaible change $ }
+	{
+	\letbe
+	{
+		(\Omega,\Ac,\Pc) $ probability space $.
+		\function{ X }{ \Omega }{ \R } $ abs cont $.
+		I = \open{I} \subset \R \suchthat \Pc(X \in I ) = 1.
+		J = \open{J} \subset \R.
+		\function{ g }{ I }{ J }
+	}
+	\then{ g }{ $a variable change over $ X }
+	{
+		g $ biyective $.
+		g,g^{-1} \in \Cc^1
+	}}
+}

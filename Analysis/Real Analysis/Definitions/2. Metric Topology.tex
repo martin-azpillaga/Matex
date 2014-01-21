@@ -1,0 +1,166 @@
+\unit{ $Metric Topology$ }
+{
+	\introduction{ 
+		$
+		The field of real numbers is the transcendent extension \\
+		of the rational numbers that represent all the possible \\
+		values that can be obtained once a reference is set in a \\
+		line. This set and its properties have been used since the \\
+		very beggining of the mathematics but its formalization didn't \\
+		come off till the 20th century. As we will discuss in this unit, \\
+		the field of real numbers is the defined by a field that \\
+		accomplishes some special properties. The point is that exists \\
+		one unique field ( over isomorphisms ) that has this properties \\
+		and thats why its calles The field of real numbers. Lets start \\
+		From the very beggining:
+		$
+	}
+
+	\definition{ $Metric Space$ }
+	{
+	\letbe
+	{
+		A $ set $.
+		\function{ d }{ A \times A }{ \R }
+	}
+	\then{ (A,d) }{ $a metric space$ }
+	{
+		\all{ x,y \in A }
+		{
+			d(x,y) \geq 0
+		}.
+		\all{ x,y \in A }
+		{
+			d(x,y) = 0 \ifandonlyif x = y
+		}.
+		\all{ x,y \in A }
+		{
+			d(x,y) = d(y,x)
+		}.
+		\all{ x,y,z \in A }
+		{
+			d(x,z) \leq d(x,y) + d(y,z)
+		}
+	}
+	\denote
+	{
+		d : $ distance over $ A
+	}
+
+
+	
+	}
+
+	\definition{ $Ball$ }
+	{
+	\letbe
+	{
+		(A,d) $ metric space $.
+		x \in A.
+		r \in \R^+
+	}
+	\then{ B(x,r) \subset A }{ $the ball centered in $ x $ of radius $ r }
+	{
+		B(x,r) = \set{ a \in A }[ d(x,a) < r ]
+	}
+
+
+	
+	}
+	
+	\definition{ $Inner point$ }
+	{
+	\letbe
+	{
+		(A,d) $ metric space $.
+		B \subset A.
+		x \in B
+	}
+	\then{ x }{ $an inner point of $ B }
+	{
+		\ex{ r \in \R^+ }{ B(x,r) \subset B }
+	}
+	\denote
+	{
+		\set{ x \in B }[ x $ inner point of $ B ] \as \open{ B }
+	}
+
+	}
+
+	\definition{ $Adherent point$ }
+	{
+	\letbe
+	{
+		(A,d) $ metric space $.
+		B \subset A.
+		x \in A
+	}
+	\then{ x }{ $an adherent point of $ B }
+	{
+		\all{ r \in \R^+ }
+		{
+			\disjoint{ B(x,r) }{ B }
+		}
+	}
+	\denote
+	{
+		\set{ x \in B }[ x $ adherent point of $ B ] \as \closed{ B }
+	}
+	}
+
+	\definition{ $Accumulation point$ }
+	{
+	\letbe
+	{
+		(A,d) $ metric space $.
+		B \subset A.
+		x \in B
+	}
+	\then{ x }{ $an accumulation point of $ B }
+	{
+		\all{ r \in \R^+ }
+		{
+			B(x,r) \setminus \{x\} \cap B \neq \emptyset
+		}
+	}
+	\denote
+	{
+		\set{ x \in B }[ x $ accumulation point of $ B ] \as B'.
+		x \in \closed{ B } \logicand x \nin B' \as x $ aislated point of $ B
+	}
+
+
+	
+	}
+
+	\definition{ $Compact$ }
+	{
+	\letbe
+	{
+		(A,d) $ metric space $.
+		K \subset A
+	}
+	\then{ K }{ $compact$ }
+	{
+		\all{ \family{ U_i }{ i } \subset \Pc(A) }[ K \subset \union{ U_i }{ i } ]
+		{
+			\ex{ \family{ U_j }{ j }[ 1 ][ n ] \subset \family{ U_i }{ i } }{ K \subset \union{ U_j }{ j }[ 1 ][ n ] }
+		}
+	}	}
+
+	\definition{ $Connex$ }
+	{
+	\letbe
+	{
+		(A,d) $ metric space $.
+		B \subset A
+	}
+	\then{ B }{ $connex$ }
+	{
+		\all{ U_1,U_2 \subset A }[ U_1 = \open{ U_1 } \logicand U_2 = \open{ U_2 } \logicand B = (B \cap U_1) \cup (B \cap U_2) ]
+		{
+			( B \cap U_1 ) = \emptyset \logicor ( B \cap U_2 ) = \emptyset
+		}
+	}
+	}
+}

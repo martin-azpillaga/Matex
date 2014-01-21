@@ -1,0 +1,238 @@
+\unit{ $Metric Topology$ }
+{
+	\introduction{ $ metric topology $ }
+
+	\proposition{ $Inclusion of Compacts in Bounded Closed sets$ }
+	{
+	\letbe
+	{
+		(A,d) $ metric space $.
+		K \subset A $ compact $
+	}
+	\holds
+	{
+		K $ bounded $.
+		K = \closed{A}
+	}
+	\demonstration
+	{
+		$ Follow 2 steps $.
+		
+		\step{ 1 }{ K $ bounded$ }
+		{
+			K \subset \displaystyle\cup_{x \in K} B(x,1) \imp \ex{ \family{ x_i }{ i }[ 1 ][ n ] \subset K }{ K \subset \union{ B(x_i,1) }{ i }[ 1 ][ n ] }.
+
+			\all{ x_0 \in A }
+			{
+				K \subset \union{ B(x_0,d(x_0,x_i)+1) }{ i }[ 1 ][ n ].
+				\be{ m \in \R  }{ max \family{ d(x_0,x_i) + 1 }{ i }[ 1 ][ n ] }.
+				K \subset B(x_0,m).
+				K $ bounded $ 
+			}
+		}
+		
+		\step{ 2 }{ K = \closed{K} }
+		{
+			K = \closed{K} \ifandonlyif K^c = \open{K^c}.
+
+			\all{ p \in K^c }
+			{
+				\all{ x \in K }
+				{
+					\be{ d_x \in \R^+  }{ d(x,p) }.
+					\be{ U_x \subset A }{ B(x,\frac{d_x}{2}) }.
+					\be{ V_x \subset A }{ B(p,\frac{d_x}{2}) }.
+					.
+					K \subset \displaystyle\cup_{x \in K} U_x.
+					K $ compact $ \imp \ex{ \family{ x_i }{ i }[ 1 ][ n ] \subset K }{ K \subset \union{ U_{x_i} }{ i }[ 1 ][ n ] }.
+					.
+					\be{ U }{ \union{ U_{x_i} }{ i }[ 1 ][ n ] }.
+					\be{ V }{ \intersection{ V_{x_i} }{ i }[ 1 ][ n ] }.
+
+					\disjoint{U}{V} \imp V \subset K^c.
+					V = \open{V}.
+					p \in V     
+				}
+
+				p \in \open{K^c}.
+			}
+			K^c = \open{K^c} \imp K = \closed{K}
+		}
+		
+	}}
+
+
+
+	\proposition{ $Finite intersection property$ }
+	{
+	\letbe
+	{
+		(A,d) $ metric space $.
+		\family{ K_i }{ i } \subset \Pc(A) $ compacts $ \suchthat \all{ \family{ K_j }{ j }[ 1 ][ n ] \subset \family{ K_i }{ i } }
+		{
+			\intersection{ K_j }{ j }[ 1 ][ n ] \neq \emptyset
+		} 
+	}
+	\holds
+	{
+		\intersection{ K_i }{ i } \neq \emptyset
+	}
+	\demonstration
+	{
+		$ Counter-reciprocal: $ \intersection{ K_i }{ i } = \emptyset.
+
+		\all{ K \in \family{ K_i }{ i } }
+		{
+			\all{ x \in K }
+			{
+				x \nin \intersection{ K_i }{ i } \imp x \in (\intersection{ K_i }{ i })^c \imp x \in \union{ K_i^c }{ i }
+			}
+
+			K \subset \union{ K_i^c }{ i }.
+
+			K $ compact $ \imp \ex{ \family{ K_j }{ j }[ 1 ][ n ] \subset \family{ K_i }{ i } }{ K \subset \union{ K_j^c }{ j }[ 1 ][ n ] }.
+
+			K \subset (\intersection{ K_j }{ j }[ 1 ][ n ])^c.
+
+			\intersection{ K_j }{ j }[ 1 ][ n ] \cap K = \emptyset.
+
+		}
+	}}
+
+
+
+	\proposition{ $Inheritance of compacticity by closed subsets$ }
+	{
+	\letbe
+	{
+		(A,d) $ metric space $.
+		K \subset A $ compact $.
+		F \subset K $ closed $.
+	}
+	\holds
+	{
+		F $ compact $
+	}
+	\demonstration
+	{
+		\all{ \family{ U_i = \open{U_i}}{ i } \subset \Pc(A) }[ F \subset \union{ U_i }{ i } ]
+		{
+			K \subset \union{ U_i }{ i } \cup F^c.
+
+			K $ compact $ \imp \ex{ \family{ U_j }{ j }[ 1 ][ n ] \subset \family{ U_i }{ i } }{ K \subset \union{ U_j }{ j }[ 1 ][ n ] \cup F^c }.
+
+			F \subset K \imp F \subset \union{ U_j }{ j }[ 1 ][ n ] \cup F^c \imp F \subset \union{ U_j }{ j }[ 1 ][ n ].
+		}
+
+		F $ compact $
+	}}
+
+
+
+	\proposition{ $Characterization of real compacts$ }
+	{
+	\letbe
+	{
+		K \subset \R
+	}
+	\holds
+	{
+		K $ compact $ \ifandonlyif K $ closed $ \logicand K $ bounded $
+	}
+	\demonstration
+	{
+		\rightway
+		{
+			$ Already seen$
+		}
+		\leftway
+		{
+			$ Follow 2 steps $.
+			
+			\step{ 1 }{ \forall a,b \in \R : [a,b] $ compact$ }
+			{
+				$ Counter-reciprocal: $ [a,b] $ no compact $.
+
+				\ex{ \family{ U_i = \open{U_i}}{ i } \subset \Pc(\R) }{ [a,b] \subset \union{ U_i }{ i } \logicand \all{ \family{ U_j }{ j }[ 1 ][ n ] \subset \family{ U_i }{ i } }
+				{
+					[a,b] \nsubset \union{ U_j }{ j }[ 1 ][ n ]
+				}}.
+
+				\be{ I_0 }{ [a,b] }.
+
+				\all{ n \in \N }
+				{
+				 	\be{ I_n }{ I \in \set{ I_{n-1}', I_{n-1}''} }[ I $ no compact $ ] 
+				} 
+
+				$ Nested intervals theorem $ \imp \ex{ x_0 \in \R }{ \intersection{ I_n }{ n } = \set{ x_0 } }.
+
+				\ex{ U_{i_0} \in \family{ U_i }{ i } }{ x_0 \in U_{i_0} }.
+
+				U_{i_0} = \open{U_{i_0}} \imp \ex{ \delta \in \R^+ }{ (x-\delta,x+\delta) \subset U_{i_0} }.
+
+				\ex{ n \in \N }{ \frac{b-a}{2^n} < \delta } \imp I_n \subset (x-\delta,x+\delta) \subset U_{i_0}.
+
+				I_n $ compact $
+			}.
+			
+			\step{ 2 }{ A $ compact$ }
+			{
+				A $ bounded $ \imp \ex{ a,b  \in \R }{ A \subset [a,b] }.
+
+				\multiple[\{][ \} ]
+				{
+					A $ closed $.
+					A \subset [a,b] $ compact $ 
+				} \imp A $ compact $
+			}
+		}
+	}}
+
+
+
+	\proposition{ $Characterization of real connex sets$ }
+	{
+	\letbe
+	{
+		A \subset \R
+	}
+	\holds
+	{
+		A $ connex $ \ifandonlyif \ex{ a,b \in \R }{ A = |a,b| }
+	}
+	\demonstration
+	{
+		\rightway
+		{
+			$ Counter-reciprocal: $ \nexists a,b \in \R \suchthat A = |a,b|.
+
+			\ex{ x \in (inf A, sup A) }{ x \nin A }.
+
+			A = (-\infty, x) \cup (x,\infty).
+
+			A $ no connex $
+		}
+		\leftway
+		{
+			\definedfunction{ arctg }{ \R }{ (-\frac{\pi}{2},\frac{\pi}{2}) }{ x }{ arctg(x) }.
+
+			\multiple[ \{ ][ \} ]
+			{
+				\R $ connex $.
+				arctg $ continuous $ 
+			} \imp (-\frac{\pi}{2},\frac{pi}{2}) $ connex $.
+			
+			\all{ a,b \in \R }
+			{
+				\definedfunction{ \phi }{ (-\frac{\pi}{2},\frac{pi}{2}) }{ (a,b) }{ x }{ a + (b-a)\frac{(x + \frac{\pi}{2} )}{\pi}}.
+
+				(a,b) $ connex $
+
+				|a,b| \subset \closed{(a,b)} \imp |a,b| $ connex $
+			}
+
+			A $ connex $
+		}	
+	}}
+}

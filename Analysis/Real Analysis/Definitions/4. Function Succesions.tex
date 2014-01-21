@@ -1,0 +1,85 @@
+\unit{ $Function Succesions$ }
+{
+	\introduction{ $ asdf $ }
+
+	\definition{ $Function Succesion$ }
+	{
+	\letbe
+	{
+		A,B $ sets $
+	}
+	\call{ $function succesion over the sets $ A,B }
+	{
+		\definedfunction{ \Phi }{ \N }{ \functionspace{ A }{ B } }{ n }{ f_n }
+	}
+	\denote
+	{
+		Im \Phi \as \succesion{ f_n }{ n } \subset \functionspace{ A }{ B }.
+		A,B $ metric spaces $ \as \succesion{ f_n }{ n } $ metric function succesion $.
+		A $ metric space $ \logicand B=\R \as \succesion{ f_n }{ n } $ real function succesion $
+	}
+	}
+
+	\definition{ $Punctually convergent$ }
+		{
+	\letbe
+	{
+		\succesion{ f_n }{ n } \subset \functionspace{ A_1 }{ A_2 } $ metric function succesion $
+	}
+	\then{ \succesion{ f_n }{ n } }{ $punctually convergent$ }
+	{
+		\ex{ f \in \functionspace{ A_1 }{ A_2 } }{ \all{ x \in A_1 }
+		{
+			f(x) = \limit{ f_n(x) }{ n }
+		} }
+	}
+	\denote
+	{
+		f \as $ punctual limit of $ \succesion{ f_n }{ n }.
+		f $ punctual limit of $ \succesion{ f_n }{ n } \as f_n \convergesto f
+	}
+
+	}
+
+	\definition{ $Uniformly convergent$ }
+	{
+	\letbe
+	{
+		\succesion{ f_n }{ n } \subset \functionspace{ A_1 }{ A_2 } $ metric function succesion $
+	}
+	\then{ \succesion{ f_n }{ n } }{ $uniformly convergent$ }
+	{
+		\ex{ f \in \functionspace{ A_1 }{ A_2 } }{ \all{ \eps \in A_1 }
+		{
+			\ex{ n_0 \in \N }{ \all{ n \in \N }[ n \geq n_0 ]
+			{
+				f_n - f < \eps
+			} }
+		} }
+	}
+	\denote
+	{
+		f \as $ uniform limit of $ \succesion{ f_n }{ n }.
+		f $ uniform limit of $ \succesion{ f_n }{ n } \as f_n \convergesuniformlyto f
+	}	}
+
+	\definition{ $Uniformly Cauchy$ }
+	{
+	\letbe
+	{
+		(A_1,d_1),(A_2,d_2) $ metric spaces $.
+		B \subset A_1.
+		\succesion{ f_n }{ n } \subset \functionspace{ B }{ A_2 }
+	}
+	\then{ \succesion{ f_n }{ n } }{ $Uniformly Cauchy$ }
+	{
+		\all{ \eps \in \R^+ }
+		{
+			\ex{ n_0 \in \N }{ \all{ n,m \in \N }[ n,m \geq n_0 ]
+			{
+				|f_m - f_n| < \eps
+			} }
+		}
+	}
+	}
+}

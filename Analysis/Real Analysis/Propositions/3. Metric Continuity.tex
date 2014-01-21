@@ -1,0 +1,404 @@
+\unit{ $Metric Continuity$ }
+{
+	\introduction{ $ Continuity in Metric Spaces $ }
+
+	\proposition{ $Characterization of limits by succesions$ }
+	{
+	\letbe
+	{
+		(A_1,d_1), (A_2,d_2) $ metric spaces $.
+		B \subset A_1.
+		\function{ f }{ B }{ A_2 }.
+		p \in B'.
+		l \in A_2
+	}
+	\holds
+	{
+		l = \limit{ f(x) }{ x }[ p ] \ifandonlyif \all{ \succesion{ p_n }{ n } \subset B \setminus \{0\} }[ p_n \convergesto p ]
+		{
+			\succesion{ f(p_n) }{ n } \convergesto l
+		}
+	}
+	\demonstration
+	{
+		\rightway
+		{
+			\all{ \eps \in \R^+ }
+			{
+				\ex{ \delta \in \R^+ }{ \all{ x \in A_1 }[ d(x,p) < \delta ]
+				{
+					d(f(x),l) < \eps
+				} }
+			}
+
+			\all{ \succesion{ p_n }{ n } \subset B \setminus \{p\} }[ p_n \convergesto p ]
+			{
+				\multiple[ \{ ][ \} ]
+				{
+					p_n \convergesto p.
+					\eps = \delta 
+				}
+				\imp \ex{ n_0 \in \N }{ \all{ n \in \N }[ n \geq n_0 ]
+				{
+					d(p_n,p) < \delta \imp d(f(p_n),l) < \eps
+				} }
+			}
+		}
+		\leftway
+		{
+			$ Counter-reciprocal: $ \limit{ f(x) }{ x }[ p ] \neq l.
+
+			\ex{ \eps \in \R^+ }{ \all{ n \in \N }
+			{
+				\ex{ x_n \in B }{ d_1(x_n,p) < \frac{1}{n} \logicand d_2(f(x_n),l) > \eps }
+			} }
+
+			$ In particular, $ x_n \neq p \imp x \in B \setminus \{p\}.
+
+			\ex{ \succesion{ x_n }{ n }  \subset B \setminus \{p\} }{ \limit{ x_n }{ n } = p \logicand \limit{ f(x_n) }{ n } \neq l }
+		}
+	}}
+
+
+
+	\proposition{ $Compacts are closed by limit$ }
+	{
+	\letbe
+	{
+		(A,d) $ metric space $.
+		K \subset A $ compact $.
+		\succesion{ a_n }{ n } \subset K \suchthat a_n \convergesto a
+	}
+	\holds
+	{
+		a \in K
+	}
+	\demonstration
+	{
+		$ Counter-reciprocal: $ a \nin K.
+
+		K $ compact $ \imp K $ closed $ \imp K^c $ open $.
+
+		a \in K^c \imp \ex{ \delta \in \R^+ }{ B(a,\delta) \subset K^c }.
+
+		\all{ \succesion{ a_n }{ n } \subset A }[ a_n \convergesto a ]
+		{
+			\ex{ n_0 \in \N }{ \all{ n \in \N }[ n \geq n_0 ]
+			{
+				d(a_n,a) < \delta \imp a_n \in B(a,\delta) \imp a_n \in K^c
+			} }
+		}
+
+		\nexists \succesion{ a_n }{ n } \subset K \suchthat a_n \convergesto a
+	}}
+
+
+
+	\proposition{ $Continuous funtions are closed by composition$ }
+	{
+	\letbe
+	{
+		(A_1,d_1), (A_2,d_2), (A_3,d_3) $ metric spaces $.
+		B \subset A_1.
+		\function{ f }{ B }{ A_2 }.
+		\function{ g }{ f(B) }{ A_3 }.
+		p \in B'.
+		f $ continuous in $ p.
+		f $ continuous in $ f(p)
+	}
+	\holds
+	{
+		g \circ f $ continuous in $ p
+	}
+	\demonstration
+	{
+		g $ continuous in $ f(p) \imp \all{ \eps \in \R^+ }
+		{
+			\ex{ \delta \in \R^+ }{ \all{ y \in f(B) }[ d(f(p),y) < \delta ]
+			{
+				d(g \circ f(p),g(y)) < \eps
+			} }
+
+			f $ continuous in $ p \imp \ex{ \mu \in \R^+ }{ \all{ x \in B }[ d(p,x) < \mu ]
+			{
+				d(f(p),f(x)) < \delta \imp d(g \circ f(p)),g \circ f(x) ) < \eps
+			} }		
+		}		
+	}}
+
+
+
+	\proposition{ $Characterization of continuous functions by open sets$ }
+	{
+	\letbe
+	{
+		(A_1,d_1), (A_2,d_2) $ metric spaces $.
+		B \subset A_1.
+		\function{ f }{ B }{ A_2 }
+	}
+	\holds
+	{
+		f $ continuous in $ B \ifandonlyif \all{ U_i \subset A_2 }[ U = \open{U} ]
+		{
+			f^{-1}(U) = \open{ f^{-1}(U) }
+		}
+	}
+	\demonstration
+	{
+		\rightway
+		{
+			\all{ U \subset A_2 }[ U = \open{U} ]
+			{
+				\all{ p \in f^{-1}(U) }
+				{
+					f(p) \in U = \open{ U } \imp \ex{ \eps \in \R^+ }{ B(f(p), \eps) \subset A_2 }.
+
+					f $ continious in $ p \imp \ex{ \delta \in \R^+ }{ B(p,\delta) \subset f^{-1}(U) }.
+
+					p \in \open{ f^{-1}(U) }
+				}
+
+				f^{-1}(U) = \open{ f^{-1}(U) }
+			}
+		}
+		\leftway
+		{
+			\all{ p \in A_1 }
+			{
+				\all{ \eps \in \R^+ }
+				{
+					\be{ U \subset A_2 }{ B(f(p),\eps) }.
+
+					U = \open{ U } \imp f^{-1}(U) = \open{ f^{-1}(U) }.
+
+					p \in \open{ f^{-1}(U) } \imp \ex{ \delta \in \R^+ }{ B(p,\delta) \subset f^{-1}(U) }
+				}
+
+				f $ continuous in $ p
+			}
+
+			f $ continuous in $ B
+		}	
+	}}
+
+
+
+	\proposition{ $Invariancy of compacts by continuous functions$ }
+	{
+	\letbe
+	{
+		(A_1,d_1),(A_2,d_2) $ metric spaces $.
+		K \subset A_1 $ compact $.
+		\function{ f }{ K }{ A_2 } $ continuous $
+	}
+	\holds
+	{
+		f(K) \subset A_2 $ compact $
+	}
+	\demonstration
+	{
+		\all{ \family{ U_i \with U_i = \open{U_i} }{ i } \subset \Pc(A_2) }[ f(K) \subset \union{ U_i }{ i } ]
+		{
+			\all{ i \in I }
+			{
+				\be{ V_i }{ f^{-1}(U_i) }.
+				f $ continuous $ \imp V_i = \open{V_i}
+			}
+
+			K \subset \union{ V_i }{ i } \imp \ex{ \family{ V_j }{ j }[ 1 ][ n ] \subset \family{ V_i }{ i } }{ K \subset \union{ V_j }{ j }[ 1 ][ n ] }.
+
+			f(K) \subset f(\union{ V_j }{ j }[ 1 ][ n ]) = \union{ f(V_j) }{ j }[ 1 ][ n ] = \union{ U_j }{ j }[ 1 ][ n ].
+		}
+
+		f(K) $ compact $
+	}}
+
+
+
+	\proposition{ $Invariancy of connex sets by continuous functions$ }
+	{
+	\letbe
+	{
+		(A_1,d_1),(A_2,d_2) $ metric spaces $.
+		B \subset A_1 $ connex $.
+		\function{ f }{ A }{ A_2 } $ continuous $
+	}
+	\holds
+	{
+		f(B) $ connex $
+	}
+	\demonstration
+	{
+		\counterreciprocal{ f(B) $ no connex$ }{ B $ no connex$ }
+		{
+			\ex{ U,V \subset A_2 }{ \multiple[ \{ ]
+			{
+				U = \open{U}.
+				V = \open{V}.
+				U \cap f(B) \neq \emptyset.
+				V \cap f(B) \neq \emptyset.
+				B = ( U \cap B ) \cupdot ( V \cap B )
+			} }	..
+
+			f^{-1}(f(B)) = f^{-1}( U \cap f(B) \cupdot V \cap f(B) ).
+
+			B \subset f^{-1}(f(B)).
+
+			B \subset f^{-1}( U \cap f(B) \cupdot V \cap f(B) ).
+
+			B \subset ( f^{-1}(U) \cap f^{-1}(f(B)) ) \cupdot ( f^{-1}(V) \cap f^{-1}(f(B)) ).
+
+			B = ( f^{-1}(U) \cap f^{-1}(f(B)) \cap B ) \cupdot ( f^{-1}(V) \cap f^{-1}(f(B)) \cap B ).
+
+			B = ( f^{-1}(U) \cap B ) \cupdot ( f^{-1}(V) \cap B ).
+
+			\multiple[ \{ ][ \} ]
+			{
+				f^{-1}(U) = \open{f^{-1}(U)}.
+				f^{-1}(V) = \open{f^{-1}(V)}.
+				f^{-1}(U) \cap B \neq \emptyset.
+				f^{-1}(V) \cap B \neq \emptyset.
+				B = ( f^{-1}(U) \cap B ) \cupdot ( f^{-1}(V) \cap B )
+			} \imp B $ no connex $
+		}
+	}}
+
+
+
+	\proposition{ $Characterization of Uniformly continuous functions over compacts by continuous functions$ }
+	{
+	\letbe
+	{
+		(A_1,d_1),(A_2,d_2) $ metric space $ \suchthat A_1 $ compact $
+	}
+	\holds
+	{
+		f $ uniformly continuous over $ A_1 \ifandonlyif f $ continuous over $ A_1
+	}
+	\demonstration
+	{
+		f $ continuous over $ A_1 \imp.
+
+		\all{ p \in A_1 }
+		{
+			\all{ \eps \in \R^+ }
+			{
+				\ex{ \delta_p \in \R^+ }{ \all{ x \in A_1 }[ d(x,p) < \delta_p ]
+				{
+					d(f(x),f(p)) < \frac{\eps}{2}
+				} }
+			}
+		}
+
+		\multiple[ \{ ][ \} ]
+		{
+			A_1 $ compact $.
+			A_1 \subset \displaystyle\bigcup_{p \in A_1} B(p,\frac{\delta_p}{2}) 
+		}
+
+		\imp \ex{ \family{ p_i }{ i }[ 1 ][ n ] \subset A_1 }{ A_1 \subset \union{ p_i }{ i }[ 1 ][ n ] }.
+
+
+		\all{ \eps \in \R^+ }
+		{
+			\be{ \delta }{ min \family{ \frac{\delta_{p_i}}{2}}{ i }[ 1 ][ n ] }.
+
+			\all{ x,y \in A_1 }[ d(x,y) < \delta ]
+			{
+				\ex{ p \in \family{ p_i }{ i }[ 1 ][ n ] }{ x \in B(p,\frac{\delta_p}{2} }.
+
+				d(x,p) < \frac{\delta_p}{2} \imp d(f(x),f(p)) < \frac{\eps}{2}.
+
+				d(y,p) \leq d(y,x)+d(x,p) < \delta + \frac{\delta_p}{2} \leq \delta_p.
+
+				d(y,p) < \delta_p \imp d(f(y),f(p)) < \frac{\eps}{2}.
+
+				d(f(x),f(y)) \leq d(f(x),f(p)) + d(f(p),f(y)) < \eps
+			}	
+		}
+
+		f $ uniformly continuous over $ A_1
+	}}
+
+
+
+	\proposition{ $Weierstrass' theorem$ }
+	{
+	\letbe
+	{
+		(A,d) $ metric space $.
+		K \subset A $ compact $.
+		\function{ f }{ K }{ \R } $ continuous over $ K
+	}
+	\holds
+	{
+		f(K) $ compact $
+	}
+	\demonstration
+	{
+		$ Follow 2 steps $.
+		
+		\step{ 1 }{ f(K) $ bounded$ }
+		{
+			K $ compact $ \imp K $ bounded $.
+
+			f $ continuous over $ K \imp f $ bounded $ \imp f(K) $ bounded $
+		}.
+		
+		\step{ 2 }{ f(K) $ closed$ }
+		{
+			f $ bounded $ \imp \ex{ s,i \in \R }{ s = sup f(K) \logicand i = inf f(K) }.
+
+			\all{ n \in \N }
+			{
+				\ex{ x_n \in K }{ s-\frac{1}{n} < f(x_n) \leq s }
+			}
+
+			\multiple[ \{ ][ \} ]
+			{
+				\succesion{ f(x_n) }{ n } \subset f(K).
+				f(x_n) \convergesto s
+			} \imp s \in f(K)..
+
+			\similarly{ i \in f(K) }.
+
+			f(K) $ closed $
+		}
+	}}
+
+
+
+	\proposition{ $Intermediate Value Theorem$ }
+	{
+	\letbe
+	{
+		a,b \in \R.
+		\function{ f }{ [a,b] }{ \R } $ continuous over $ [a,b]
+	}
+	\holds
+	{
+		\all{ y \in <f(a),f(b)> }
+		{
+			\ex{ x \in [a,b] }{ f(x) = y }
+		}
+	}
+	\demonstration
+	{
+		\multiple[ \{ ][ \} ]
+		{
+			[a,b] $ connex $.
+			f $ continuous over $ [a,b]
+		}
+
+		\imp f([a,b]) $ connex $.
+
+		\ex{ c,d \in \R }{ f([a,b]) = |c,d| }.
+
+		f(a),f(b) \in f([a,b]) \imp <f(a),f(b)> \subset f([a,b]).
+
+		\all{ y \in <f(a),f(b)> }
+		{
+			y \in f([a,b]) \imp \ex{ x \in [a,b] }{ f(x) = y }
+		}
+	}}
+}

@@ -1,0 +1,140 @@
+\unit{ $The Field of Real Numberss$ }
+{
+
+	\introduction{ 
+		$
+		The field of real numbers is the transcendent extension \\
+		of the rational numbers that represent all the possible \\
+		values that can be obtained once a reference is set in a \\
+		line. This set and its properties have been used since the \\
+		very beggining of the mathematics but its formalization didn't \\
+		come off till the 20th century. As we will discuss in this unit, \\
+		the field of real numbers is the defined by a field that \\
+		accomplishes some special properties. The point is that exists \\
+		one unique field ( over isomorphisms ) that has this properties \\
+		and thats why its calles The field of real numbers. Lets start \\
+		From the very beggining:
+		$
+	}
+
+	\definition{ $Ordered Conmutative Field$ }
+	{
+	\letbe
+	{
+		(K,+,\cdot) $ commutative field $.
+		R $ total order over $ K
+	}
+	\then{ (K, +, \cdot, R) }{ $an ordered commutative field$ }
+	{
+		\all{ x,y,z \in K }[ (x,y) \in R ]
+		{
+			(x+z,y+z) \in R
+		}.
+
+		\all{ x,y \in K }[ (0,x) \in R \logicand (0,y) \in R ]
+		{
+			(0,x\cdot y) \in R
+		}
+	}
+	\denote
+	{
+		\set{ x \in  \K }[ (0,x) \in R ] \setminus \{0\} \as \K^+.
+		\set{ x \in  \K }[ (x,0) \in R ] \setminus \{0\} \as \K^-
+	}}
+
+
+
+	\definition{ $Arquimedian$ }
+	{
+	\letbe
+	{
+		\K $ ordered commutative field $
+	}
+	\then{ \K }{ $arquimedian$ }
+	{
+		\all{ \function{ \phi }{ \N }{ \K } }[ \phi $ inyective $ ]
+		{
+			\phi(\N) $ not bounded $
+		}
+	}}
+
+
+
+	\definition{ $Convergent Succession$ }
+	{
+	\letbe
+	{
+		A $ set $.
+		\succesion{ a_n }{ n }
+	}
+	\then{ \succesion{ a_n }{ n } }{ $convergent$ }
+	{
+		\ex{ l \in K }{ \all{ \eps \in \K^+ }
+		{
+			\ex{ n_0 \in \N }{ \all{ n \in \N }[ n \geq n_0 ] 
+			{
+				| a_n - l | < \eps
+			}}
+		}}
+	}
+	\denote
+	{
+		l \as \limit{ a_n }{ n }.
+		a_n $ convergent $ \logicand \limit{ a_n }{ n } = l \as a_n \to l
+	}}
+
+
+
+	\definition{ $Cauchy Succession$ }
+	{
+	\letbe
+	{
+		\K $ ordered commutative field $
+		
+	}
+	\then{ \succesion{ a_n }{ n } \subset \K }{ $a Cauchy Succession$ }
+	{
+		\all{\eps \in K^+ }
+		{
+			\ex{ n_0 \in \N }{ \all{ n,m \in \N }[ n,m \geq n_0]
+			{
+				|a_n - a_m| < \eps
+			}} 
+		}
+	}}
+
+
+
+	\definition{ $Complete$ }
+	{
+	\letbe
+	{
+		\K $ ordered commutative field $
+	}
+	\then{ \K }{ $complete$ }
+	{
+		\all{ \succesion{ a_n }{ n } \subset \K }[ \succesion{ a_n }{ n } $ Cauchy $ ]
+		{
+			\succesion{ a_n }{ n } $ convergent $
+		}
+	}}
+
+
+
+	\definition{ $Field of Real Numbers$ }
+	{
+	\letbe
+	{
+		A $ set $
+	}
+	\then{ A }{ $the field of real numbers$ }
+	{
+		A $ ordered commutative field $.
+		A $ arquimedian $.
+		A $ complete $
+	}
+	\denote
+	{
+		A \as \R
+	}}
+}
