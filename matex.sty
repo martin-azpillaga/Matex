@@ -13,8 +13,8 @@
 
 
 % Hacks
-%\setlength{\parindent}{0cm} % disable paragraph indentation
-%\endlinechar=-1\relax % disable new paragraph with 2 line breaks
+\setlength{\parindent}{0cm} % disable paragraph indentation
+\endlinechar=-1\relax % disable new paragraph with 2 line breaks
 \newenvironment{absolutelynopagebreak}
   {\par\nobreak\vfil\penalty0\vfilneg
    \vtop\bgroup}
@@ -117,9 +117,6 @@
 
 % Custom Environments
 
-
-%\leftskip=1.5in
-
 \newcommand\myitem[1]{
 \\ \hspace*{\value{tabspace}pt} \begin{math} \cdot \; #1 \end{math}
 }
@@ -163,6 +160,8 @@
 
 
 % Math Structures
+
+\renewcommand{\let}[1] {\tabtext{Let}{#1}}
 
 \newcommand{\letbe}[1] {\tabtext{Let}{#1}}
 
