@@ -2,5 +2,5 @@
 	<content><![CDATA[
 \succesion{ f_n }{ n } \subset \functionspace{ A_1 }{ A_2 } \$ metric function succesion \$
 ]]></content>
-	<tabTrigger>mfs</tabTrigger>
+	<scope>text.tex.latex</scope>
 </snippet>

@@ -3,5 +3,5 @@
 \sumatory{ ${1:a_n}${2:f_n} }{ n }[ ${3:1} ] ${4:\$ power series \$}
 ]]></content>
 
-	<tabTrigger>series</tabTrigger>
+	<scope>text.tex.latex</scope>
 </snippet>

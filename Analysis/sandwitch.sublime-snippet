@@ -13,5 +13,5 @@
 }
 ]]>
 	</content>
-	<tabTrigger>sandwitch</tabTrigger>
+	<scope>text.tex.latex</scope>
 </snippet>

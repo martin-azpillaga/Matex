@@ -3,5 +3,5 @@
 \sumatory{ a_nx^n }{ n }[ 0 ] \$ power series \$
 ]]></content>
 	<tabTrigger>ps</tabTrigger>
-</snippet>
+	<scope>text.tex.latex</scope>
 

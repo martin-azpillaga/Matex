@@ -3,4 +3,5 @@
 \frac{ ${1:denominator} }{ ${2:numerator} }
 ]]></content>
 	<tabTrigger>frac</tabTrigger>
+	<scope>text.tex.latex</scope>
 </snippet>

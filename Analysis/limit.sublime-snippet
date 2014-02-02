@@ -3,5 +3,5 @@
 \\${1:superior}limit{ ${2:term} }{ ${3:over} }${4:[ ${5:near} ]}
 ]]></content>
 	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
-	<tabTrigger>lim</tabTrigger>
+	<scope>text.tex.latex</scope>
 </snippet>
