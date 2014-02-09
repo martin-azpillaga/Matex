@@ -1,0 +1,25 @@
+<snippet>
+<scope>text.xml</scope>
+
+<description>Matex Snippets basic structure</description>
+<tabTrigger>snippet</tabTrigger>
+
+<content>
+<![CDATA[
+<snippet>
+<scope>text.tex.latex</scope>
+
+<description>.</description>
+<tabTrigger>${1:tabTrigger}</tabTrigger>
+
+<content>
+<![CDATA[
+${2:content}
+]]${3:>}
+</content>
+
+</snippet>
+]]>
+</content>
+
+</snippet>

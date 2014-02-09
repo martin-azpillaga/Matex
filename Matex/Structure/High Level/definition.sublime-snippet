@@ -1,23 +1,31 @@
 <snippet>
-	<content><![CDATA[
-\definition{ \$ ${1:name} \$ }
+<scope>text.tex.latex</scope>
+
+<description>.</description>
+<tabTrigger>definition</tabTrigger>
+
+<content>
+<![CDATA[
+\definition{ \$ ${1:entity} \$ }
 {
-\letbe
-{
-	${2:let.}
-}
-\then{ ${3:object} }{ \$${4:a/an name} ${5:over}\$ ${6:this }}
-{
-	${7:condition.}
-}
-${8:\denote
-{
-	${9:property} \as ${10:notation.}
-\}\}}
+	\let
+	{
+		${2:statements.}
+	}
+	\then{ ${3:item} }{ \$ ${4:a/an entity} \$ }
+	{
+		${5:conditions.}
+	}${6:
+	\denote
+	{
+		${7:property} \as ${8:notation.}
+	\}}
+\}
+
+
+
+
 ]]>
-	</content>
-	<tabTrigger>def</tabTrigger>
-	<!-- <scope>source.python</scope> -->
-	<scope>text.tex.latex</scope>
+</content>
 
-
+</snippet>

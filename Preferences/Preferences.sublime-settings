@@ -1,0 +1,11 @@
+{
+	"auto_match_enabled": false,
+	"color_scheme": "Packages/Color Scheme - Default/Monokai.tmTheme",
+	"font_size": 21,
+	"ignored_packages":
+	[
+		"Vintage"
+	],
+	// Controls what scopes auto complete will be triggered in ( set to all )
+    "auto_complete_selector": ""
+}
