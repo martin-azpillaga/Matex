@@ -2,24 +2,24 @@
 <scope>text.tex.latex</scope>
 
 <description>.</description>
-<tabTrigger>proposition</tabTrigger>
+<tabTrigger>name</tabTrigger>
 
 <content>
 <![CDATA[
-\proposition{ \$ ${1:abstract} \$ }
+\definition{ \$ ${1:entity} \$ }
 {
 	\let
 	{
 		${2:statements.}
 	}
-	\holds
+	\name{ \$ ${3:entity} \$ }
 	{
-		${3:then, holds.}
-	}
-	\demonstration
+		${4:naming.}
+	}${5:
+	\denote
 	{
-		${4:demonstration.}
-	}
+		${6:property} \as ${7:notation.}
+	\}}
 }
 
 
