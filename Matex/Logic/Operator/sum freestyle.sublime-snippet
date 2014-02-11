@@ -6,7 +6,7 @@
 
 <content>
 <![CDATA[
-\sum*{ ${1:general term} }{ ${2:indexed by} }{ ${3:over.} }
+\sum*{ ${1:general term} }{ ${2:over.} }
 ]]>
 </content>
 

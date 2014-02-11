@@ -6,7 +6,7 @@
 
 <content>
 <![CDATA[
-\disjunctUnion*{ ${1:general term} }{ ${2:indexed by} }{ ${3:over.} }
+\disjunctUnion*{ ${1:general term} }{ ${2:over.} }
 ]]>
 </content>
 
