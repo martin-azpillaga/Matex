@@ -25,7 +25,7 @@
 \RequirePackage{xparse}
 \RequirePackage{MnSymbol}
 \RequirePackage{hyperref}
-
+\RequirePackage{comment}
 
 
 
@@ -126,7 +126,7 @@
 \newcommand{\dotEntry}[1]
 {
 	\\
-	\hspace*{\value{tabSpace}pt}
+	\hspace*{\value{indentation}pt}
 	
 	\begin{math}
 		\cdot \; #1
@@ -137,7 +137,7 @@
 \newcommand{\noDotEntry}[1]
 {
 	\\
-	\hspace*{\value{tabSpace}pt}
+	\hspace*{\value{indentation}pt}
 	
 	\begin{math}
 		#1
@@ -318,5 +318,462 @@
 
 
 
+% High level inner sections
 
+\newcommand{\letbe}[1]
+{
+	\tabtext{Let}{#1}
+}
+
+
+\newcommand{\then}[3]
+{
+	\tabtext{Then, $#1$ is $#2$ if}{#3}
+}
+
+
+\newcommand{\name}[2]
+{
+	\tabtext{We name $#1$ to}{#2}
+}
+
+
+\newcommand{\denote}[1]
+{
+	\tabtext{We denote}{#1}
+}
+
+
+\newcommand{\holds}[1]
+{
+	\tabtext{Then, holds}{#1}
+}
+
+
+\newcommand{\demonstration}[1]
+{
+	\tabmath{Demonstration}{#1}
+}
+
+
+
+
+
+
+\begin{comment}
+%					*** Law ***
+
+
+\newcommand{\rightinclusion}[1]
+{
+	\end{math}
+	
+		\tabmath{$\subset$)}{ #1 }
+	
+	\begin{math}
+}
+
+
+\newcommand{\leftinclusion} [1]
+{
+	\end{math}
+	
+		\tabmath{$\supset$)}{ #1 }
+	
+	\begin{math}
+}
+
+\newcommand{\rightway}[1]
+{
+	\end{math}
+
+		\tabmath{$\rightarrow$)}{ #1 }
+
+	\begin{math}
+}
+
+
+\newcommand{\leftway} [1]
+{
+	\end{math}
+
+		\tabmath{$\leftarrow$)} { #1 }
+
+	\begin{math}
+}
+
+
+\newcommand{\upperbound}[1]
+{
+	\end{math}
+
+		\tabmath{$\leq$)}{ #1 }
+
+	\begin{math}
+}
+
+
+\newcommand{\lowerbound}[1]
+{
+	\end{math}
+
+		\tabmath{$\geq$)}{ #1 }
+
+	\begin{math}
+}
+
+\newcommand{\induction}[2]
+{
+	\end{math}
+
+		\tabmath{Induction over $#1$}{ #2 }
+
+	\begin{math}
+}
+
+\newcommand{\counterreciprocal}[3]
+{
+	\end{math}
+
+		\tabmath{Counter-reciprocal: $#1 \imp #2$ }{ #3 }
+
+	\begin{math}
+}
+
+
+\newcommand{\case}[2]
+{
+	\end{math}
+
+		\tabmath{Case $#1$}{#2}
+
+	\begin{math}
+}
+
+\newcommand{\step}[3]
+{
+	\end{math}
+
+		\tabmath{Step $#1$: $#2$}{ #3 }
+
+	\begin{math}
+}
+
+
+\newcommand{\similarly}[1]
+{
+	\end{math}
+
+		\tabmath{Similarly}{ #1 }
+
+	\begin{math}
+}
+
+
+\newcommand{\imp}
+{
+	\rightarrow
+}
+
+
+\newcommand{\ifandonlyif}
+{
+	\leftrightarrow
+}
+
+
+
+
+
+
+
+%					*** Logic ***
+
+
+% Quantifiers
+
+\DeclareDocumentCommand{ \all }{ m o m }
+{
+	\IfValueTF{#2}
+	{
+		\end{math}
+
+			\tabmath{$\forall \; #1 \suchthat #2$}{ #3 }
+
+		\begin{math}
+	}{
+		\end{math}
+
+			\tabmath{$\forall \; #1$}{ #3 } 
+
+		\begin{math}
+	}
+}
+
+\DeclareDocumentCommand{ \ex }{ m m }
+{
+	\exists \; #1 \suchthat #2
+}
+
+
+
+% Determination
+
+\newcommand{ \be }[2]
+{
+	#1 \; := \; #2
+}
+
+\newcommand{\suchthat}
+{
+	\; \text{ \textquotestraightdblbase } \;
+}
+
+
+\newcommand{\with}
+{
+	\; {|} \;
+}
+
+
+\newcommand{\as}
+{
+	\; : \;
+}
+
+
+\newcommand{\conclude}
+{
+	\therefore) \; \;
+}
+
+
+
+% Functions
+
+\newcommand{\function}[3]
+{
+	#1 \; : \; #2 \to #3
+}
+
+
+\newcommand{\definedfunction}[5]
+{
+	\begin{array}{ r c l }
+		
+		#1 \;: #2 & \longrightarrow & #3 \\
+		#4 & \longmapsto & #5
+	
+	\end{array}
+}
+
+
+\newcommand{ \functionspace }[2]
+{
+	\F( #1, #2 )
+}
+
+
+
+% Logic operators
+
+\renewcommand{\and}
+{
+	\; \wedge \;
+}
+
+
+\renewcommand{\or}
+{
+	\; \vee \;
+}
+
+
+
+% Big operators 
+
+\DeclareDocumentCommand{\union}{ s m m o o }
+{
+	\IfBooleanTF{#1}
+	{
+		\displaystyle\bigcup_{#3} #2
+	}{
+		\IfValueTF {#4}
+		{ 
+			\IfValueTF {#5}
+			{
+				\displaystyle\bigcup_{ #3 = #4 }^{ #5 } \; #2
+			}{
+				\displaystyle\bigcup_{ #3 \geq #4 } \; #2
+			} 
+		}{
+			\displaystyle\bigcup_{ #3 \in \uppercase{ #4 } } \; #2
+		}
+	}
+}
+
+
+\DeclareDocumentCommand{\disjunctUnion}{ s m m o o }
+{
+	\IfBooleanTF {#1}
+	{
+		\displaystyle\bigcupdot_{#3} #2
+	}{
+		\IfValueTF {#4}
+		{ 
+			\IfValueTF {#5}
+			{
+				\displaystyle\bigcupdot_{ #3 = #4 }^{ #5 } \; #2
+			}{
+				\displaystyle\bigcupdot_{ #3 \geq #4 } \; #2
+			} 
+		}{
+			\displaystyle\bigcupdot_{ #3 \in \uppercase{ #4 } } \; #2
+		}
+	}
+}
+
+
+\DeclareDocumentCommand{\intersection}{ s m m o o }
+{
+	\IfBooleanTF {#1}
+	{
+		\displaystyle\bigcap_{#3} #2
+	}{
+		\IfValueTF {#4}
+		{ 
+			\IfValueTF {#5}
+			{
+				\displaystyle\bigcap_{ #3 = #4 }^{ #5 } \; #2
+			}{
+				\displaystyle\bigcap_{ #3 \geq #4 } \; #2
+			} 
+		}{
+			\displaystyle\bigcap_{ #3 \in \uppercase{ #4 } } \; #2
+		}
+	}
+}
+
+
+\newcommand{\sumation}{\sum}
+
+
+\DeclareDocumentCommand{\sum}{ s m m o o }
+{
+	\IfBooleanTF {#1}
+	{
+		\displaystyle\sumation_{#3} #2
+	}{
+		\IfValueTF {#4}
+		{ 
+			\IfValueTF {#5}
+			{
+				\displaystyle\sumation_{ #3 = #4 }^{ #5 } \; #2
+			}{
+				\displaystyle\sumation_{ #3 \geq #4 } \; #2
+			} 
+		}{
+			\displaystyle\sumation_{ #3 \in \uppercase{ #4 } } \; #2
+		}
+	}
+}
+
+
+\DeclareDocumentCommand{\product}{ s m m o o }
+{
+	\IfBooleanTF {#1}
+	{
+		\displaystyle\prod_{#3} #2
+	}{
+		\IfValueTF {#4}
+		{ 
+			\IfValueTF {#5}
+			{
+				\displaystyle\prod{ #3 = #4 }^{ #5 } \; #2
+			}{
+				\displaystyle\prod{ #3 \geq #4 } \; #2
+			} 
+		}{
+			\displaystyle\prod{ #3 \in \uppercase{ #4 } } \; #2
+		}
+	}
+}
+
+
+
+
+
+
+
+%					*** Object ***
+
+
+% Sets 
+
+\DeclareDocumentCommand{\set}{ m o }
+{
+	\IfValueTF {#2}
+	{
+		\{#1 \with #2 \}
+	}{
+		\{ #1 \}
+	}
+}
+
+\DeclareDocumentCommand{\family}{ m m o o }
+{
+	\IfValueTF {#3}
+	{
+		\IfValueTF {#4}
+		{
+			\{ #1 \}_{ #2 = #3 }^{ #4 }
+		}{
+			\{ #1 \}_{ #2 \geq #3 } 
+		}
+	}{
+		\{ #1 \}_{ #2 \in \uppercase{ #2 } }
+	}
+}
+
+\DeclareDocumentCommand{\vector}{ m m o o }
+{
+	\IfValueTF {#3}
+	{
+		\IfValueTF {#4}
+		{
+			( #1 )_{ #2 = #3 }^{ #4 }
+		}{
+			( #1 )_{ #2 \geq #3 } 
+		}
+	}{
+		( #1 )_{ #2 \in \uppercase{ #2 } }
+	}
+}
+
+
+\newcommand{\indexes}[2]
+{
+	[#1,#2]_\N
+}
+
+
+% Set properties
+
+\newcommand{\countable}
+{
+	\stackrel{ \subset }{ \sim } \N
+}
+
+
+\newcommand{\nonzero}
+{
+	\setminus \{0\}
+}
+
+
+
+
+
+
+\end{comment}
 \endinput
