@@ -8,7 +8,7 @@
 <![CDATA[
 \definition{ \$ ${1:entity} \$ }
 {
-	\let
+	\letbe
 	{
 		${2:statements.}
 	}
