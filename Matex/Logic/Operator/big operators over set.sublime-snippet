@@ -1,7 +1,13 @@
 <snippet>
-	<content><![CDATA[
-\\${1:operator}overset{ ${2:term} }{ ${3:varying} }{ ${4:over set} }
-]]></content>
-	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
-	<tabTrigger>bigs</tabTrigger>
+
+<scope>text.tex.latex</scope>
+<tabTrigger>summation freeway</tabTrigger>
+<description>.</description>
+
+<content>
+<![CDATA[
+\summation*{ ${1:general term} }{ ${2:indexed by} }{ ${3:over.} }
+]]>
+</content>
+
 </snippet>

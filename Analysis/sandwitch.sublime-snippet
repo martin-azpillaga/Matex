@@ -1,17 +1,23 @@
 <snippet>
-	<content><![CDATA[
-\$Sandwitch \$ ${1:homelet} \$ with \$ ${2:bread} \$ :\$.
 
-\lowerbound
+<scope>text.tex.latex</scope>
+<tabTrigger>sandwitch</tabTrigger>
+<description>.</description>
+
+<content>
+<![CDATA[
+\$Sandwitch \$ ${1:chocolate} \$ with \$ ${2:bread} \$ :\$.
+
+\lowerBound
 {
-	${3: homelet <= bread .}
+	${3:bread <= chocolate.}
 }.
 
-\upperbound
+\upperBound
 {
-	${4: bread <= homelet .}
+	${4:chocolate <= bread.}
 }
 ]]>
-	</content>
-	<scope>text.tex.latex</scope>
+</content>
+
 </snippet>

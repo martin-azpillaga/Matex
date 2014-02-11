@@ -1,16 +1,16 @@
 <snippet>
-<scope>text.xml</scope>
 
-<description>Matex Snippets basic structure</description>
+<scope>text.xml</scope>
 <tabTrigger>snippet</tabTrigger>
+<description>.</description>
 
 <content>
 <![CDATA[
 <snippet>
-<scope>text.tex.latex</scope>
 
-<description>.</description>
+<scope>text.tex.latex</scope>
 <tabTrigger>${1:tabTrigger}</tabTrigger>
+<description>.</description>
 
 <content>
 <![CDATA[

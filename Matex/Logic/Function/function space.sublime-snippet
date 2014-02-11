@@ -1,7 +1,13 @@
 <snippet>
-	<content><![CDATA[
-\functionspace{ ${1:from} }{ ${2:to} }
-]]></content>
-	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
-	<tabTrigger>fs</tabTrigger>
+
+<scope>text.tex.latex</scope>
+<tabTrigger>function space</tabTrigger>
+<description>.</description>
+
+<content>
+<![CDATA[
+\functionSpace{ ${1:from} }{ ${2:to} }
+]]>
+</content>
+
 </snippet>

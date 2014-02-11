@@ -1,6 +1,12 @@
 <snippet>
-	<content><![CDATA[
-\$ Follow ${1:number} steps \$.
+
+<scope>text.tex.latex</scope>
+<tabTrigger>steps</tabTrigger>
+<description>.</description>
+
+<content>
+<![CDATA[
+\$ Follow ${1:n} steps \$.
 
 \step{ 1 }{ ${2:first step name} }
 {
@@ -11,6 +17,7 @@
 {
 	${5:rows.}
 }
-]]></content>
-	<tabTrigger>steps</tabTrigger>
+]]>
+</content>
+
 </snippet>

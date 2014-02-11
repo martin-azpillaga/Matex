@@ -1,12 +1,12 @@
 <snippet>
 
 <scope>text.tex.latex</scope>
-<tabTrigger>series</tabTrigger>
+<tabTrigger>vector</tabTrigger>
 <description>.</description>
 
 <content>
 <![CDATA[
-\sum{ ${1:a_nf_n} }{ n }[ ${2:0} ] ${3:\$ series \$}
+\vector{ ${1:general term} }{ ${2:indexed by} }${3:[ ${4:from} ]}${5:[ ${6:until} ]}
 ]]>
 </content>
 

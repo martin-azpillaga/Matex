@@ -1,7 +1,13 @@
 <snippet>
-	<content><![CDATA[
-\sumatory{ a_nx^n }{ n }[ 0 ] \$ power series \$
-]]></content>
-	<tabTrigger>ps</tabTrigger>
-	<scope>text.tex.latex</scope>
 
+<scope>text.tex.latex</scope>
+<tabTrigger>power series</tabTrigger>
+<description>.</description>
+
+<content>
+<![CDATA[
+\sum{ a_nx^n }{ n }[ 0 ] \$ power series \$
+]]>
+</content>
+
+</snippet>

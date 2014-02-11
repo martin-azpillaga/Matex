@@ -1,16 +1,20 @@
 <snippet>
-	<content><![CDATA[
+
+<scope>text.tex.latex</scope>
+<tabTrigger>double inclusion</tabTrigger>
+<description>.</description>
+
+<content>
+<![CDATA[
 \rightinclusion
 {
-	${1:right inclusion.}
+	${1:proof.}
 }
 \leftinclusion
 {
-	${2:left inclusion.}
+	${2:proof.}
 }
-]]></content>
-	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
-	<tabTrigger>doubleinclusion</tabTrigger>
-	<!-- Optional: Set a scope to limit where the snippet will trigger -->
-	<!-- <scope>source.python</scope> -->
+]]>
+</content>
+
 </snippet>

@@ -1,24 +1,22 @@
 <snippet>
-	<content><![CDATA[
-\$ Separate ${1:number of cases} cases: \$.
+
+<scope>text.tex.latex</scope>
+<tabTrigger>cases</tabTrigger>
+<description>.</description>
+
+<content>
+<![CDATA[
+\$ Separate ${1:n} cases: \$.
 
 \case{ ${2:condition} }
 {
-	${3:sentence.}
+	${3:proof.}
 }
 \case{ ${4:condition} }
 {
-	${5:sentence.}
+	${5:proof.}
 }
-${6:\case{ ${7:condition} \}
-{
-	${8:sentence.}
-\}}
 ]]>
-	</content>
-	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
-	<tabTrigger>cases</tabTrigger>
-	<!-- Optional: Set a scope to limit where the snippet will trigger -->
-	<!-- <scope>source.python</scope> -->
-</snippet>
+</content>
 
+</snippet>

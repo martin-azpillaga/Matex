@@ -1,6 +1,13 @@
 <snippet>
-	<content><![CDATA[
-\definedfunction{ ${1:f} }{ ${2:from} }{ ${3:to} }{ ${4:x} }{ ${5:f(x)} }
-]]></content>
-	<tabTrigger>df</tabTrigger>
+
+<scope>text.tex.latex</scope>
+<tabTrigger>defined function</tabTrigger>
+<description>.</description>
+
+<content>
+<![CDATA[
+\definedFunction{ ${1:letter} }{ ${2:from} }{ ${3:to} }{ ${4:element} }{ ${5:image} }
+]]>
+</content>
+
 </snippet>

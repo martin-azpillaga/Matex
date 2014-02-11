@@ -1,5 +1,11 @@
 <snippet>
-	<content><![CDATA[
+
+<scope>text.tex.latex</scope>
+<tabTrigger>init</tabTrigger>
+<description>.</description>
+
+<content>
+<![CDATA[
 
 \documentclass[a5paper]{book}
 
@@ -9,19 +15,22 @@
 
 \begin{document}
 
-\titlePage{ \$ Probability \$ }{ \$ Martin Azpillaga \$ }
+\titlePage{ \$ ${1:title} \$ }{ \$ ${2:author} \$ }
 
 
-\input{../Definitions/Definitions.tex}
+\input{../Definitions/Main.tex}
 
-\input{../Propositions/Propositions.tex}
+\input{../Propositions/Main.tex}
 
-\input{../Examples/Examples.tex}
+\input{../Examples/Main.tex}
 
-\input{../Exercises/Exercises.tex}
+\input{../Exercises/Main.tex}
+
+\input{../Tasks/Main.tex}
 
 
 \end{document}
-]]></content>
-	<tabTrigger>init</tabTrigger>
+]]>
+</content>
+
 </snippet>

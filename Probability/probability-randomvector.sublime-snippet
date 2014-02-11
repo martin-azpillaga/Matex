@@ -1,6 +1,13 @@
 <snippet>
-	<content><![CDATA[
+
+<scope>text.tex.latex</scope>
+<tabTrigger>random vector</tabTrigger>
+<description>.</description>
+
+<content>
+<![CDATA[
 \function{ X }{ \Omega }{ \R^m } \$ random vector \$
-]]></content>
-	<tabTrigger>rvv</tabTrigger>
+]]>
+</content>
+
 </snippet>

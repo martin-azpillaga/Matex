@@ -1,7 +1,13 @@
 <snippet>
-	<content><![CDATA[
-\succesion{ ${1:general term} }{ ${2:varying} }${3: \subset ${4:set}}
-]]></content>
-	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
-	<tabTrigger>suc</tabTrigger>
+
+<scope>text.tex.latex</scope>
+<tabTrigger>sequence</tabTrigger>
+<description>.</description>
+
+<content>
+<![CDATA[
+\sequence{ ${1:general term} }{ ${2:indexed by} }
+]]>
+</content>
+
 </snippet>

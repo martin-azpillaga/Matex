@@ -1,7 +1,13 @@
 <snippet>
-	<content><![CDATA[
-\be{ ${1:tag} }{ ${2:definition} } ${3:\in ${4:set }} 
+
+<scope>text.tex.latex</scope>
+<tabTrigger>be</tabTrigger>
+<description>.</description>
+
+<content>
+<![CDATA[
+\be{ ${1:letter} }{ ${2:definition} }
 ]]>
-	</content>
-	<tabTrigger>be</tabTrigger>
+</content>
+
 </snippet>

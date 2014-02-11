@@ -1,12 +1,16 @@
 <snippet>
-	<content>
+
+<scope>text.tex.latex</scope>
+<tabTrigger>all</tabTrigger>
+<description>.</description>
+
+<content>
 <![CDATA[
 \all{ ${1:elem} ${2:\in ${3:set} }}${4:[ ${5:such that} ]}
 {
 	${6:holds.}
 }
 ]]>
-	</content>
-	<tabTrigger>all</tabTrigger>
-	<scope>text.tex.latex</scope>
+</content>
+
 </snippet>

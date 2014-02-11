@@ -1,7 +1,13 @@
 <snippet>
-	<content><![CDATA[
-\set{ ${1:elem} ${2:\in ${3:set} }}${4:[ ${5:with} ]}
+
+<scope>text.tex.latex</scope>
+<tabTrigger>set explicit</tabTrigger>
+<description>.</description>
+
+<content>
+<![CDATA[
+\set{ ${1:elements,} }
 ]]>
-	</content>
-	<tabTrigger>set</tabTrigger>
+</content>
+
 </snippet>

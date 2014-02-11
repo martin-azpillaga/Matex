@@ -1,19 +1,12 @@
 <snippet>
 
 <scope>text.tex.latex</scope>
-<tabTrigger>double implication</tabTrigger>
+<tabTrigger>union freestyle</tabTrigger>
 <description>.</description>
 
 <content>
 <![CDATA[
-\rightway
-{
-	${1:proof.}
-}
-\leftway
-{
-	${2:proof.}
-}	
+\union*{ ${1:general term} }{ ${2:indexed by} }{ ${3:over.} }
 ]]>
 </content>
 
