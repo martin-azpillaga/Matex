@@ -6,7 +6,7 @@
 
 <content>
 <![CDATA[
-${1:statement 1} \and ${2:statement 2} 
+${1:statement 1} \logicAnd ${2:statement 2} 
 ]]>
 </content>
 

@@ -6,7 +6,7 @@
 
 <content>
 <![CDATA[
-${1:option 1} \or ${2:option 2} 
+${1:option 1} \logicOr ${2:option 2} 
 ]]>
 </content>
 
