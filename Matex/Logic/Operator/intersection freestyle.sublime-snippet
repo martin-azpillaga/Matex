@@ -1,12 +1,12 @@
 <snippet>
 
 <scope>text.tex.latex</scope>
-<tabTrigger>summation freeway</tabTrigger>
+<tabTrigger>intersection freestyle</tabTrigger>
 <description>.</description>
 
 <content>
 <![CDATA[
-\summation*{ ${1:general term} }{ ${2:indexed by} }{ ${3:over.} }
+\intersection*{ ${1:general term} }{ ${2:indexed by} }{ ${3:over.} }
 ]]>
 </content>
 

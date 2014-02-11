@@ -1,12 +1,12 @@
 <snippet>
 
 <scope>text.tex.latex</scope>
-<tabTrigger>limit</tabTrigger>
+<tabTrigger>union</tabTrigger>
 <description>.</description>
 
 <content>
 <![CDATA[
-\limit{ ${1:general term} }{ ${3:over} }${4:[ ${5:approaching} ]}
+\union{ ${2:general term} }{ ${3:indexed by} }${4:[ ${5:from} ]}${6:[ ${7:to} ]}
 ]]>
 </content>
 

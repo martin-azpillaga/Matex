@@ -1,7 +1,13 @@
 <snippet>
-	<content><![CDATA[
-\convergesuniformlyto 
-]]></content>
-	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
-	<scope>text.tex.latex</scope>
+
+<scope>text.tex.latex</scope>
+<tabTrigger>converges uniformly to</tabTrigger>
+<description>.</description>
+
+<content>
+<![CDATA[
+\convergesUniformlyTo
+]]>
+</content>
+
 </snippet>

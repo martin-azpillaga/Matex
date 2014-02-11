@@ -1,12 +1,12 @@
 <snippet>
 
 <scope>text.tex.latex</scope>
-<tabTrigger>intersection freestyle</tabTrigger>
+<tabTrigger>intersection</tabTrigger>
 <description>.</description>
 
 <content>
 <![CDATA[
-\intersection*{ ${1:general term} }{ ${2:indexed by} }{ ${3:over.} }
+\intersection{ ${2:general term} }{ ${3:indexed by} }${4:[ ${5:from} ]}${6:[ ${7:to} ]}
 ]]>
 </content>
 

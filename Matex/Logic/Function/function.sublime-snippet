@@ -1,10 +1,13 @@
 <snippet>
-	<content><![CDATA[
+
+<scope>text.tex.latex</scope>
+<tabTrigger>function</tabTrigger>
+<description>.</description>
+
+<content>
+<![CDATA[
 \function{ ${1:letter} }{ ${2:from} }{ ${3:to} }
 ]]>
-	</content>
-	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
-	<tabTrigger>f</tabTrigger>
-	<!-- Optional: Set a scope to limit where the snippet will trigger -->
-	<!-- <scope>source.python</scope> -->
+</content>
+
 </snippet>

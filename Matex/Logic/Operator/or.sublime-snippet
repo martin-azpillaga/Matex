@@ -1,6 +1,13 @@
 <snippet>
-	<content><![CDATA[
-${1:condition 1} \logicor ${2:condition 2} 
-]]></content>
-	<tabTrigger>or</tabTrigger>
+
+<scope>text.tex.latex</scope>
+<tabTrigger>or</tabTrigger>
+<description>.</description>
+
+<content>
+<![CDATA[
+${1:option 1} \or ${2:option 2} 
+]]>
+</content>
+
 </snippet>

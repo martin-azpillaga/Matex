@@ -1,6 +1,13 @@
 <snippet>
-	<content><![CDATA[
-${1:condition 1} \logicand ${2:condition 2} 
-]]></content>
-	<tabTrigger>and</tabTrigger>
+
+<scope>text.tex.latex</scope>
+<tabTrigger>and</tabTrigger>
+<description>.</description>
+
+<content>
+<![CDATA[
+${1:statement 1} \and ${2:statement 2} 
+]]>
+</content>
+
 </snippet>

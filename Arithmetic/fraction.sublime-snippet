@@ -1,7 +1,13 @@
 <snippet>
-	<content><![CDATA[
-\frac{ ${1:denominator} }{ ${2:numerator} }
-]]></content>
-	<tabTrigger>frac</tabTrigger>
-	<scope>text.tex.latex</scope>
+
+<scope>text.tex.latex</scope>
+<tabTrigger>fraction</tabTrigger>
+<description>.</description>
+
+<content>
+<![CDATA[
+\fraction{ ${1:denominator} }{ ${2:numerator} }
+]]>
+</content>
+
 </snippet>

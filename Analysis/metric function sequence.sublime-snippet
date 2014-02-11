@@ -1,6 +1,13 @@
 <snippet>
-	<content><![CDATA[
-\succesion{ f_n }{ n } \subset \functionspace{ A_1 }{ A_2 } \$ metric function succesion \$
-]]></content>
-	<scope>text.tex.latex</scope>
+
+<scope>text.tex.latex</scope>
+<tabTrigger>metric function sequence</tabTrigger>
+<description>.</description>
+
+<content>
+<![CDATA[
+\sequence{ f_n }{ n } \subset \functionSpace{ A_1 }{ A_2 } \$ metric function sequence \$
+]]>
+</content>
+
 </snippet>
