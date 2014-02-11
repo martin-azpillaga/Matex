@@ -593,11 +593,11 @@
 
 % Big operators 
 
-\DeclareDocumentCommand{\union}{ s m o o o }
+\DeclareDocumentCommand{\union}{ s m m o o }
 {
 	\IfBooleanTF {#1}
 	{
-		\displaystyle\bigcup #2
+		\displaystyle\bigcup_{#3} #2
 	}{
 		\IfValueTF {#4}
 		{ 
@@ -614,11 +614,11 @@
 }
 
 
-\DeclareDocumentCommand{\disjunctUnion}{ s m o o o }
+\DeclareDocumentCommand{\disjunctUnion}{ s m m o o }
 {
 	\IfBooleanTF {#1}
 	{
-		\displaystyle\bigcupdot #2
+		\displaystyle\bigcupdot_{#3} #2
 	}{
 		\IfValueTF {#4}
 		{ 
@@ -635,11 +635,11 @@
 }
 
 
-\DeclareDocumentCommand{\intersection}{ s m o o o }
+\DeclareDocumentCommand{\intersection}{ s m m o o }
 {
 	\IfBooleanTF {#1}
 	{
-		\displaystyle\bigcap #2
+		\displaystyle\bigcap_{#3} #2
 	}{
 		\IfValueTF {#4}
 		{ 
@@ -659,11 +659,11 @@
 \newcommand{\sumation}{\sum}
 
 
-\DeclareDocumentCommand{\sum}{ s m o o o }
+\DeclareDocumentCommand{\sum}{ s m m o o }
 {
 	\IfBooleanTF {#1}
 	{
-		\displaystyle\sumation #2
+		\displaystyle\sumation_{#3} #2
 	}{
 		\IfValueTF {#4}
 		{ 
@@ -680,11 +680,11 @@
 }
 
 
-\DeclareDocumentCommand{\product}{ s m o o o }
+\DeclareDocumentCommand{\product}{ s m m o o }
 {
 	\IfBooleanTF {#1}
 	{
-		\displaystyle\prod #2
+		\displaystyle\prod_{#3} #2
 	}{
 		\IfValueTF {#4}
 		{ 
@@ -699,7 +699,6 @@
 		}
 	}
 }
-
 
 
 
