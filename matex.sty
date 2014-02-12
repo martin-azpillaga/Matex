@@ -50,13 +50,6 @@
 
 
 
-% Global environment
-
-\setlength{\parindent}{0cm} 	% no paragraph indentation
-
-\endlinechar=9\relax 			% ignore line breaks
-
-
 % Local environments
 
 \newcounter{indentation}
@@ -282,7 +275,9 @@
 	}
 	\end{center}
 
-	\setlength{\baselineskip}{25pt}
+	\setlength{\baselineskip}{25pt} % blank space
+	\endlinechar=9\relax			% ignore breaks
+	\setlength{\parindent}{0cm} 	% no paragraph indentation
 }
 
 
