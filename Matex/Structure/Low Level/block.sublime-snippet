@@ -6,7 +6,11 @@
 
 <content>
 <![CDATA[
-		
+
+\documentclass["../Main/main.tex]{subfiles}
+\begin{document}
+
+
 \block{ \$ ${1:block name} \$ }
 
 
@@ -23,6 +27,9 @@ ${9:\input{"../${1:block name}/${10:unit\space 5}.tex"\}}
 ${11:\input{"../${1:block name}/${12:unit\space 6}.tex"\}}
 
 ${13:\input{"../${1:block name}/${14:unit\space 7}.tex"\}}
+
+
+\end{document}
 ]]>
 </content>
 

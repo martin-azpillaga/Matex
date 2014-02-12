@@ -2,13 +2,13 @@ import os
 
 def main(path,units):
 
-    blockNames = ["Definitions","Propositions","Examples","Exercises","Tasks"]
+    blockNames = ["Definitions","Propositions","Examples"]
 
     for blockName in blockNames:
 
         if not os.path.exists(path+"\\"+blockName):
             os.makedirs( path+"\\"+blockName )
-        f = open( path+"\\"+blockName + "\\Main.tex" ,"w" )
+        f = open( path+"\\"+blockName + "\\main.tex" ,"w" )
         f.close()
         
         for unit in range(units):
@@ -20,6 +20,20 @@ def main(path,units):
     f = open(path+"\\Main\\main.tex","w")
     f = open(path+"\\Main\\specific.sty","w")
     f.close()
+
+    if not os.path.exists(path+"\\Problems"): os.makedirs( path+"\\Problems" )
+    f = open(path+"\\Problems\\main.tex","w")
+    f = open(path+"\\Problems\\formulations.tex","w")
+
+    for unit in range(units):
+
+            f = open( path+"\\Problems\\unit " + str(unit+1) + ".tex" ,"w" )
+            f.close()
+            
+    f.close()
+
+    if not os.path.exists(path+"\\Tasks"): os.makedirs( path+"\\Tasks" )
+    f = open(path+"\\Tasks\\main.tex","w")
 
 p= input("Path: ")
 n = input("Number of units: ")

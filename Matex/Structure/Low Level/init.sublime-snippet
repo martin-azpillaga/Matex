@@ -18,15 +18,15 @@
 \titlePage{ \$ ${1:title} \$ }{ \$ ${2:author} \$ }
 
 
-\input{../Definitions/Main.tex}
+\subfile{../Definitions/main.tex}
 
-\input{../Propositions/Main.tex}
+\subfile{../Propositions/main.tex}
 
-\input{../Examples/Main.tex}
+\subfile{../Examples/main.tex}
 
-\input{../Exercises/Main.tex}
+\subfile{../Problems/main.tex}
 
-\input{../Tasks/Main.tex}
+\subfile{../Tasks/main.tex}
 
 
 \end{document}

@@ -6,6 +6,11 @@
 
 <content>
 <![CDATA[
+
+\documentclass[main.tex]{subfiles} 
+\begin{document}
+
+
 \unit{ \$ ${1:unit name} \$ }
 {
 	\introduction
@@ -16,6 +21,9 @@
 	${3:go}
 
 }
+
+
+\end{document}
 ]]>
 </content>
 
