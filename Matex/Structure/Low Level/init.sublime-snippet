@@ -7,29 +7,29 @@
 <content>
 <![CDATA[
 
-\documentclass[a5paper]{book}
+\documentclass[ a5paper ]{ book }
 
-\usepackage{matex}
-\usepackage{specific}
+\usepackage{ matex }
+\usepackage{ specific }
 
 
-\begin{document}
+\begin{ document }
 
 \titlePage{ \$ ${1:title} \$ }{ \$ ${2:author} \$ }
 
 
-\subfile{../Definitions/main.tex}
+\subfile{ ../Definitions/main }
 
-\subfile{../Propositions/main.tex}
+\subfile{ ../Propositions/main }
 
-\subfile{../Examples/main.tex}
+\subfile{ ../Examples/main }
 
-\subfile{../Problems/main.tex}
+\subfile{ ../Problems/main }
 
-\subfile{../Tasks/main.tex}
+\subfile{ ../Tasks/main }
 
 
-\end{document}
+\end{ document }
 ]]>
 </content>
 
