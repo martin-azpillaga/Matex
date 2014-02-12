@@ -7,26 +7,26 @@
 <content>
 <![CDATA[
 
-\documentclass["../Main/main.tex]{subfiles}
+\documentclass[../Main/main.tex]{subfiles}
 \begin{document}
 
 
 \block{ \$ ${1:block name} \$ }
 
 
-\input{"../${1:block name}/${2:unit\space 1}.tex"}
+\subfile{"../${1:block name}/${2:unit\space 1}.tex"}
 
-${3:\input{"../${1:block name}/${4:unit\space 2}.tex"\}}
+${3:\subfile{"../${1:block name}/${4:unit\space 2}.tex"\}}
 
-${5:\input{"../${1:block name}/${6:unit\space 3}.tex"\}}
+${5:\subfile{"../${1:block name}/${6:unit\space 3}.tex"\}}
 
-${7:\input{"../${1:block name}/${8:unit\space 4}.tex"\}}
+${7:\subfile{"../${1:block name}/${8:unit\space 4}.tex"\}}
 
-${9:\input{"../${1:block name}/${10:unit\space 5}.tex"\}}
+${9:\subfile{"../${1:block name}/${10:unit\space 5}.tex"\}}
 
-${11:\input{"../${1:block name}/${12:unit\space 6}.tex"\}}
+${11:\subfile{"../${1:block name}/${12:unit\space 6}.tex"\}}
 
-${13:\input{"../${1:block name}/${14:unit\space 7}.tex"\}}
+${13:\subfile{"../${1:block name}/${14:unit\space 7}.tex"\}}
 
 
 \end{document}
