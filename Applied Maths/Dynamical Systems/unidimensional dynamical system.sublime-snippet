@@ -1,0 +1,13 @@
+<snippet>
+
+<scope>text.tex.latex</scope>
+<tabTrigger>unidimensional dynamical system</tabTrigger>
+<description>.</description>
+
+<content>
+<![CDATA[
+( M, T, \phi ) \$ 1-D dynamical system \$
+]]>
+</content>
+
+</snippet>
