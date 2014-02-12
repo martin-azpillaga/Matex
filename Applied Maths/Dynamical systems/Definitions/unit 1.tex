@@ -10,18 +10,66 @@
 		\letbe
 		{
 			M $ manifold $.
-			T $ set $.
-			\Phi : \family{ \Phi_t }{ t } \subset \functionSpace{ M }{ M }
+			T $ monoid $.
+			\function{ \phi }{ M \times T }{ M }
 		}
-		\then{ ( M, T, \Phi ) }{ $ a dynamical system $ }
+		\then{ ( M, T, \phi ) }{ $ a dynamical system $ }
 		{
-			T \in \set{ \N, \Z, \R, \R^+ }
+			\all{ x \in X }
+			{
+				\phi( x, 0 ) = 0.
+
+				\all{ t_1,t_2 \in T }
+				{
+					\phi( \phi( x, t_1 ), t_2 ) = \phi( x, t_1+t_2 )
+				}
+			}
+		}
+
+	}
+	\definition{ $ Dimension $ }
+	{
+		\letbe
+		{
+			( M, T, \phi ) $ dynamical system $
+		}
+		\name{ $ dimension of $ ( M, T, \phi ) }
+		{
+			\dim(M)
 		}
 		\denote
 		{
-			T \as $ time of $ ( M, T, \Phi )
+			dim(M) = n \as ( M, T, \phi ) $ n-D dynamical system $
 		}
 	}
+
+
+	\definition{ $ Discrete & Continuous$ }
+	{
+		\letbe
+		{
+			( M, T, \phi ) $ dynamical system $
+		}
+		\then{ ( M, T, \phi ) }{ $ discrete $ }
+		{
+			T \countable
+		}
+		\then{ ( M, T, \phi ) }{ $ continuous $ }
+		{
+			T \subset \R \suchthat T $ open $
+		}
+	}
+
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	
 	
