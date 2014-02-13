@@ -1,12 +1,12 @@
 <snippet>
 
 <scope>text.tex.latex</scope>
-<tabTrigger>fraction</tabTrigger>
+<tabTrigger>square root</tabTrigger>
 <description>.</description>
 
 <content>
 <![CDATA[
-\frac{ ${1:denominator} }{ ${2:numerator} }
+\sqrt{ ${1:radical} }
 ]]>
 </content>
 
