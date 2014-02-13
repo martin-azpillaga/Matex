@@ -5,14 +5,150 @@
 \begin{document}
 
 
-\unit{ $ Holomorphic functions $ }
+\unit{ $ The field of complex numbers $ }
 {
 	\introduction
 	{ 
 		$introduction\\$ 
 	}
 
-	go
+	\definition{ $ The field of complex numbers $ }
+	{
+		\letbe
+		{
+			\definedFunction{ + }{ \R^2 \times \R^2 }{ \R^2 }{ ((a,b),(c,d)) }{ (a+c,b+d) }.
+			\definedFunction{ \cdot }{ \R^2 \times \R^2 }{ \R^2 }{ ((a,b),(c,d)) }{ (ac-bd,ad+bd) }
+
+		}
+		\name{ $ the field of complex numbers $ }
+		{
+			( \R^2, +, \cdot )
+		}
+		\denote
+		{
+			( \R^2, +, \cdot ) \as \C.
+			(0,1) \in \C \as i.
+			(a,b) \in \C \as a + bi.
+			\pi_1(\C) \as Re.
+			\pi_2(\C) \as Im
+		}
+	}
+
+	\definition{ $ Conjugation $ }
+	{
+		\name{ $ complex conjugation $ }
+		{
+			\definedFunction{ f }{ \C }{ \C }{ (a,b) }{ (a,-b) }
+		}
+		\denote
+		{
+			f((a,b)) \as \overline{(a,b)}
+		}
+	}
+
+
+	\definition{ $ Norm $ }
+	{
+
+		\name{ $ complex norm $ }
+		{
+			\definedFunction{ f }{ \C }{ \R }{ (a,b) }{ a^2+b^2 }
+		}
+		\denote
+		{
+			f((a,b)) \as |(a,b)|
+		}
+	}
+	
+	
+	\definition{ $ Polar form $ }
+	{
+		\name{ $ polar form $ }
+		{
+			\definedFunction{ f }{ \C }{ \R^+ \times [0,2\pi) }{ (a,b) }{ (\sqrt{ |(a,b)| }, \arctan( \frac{ b }{ a } ) ) }
+		}
+		\denote
+		{
+			f((a,b)) \as $ polar form of $ (a,b)
+		}
+	}
+
+
+	\definition{ $ Unit sphere projection $ }
+	{
+		\name{ $ unit sphere projection $ }
+		{
+			\definedFunction{ f }{ \C }{ S^1 }{ z }{ \frac{ z }{ |z| } }
+		}
+		\denote
+		{
+			f(z) \as \pi(z)
+		}
+	}
+	
+	
+	
+	
+	
+	
+	\definition{ $ Roots of unity $ }
+	{
+		\letbe
+		{
+			z \in \C
+		}
+		\then{ z }{ $ a root of unity $ }
+		{
+			\ex{ n \in  \N }{ z^n = 1 }
+		}
+		\denote
+		{
+			\set{ z \in \C \with z $ root of unity $ } \as S^1
+		}
+	}
+
+
+	\definition{ $ Disk $ }
+	{
+		\letbe
+		{
+			p \in \C.
+			r \in \R^+ \nonzero
+		}
+		\name{ $ Disk centered in p and radius r $ }
+		{
+			\set{ z \in \C \with |z-p| < r }
+		}
+		\denote
+		{
+			
+			\set{ z \in \C \with |z-p| < r } \as D^1
+		}
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 
 }
 
