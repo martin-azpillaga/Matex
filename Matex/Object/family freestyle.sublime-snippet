@@ -1,12 +1,12 @@
 <snippet>
-
+	
 <scope>text.tex.latex</scope>
-<tabTrigger>ex</tabTrigger>
+<tabTrigger>family freestyle</tabTrigger>
 <description>.</description>
 
 <content>
 <![CDATA[
-\ex{ ${1:elem} \in  ${2:set} }{ ${3:such that} }
+\family*{ ${1:general term} }{ ${2:over} }
 ]]>
 </content>
 

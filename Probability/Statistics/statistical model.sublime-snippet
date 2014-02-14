@@ -1,12 +1,12 @@
 <snippet>
 
 <scope>text.tex.latex</scope>
-<tabTrigger>ex</tabTrigger>
+<tabTrigger>statistical model</tabTrigger>
 <description>.</description>
 
 <content>
 <![CDATA[
-\ex{ ${1:elem} \in  ${2:set} }{ ${3:such that} }
+( \Omega, \Ac, \Pc ) \$ statistical model \$
 ]]>
 </content>
 
