@@ -642,25 +642,22 @@
 }
 
 
-\newcommand{\sumation}{\sum}
-
-
-\DeclareDocumentCommand{\sum}{ s m m o o }
+\DeclareDocumentCommand{\sumation}{ s m m o o }
 {
 	\IfBooleanTF {#1}
 	{
-		\displaystyle\sumation_{#3} #2
+		\displaystyle\sum_{#3} #2
 	}{
 		\IfValueTF {#4}
 		{ 
 			\IfValueTF {#5}
 			{
-				\displaystyle\sumation_{ #3 = #4 }^{ #5 } \; #2
+				\displaystyle\sum_{ #3 = #4 }^{ #5 } \; #2
 			}{
-				\displaystyle\sumation_{ #3 \geq #4 } \; #2
+				\displaystyle\sum_{ #3 \geq #4 } \; #2
 			} 
 		}{
-			\displaystyle\sumation_{ #3 \in \uppercase{ #4 } } \; #2
+			\displaystyle\sum_{ #3 \in \uppercase{ #4 } } \; #2
 		}
 	}
 }
@@ -676,12 +673,12 @@
 		{ 
 			\IfValueTF {#5}
 			{
-				\displaystyle\prod{ #3 = #4 }^{ #5 } \; #2
+				\displaystyle\prod_{ #3 = #4 }^{ #5 } \; #2
 			}{
-				\displaystyle\prod{ #3 \geq #4 } \; #2
+				\displaystyle\prod_{ #3 \geq #4 } \; #2
 			} 
 		}{
-			\displaystyle\prod{ #3 \in \uppercase{ #4 } } \; #2
+			\displaystyle\prod_{ #3 \in \uppercase{ #4 } } \; #2
 		}
 	}
 }
