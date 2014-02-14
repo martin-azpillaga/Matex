@@ -707,18 +707,23 @@
 	}
 }
 
-\DeclareDocumentCommand{\family}{ m m o o }
+\DeclareDocumentCommand{\family}{ s m m o o }
 {
-	\IfValueTF {#3}
+	\IfBooleanTF {#1}
 	{
+		\{ #2 \}_{ #3 }
+	}{
 		\IfValueTF {#4}
 		{
-			\{ #1 \}_{ #2 = #3 }^{ #4 }
+			\IfValueTF {#5}
+			{
+				\{ #2 \}_{ #3 = #4 }^{ #5 }
+			}{
+				\{ #2 \}_{ #3 \geq #4 } 
+			}
 		}{
-			\{ #1 \}_{ #2 \geq #3 } 
+			\{ #2 \}_{ #3 \in \uppercase{ #4 } }
 		}
-	}{
-		\{ #1 \}_{ #2 \in \uppercase{ #2 } }
 	}
 }
 
