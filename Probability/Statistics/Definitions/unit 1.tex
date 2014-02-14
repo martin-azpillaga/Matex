@@ -12,7 +12,94 @@
 		$introduction\\$ 
 	}
 
-	go
+	\definition{ $ Statistical model $ }
+	{
+		\letbe
+		{
+			\Omega $ set $.
+			\Ac $ sigma-algebra over $ \Omega.
+			\Pc \subset \functionSpace{ \Omega }{ \R }
+		}
+		\then{ ( \Omega, \Ac, \Pc ) }{ $ a statistical model $ }
+		{
+			\all{ f \in \Pc }
+			{
+				f $ probability distribution $
+			}
+		}
+	}
+	
+
+
+	\definition{ $ Parametrized $ }
+	{
+		\letbe
+		{
+			( \Omega, \Ac, \Pc ) $ statistical model $.
+			\Theta \subset \R^d
+		}
+		\then{ ( \Omega, \Ac, \Pc ) }{ $ parametrized by $ \Theta }
+		{
+			\Pc = \family*{ P_\theta }{ \theta \in \Theta }
+		}
+	}
+	
+	
+	\definition{ $ Likelihood $ }
+	{
+		\letbe
+		{
+			( \Omega, \Ac, \Pc ) $ statistical model parametrized by $ \Theta
+		}
+		\name{ $ likelihood function of $ ( \Omega, \Ac, \Pc ) }
+		{
+			\definedFunction{ L }{ \Omega \times \Theta }{ \R^+ }{ (x,\theta) }{ P_\theta(x) }
+		}
+	}
+	
+
+
+	\definition{ $ Exponential model $ }
+	{
+		\letbe
+		{
+			( \Omega, \Ac, \Pc ) $ statistical model parametrized by $ \Theta.
+			L $ likelihood function of $ ( \Omega, \Ac, \Pc )
+		}
+		\then{ ( \Omega, \Ac, \Pc ) }{ $ exponential $ }
+		{
+			\ex{ \family{ C_i }{ i }[ 1 ][ r ], D \in \functionSpace{ \theta }{ \R } }{ \all{ i \in \indexes{ 1 }{ r } }
+			{
+				C_i $ measurable $
+			} }.
+			\ex{ \family{ \phi_i }{ i }[ 1 ][ r ], \psi \in \functionSpace{ \Omega }{ \R } }{ \all{ i \in \indexes{ 1 }{ r } }
+			{
+				\phi_i $ measurable $
+			} }.
+
+			\all{ x \in \Omega }
+			{
+				\all{ \theta \in \Theta }
+				{
+					L( x, \theta ) = \exp( \sumation{ C_i(\theta)\phi_i(x) }{ i }[ 1 ][ r ] + D(\theta) + \psi(x) )
+				}
+			}
+		}
+	}
+	
+	
+	
+	
+	
+	
+	
+
+
+	
+	
+	
+	
+	
 
 }
 
