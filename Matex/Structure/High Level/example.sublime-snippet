@@ -2,25 +2,21 @@
 
 <scope>text.tex.latex</scope>
 <description>.</description>
-<tabTrigger>proposition</tabTrigger>
+<tabTrigger>example</tabTrigger>
 
 <content>
 <![CDATA[
-\proposition{ \$ ${1:abstract} \$ }
+\example{ \$ ${1:entity} \$ }
 {
 	\letbe
 	{
 		${2:statements.}
 	}
-	\holds
+	\is{ ${3:item} }{ \$ ${4:a/an entity} \$ }
 	{
-		${3:then, holds.}
+		${5:proof.}
 	}
-	\demonstration
-	{
-		${4:demonstration.}
-	}
-}
+\}
 
 
 
