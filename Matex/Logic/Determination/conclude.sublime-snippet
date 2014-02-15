@@ -1,0 +1,13 @@
+<snippet>
+
+<scope>text.tex.latex</scope>
+<tabTrigger>conclude</tabTrigger>
+<description>.</description>
+
+<content>
+<![CDATA[
+\conclude 
+]]>
+</content>
+
+</snippet>

@@ -1,0 +1,13 @@
+<snippet>
+
+<scope>text.tex.latex</scope>
+<tabTrigger>such that</tabTrigger>
+<description>.</description>
+
+<content>
+<![CDATA[
+\suchthat 
+]]>
+</content>
+
+</snippet>
