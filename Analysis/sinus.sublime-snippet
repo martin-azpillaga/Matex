@@ -1,0 +1,13 @@
+<snippet>
+
+<scope>text.tex.latex</scope>
+<tabTrigger>sinus</tabTrigger>
+<description>.</description>
+
+<content>
+<![CDATA[
+\sin( ${1:go} )
+]]>
+</content>
+
+</snippet>

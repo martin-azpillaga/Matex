@@ -1,0 +1,13 @@
+<snippet>
+
+<scope>text.tex.latex</scope>
+<tabTrigger>arc tangent</tabTrigger>
+<description>.</description>
+
+<content>
+<![CDATA[
+\arctan( ${1:go} )
+]]>
+</content>
+
+</snippet>
