@@ -300,6 +300,19 @@
 }
 
 
+\newcommand{\example}[2]
+{
+	\addcontentsline{toc}{section}{ $#1$ }
+
+	\begin{noBreak}
+
+		{\bf $#1$} \\
+		#2
+	
+	\end{noBreak}
+}
+
+
 \newcommand{\introduction}[1]
 { 
 	$#1$
@@ -344,6 +357,18 @@
 \newcommand{\demonstration}[1]
 {
 	\tabmath{Demonstration}{#1}
+}
+
+
+\newcommand{\is}[3]
+{
+	\tabmath{Then, $#1$ is $#2$}{#3}
+}
+
+
+\newcommand{\isNot}[3]
+{
+	\tabmath{Then, $#1$ is not $#2$}{#3}
 }
 
 
