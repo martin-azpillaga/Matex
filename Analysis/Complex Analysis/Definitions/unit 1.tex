@@ -52,7 +52,7 @@
 
 		\name{ $ complex norm $ }
 		{
-			\definedFunction{ f }{ \C }{ \R }{ (a,b) }{ a^2+b^2 }
+			\definedFunction{ f }{ \C }{ \R }{ (a,b) }{ \sqrt{ a^2+b^2 } }
 		}
 		\denote
 		{
@@ -61,15 +61,15 @@
 	}
 	
 	
-	\definition{ $ Polar form $ }
+	\definition{ $ Polar transformation $ }
 	{
-		\name{ $ polar form $ }
+		\name{ $ polar transformation $ }
 		{
 			\definedFunction{ f }{ \C }{ \R^+ \times [0,2\pi) }{ (a,b) }{ (\sqrt{ |(a,b)| }, \arctan( \frac{ b }{ a } ) ) }
 		}
 		\denote
 		{
-			f((a,b)) \as $ polar form of $ (a,b)
+			f((a,b)) \as (r, \theta )
 		}
 	}
 
@@ -125,6 +125,29 @@
 			\set{ z \in \C \with |z-p| < r } \as D^1
 		}
 	}
+
+
+	\definition{ $ Component decomposition $ }
+	{
+		\letbe
+		{
+			\function{ f }{ \C }{ \C }
+		}
+		\name{ $ real component of $ f }
+		{
+			\definedFunction{ f_{Re} }{ \C }{ \R }{ z }{ Re( f(z) ) }
+		}
+		\name{ $ imaginary component of $ f }
+		{
+			\definedFunction{ f_{Im} }{ \C }{ \R }{ z }{ Im( f(z) ) }
+		}
+		\name{ $ component decomposition of $ f }
+		{
+			\definedFunction{ f_{\R^2} }{ \C }{ \R^2 }{ (x,y) }{ ( f_{Re}(x+yi), f_{Im}(x+yi) }
+		}
+	}
+
+	
 	
 	
 	

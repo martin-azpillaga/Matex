@@ -1,0 +1,72 @@
+
+\documentclass[../Main/main]{subfiles}
+
+
+\begin{document}
+
+
+\unit{ $ Holomorphic functions $ }
+{
+
+	\definition{ $ Incremental quotient $ }
+	{
+		\letbe
+		{
+			\Uc \subset \C $ open $.
+			\function{ f }{ \Uc }{ \C }.
+			p \in \Uc
+		}
+		\name{ $ incremental quotient of $ f $ in $ p }
+		{
+			\limit{ \frac{ f(z) - f(p) }{ z-p } }{ z }[ p ]
+		}
+		\denote
+		{
+			f'(p)
+		}
+	}
+
+
+
+
+
+	\definition{ $ Holomorphic function $ }
+	{
+		\letbe
+		{
+			\Uc \subset \C $ open $.
+			\function{ f }{ \Uc }{ \C }.
+			p \in \Uc
+		}
+		\then{ f }{ $ holomorphic over $ p $ $ }
+		{
+			\exists f'(p)
+		}
+		\then{ f }{ $ holomorphic over $ U $ $ }
+		{
+			\all{ p \in \Uc }
+			{
+				\exists f'(p)
+			}
+		}
+		\denote
+		{
+			\set{ \function{ f }{ \Uc }{ \C } \with f $ holomorphic over $ \Uc } \as \Hc(\Uc).
+			f \in \Hc(\C) \as f $ entire $
+		}
+	}
+
+
+	
+}
+
+
+
+
+
+
+
+
+
+
+\end{document}

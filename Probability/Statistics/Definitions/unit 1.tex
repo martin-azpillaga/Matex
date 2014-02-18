@@ -68,23 +68,27 @@
 		}
 		\then{ ( \Omega, \Ac, \Pc ) }{ $ exponential $ }
 		{
-			\ex{ \family{ C_i }{ i }[ 1 ][ r ], D \in \functionSpace{ \theta }{ \R } }{ \all{ i \in \indexes{ 1 }{ r } }
+			\ex{ \family{ f_i }{ i }[ 1 ][ r ], f \in \functionSpace{ \Omega }{ \R } }{ \all{ i \in \indexes{ 1 }{ r } }
 			{
-				C_i $ measurable $
+				f_i,f $ measurable $
 			} }.
-			\ex{ \family{ \phi_i }{ i }[ 1 ][ r ], \psi \in \functionSpace{ \Omega }{ \R } }{ \all{ i \in \indexes{ 1 }{ r } }
+			\ex{ \family{ \phi_i }{ i }[ 1 ][ r ], \phi \in \functionSpace{ \theta }{ \R } }{ \all{ i \in \indexes{ 1 }{ r } }
 			{
-				\phi_i $ measurable $
+				\phi_i, \phi $ measurable $
 			} }.
-
 			\all{ x \in \Omega }
 			{
 				\all{ \theta \in \Theta }
 				{
-					L( x, \theta ) = \exp( \sumation{ C_i(\theta)\phi_i(x) }{ i }[ 1 ][ r ] + D(\theta) + \psi(x) )
+					L( x, \theta ) = \exp( \summation{ f_i(x)\phi_i(\theta) }{ i }[ 1 ][ r ] + f(x) + \phi(\theta) )
 				}
 			}
 		}
+
+		
+		
+		
+		
 	}
 	
 	
