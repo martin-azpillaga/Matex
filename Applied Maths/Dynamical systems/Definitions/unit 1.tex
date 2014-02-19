@@ -65,6 +65,115 @@
 		}
 	}
 
+
+	\definition{ $ Functional dynamical system $ }
+	{
+		\letbe
+		{
+			( M, T, \phi ) $ dynamical system $
+		}
+		\then{ ( M, T, \phi ) }{ $ functional $ }
+		{
+			T = \N.
+
+			\ex{ \function{ f }{ M }{ M } }{ \definedFunction{ \phi }{ M \times \N }{ M }{ (x,n) }{ f^n(x) } }
+		}
+		\denote
+		{
+			( M, \N, f )
+		}
+	}
+	
+	
+	\definition{ $ Orbit $ }
+	{
+		\letbe
+		{
+			( M, \N, f ) $ functional dynamical system $.
+			x \in M
+		}
+		\name{ $ orbit of $ x }
+		{
+			\family*{ f^n(x) }{ n \in \N }
+		}
+		\denote
+		{
+			o(x)
+		}
+	}
+	
+	
+	\definition{ $ n-periodic point $ }
+	{
+		\letbe
+		{
+			( M, \N, f ) $ functional dynamical system $.
+			x \in M.
+			n \in \N
+		}
+		\then{ x }{ $ a n-periodic point $ }
+		{
+			f^n(x) = x.
+			\all{ n' \in \N }[ n' < n ]
+			{
+				f^{n'}(x) \neq x
+			}
+		}
+		\denote
+		{
+			n = 1 \as x $ fixed point $
+		}
+	}
+	
+
+	\definition{ $ Attractive \& Repulsive $ }
+	{
+		\letbe
+		{
+			( M, \N, f ) $ functional metrical dynamical system $.
+			x \in M $ fixed point $
+		}
+		\then{ x }{ $ attractive $ }
+		{
+			\ex{ \Uc \subset M $ open $ }{ \all{ y \in \Uc }
+			{
+				\ex{ N \in \N }{ \all{ n \in \N }[ n \geq N ]
+				{
+					f^n(y) \in \Uc
+				} }
+			} }
+		}
+		\then{ x }{ $ repulsive $ }
+		{
+			x $ attractive in $ ( M, \N, f )
+		}
+	}
+	
+	
+	\definition{ $ Attraction set $ }
+	{
+		\letbe
+		{
+			( M, \N, f ) $ functional dynamical system $.
+			x \in M $ attractive fixed point $
+		}
+		\name{ $ attraction set of $ x }
+		{
+			\set{ y \in M \with f^n(y) \convergesto x }
+		}
+		\denote
+		{
+			A( x )
+		}
+	}
+	
+	
+	
+	
+	
+	
+	
+
 }
 
 \end{document}
