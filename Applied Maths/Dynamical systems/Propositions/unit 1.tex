@@ -12,7 +12,80 @@
 		$introduction\\$ 
 	}
 
-	go
+	\proposition{ $ Fixed points theorem $ }
+	{
+		\letbe
+		{
+			I \subset \R $ open $.
+			\function{ f }{ I }{ I } $ differentiable $.
+			x \in I
+		}
+		\holds
+		{
+			|f'(x)| < 1 \imp x $ attractive $.
+			|f'(x)| > 1 \imp x $ repulsive $
+		}
+		\demonstration
+		{
+			demonstration.
+		}
+	}
+	
+	
+	\proposition{ $ Attractiveness of periodic points does not involve the chosen point $ }
+	{
+		\letbe
+		{
+			( M, \N, f ) $ functional dynamical system $.
+			x \in M $ n-periodic point $.
+			\family{ x_i }{ i }[ 1 ][ r ] $ orbit of $ x
+		}
+		\holds
+		{
+			x $ attractive $ \ifandonlyif \all{ x' \in o(x) }
+			{
+				x' $ attractive $
+			}
+		}
+		\demonstration
+		{
+			\all{ x' \in o(x) }
+			{
+				f^n'(x') = \product{ f'(x_i) }{ i }[ 1 ][ r ] = f^n'(x)
+			}
+		}
+	}
+
+
+	\proposition{ $ Partition of attraction set $ }
+	{
+		\letbe
+		{
+			( M, \N, f ) $ functional dynamical system $.
+			x $ n-periodic point $.
+			o(x) $ orbit of $ x
+		}
+		\holds
+		{
+			\all{ x' \in o(x) }
+			{
+				\ex{ \Uc \subset M $ open $ }{ \all{ y \in \Uc }
+				{
+					f^n(y) \convergesto x'
+				} }
+			}
+		}
+		\demonstration
+		{
+			demonstration.
+		}
+	}
+	
+	
+	
+	
+	
+	
 
 }
 

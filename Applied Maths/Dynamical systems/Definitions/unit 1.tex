@@ -168,6 +168,103 @@
 	}
 	
 	
+	\definition{ $ Neutral point $ }
+	{
+		\letbe
+		{
+			( M, \N, f ) $ differentiable dynamical system $.
+			x \in M
+		}
+		\then{ x }{ $ a neutral point $ }
+		{
+			f'(x) \in \set{ -1,1 }
+		}
+	}
+
+
+	\definition{ $ feeble attractive \& repulsive points $ }
+	{
+		\letbe
+		{
+			( M, \N, f ) $ functional dynamical system $.
+			x \in M
+		}
+		\then{ x }{ $ feeble attractive point $ }
+		{
+			f'(x) = 1.
+			f''(x) = 0.
+			f'''(x) > 0
+		}
+		\then{ x }{ $ feeble repulsive point $ }
+		{
+			f'(x) = 1.
+			f''(x) = 0.
+			f'''(x) < 0
+		}
+	}
+	
+	
+	\definition{ $ Attractive \& repulsive periodic points $ }
+	{
+		\letbe
+		{
+			( M, \N, f ) $ functional dynamical system $.
+			x \in M $ n-periodic point $
+		}
+		\then{ x }{ $ a attractive n-periodic point $ }
+		{
+			x $ attractive point of $ f^n
+		}
+		\then{ x }{ $ a repulsive n-periodic point $ }
+		{
+			x $ repulsive point of $ f^n
+		}
+	}
+	
+	
+	\definition{ $ Multiplier $ }
+	{
+		\letbe
+		{
+			( M, \N, f ) $ functional dynamical system $.
+			x \in M $ n-periodic point $
+		}
+		\name{ $ multiplier of x $ }
+		{
+			f'(x)
+		}
+		\denote
+		{
+			m(x)
+		}
+	}
+	
+	
+	\definition{ $ Attraction set of periodic points $ }
+	{
+		\letbe
+		{
+			( M, \N, f ) $ functional dynamical system $.
+			x \in M $ n-periodic point $.
+			o(x) $ orbit of $ x
+		}
+		\name{ $ attraction set of $ }
+		{
+			\set{ y \in \M \with \ex{ x' \in o(x) }{ f^{nk} \convergesto x' } }
+		}
+		\denote
+		{
+			A(x)
+		}
+	}
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	
 	

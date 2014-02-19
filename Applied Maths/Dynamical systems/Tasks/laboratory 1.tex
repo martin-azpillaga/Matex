@@ -1,0 +1,132 @@
+
+\documentclass[../Main/main]{subfiles}
+
+
+\begin{document}
+
+\block{ $ Martin Azpillaga $ }{
+\immm{laboratory1}{ lab }
+\unit{ $ 1st laboratory Orbit Analysis $ }
+{
+	\proposition{ $ 1st laboratory. Orbit analysis $ }
+	{
+		\letbe
+		{
+			\definedFunction{ f }{ \R }{ \R }{ x }{ x^3 + \frac{ 1 }{ 4 }x }
+		}
+		\demonstration
+		{
+			
+			$ Formalization $.
+	
+				$Consider $ (M,T,\phi) $ where:$.
+				
+				M = \R.
+				T = \N.
+				\definedFunction{ \phi }{ \R \times \N }{ \R }{ (x,n) }{ f^n(x) }.
+				
+				$We will denote $ \phi(x,n) = f^n(x) $ as $ x_n.
+			
+			
+			
+			$ Fixed points $.
+
+				\all{ x \in \R }
+				{
+					f(x) = x \ifandonlyif x^3 + \frac{ 1 }{ 4 }x - x = 0 \ifandonlyif x^3 - \frac{ 3 }{ 4 }x = 0.
+
+				\ifandonlyif x = 0 \logicOr x^2 - \frac{ 3 }{ 4 } = 0 \ifandonlyif x \in \set{ 0, \pm \frac{ \sqrt{ 3 } }{ 2 } }.
+				}.
+			
+
+
+			$ Graphic analysis $.
+
+				$ Parity: f is odd$.
+
+				\all{ x \in \R }
+				{
+					f(-x) = (-x)^3 + \frac{ (-x) }{ 4 } = -( x^3 + \frac{ x }{ 4 }) = -f(x)
+				}.
+
+				$ Monotonicity: f is increasing $.
+
+				\all{ x \in \R }
+				{
+					f'(x) = 3x^2 + \frac{ 1 }{ 4 } > 0
+				}.
+
+				$ Convexity: f is concave over $ \R^- $ and convex over $ \R^+.
+
+				\all{ x \in \R^- }
+				{
+					f''(x) = 6x \leq 0
+				}.
+
+				\all{ x \in \R^+ }
+				{
+					f''(x) = 6x \geq 0
+				}.
+			
+			$ Graphic representation $.
+			
+
+			
+
+			$ Orbit analysis$.
+
+			\all{ x \in \R }[ x < \frac{ \sqrt{ 3 } }{ 2 } ]
+			{
+				\all{ n \in \N }
+				{
+					x_n < \frac{ \sqrt{ 3 } }{ 2 }
+				}
+			}.
+
+			$ Induction over n $.
+
+			x_{n+1} = x_n^3 + \frac{ 1 }{ 4 }x_n = 
+
+			x_n( x_n^2 + \frac{ 1 }{ 4 }).
+
+			x_n < -\frac{ \sqrt{ 3 } }{ 2 } \imp x_n^2 > \frac{ 3 }{ 4 } \imp x_n^2 + \frac{ 1 }{ 4 } > 1.
+
+		
+
+			\imp x_n( x_n^2 + \frac{ 1 }{ 4 }) = x_{n+1} < -\frac{ \sqrt{ 3 } }{ 2 }.
+
+			$ Decreasing $.
+
+			\all{ x \in \R }[ x < -\frac{ \sqrt{ 3 } }{ 2 } ]
+			{
+				f(x) - x = x( x^2 - \frac{ 3 }{ 4 }).
+
+				x > 0 , x^2 - \frac{ 3 }{ 4 } < 0 \imp f(x) - x < 0 \imp f(x) < x.
+			}
+
+			o(x) $ decreasing and no fixed point under x $ \imp o(x) \convergesto \infty
+
+
+
+
+			\all{ x \in (\frac{ -\sqrt{ 3 } }{ 2 }, 0 ) }
+			{
+				o(x) \convergesto - \frac{ \sqrt{ 3 } }{ 2 }.
+
+				f(x) = x(x^2 + \frac{ 1 }{ 4 }) < 0.
+
+				o(x) $ superiorly bounded by $ 0.
+
+				f(x) - x = x( x^2 - \frac{ 3 }{ 4 } ) < 0 \imp f(x) < x
+
+				o(x) $ bounded + decreasing $ \imp $ o(x) convergent to a fixed point$.
+				$ The only fixed point lesser than x is $ - \frac{ \sqrt{ 3 } }{ 2 }. o(x) \convergesto - \frac{ \sqrt{ 3 } }{ 2 }
+			}
+		}
+	}
+}
+}
+
+
+
+\end{document}
