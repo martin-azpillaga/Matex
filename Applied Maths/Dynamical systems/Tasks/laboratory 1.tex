@@ -5,10 +5,9 @@
 \begin{document}
 
 \block{ $ Martin Azpillaga $ }{
-\immm{laboratory1}{ lab }
-\unit{ $ 1st laboratory Orbit Analysis $ }
+\unit{ $ 1st laboratory $ }
 {
-	\proposition{ $ 1st laboratory. Orbit analysis $ }
+	\proposition{ $ Orbit analysis $ }
 	{
 		\letbe
 		{
@@ -68,43 +67,36 @@
 					f''(x) = 6x \geq 0
 				}.
 			
-			$ Graphic representation $.
+			$ Graphic representation $..
 			
-
+			
+			\includeimage{image1}.
 			
 
 			$ Orbit analysis$.
 
 			\all{ x \in \R }[ x < \frac{ \sqrt{ 3 } }{ 2 } ]
 			{
-				\all{ n \in \N }
-				{
-					x_n < \frac{ \sqrt{ 3 } }{ 2 }
-				}
+
+			o(x) $ is superiorly bounded by $ -\frac{ \sqrt{ 3 } }{ 2 }.
+
+			$Induction over n: As $ f $ is increasing: $.
+
+			x_n < -\frac{ \sqrt{ 3 } }{ 2 } \imp f(x_n) < f(-\frac{ \sqrt{ 3 } }{ 2 }) \imp x_{n+1} < - \frac{ \sqrt{ 3 } }{ 2 }.
+
+			o(x) $ decreasing $.
+
+			\definedFunction{ g }{ \R }{ \R }{ x }{ f(x) - x } $ increasing $.
+
+			$Induction over n: As $ f $ is increasing: $.
+
+			f(x_n) - x_n = x_n^3 - \frac{ 3 }{ 4 }x_n.
+
+			x_n < -\frac{ \sqrt{ 3 } }{ 2 } \imp f(x_n) < (-\frac{ \sqrt{ 3 } }{ 2 })^3 - \frac{ 3 }{ 4 }(-\frac{ \sqrt{ 3 } }{ 2 }) < 0
+			
 			}.
-
-			$ Induction over n $.
-
-			x_{n+1} = x_n^3 + \frac{ 1 }{ 4 }x_n = 
-
-			x_n( x_n^2 + \frac{ 1 }{ 4 }).
-
-			x_n < -\frac{ \sqrt{ 3 } }{ 2 } \imp x_n^2 > \frac{ 3 }{ 4 } \imp x_n^2 + \frac{ 1 }{ 4 } > 1.
-
-		
-
-			\imp x_n( x_n^2 + \frac{ 1 }{ 4 }) = x_{n+1} < -\frac{ \sqrt{ 3 } }{ 2 }.
-
-			$ Decreasing $.
-
-			\all{ x \in \R }[ x < -\frac{ \sqrt{ 3 } }{ 2 } ]
-			{
-				f(x) - x = x( x^2 - \frac{ 3 }{ 4 }).
-
-				x > 0 , x^2 - \frac{ 3 }{ 4 } < 0 \imp f(x) - x < 0 \imp f(x) < x.
-			}
-
-			o(x) $ decreasing and no fixed point under x $ \imp o(x) \convergesto \infty
+			o(x) $ decreasing and no fixed point under x $.
+			o(x) \convergesto -\infty..
 
 
 
@@ -117,10 +109,12 @@
 
 				o(x) $ superiorly bounded by $ 0.
 
-				f(x) - x = x( x^2 - \frac{ 3 }{ 4 } ) < 0 \imp f(x) < x
+				f(x) - x = x( x^2 - \frac{ 3 }{ 4 } ) > 0 \imp f(x) > x
 
-				o(x) $ bounded + decreasing $ \imp $ o(x) convergent to a fixed point$.
-				$ The only fixed point lesser than x is $ - \frac{ \sqrt{ 3 } }{ 2 }. o(x) \convergesto - \frac{ \sqrt{ 3 } }{ 2 }
+				o(x) $ bounded + increasing $ \imp $ o(x) convergent to a fixed point$.
+				$ The only fixed point higher than x is $ 0.
+
+				o(x) \convergesto 0
 			}
 		}
 	}
