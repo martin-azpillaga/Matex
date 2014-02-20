@@ -1,0 +1,13 @@
+<snippet>
+
+<scope>text.tex.latex</scope>
+<tabTrigger>partial derivative</tabTrigger>
+<description>.</description>
+
+<content>
+<![CDATA[
+\partialderivative{ ${1:of} }{ ${2:respect} }
+]]>
+</content>
+
+</snippet>
