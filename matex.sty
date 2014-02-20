@@ -26,6 +26,8 @@
 \RequirePackage{MnSymbol}
 \RequirePackage{comment}
 \RequirePackage{subfiles}
+\RequirePackage{graphicx}
+\RequirePackage{caption}
 \usepackage[final]{pdfpages}
 
 
@@ -387,6 +389,12 @@
 \newcommand{\showthat}[1]
 {
 	\tabtext{Show that}{#1}
+}
+
+
+\newcommand{\study}[1]
+{
+	\tabtext{Study}{#1}
 }
 
 
@@ -803,6 +811,20 @@
 }
 
 
+
+
+
+
+
+%					*** Imaging ***
+
+
+\newcommand{\includeimage}[1]
+{
+	\centering
+	\includegraphics[width=5cm]{#1.pdf}
+	%\captionof{figure}{figure}
+}
 
 
 
