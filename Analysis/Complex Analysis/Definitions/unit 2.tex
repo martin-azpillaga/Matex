@@ -57,7 +57,57 @@
 	}
 
 
+	\definition{ $ Cauchy-Riemman equations $ }
+	{
+		\letbe
+		{
+			\function{ u,v }{ \R^2 }{ \R }.
+			\definedFunction{ f }{ \R^2 }{ \R^2 }{ (x,y) }{ (u((x,y)),v((x,y))) }
+		}
+		\then{ f }{ $ satisfies the Cauchy-Riemman equations $ }
+		{
+			\exists \; u_x, u_y, v_x, v_y.
+
+			u_x = v_y.
+			u_y = - v_x
+		}
+		\denote
+		{
+			u_x + iv_x \as f_x.
+			u_y + iv_y \as f_y
+		}
+	}
+
+
 	
+
+
+	\definition{ $ Conformal $ }
+	{
+		\letbe
+		{
+			\Uc \subset \C $ open $.
+			\function{ f }{ \Uc }{ \C }.
+			z \in \Uc
+		}
+		\then{ f }{ $ conformal in $ z $ $ }
+		{
+			\ex{ c \in \C }{ \all{ I \subset \R }[ 0 \in I ]
+			{
+				\all{ \function{ \gamma }{ I }{ \R^2 } }[ \gamma $ differentiable$ \logicAnd \gamma(0) = z \logicAnd \gamma'(0) \neq 0  ]
+				{
+					\frac{ (f \circ \gamma)'(0) }{ \gamma'(0) } = c
+				}
+			}}
+		}
+		\then{ f }{ $ conformal $ }
+		{
+			\all{ z \in \Uc }
+			{
+				f $ conformal in $ z
+			}
+		}
+	}
 }
 
 
