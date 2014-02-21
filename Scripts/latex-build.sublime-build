@@ -4,19 +4,19 @@
 	{
 		"cmd": 
 		[
-			"taskkill", "/Im", "AcroRd32.exe", "&",
+			"taskkill", "/Im", "sumatrapdf.exe", "&",
 			
-			"pdflatex", "$file", "&&",
-			"pdflatex", "$file", "&&",
+			"pdflatex", "-quiet", "$file", "&&",
 
-			"del", "$file_base_name.aux", "&&",
-			"del", "$file_base_name.log", "&&",
-			"del", "$file_base_name.toc", "&&",
-			"del", "$file_base_name.out", "&&",
+			"del", "$file_base_name.aux", "&",
+			"del", "$file_base_name.log", "&",
+			"del", "$file_base_name.toc", "&",
+			"del", "$file_base_name.out", "&",
 			
-			"AcroRd32", "$file_base_name.pdf" // \A "page=7"
+			"sumatrapdf", "$file_base_name.pdf", "-presentation"
 		],
 		//"file_regex": "ERROR",
 		"selector": "source.latex"
+
 	}
 }
