@@ -8,22 +8,131 @@
 \unit{ $ Statistic models $ }
 {
 	
-		
-		
-		
-		
+	\proposition{ $ Characterization of regular exponential models $ }
+	{
+		\letbe
+		{
+			( \Omega, \Ac, \Pc ) $ exponential 1-D model parametrized by $ \Theta.
+			L(x,\theta) = \exp( f(x)\phi(\theta) + f'(x) + \phi'(\theta) ) $ exponential expression $
+		}
+		\holds
+		{
+			\Theta $ interval $, \phi,\phi' \in \Cc^2 \suchthat \all{ \theta \in \Theta }
+			{
+				\phi'(\theta) \neq 0.
+				E_\theta f^2(x) \in \R
+			}.
 
+			\imp ( \Omega, \Ac, \Pc ) $ regular $
+		}
+		\demonstration
+		{
+			$ no demonstration $
+		}
+	}
 	
 	
-	
-	
-	
-	
-	
-	
-	
-	
+	Suficiencia \\
 
+	\definition{ $ Statistic $ }
+	{
+		\letbe
+		{
+			( \Omega, \Ac, \Pc ) $ statistical model m-D parametrized by $ \Theta.
+			X = (X_1,\dots,X_n): \tilde{\Omega} \to \Omega.
+			\function{ T }{ \Omega }{ \R^m }
+		}
+		\then{ T }{ $ statistic $ }
+		{
+			\all{ B \in \B(\R) }
+			{
+				T^{-1}(B) \in \Ac
+			}
+		}
+	}
+	
+	
+	\definition{ $ Sufficiency $ }
+	{
+		\letbe
+		{
+			( \Omega, \Ac, \Pc ) $ statistical l-D model parametrized by $ \Theta.
+			\function{ T }{ \Omega }{ \R^m } $ statistic $
+		}
+		\then{ T }{ $ sufficient $ }
+		{
+			$ la ley de la muestra condicionada por T no depende de $ \theta
+		}
+	}
+	
+	
+	\proposition{ $ Noyman \& Fisher's factorization test $ }
+	{
+		\letbe
+		{
+			( \Omega, \Ac, \Pc ) $ statistical model parametrized by $ \Theta.
+			\function{ T }{ \Omega }{ \R^m }
+		}
+		\holds
+		{
+			T $ sufficient $ \ifandonlyif 
+			\ex{ \logicAnd \in \functionSpace{ \R^m \times \Theta }{ \R^+ }, h \in \functionSpace{ \Omega }{ \R^+ } }{ L(x,\theta) = \logicAnd(T(x),\theta)h(x)  }
+		}
+	}
+	
+	
+	Punctual estimation \\
+
+	\definition{ $ estimator $ }
+	{
+		\letbe
+		{
+			( \Omega, \Ac, \Pc ) $ statistical model parametrized by $ \Theta.
+			x_1,\dots,x_n $ observation of $ X=X_1,\dots,X_n): \tilde{\Omega} \to \Omega.
+			\function{ T }{ \Omega }{ \R^k } $ statistic $
+		}
+		\then{ T }{ $ an estimator $ }
+		{
+			T $ approaches $ \theta
+		}
+	}
+	
+	
+	\definition{ $ loose function $ }
+	{
+		\letbe
+		{
+			( \Omega, \Ac, \Pc ) $ statistical model parametrized by $ \Theta.
+			x_1,\dots,x_n $ observation of $ X=X_1,\dots,X_n): \tilde{\Omega} \to \Omega.
+			\function{ T }{ \Omega }{ \R^k } $ estimator $.
+			\function{ W }{ \R^k \times \Theta }{ \R^+ }
+		}
+		\then{ W }{ $ a loose function $ }
+		{
+			W(\theta,\theta) = 0
+		}
+	}
+	
+	
+	\definition{ $ Risk function $ }
+	{
+		\letbe
+		{
+			( \Omega, \Ac, \Pc ) $ statistical model parametrized by $ \Theta.
+			x_1,\dots,x_n $ observation of $ X=X_1,\dots,X_n): \tilde{\Omega} \to \Omega.
+			\function{ T }{ \Omega }{ \R^k } $ estimator $.
+			\function{ W }{ \R^k \times \Theta }{ \R^+ } $ loose function $
+		}
+		\name{ $ risk function $ }
+		{
+			\definedFunction{ R_T }{ \Theta }{ \R^+ }{ \theta }{ E_\theta(W(T,\theta)) }
+		}
+	}
+	
+	
+	
+	
+	
 
 	
 	
