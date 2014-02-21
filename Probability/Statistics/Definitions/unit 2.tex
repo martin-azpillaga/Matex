@@ -1,0 +1,112 @@
+
+\documentclass[../Main/main]{subfiles}
+
+
+\begin{document}
+
+
+\unit{ $ Estimation $ }
+{
+	\introduction
+	{ 
+		$introduction\\$ 
+	}
+
+	\definition{ $ Statistic $ }
+	{
+		\letbe
+		{
+			( \Omega, \Ac, \Pc ) $ m-D statistical model parametrized by $ \Theta.
+			( M, \Sigma ) $ measurable space $.
+			\function{ X }{ \Omega }{ M } $ random variable $.
+			\function{ f }{ M }{ \R^m }
+		}
+		\then{ f }{ $ a statistic $ }
+		{
+			\all{ B \in \B(\R^m) }
+			{
+				f^{-1}(B) \in \Sigma
+			}
+		}
+		\denote
+		{
+			f \as T
+		}
+	}
+
+
+	\definition{ $ Sufficiency $ }
+	{
+		\letbe
+		{
+			( \Omega, \Ac, \Pc ) $ m-D statistical model parametrized by $ \Theta.
+			( M, \Sigma ) $ measurable space $.
+			\function{ X }{ \Omega }{ M } $ random variable $.
+			\function{ T }{ M }{ \R^m } $ statistic $
+		}
+		\then{ T }{ $ sufficient $ }
+		{
+			\all{ \theta_1,\theta_2 \in \Theta }
+			{
+				\all{ x \in M }
+				{
+				 	\all{ t \in \R^m }
+				 	{
+				 		P_{\theta_1}(X = x \with T \circ X = t ) = P_{\theta_2}( X = x \with T \circ X = t )
+				 	}
+				}
+			}
+		}
+	}
+
+
+	\definition{ $ Estimator $ }
+	{
+		\letbe
+		{
+			( \Omega, \Ac, \Pc ) $ statistical model parametrized by $ \Theta.
+			x_1,\dots,x_n $ observation of $ X=X_1,\dots,X_n): \tilde{\Omega} \to \Omega.
+			\function{ T }{ \Omega }{ \R^k } $ statistic $
+		}
+		\then{ T }{ $ an estimator $ }
+		{
+			T $ approaches $ \theta
+		}
+	}
+	
+	
+	\definition{ $ Loss function $ }
+	{
+		\letbe
+		{
+			( \Omega, \Ac, \Pc ) $ statistical model parametrized by $ \Theta.
+			x_1,\dots,x_n $ observation of $ X=X_1,\dots,X_n): \tilde{\Omega} \to \Omega.
+			\function{ T }{ \Omega }{ \R^k } $ estimator $.
+			\function{ W }{ \R^k \times \Theta }{ \R^+ }
+		}
+		\then{ W }{ $ a loss function $ }
+		{
+			W(\theta,\theta) = 0
+		}
+	}
+	
+	
+	\definition{ $ Risk function $ }
+	{
+		\letbe
+		{
+			( \Omega, \Ac, \Pc ) $ statistical model parametrized by $ \Theta.
+			x_1,\dots,x_n $ observation of $ X=X_1,\dots,X_n): \tilde{\Omega} \to \Omega.
+			\function{ T }{ \Omega }{ \R^k } $ estimator $.
+			\function{ W }{ \R^k \times \Theta }{ \R^+ } $ loose function $
+		}
+		\name{ $ risk function $ }
+		{
+			\definedFunction{ R_T }{ \Theta }{ \R^+ }{ \theta }{ E_\theta(W(T,\theta)) }
+		}
+	}
+
+}
+
+
+\end{document}
