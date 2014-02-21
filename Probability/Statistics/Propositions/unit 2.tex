@@ -1,0 +1,48 @@
+
+\documentclass[../Main/main]{subfiles}
+
+
+\begin{document}
+
+
+\unit{ $ Punctual estimation $ }
+{
+	\introduction
+	{ 
+		$introduction\\$ 
+	}
+
+	
+	\proposition{ $ Neyman \& Fisher's factorization theorem $ }
+	{
+		\letbe
+		{
+			( \Omega, \Ac, \Pc ) $ k-D statistical model parametrized by $ \Theta.
+			\function{ L }{ \Omega \times \Theta }{ \R } $ likelihood function of $ ( \Omega, \Ac, \Pc ).
+			( M, \Sigma ) $ measurable space $.
+			\function{ X }{ \Omega }{ M } $ random variable $.
+			\function{ T }{ M }{ \R^k } $ statistic $
+		}
+		\holds
+		{
+			T $ sufficient $ \ifandonlyif 
+			\ex{ \function{ \Lambda }{ \R^m \times \Theta }{ \R^+ }, \function{ h }{ \Omega }{ \R^k } }
+			{
+				\all{ x \in \Omega }
+				{
+					\all{ \theta \in \Theta }
+					{
+						L(x,\theta) = \Lambda( T(x), \theta )h(x)
+					}
+				}
+			}
+		}
+	}
+
+
+
+
+}
+
+
+\end{document}

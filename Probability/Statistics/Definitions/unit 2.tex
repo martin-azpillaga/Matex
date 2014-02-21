@@ -7,10 +7,6 @@
 
 \unit{ $ Estimation $ }
 {
-	\introduction
-	{ 
-		$introduction\\$ 
-	}
 
 	\definition{ $ Statistic $ }
 	{
@@ -18,15 +14,13 @@
 		{
 			( \Omega, \Ac, \Pc ) $ m-D statistical model parametrized by $ \Theta.
 			( M, \Sigma ) $ measurable space $.
+
 			\function{ X }{ \Omega }{ M } $ random variable $.
 			\function{ f }{ M }{ \R^m }
 		}
 		\then{ f }{ $ a statistic $ }
 		{
-			\all{ B \in \B(\R^m) }
-			{
-				f^{-1}(B) \in \Sigma
-			}
+			f $ measurable $
 		}
 		\denote
 		{
@@ -65,10 +59,12 @@
 		\letbe
 		{
 			( \Omega, \Ac, \Pc ) $ statistical model parametrized by $ \Theta.
-			x_1,\dots,x_n $ observation of $ X=X_1,\dots,X_n): \tilde{\Omega} \to \Omega.
-			\function{ T }{ \Omega }{ \R^k } $ statistic $
+			( M, \Sigma ) $ measurable space $.
+			\function{ X }{ \Omega }{ M } $ random variable $.
+			\function{ T }{ M }{ \R^k } $ statistic $.
+			\theta \in \Theta
 		}
-		\then{ T }{ $ an estimator $ }
+		\then{ T }{ $ an estimator of $ \theta }
 		{
 			T $ approaches $ \theta
 		}
@@ -80,8 +76,9 @@
 		\letbe
 		{
 			( \Omega, \Ac, \Pc ) $ statistical model parametrized by $ \Theta.
-			x_1,\dots,x_n $ observation of $ X=X_1,\dots,X_n): \tilde{\Omega} \to \Omega.
-			\function{ T }{ \Omega }{ \R^k } $ estimator $.
+			( M, \Sigma ) $ measurable space $.
+			\function{ X }{ \Omega }{ M } $ random variable $.
+			\function{ T }{ M }{ \R^k } $ estimator $.
 			\function{ W }{ \R^k \times \Theta }{ \R^+ }
 		}
 		\then{ W }{ $ a loss function $ }
@@ -96,9 +93,10 @@
 		\letbe
 		{
 			( \Omega, \Ac, \Pc ) $ statistical model parametrized by $ \Theta.
-			x_1,\dots,x_n $ observation of $ X=X_1,\dots,X_n): \tilde{\Omega} \to \Omega.
-			\function{ T }{ \Omega }{ \R^k } $ estimator $.
-			\function{ W }{ \R^k \times \Theta }{ \R^+ } $ loose function $
+			( M, \Sigma ) $ measurable space $.
+			\function{ X }{ \Omega }{ M } $ random variable $.
+			\function{ T }{ M }{ \R^k } $ estimator $.
+			\function{ W }{ \R^k \times \Theta }{ \R^+ } $ loss function $
 		}
 		\name{ $ risk function $ }
 		{
