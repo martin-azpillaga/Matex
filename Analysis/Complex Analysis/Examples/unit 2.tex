@@ -1,0 +1,75 @@
+
+\documentclass[../Main/main]{subfiles}
+
+
+\begin{document}
+
+
+\unit{ $ Holomorphic functions $ }
+{
+	
+	\example{ $ Conjugation $ }
+	{
+		\letbe
+		{
+			\definedFunction{ \bar{a} }{ \C }{ \C }{ z }{ \bar{z} }
+		}
+		\isNot{ \bar{a} }{ $ holomorphic $ }
+		{
+			u_x = 1.
+			u_y = 0.
+			v_x = 0.
+			v_y = -1.
+
+			\all{ z \in \C }
+			{
+				-1 \neq 1 \imp f $ not holomorphic in $ z
+			}
+		}
+	}
+
+
+	\example{ $ Quadratic norm $ }
+	{
+		\letbe
+		{
+			\definedFunction{ f }{ \C }{ \C }{ z }{ |z|^2 }.
+			f_{\R^2} $ component decomposition of f $
+		}
+		\is{ f }{ $ holomorphic in $ 0 }
+		{
+			f $ differentiable in $ \R^2 $ polinomial $.
+			\all{ z \in \C }
+			{
+				u_x(x,y) = 2x.
+				u_y(x,y) = 2y.
+				v_x(x,y) = 0.
+				v_y(x,y) = 0.
+
+				u_x = v_y \ifandonlyif x = 0.
+				u_y = -v_x \ifandonlyif y = 0.
+
+				f $ holomorphic function in $ z \ifandonlyif z = 0
+			}
+		}
+	}
+
+
+	\example{ $ Non preserving angles function $ }
+	{
+		\letbe
+		{
+			f(z) = z^2
+		}
+		\is{ f }{ $ conform in $ \R \nonzero }
+		{
+			f(\set{ (x,0) \in \C \with x > 0 }) = \set{ (x,0) \in \C \with x > 0 }.
+			f(\set{ (x,0) \in \C \with x < 0 }) = \set{ (x,0) \in \C \with x > 0 }.
+
+			ang(A,B) = \pi \neq 0 = ang(f(A),f(B))
+		}
+	}
+}
+
+
+\end{document}

@@ -1,0 +1,107 @@
+
+\documentclass[../Main/main]{subfiles}
+
+
+\begin{document}
+
+
+\unit{ $ Holomorphic functions $ }
+{
+	
+	\proposition{ $ Cauchy-Riemman $ }
+	{
+		\letbe
+		{
+			\function{ f }{ \R^2 }{ \R^2 } $ satisfies CR $
+		}
+		\holds
+		{
+			f_x = f'(z).
+			f_y = -if_y.
+			\partialderivative{ z }{ f(z) } = 0
+		}
+		\demonstration
+		{
+			f_x = u_x + iv_x = a + bi = f'(z).
+			f_y = i(a+ib) = if'(z).
+			f'(z) = -if_y.
+			$notation$
+		}
+	}
+
+
+	\proposition{ $ tangent venctor $ }
+	{
+		\letbe
+		{
+			\gamma $ differentiable plane arc $ \suchthat \all{ t \in I }
+			{
+				\gamma'(t) \neq 0
+			}
+		}
+		\holds
+		{
+			\gamma'(t) $ tangent to $ \gamma
+		}
+		\demonstration
+		{
+			demonstration.
+		}
+	}
+
+
+	\proposition{ $ arc images $ }
+	{
+		\letbe
+		{
+			f \in \Hc(\Uc).
+			\gamma $ differentiable plane arc $ \suchthat \gamma \subset \Uc.
+			\sigma = f(\gamma).
+			z_0 = \gamma(0)
+		}
+		\holds
+		{
+			\sigma' = f'(\gamma)\gamma'.
+			\gamma'(0) \neq 0 \imp f'(z_0) \neq 0.
+			\sigma'(0) = f'(z_0)\gamma'(0).
+			|\sigma'(0)| = |f'(z_0)||\gamma'(0)|.
+			arg \sigma'(0) = arg \gamma'(0) + arg f(z_0).
+			$ f aplica una homotecia mas una rotacion constante a todos los \\ vectores tangentes que salen de z0 $
+		}
+		\demonstration
+		{
+			$obvio$
+		}
+	}
+
+
+	
+	
+	\proposition{ $ Holomorphic functions are conform $ }
+	{
+		\letbe
+		{
+			\function{ f }{ \Uc }{ \C }.
+			
+		}
+		\holds
+		{
+			f $holomorph in $ z \suchthat f'(z) \neq 0 \ifandonlyif f $ conform $
+		}
+		\demonstration
+		{
+			\rightway
+			{
+				$ already seen $
+			}
+			\leftway
+			{
+				$ too hard $
+			}	
+		}
+	}
+
+}
+
+
+\end{document}
