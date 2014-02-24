@@ -35,11 +35,11 @@
 	{
 		\letbe
 		{
-			\sum{ c_n }{ n }[ 0 ] $ complex series $
+			\summation{ c_n }{ n }[ 0 ] $ complex series $
 		}
 		\holds
 		{
-			\sum{ c_n }{ n }[ 0 ] $ convergent $ \ifandonlyif \sum{ Re c_n }{ n }[ 0 ] $ convergent $ \logicAnd \sum{ Im c_n }{ n }[ 0 ] $ convergent $	
+			\summation{ c_n }{ n }[ 0 ] $ convergent $ \ifandonlyif \summation{ Re c_n }{ n }[ 0 ] $ convergent $ \logicAnd \sum{ Im c_n }{ n }[ 0 ] $ convergent $	
 		}
 		\demonstration
 		{
@@ -132,7 +132,9 @@
 	{
 		\letbe
 		{
-			\summation{ c_n }{ n }[ 0 ] $ real series $
+			\summation{ c_n }{ n }[ 0 ] $ real series $.
+
+			l \in \R \suchthat 
 		}
 		\holds
 		{
@@ -146,112 +148,113 @@
 	}
 	
 	
-	% \definition{ $ Power series $ }
-	% {
-	% 	\letbe
-	% 	{
-	% 		\sum{ a_nf_n }{ n }[ 0 ] $ complex valued sequence $
-	% 	}
-	% 	\then{ \sum{ a_nf_n }{ n }[ 0 ] }{ $ a power series $ }
-	% 	{
-	% 		\all{ n \in \N }
-	% 		{
-	% 			\definedFunction{ f_n }{ \C }{ \C }{ z }{ (z-a)^n }
-	% 		}
-	% 	}
-	% }
+	\definition{ $ Power series $ }
+	{
+		\letbe
+		{
+			\summation{ a_nf_n }{ n }[ 0 ] $ complex valued sequence $
+		}
+		\then{ \summation{ a_nf_n }{ n }[ 0 ] }{ $ a power series $ }
+		{
+			\all{ n \in \N }
+			{
+				\definedFunction{ f_n }{ \C }{ \C }{ z }{ (z-a)^n }
+			}
+		}
+	}
 	
 	
-	% \definition{ $ Convergence radius $ }
-	% {
-	% 	\letbe
-	% 	{
-	% 		statements.
-	% 	}
-	% 	\then{ item }{ $ a/an entity $ }
-	% 	{
-	% 		conditions.
-	% 	}
-	% 	\denote
-	% 	{
-	% 		property \as notation.
-	% 	}
-	% }
+	\definition{ $ Convergence radius $ }
+	{
+		\letbe
+		{
+			statements.
+		}
+		\then{ item }{ $ a/an entity $ }
+		{
+			conditions.
+		}
+		\denote
+		{
+			property \as notation.
+		}
+	}
 	
 	
 	
-	% \proposition{ $ Power series theorem $ }
-	% {
-	% 	\letbe
-	% 	{
-	% 		\sum{ a_nc^n }{ n }[ 0 ] $ power series $
-	% 	}
-	% 	\holds
-	% 	{
-	% 		|z-a| < R \imp $ absolutely convergent $.
-	% 		|z-a| > R \imp $ divergent $.
+	\proposition{ $ Power series theorem $ }
+	{
+		\letbe
+		{
+			\summation{ a_nc^n }{ n }[ 0 ] $ power series $
+		}
+		\holds
+		{
+			|z-a| < R \imp $ absolutely convergent $.
+			|z-a| > R \imp $ divergent $.
 
-	% 		$ convergent in $ D(a,R).
+			$ convergent in $ D(a,R).
 
-	% 		\definedFunction{ f }{ \C }{ \C }{ z }{ \sum{ c_n(z-a)^n }{ n }[ 0 ] } \in \Hc(D(a,R)).
+			\definedFunction{ f }{ \C }{ \C }{ z }{ \summation{ c_n(z-a)^n }{ n }[ 0 ] } \in \Hc(D(a,R)).
 
-	% 		\all{ z \in \C }
-	% 		{
-	% 			f'(z) = \sum{ nc_n(z-a)^{n-1} }{ n }[ 0 ] $ convergent $ 
-	% 		}.
+			\all{ z \in \C }
+			{
+				f'(z) = \summation{ nc_n(z-a)^{n-1} }{ n }[ 0 ] $ convergent $ 
+			}.
 
-	% 		$ convergence radius of $ f' = $ convergence radius of $ f
-	% 	}
-	% 	\demonstration
-	% 	{
-	% 		 \all{ z \in \C }[ |z-a| < R ]
-	% 		 {
-	% 		 	$ Root test over $ \sum{ |c_n||z-a|^n }{ n }[ 0 ]
+			$ convergence radius of $ f' = $ convergence radius of $ f
+		}
+		\demonstration
+		{
+			 \all{ z \in \C }[ |z-a| < R ]
+			 {
+			 	$ Root test over $ \summation{ |c_n||z-a|^n }{ n }[ 0 ]
 
-	% 		 	\limit{ (|c_n||z-a|^n)^{\frac{ 1 }{ n }) }{ n } =
-	% 		 	|z-a| \limit{ |c_n|^{\frac{ 1 }{ n }} }{ n } = \frac{ |z-a| }{ R } < 1
+			 	\limit{ (|c_n||z-a|^n)^{\frac{ 1 }{ n }) }{ n } =
+			 	|z-a| \limit{ |c_n|^{\frac{ 1 }{ n }} }{ n } = \frac{ |z-a| }{ R } < 1
 
-	% 		 	$ Root test $ \imp $ absolutely convergent $.
+			 	$ Root test $ \imp $ absolutely convergent $.
 
-	% 		 }
+			 }
 
-	% 		 \all{ z \in \C }[ |z-a| < R ]
-	% 		 {
-	% 		 	\all{ \rho \in \R }[ |z-a| < \rho < R ]
-	% 		 	{
-	% 		 		\frac{ 1 }{ \rho } < \frac{ 1 }{ R }.
+			 \all{ z \in \C }[ |z-a| < R ]
+			 {
+			 	\all{ \rho \in \R }[ |z-a| < \rho < R ]
+			 	{
+			 		\frac{ 1 }{ \rho } < \frac{ 1 }{ R }.
 
-	% 		 		\limit{ |c_n|^{1/n} }{ n } = \frac{ 1 }{ R } \imp
+			 		\limit{ |c_n|^{1/n} }{ n } = \frac{ 1 }{ R } \imp
 
-	% 		 		$ exists partial of $ |c_n|^{1/n} $:..$.
+			 		$ exists partial of $ |c_n|^{1/n} $:..$.
 
-	% 		 		|c_n||z-a|^n > \frac{ |z-a|^n }{ \rho^n } $ no $ \convergesto 0.
+			 		|c_n||z-a|^n > \frac{ |z-a|^n }{ \rho^n } $ no $ \convergesto 0.
 
-	% 		 		$ General term test $ \imp $ divergent $
-	% 		 	}
-	% 		 }
-	% 	}
-	% }
+			 		$ General term test $ \imp $ divergent $
+			 	}
+			}
+		}
+		}
+	}
 	
 	
-	% \example{ $ Exponential $ }
-	% {
-	% 	\letbe
-	% 	{
-	% 		a \as 0.
-	% 		c_n \as \frac{ 1 }{ n }
-	% 	}
-	% 	\is{ \sum{ c_n(z-a)^n }{ n }[ 0 ] }{ $ convergent in D1 $ }
-	% 	{
-	% 		\limit{ \frac{ |c_n| }{ |c_{n+1}| } }{ n } = \limit{ \frac{ n+1 }{ n } }{ n } = 1 \imp R = 1.
+	\example{ $ Exponential $ }
+	{
+		\letbe
+		{
+			a \as 0.
+			c_n \as \frac{ 1 }{ n }
+		}
+		\is{ \summation{ c_n(z-a)^n }{ n }[ 0 ] }{ $ convergent in D1 $ }
+		{
+			\limit{ \frac{ |c_n| }{ |c_{n+1}| } }{ n } = \limit{ \frac{ n+1 }{ n } }{ n } = 1 \imp R = 1.
 
-	% 		$CH$ \imp D(0,1) $ convergent $.
+			$CH$ \imp D(0,1) $ convergent $.
 
-	% 		\C \setminus D(0,1) $ divergent $.
+			\C \setminus D(0,1) $ divergent $.
 
-	% 		f' = f
-	% 	}
-	% }
+			f' = f
+		}
+	}
 	
 	
 	
