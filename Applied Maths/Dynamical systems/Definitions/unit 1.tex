@@ -66,21 +66,22 @@
 	}
 
 
-	\definition{ $ Functional dynamical system $ }
+	\definition{ $ Defined by a function $ }
 	{
 		\letbe
 		{
-			( M, T, \phi ) $ dynamical system $
+			( M, T, \phi ) $ dynamical system $.
+			\function{ f }{ M }{ M }
 		}
-		\then{ ( M, T, \phi ) }{ $ functional $ }
+		\then{ ( M, T, \phi ) }{ $ a dynamical system defined by $ f $ $ }
 		{
 			T = \N.
 
-			\ex{ \function{ f }{ M }{ M } }{ \definedFunction{ \phi }{ M \times \N }{ M }{ (x,n) }{ f^n(x) } }
+			\definedFunction{ \phi }{ M \times \N }{ M }{ (x,n) }{ f^n(x) }
 		}
 		\denote
 		{
-			( M, \N, f )
+			( M, T, \phi ) $ dynamical system defined by $ f \as ( M, \N, f )
 		}
 	}
 	
@@ -130,8 +131,8 @@
 	{
 		\letbe
 		{
-			( M, \N, f ) $ functional metrical dynamical system $.
-			x \in M $ fixed point $
+			( M, \N, f ) $ metrical dynamical system $.
+			x \in M $ m-periodic point $
 		}
 		\then{ x }{ $ attractive $ }
 		{
@@ -139,13 +140,25 @@
 			{
 				\ex{ N \in \N }{ \all{ n \in \N }[ n \geq N ]
 				{
-					f^n(y) \in \Uc
+					f^{nm}(y) \in \Uc
 				} }
 			} }
 		}
 		\then{ x }{ $ repulsive $ }
 		{
-			x $ attractive in $ ( M, \N, f )
+			\all{ \Uc \subset M }[ x \in \Uc ]
+			{
+				\all{ y \in \Uc }
+				{
+					\ex{ N \in \N }
+					{
+						\all{ n \in \N }[ n \geq N ]
+						{
+							f^{nm}(x) \nin \Uc
+						}
+					}
+				}
+			}
 		}
 	}
 	
@@ -154,12 +167,13 @@
 	{
 		\letbe
 		{
-			( M, \N, f ) $ functional dynamical system $.
-			x \in M $ attractive fixed point $
+			( M, \N, f ) $ dynamical system $.
+			x \in M $ attractive m-periodic point $.
+			o(x) $ orbit of $ x
 		}
 		\name{ $ attraction set of $ x }
 		{
-			\set{ y \in M \with f^n(y) \convergesto x }
+			\set{ y \in M \with \exists \; x' \in o(x) \as f^{nm}(y) \convergesto x' }
 		}
 		\denote
 		{
@@ -182,11 +196,11 @@
 	}
 
 
-	\definition{ $ feeble attractive \& repulsive points $ }
+	\definition{ $ Feeble attractive \& repulsive points $ }
 	{
 		\letbe
 		{
-			( M, \N, f ) $ functional dynamical system $.
+			( M, \N, f ) \; \Cc^3 $ dynamical system $.
 			x \in M
 		}
 		\then{ x }{ $ feeble attractive point $ }
@@ -204,59 +218,21 @@
 	}
 	
 	
-	\definition{ $ Attractive \& repulsive periodic points $ }
-	{
-		\letbe
-		{
-			( M, \N, f ) $ functional dynamical system $.
-			x \in M $ n-periodic point $
-		}
-		\then{ x }{ $ a attractive n-periodic point $ }
-		{
-			x $ attractive point of $ f^n
-		}
-		\then{ x }{ $ a repulsive n-periodic point $ }
-		{
-			x $ repulsive point of $ f^n
-		}
-	}
-	
-	
 	\definition{ $ Multiplier $ }
 	{
 		\letbe
 		{
-			( M, \N, f ) $ functional dynamical system $.
-			x \in M $ n-periodic point $
+			( M, \N, f ) \Cc^1 $ dynamical system $.
+			x \in M
 		}
-		\name{ $ multiplier of x $ }
+		\name{ $ multiplier of $ x }
 		{
 			f'(x)
 		}
-		\denote
-		{
-			m(x)
-		}
 	}
 	
 	
-	\definition{ $ Attraction set of periodic points $ }
-	{
-		\letbe
-		{
-			( M, \N, f ) $ functional dynamical system $.
-			x \in M $ n-periodic point $.
-			o(x) $ orbit of $ x
-		}
-		\name{ $ attraction set of $ }
-		{
-			\set{ y \in \M \with \ex{ x' \in o(x) }{ f^{nk} \convergesto x' } }
-		}
-		\denote
-		{
-			A(x)
-		}
-	}
+	
 	
 	
 	
