@@ -121,6 +121,101 @@
 	}
 	
 	
+	\definition{ $ Logistic $ }
+	{
+		\letbe
+		{
+			\function{ f }{ \R }{ \R }.
+			( M, T, \phi ) $ dynamical system defined by $ f
+		}
+		\then{ ( M, T, \phi ) }{ $ a logistic dynamical system $ }
+		{
+			\ex{ a \in \R }
+			{
+				\definedFunction{ f }{ \R }{ \R }{ x }{ ax(1-x) }
+			}
+		}
+	}
+	
+	
+	\proposition{ $ Analysis of logistic dynamical systems $ }
+	{
+		\letbe
+		{
+			( M, T, \phi ) $ logistical dynamical system defined by $ f
+		}
+		\holds
+		{
+			Fix(f) = \set{ 0,\frac{ a-1 }{ a } }.
+			Per_2(f) = 
+		}
+		\demonstration
+		{
+			demonstration.
+		}
+	}
+	
+	
+	\definition{ $ Chaos $ }
+	{
+		\letbe
+		{
+			\function{ f }{ \R }{ \R }.
+			( M, T, \phi ) $ dynamical system defined by $ f
+		}
+		\then{ ( M, T, \phi ) }{ $ chaotic $ }
+		{
+			Fix(f) $ dense in $ \R.
+			\ex{ x \in \R }
+			{
+				o(x) $ dense in $ \R
+			}.
+
+			f $ sensibility of $ x_0
+		}
+	}
+	
+	
+	\definition{ $ Sarkovskii's order $ }
+	{
+		\name{ $ Sarkovskii's order	$ }
+		{
+			naming.
+		}
+		\denote
+		{
+			property \as notation.
+		}
+	}
+	
+	
+	
+	\proposition{ $ Sarkovskii's theorem $ }
+	{
+		\letbe
+		{
+			\function{ f }{ I }{ I }.
+			( M, T, \phi ) $ dynamical system $
+		}
+		\holds
+		{
+			\ex{ x \in M }
+			{
+				o(x) $ k-period $
+			}.
+
+			\imp \all{ l \in \N }[ l > k ]
+			{
+				\ex{ x' \in M }
+				{
+					x' $ l-period $
+				}
+			}
+		}
+	}
+	
+	
+	
 		
 
 }
