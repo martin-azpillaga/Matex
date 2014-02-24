@@ -1,7 +1,7 @@
 
 \documentclass[../Main/main]{subfiles}
 
-
+\newcommand{\step}[2]{\end{math}\tabmath{$#1$}{#2}\begin{math}}
 \begin{document}
 
 \block{ $ Martin Azpillaga $ }{
@@ -13,34 +13,37 @@
 		{
 			\definedFunction{ f }{ \R }{ \R }{ x }{ x^3 + \frac{ 1 }{ 4 }x }
 		}
-		\demonstration
+		\study
 		{
 			
-			$ Formalization $.
-	
+		}
+		\demonstration
+		{
+			\step{ $ Formalization $ }
+			{
 				$Consider $ (M,T,\phi) $ where:$.
-				
 				M = \R.
 				T = \N.
-				\definedFunction{ \phi }{ \R \times \N }{ \R }{ (x,n) }{ f^n(x) }.
+				\definedFunction{ \phi }{ \R \times \N }{ \R }{ (x, n) }{ f^n(x) }.
 				
-				$We will denote $ \phi(x,n) = f^n(x) $ as $ x_n.
+				$We will denote $ \phi(x, n) = f^n(x) $ as $ x_n.
+			}.
 			
-			
-			
-			$ Fixed points $.
-
+			\step{ $ Fixed points $ }
+			{
 				\all{ x \in \R }
 				{
 					f(x) = x \ifandonlyif x^3 + \frac{ 1 }{ 4 }x - x = 0 \ifandonlyif x^3 - \frac{ 3 }{ 4 }x = 0.
 
-				\ifandonlyif x = 0 \logicOr x^2 - \frac{ 3 }{ 4 } = 0 \ifandonlyif x \in \set{ 0, \pm \frac{ \sqrt{ 3 } }{ 2 } }.
+				\ifandonlyif x = 0 \logicOr x^2 - \frac{ 3 }{ 4 } = 0 \ifandonlyif x \in \set{ 0, \pm \frac{ \sqrt{ 3 } }{ 2 } }
 				}.
-			
+
+				$ The fixed points set is $ \set{ 0, \pm \frac{ \sqrt{ 3 } }{ 2 } }.
+			}.			
 
 
-			$ Graphic analysis $.
-
+			\step{ $ Graphic analysis $ }
+			{
 				$ Parity: f is odd$.
 
 				\all{ x \in \R }
@@ -66,56 +69,64 @@
 				{
 					f''(x) = 6x \geq 0
 				}.
-			
-			$ Graphic representation $..
-			
-			
-			\includeimage{image1}.
-			
-
-			$ Orbit analysis$.
-
-			\all{ x \in \R }[ x < \frac{ \sqrt{ 3 } }{ 2 } ]
-			{
-
-			o(x) $ is superiorly bounded by $ -\frac{ \sqrt{ 3 } }{ 2 }.
-
-			$Induction over n: As $ f $ is increasing: $.
-
-			x_n < -\frac{ \sqrt{ 3 } }{ 2 } \imp f(x_n) < f(-\frac{ \sqrt{ 3 } }{ 2 }) \imp x_{n+1} < - \frac{ \sqrt{ 3 } }{ 2 }.
-
-			o(x) $ decreasing $.
-
-			\definedFunction{ g }{ \R }{ \R }{ x }{ f(x) - x } $ increasing $.
-
-			$Induction over n: As $ f $ is increasing: $.
-
-			f(x_n) - x_n = x_n^3 - \frac{ 3 }{ 4 }x_n.
-
-			x_n < -\frac{ \sqrt{ 3 } }{ 2 } \imp f(x_n) < (-\frac{ \sqrt{ 3 } }{ 2 })^3 - \frac{ 3 }{ 4 }(-\frac{ \sqrt{ 3 } }{ 2 }) < 0
-			
-			}.
-			o(x) $ decreasing and no fixed point under x $.
-			o(x) \convergesto -\infty..
-
-
-
-
-			\all{ x \in (\frac{ -\sqrt{ 3 } }{ 2 }, 0 ) }
-			{
-				o(x) \convergesto - \frac{ \sqrt{ 3 } }{ 2 }.
-
-				f(x) = x(x^2 + \frac{ 1 }{ 4 }) < 0.
-
-				o(x) $ superiorly bounded by $ 0.
-
-				f(x) - x = x( x^2 - \frac{ 3 }{ 4 } ) > 0 \imp f(x) > x
-
-				o(x) $ bounded + increasing $ \imp $ o(x) convergent to a fixed point$.
-				$ The only fixed point higher than x is $ 0.
-
-				o(x) \convergesto 0
 			}
+			
+			% $ Graphic representation $..
+			
+			
+			% \includeimage{image1}.
+			
+
+			% $ Orbit analysis$.
+
+			% \all{ x \in \R }[ x < \frac{ \sqrt{ 3 } }{ 2 } ]
+			% {
+
+			% 	\induction{ n }
+			% 	{
+			% 		f $ increasing $ \imp f(x_n) < f(-\frac{ \sqrt{ 3 } }{ 2 }) \imp x_{n+1} < - \frac{ \sqrt{ 3 } }{ 2 }.
+			% 	}
+
+			% 	o(x) $ is superiorly bounded by $ -\frac{ \sqrt{ 3 } }{ 2 }.
+
+
+			% 	$Induction over n: As $ f $ is increasing: $.
+
+			% 	x_n < -\frac{ \sqrt{ 3 } }{ 2 } \imp f(x_n) < f(-\frac{ \sqrt{ 3 } }{ 2 }) \imp x_{n+1} < - \frac{ \sqrt{ 3 } }{ 2 }.
+
+			% 	o(x) $ decreasing $.
+
+			% 	\definedFunction{ g }{ \R }{ \R }{ x }{ f(x) - x } $ increasing $.
+
+			% 	$Induction over n: As $ f $ is increasing: $.
+
+			% 	f(x_n) - x_n = x_n^3 - \frac{ 3 }{ 4 }x_n.
+
+			% 	x_n < -\frac{ \sqrt{ 3 } }{ 2 } \imp f(x_n) < (-\frac{ \sqrt{ 3 } }{ 2 })^3 - \frac{ 3 }{ 4 }(-\frac{ \sqrt{ 3 } }{ 2 }) < 0
+				
+			% }.
+			% o(x) $ decreasing and no fixed point under x $.
+			% o(x) \convergesto -\infty..
+
+
+
+
+			% \all{ x \in (\frac{ -\sqrt{ 3 } }{ 2 }, 0 ) }
+			% {
+			% 	o(x) \convergesto - \frac{ \sqrt{ 3 } }{ 2 }.
+
+			% 	f(x) = x(x^2 + \frac{ 1 }{ 4 }) < 0.
+
+			% 	o(x) $ superiorly bounded by $ 0.
+
+			% 	f(x) - x = x( x^2 - \frac{ 3 }{ 4 } ) > 0 \imp f(x) > x
+
+			% 	o(x) $ bounded + increasing $ \imp $ o(x) convergent to a fixed point$.
+			% 	$ The only fixed point higher than x is $ 0.
+
+			% 	o(x) \convergesto 0
+			% }
+
 		}
 	}
 }
