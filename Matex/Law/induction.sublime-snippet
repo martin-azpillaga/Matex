@@ -1,0 +1,16 @@
+<snippet>
+
+<scope>text.tex.latex</scope>
+<tabTrigger>induction</tabTrigger>
+<description>.</description>
+
+<content>
+<![CDATA[
+\induction{ ${1:over} }
+{
+	${2:go.}
+}
+]]>
+</content>
+
+</snippet>
