@@ -6,7 +6,10 @@
 
 <content>
 <![CDATA[
-\ex{ ${1:elem} \in  ${2:set} }{ ${3:such that} }
+\ex{ ${1:elem} \in ${2:set} }
+{
+	${3:such that}
+}
 ]]>
 </content>
 
