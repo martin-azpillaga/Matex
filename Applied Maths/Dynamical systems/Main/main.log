@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2013.11.22)  26 FEB 2014 12:04
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2013.11.22)  26 FEB 2014 16:30
 entering extended mode
-**C:/Users/MnM/Documents/Matex*Projects/Applied*Maths/Dynamical*systems/New/new
-.tex
+**C:/Users/MnM/Documents/Matex*Projects/Applied*Maths/Dynamical*systems/Main/ma
+in.tex
 
-("C:/Users/MnM/Documents/Matex Projects/Applied Maths/Dynamical systems/New/new
-.tex"
+("C:/Users/MnM/Documents/Matex Projects/Applied Maths/Dynamical systems/Main/ma
+in.tex"
 LaTeX2e <2011/06/27>
 Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, ar
 abic, armenian, assamese, basque, bengali, bokmal, bulgarian, catalan, coptic, 
@@ -16,18 +16,7 @@ german-x-2013-05-26, nynorsk, oriya, panjabi, pinyin, polish, portuguese, roman
 ian, russian, sanskrit, serbian, slovak, slovenian, spanish, swedish, swissgerm
 an, tamil, telugu, turkish, turkmen, ukenglish, ukrainian, uppersorbian, usengl
 ishmax, welsh, loaded.
-(C:\Users\MnM\AppData\Roaming\MiKTeX\2.9\tex\latex\subfiles\subfiles.cls
-Document Class: subfiles 2012/05/23 Federico Garcia
-("C:\Program Files\MiKTeX 2.9\tex\latex\tools\verbatim.sty"
-Package: verbatim 2003/08/22 v1.5q LaTeX2e package for verbatim enhancements
-\every@verbatim=\toks14
-\verbatim@line=\toks15
-\verbatim@in@stream=\read1
-)
-Preamble taken from file `../Main/main'
-
-("C:\Users\MnM\Documents\Matex Projects\Applied Maths\Dynamical systems\Main\ma
-in.tex" ("C:\Program Files\MiKTeX 2.9\tex\latex\base\book.cls"
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\book.cls"
 Document Class: book 2007/10/19 v1.4h Standard LaTeX document class
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\bk10.clo"
 File: bk10.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
@@ -54,7 +43,7 @@ For additional information on amsmath, use the `?' option.
 Package: amstext 2000/06/29 v2.01
 ("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsgen.sty"
 File: amsgen.sty 1999/11/30 v2.0
-\@emptytoks=\toks16
+\@emptytoks=\toks14
 \ex@=\dimen103
 )) ("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsbsy.sty"
 Package: amsbsy 1999/11/29 v1.2d
@@ -82,21 +71,21 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
 \dotsspace@=\muskip10
 \c@parentequation=\count95
 \dspbrk@lvl=\count96
-\tag@help=\toks17
+\tag@help=\toks15
 \row@=\count97
 \column@=\count98
 \maxfields@=\count99
-\andhelp@=\toks18
+\andhelp@=\toks16
 \eqnshift@=\dimen106
 \alignsep@=\dimen107
 \tagshift@=\dimen108
 \tagwidth@=\dimen109
 \totwidth@=\dimen110
 \lineht@=\dimen111
-\@envbody=\toks19
+\@envbody=\toks17
 \multlinegap=\skip44
 \multlinetaggap=\skip45
-\mathdisplay@stack=\toks20
+\mathdisplay@stack=\toks18
 LaTeX Info: Redefining \[ on input line 2665.
 LaTeX Info: Redefining \] on input line 2666.
 ) ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\amssymb.sty"
@@ -111,7 +100,7 @@ LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 Package: geometry 2010/09/12 v5.6 Page Geometry
 ("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\keyval.sty"
 Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
-\KV@toks@=\toks21
+\KV@toks@=\toks19
 ) ("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ifpdf.sty"
 Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
 Package ifpdf Info: pdfTeX in PDF mode is detected.
@@ -132,7 +121,7 @@ Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 \Gm@layoutheight=\dimen117
 \Gm@layouthoffset=\dimen118
 \Gm@layoutvoffset=\dimen119
-\Gm@dimlist=\toks22
+\Gm@dimlist=\toks20
 ("C:\Program Files\MiKTeX 2.9\tex\latex\geometry\geometry.cfg")) (C:\Users\MnM\
 AppData\Roaming\MiKTeX\2.9\tex\latex\fancyhdr\fancyhdr.sty
 \fancy@headwidth=\skip46
@@ -447,7 +436,12 @@ LaTeX Font Info:    Redeclaring math accent \vec on input line 1848.
 Excluding comment 'comment') (C:\Users\MnM\AppData\Roaming\MiKTeX\2.9\tex\latex
 \subfiles\subfiles.sty
 Package: subfiles 2012/05/23 Federico Garcia
-) ("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphicx.sty"
+("C:\Program Files\MiKTeX 2.9\tex\latex\tools\verbatim.sty"
+Package: verbatim 2003/08/22 v1.5q LaTeX2e package for verbatim enhancements
+\every@verbatim=\toks21
+\verbatim@line=\toks22
+\verbatim@in@stream=\read1
+)) ("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphicx.sty"
 Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
 ("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphics.sty"
 Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
@@ -636,33 +630,47 @@ File: pppdftex.def 2013/08/25 v0.4v Pdfpages driver for pdfTeX (AM)
 . Defining document command \integral with arg. spec. ' m m m O{} ' on line
 . 37.
 .................................................
+) ("C:\Program Files\MiKTeX 2.9\tex\latex\matex\logic.sty"
+
+C:\Program Files\MiKTeX 2.9\tex\latex\matex\logic.sty:4: LaTeX Error: Command \
+countable already defined.
+               Or name \end... illegal, see p.192 of the manual.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
 )
 ("C:\Users\MnM\Documents\Matex Projects\Applied Maths\Dynamical systems\Main\sp
-ecific.sty")))
-No file new.aux.
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 5.
-LaTeX Font Info:    ... okay on input line 5.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 5.
-LaTeX Font Info:    ... okay on input line 5.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 5.
-LaTeX Font Info:    ... okay on input line 5.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 5.
-LaTeX Font Info:    ... okay on input line 5.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 5.
-LaTeX Font Info:    ... okay on input line 5.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 5.
-LaTeX Font Info:    ... okay on input line 5.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 5.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 5.
+ecific.sty")
+("C:\Users\MnM\Documents\Matex Projects\Applied Maths\Dynamical systems\Main\ma
+in.aux")
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 10.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 10.
+
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\ts1cmr.fd"
 File: ts1cmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    ... okay on input line 10.
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
 * driver: pdftex
-* paper: <default>
+* paper: a5paper
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
 * modes: twoside 
@@ -692,6 +700,7 @@ LaTeX Font Info:    ... okay on input line 5.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
+
 (C:\Users\MnM\AppData\Roaming\MiKTeX\2.9\tex\context\base\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count143
@@ -709,156 +718,229 @@ LaTeX Font Info:    ... okay on input line 5.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
 \AtBeginShipoutBox=\box46
-[1{C:/Users/MnM/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}
+LaTeX Font Info:    Try loading font information for U+msa on input line 12.
 
-
-]
-LaTeX Font Info:    Try loading font information for U+msa on input line 8.
 ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 8.
+LaTeX Font Info:    Try loading font information for U+msb on input line 12.
+
 ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
-Underfull \hbox (badness 10000) in paragraph at lines 43--43
+) [1
+
+
+{C:/Users/MnM/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
+("C:\Users\MnM\Documents\Matex Projects\Applied Maths\Dynamical systems\Definit
+ions\main.tex" [2
+
+]
+("C:\Users\MnM\Documents\Matex Projects\Applied Maths\Dynamical systems\Definit
+ions\unit 1.tex" [3]
+Underfull \hbox (badness 10000) in paragraph at lines 34--34
 
  []
 
-[2]
-Underfull \hbox (badness 10000) in paragraph at lines 106--106
+
+Underfull \hbox (badness 10000) in paragraph at lines 49--49
 
  []
 
-[3]
-Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[4] [5]
-C:/Users/MnM/Documents/Matex Projects/Applied Maths/Dynamical systems/New/new.t
-ex:170: Undefined control sequence
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
+Underfull \hbox (badness 10000) in paragraph at lines 66--66
 
+ []
 
-C:/Users/MnM/Documents/Matex Projects/Applied Maths/Dynamical systems/New/new.t
-ex:170: Missing } inserted
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
+ [4
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 86--86
+
+ []
 
 
-C:/Users/MnM/Documents/Matex Projects/Applied Maths/Dynamical systems/New/new.t
-ex:170: Extra }, or forgotten $
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
+Underfull \hbox (badness 10000) in paragraph at lines 104--104
 
+ []
 
-C:/Users/MnM/Documents/Matex Projects/Applied Maths/Dynamical systems/New/new.t
-ex:170: Missing } inserted
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
+ [5]
+Underfull \hbox (badness 10000) in paragraph at lines 127--127
 
-
-C:/Users/MnM/Documents/Matex Projects/Applied Maths/Dynamical systems/New/new.t
-ex:170: Extra }, or forgotten $
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-
-C:/Users/MnM/Documents/Matex Projects/Applied Maths/Dynamical systems/New/new.t
-ex:170: Undefined control sequence
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-
-C:/Users/MnM/Documents/Matex Projects/Applied Maths/Dynamical systems/New/new.t
-ex:170: Missing } inserted
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-
-C:/Users/MnM/Documents/Matex Projects/Applied Maths/Dynamical systems/New/new.t
-ex:170: Extra }, or forgotten $
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-
-C:/Users/MnM/Documents/Matex Projects/Applied Maths/Dynamical systems/New/new.t
-ex:170: Undefined control sequence
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-
-C:/Users/MnM/Documents/Matex Projects/Applied Maths/Dynamical systems/New/new.t
-ex:170: Missing } inserted
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-
-C:/Users/MnM/Documents/Matex Projects/Applied Maths/Dynamical systems/New/new.t
-ex:170: Extra }, or forgotten $
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
+ []
 
  [6]
-("C:\Users\MnM\Documents\Matex Projects\Applied Maths\Dynamical systems\New\new
-.aux") ) 
+Underfull \hbox (badness 10000) in paragraph at lines 163--163
+
+ []
+
+ [7]
+Underfull \hbox (badness 10000) in paragraph at lines 182--182
+
+ []
+
+ [8]
+Underfull \hbox (badness 10000) in paragraph at lines 196--196
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 218--218
+
+ []
+
+ [9]
+Underfull \hbox (badness 10000) in paragraph at lines 232--232
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 249--249
+
+ []
+
+ [10]
+Underfull \hbox (badness 10000) in paragraph at lines 269--269
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 282--282
+
+ []
+
+))
+("C:\Users\MnM\Documents\Matex Projects\Applied Maths\Dynamical systems\Proposi
+tions\main.tex" [11] [12]
+("C:\Users\MnM\Documents\Matex Projects\Applied Maths\Dynamical systems\Proposi
+tions\unit 1.tex" [13
+
+] [14
+
+] [15
+
+] [16] [17] [18] [19]
+Underfull \hbox (badness 10000) in paragraph at lines 145--145
+
+ []
+
+ [20]))
+("C:\Users\MnM\Documents\Matex Projects\Applied Maths\Dynamical systems\Example
+s\main.tex"
+("C:\Users\MnM\Documents\Matex Projects\Applied Maths\Dynamical systems\Example
+s\unit 1.tex" [21
+
+]
+Overfull \hbox (13.61311pt too wide) detected at line 13
+\OML/cmm/m/it/10 Examplesofwhatareandwhatarenotone \U/MnSymbolC/m/n/10  \OML/c
+mm/m/it/10 dimensionaldynamicalsystems
+ []
+
+ [22
+
+] [23
+
+]))
+("C:\Users\MnM\Documents\Matex Projects\Applied Maths\Dynamical systems\Problem
+s\main.tex" [24
+
+]
+("C:\Users\MnM\Documents\Matex Projects\Applied Maths\Dynamical systems\Problem
+s\formulations.tex"
+<"../Problems/formulations 1".pdf, id=97, 597.50829pt x 845.0471pt>
+File: "../Problems/formulations 1".pdf Graphic file (type pdf)
+
+<use "../Problems/formulations 1".pdf>
+Package pdftex.def Info: "../Problems/formulations 1".pdf used on input line 8.
+
+(pdftex.def)             Requested size: 597.50682pt x 845.04504pt.
+File: "../Problems/formulations 1".pdf Graphic file (type pdf)
+
+<use "../Problems/formulations 1".pdf>
+Package pdftex.def Info: "../Problems/formulations 1".pdf used on input line 8.
+
+(pdftex.def)             Requested size: 597.50682pt x 845.04504pt.
+ [25]
+<"../Problems/formulations 1".pdf, id=104, page=1, 597.50829pt x 845.0471pt>
+File: "../Problems/formulations 1".pdf Graphic file (type pdf)
+
+<use "../Problems/formulations 1".pdf, page 1>
+Package pdftex.def Info: "../Problems/formulations 1".pdf, page1 used on input 
+line 8.
+(pdftex.def)             Requested size: 597.50682pt x 845.04504pt.
+File: "../Problems/formulations 1".pdf Graphic file (type pdf)
+
+<use "../Problems/formulations 1".pdf, page 1>
+Package pdftex.def Info: "../Problems/formulations 1".pdf, page1 used on input 
+line 8.
+(pdftex.def)             Requested size: 421.4531pt x 596.05487pt.
+File: "../Problems/formulations 1".pdf Graphic file (type pdf)
+
+<use "../Problems/formulations 1".pdf, page 1>
+Package pdftex.def Info: "../Problems/formulations 1".pdf, page1 used on input 
+line 8.
+(pdftex.def)             Requested size: 421.4531pt x 596.05487pt.
+File: "../Problems/formulations 1".pdf Graphic file (type pdf)
+
+<use "../Problems/formulations 1".pdf, page 1>
+Package pdftex.def Info: "../Problems/formulations 1".pdf, page1 used on input 
+line 8.
+(pdftex.def)             Requested size: 421.4531pt x 596.05487pt.
+File: "../Problems/formulations 1".pdf Graphic file (type pdf)
+
+<use "../Problems/formulations 1".pdf, page 1>
+Package pdftex.def Info: "../Problems/formulations 1".pdf, page1 used on input 
+line 8.
+(pdftex.def)             Requested size: 421.4531pt x 596.05487pt.
+ [26 <C:/Users/MnM/Documents/Matex Projects/Applied Maths/Dynamical systems/Pro
+blems/formulations 1.pdf>])
+("C:\Users\MnM\Documents\Matex Projects\Applied Maths\Dynamical systems\Problem
+s\unit 1.tex" [27
+
+] [28])) [29
+
+]
+Overfull \vbox (99.24757pt too high) has occurred while \output is active []
+
+ [30]
+("C:\Users\MnM\Documents\Matex Projects\Applied Maths\Dynamical systems\Main\ma
+in.aux") ) 
 Here is how much of TeX's memory you used:
- 12123 strings out of 493921
- 198438 string characters out of 3147287
- 238746 words of memory out of 3000000
- 15247 multiletter control sequences out of 15000+200000
- 10752 words of font info for 39 fonts, out of 3000000 for 9000
+ 12259 strings out of 493921
+ 202109 string characters out of 3147287
+ 238545 words of memory out of 3000000
+ 15320 multiletter control sequences out of 15000+200000
+ 30646 words of font info for 109 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 53i,12n,47p,397b,269s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Users/MnM/AppData/Roaming/MiKTeX/2.9/fonts/enc/dvips/mnsymbol/MnSym
-bolC.enc}{C:/Users/MnM/AppData/Roaming/MiKTeX/2.9/fonts/enc/dvips/mnsymbol/MnSy
-mbolD.enc}{C:/Users/MnM/AppData/Roaming/MiKTeX/2.9/fonts/enc/dvips/mnsymbol/MnS
-ymbolA.enc}{C:/Users/MnM/AppData/Roaming/MiKTeX/2.9/fonts/enc/dvips/mnsymbol/Mn
-SymbolE.enc}<C:/Users/MnM/AppData/Roaming/MiKTeX/2.9/fonts/type1/public/mnsymbo
-l/MnSymbol10.pfb><C:/Users/MnM/AppData/Roaming/MiKTeX/2.9/fonts/type1/public/mn
-symbol/MnSymbol7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/c
-m/cmbx10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10
-.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/
-Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program F
-iles/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Program Files/MiKTe
-X 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program Files/MiKTeX 2.9/font
-s/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on new.pdf (6 pages, 126527 bytes).
+ 50i,18n,68p,375b,512s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/Users/MnM/AppData/Roaming/MiKTeX/2.9/fonts/enc/dvips/mnsymbol/MnS
+ymbolF.enc}{C:/Users/MnM/AppData/Roaming/MiKTeX/2.9/fonts/enc/dvips/mnsymbol/Mn
+SymbolS.enc}{C:/Users/MnM/AppData/Roaming/MiKTeX/2.9/fonts/enc/dvips/mnsymbol/M
+nSymbolC.enc} <C:\Users\MnM\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\e
+c\dpi600\tcrm1000.pk>{C:/Users/MnM/AppData/Roaming/MiKTeX/2.9/fonts/enc/dvips/m
+nsymbol/MnSymbolD.enc}{C:/Users/MnM/AppData/Roaming/MiKTeX/2.9/fonts/enc/dvips/
+mnsymbol/MnSymbolE.enc}{C:/Users/MnM/AppData/Roaming/MiKTeX/2.9/fonts/enc/dvips
+/mnsymbol/MnSymbolA.enc}<C:/Users/MnM/AppData/Roaming/MiKTeX/2.9/fonts/type1/pu
+blic/mnsymbol/MnSymbol10.pfb><C:/Users/MnM/AppData/Roaming/MiKTeX/2.9/fonts/typ
+e1/public/mnsymbol/MnSymbol5.pfb><C:/Users/MnM/AppData/Roaming/MiKTeX/2.9/fonts
+/type1/public/mnsymbol/MnSymbol7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/p
+ublic/amsfonts/cm/cmbx10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/am
+sfonts/cm/cmbx12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/c
+m/cmmi10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12
+.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/
+Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Program F
+iles/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files/MiKT
+eX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fo
+nts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1
+/public/amsfonts/cm/cmr17.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/a
+msfonts/cm/cmr6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm
+/cmr7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb>
+<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Prog
+ram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files
+/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Program Files/Mi
+KTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
+Output written on main.pdf (30 pages, 285825 bytes).
 PDF statistics:
- 69 PDF objects out of 1000 (max. 8388607)
+ 232 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 21 words of extra memory for PDF output out of 10000 (max. 10000000)
 
