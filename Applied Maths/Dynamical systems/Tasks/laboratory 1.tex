@@ -1,15 +1,12 @@
 
 \documentclass[../Main/main]{subfiles}
 
-\newcommand{\step}[2]{\end{math}\tabmath{$\textbullet #1$}{#2}\begin{math}}
-\fancyhead[RE]{ Martin Azpillaga }
-\fancyhead[LO]{ 1st laboratoy }
 \begin{document}
 
 
-\unit{ $ 1st laboratory $ }
+\unit{ $ Orbit analysis $ }
 {
-	\proposition{ $ Orbit analysis $ }
+	\laboratory{ $ Martin Azpillaga $ }
 	{
 		\letbe
 		{
@@ -85,107 +82,107 @@
 			\step{ $ Graphic representation $ }
 			{
 			
-				.\includeimage{image1}
+				.\includeimage{images/image1}
 			
 			}.
 
 
 			
-				\b{I} \all{ x \in (-\infty, - \frac{ \sqrt{ 3 } }{ 2 })}
+			\b{I} \all{ x \in (-\infty, - \frac{ \sqrt{ 3 } }{ 2 })}
+			{
+				\step{ $Induction over $ n }
 				{
-					\step{$Induction over $ n }
-					{
-						f $ incresing $ \imp f(x_n) < f(-\frac{ \sqrt{ 3 } }{ 2 }).
+					f $ incresing $ \imp f(x_n) < f(-\frac{ \sqrt{ 3 } }{ 2 }).
 
-						x_{n+1} \in (-\infty, - \frac{ \sqrt{ 3 } }{ 2 })
-					}.
-
-					\conclude o(x) $ is enclosed in $ (-\infty, - \frac{ \sqrt{ 3 } }{ 2 }).
-			
-
-					\step{ $Induction over $ n }
-					{
-						x_n^2 > \frac{ 3 }{ 4 } \imp ( x_n^2 - \frac{ 3 }{ 4 }) > 0.
-
-						x_{n+1} - x_n = x_n^3 - \frac{ 3 }{ 4 }x_n = x_n( x_n^2 - \frac{ 3 }{ 4 }) < 0
-
-					}.
-					
-					\conclude o(x) $ decreasing $.
-
-					\nexists \;  x < - \frac{ \sqrt{ 3 } }{ 2 } \suchthat x $ fixed point $ \imp o(x) \convergesto - \infty				
+					x_{n+1} \in (-\infty, - \frac{ \sqrt{ 3 } }{ 2 })
 				}.
 
+				\conclude o(x) $ is enclosed in $ (-\infty, - \frac{ \sqrt{ 3 } }{ 2 }).
+		
 
-
-
-
-
-				\b{II} \all{ x \in (-\frac{ \sqrt{ 3 } }{ 2 }, 0 ) }
+				\step{ $Induction over $ n }
 				{
-					\step{ $Induction over $ n }
-					{
-						f $ increasing $ \imp f(-\frac{ \sqrt{ 3 } }{ 2 }) < f(x_n) < f(0).
+					x_n^2 > \frac{ 3 }{ 4 } \imp ( x_n^2 - \frac{ 3 }{ 4 }) > 0.
 
-						x_{n+1} \in (-\frac{ \sqrt{ 3 } }{ 2 }, 0 )
-					}.
+					x_{n+1} - x_n = x_n^3 - \frac{ 3 }{ 4 }x_n = x_n( x_n^2 - \frac{ 3 }{ 4 }) < 0
 
-					\conclude o(x) $ is enclosed in $ (-\frac{ \sqrt{ 3 } }{ 2 }, 0 ).
-
-					\step{ $Induction over $ n }
-					{
-						x_n^2 < \frac{ 3 }{ 4 } \imp ( x_n^2 - \frac{ 3 }{ 4 }) < 0.
-
-						x_{n+1} - x_n = x_n^3 - \frac{ 3 }{ 4 }x_n = x_n( x_n^2 - \frac{ 3 }{ 4 }) > 0
-
-					}.
-
-					\conclude o(x) $ increasing $.
-
-					o(x) $ convergent $ \logicAnd 0 $ fixed point $ \imp o(x) \convergesto 0
 				}.
-			
+				
+				\conclude o(x) $ decreasing $.
 
-				\b{III}\all{ x \in (0,\frac{ \sqrt{ 3 } }{ 2 }) }
+				\nexists \;  x < - \frac{ \sqrt{ 3 } }{ 2 } \suchthat x $ fixed point $ \imp o(x) \convergesto - \infty				
+			}.
+
+
+
+
+
+
+			\b{II} \all{ x \in (-\frac{ \sqrt{ 3 } }{ 2 }, 0 ) }
+			{
+				\step{ $Induction over $ n }
 				{
-					\step{ $ Induction over $ n }
-					{
-						-x_n \in (-\frac{ \sqrt{ 3 } }{ 2 }, 0) .
+					f $ increasing $ \imp f(-\frac{ \sqrt{ 3 } }{ 2 }) < f(x_n) < f(0).
 
-						\b{II} \imp f(-x_n) \in (-\frac{ \sqrt{ 3 } }{ 2 }, 0) \logicAnd f(-x_n) > -x_n.
-
-						f $ odd $ \imp f(x_n) = -f(-x_n) \in (0,\frac{ \sqrt{ 3 } }{ 2 }).
-
-						f $ odd $ \imp f(x_n) = -f(-x_n) < x_n
-					}.
-
-					\conclude o(x) $ is enclosed in $ (0, \frac{ \sqrt{ 3 } }{ 2 } ) \logicAnd o(x) $ decreasing $.
-
-					o(x) $ convergent $ \logicAnd 0 $ fixed point $ \imp o(x) \convergesto 0
-					
+					x_{n+1} \in (-\frac{ \sqrt{ 3 } }{ 2 }, 0 )
 				}.
 
+				\conclude o(x) $ is enclosed in $ (-\frac{ \sqrt{ 3 } }{ 2 }, 0 ).
 
-				\b{IV}\all{ x \in \R }[ x > \frac{ \sqrt{ 3 } }{ 2 } ]
+				\step{ $Induction over $ n }
 				{
-					\step{ $ Induction over $ n }
-					{
-						-x_n \in ( \frac{ \sqrt{ 3 } }{ 2 }, \infty).
+					x_n^2 < \frac{ 3 }{ 4 } \imp ( x_n^2 - \frac{ 3 }{ 4 }) < 0.
 
-						\b{I} \imp f(-x_n) \in ( \frac{ \sqrt{ 3 } }{ 2 }, \infty) \logicAnd f(-x_n) < -x_n.
+					x_{n+1} - x_n = x_n^3 - \frac{ 3 }{ 4 }x_n = x_n( x_n^2 - \frac{ 3 }{ 4 }) > 0
 
-						f $ odd $ \imp f(x_n) = -f(-x_n) \in ( \frac{ \sqrt{ 3 } }{ 2 }, \infty).
+				}.
 
-						f $ odd $ \imp f(x_n) = -f(-x_n) > x_n
-					}.
+				\conclude o(x) $ increasing $.
 
-					\conclude o(x) $ is inf bounded by in $ \frac{ \sqrt{ 3 } }{ 2 } \logicAnd o(x) $ increasing $.
+				o(x) $ convergent $ \logicAnd 0 $ fixed point $ \imp o(x) \convergesto 0
+			}.
+		
 
-					o(x) $ convergent $.
+			\b{III}\all{ x \in (0,\frac{ \sqrt{ 3 } }{ 2 }) }
+			{
+				\step{ $ Induction over $ n }
+				{
+					-x_n \in (-\frac{ \sqrt{ 3 } }{ 2 }, 0) .
 
-					\nexists \;  x > \frac{ \sqrt{ 3 } }{ 2 } \suchthat x $ fixed point $ \imp o(x) \convergesto +\infty
+					\b{II} \imp f(-x_n) \in (-\frac{ \sqrt{ 3 } }{ 2 }, 0) \logicAnd f(-x_n) > -x_n.
 
-				}	
+					f $ odd $ \imp f(x_n) = -f(-x_n) \in (0,\frac{ \sqrt{ 3 } }{ 2 }).
+
+					f $ odd $ \imp f(x_n) = -f(-x_n) < x_n
+				}.
+
+				\conclude o(x) $ is enclosed in $ (0, \frac{ \sqrt{ 3 } }{ 2 } ) \logicAnd o(x) $ decreasing $.
+
+				o(x) $ convergent $ \logicAnd 0 $ fixed point $ \imp o(x) \convergesto 0
+				
+			}.
+
+
+			\b{IV}\all{ x \in \R }[ x > \frac{ \sqrt{ 3 } }{ 2 } ]
+			{
+				\step{ $ Induction over $ n }
+				{
+					-x_n \in ( \frac{ \sqrt{ 3 } }{ 2 }, \infty).
+
+					\b{I} \imp f(-x_n) \in ( \frac{ \sqrt{ 3 } }{ 2 }, \infty) \logicAnd f(-x_n) < -x_n.
+
+					f $ odd $ \imp f(x_n) = -f(-x_n) \in ( \frac{ \sqrt{ 3 } }{ 2 }, \infty).
+
+					f $ odd $ \imp f(x_n) = -f(-x_n) > x_n
+				}.
+
+				\conclude o(x) $ is inf bounded by in $ \frac{ \sqrt{ 3 } }{ 2 } \logicAnd o(x) $ increasing $.
+
+				o(x) $ convergent $.
+
+				\nexists \;  x > \frac{ \sqrt{ 3 } }{ 2 } \suchthat x $ fixed point $ \imp o(x) \convergesto +\infty
+
+			}	
 
 		}
 	}

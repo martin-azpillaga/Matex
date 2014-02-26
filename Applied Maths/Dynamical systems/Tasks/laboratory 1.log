@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2013.11.22)  26 FEB 2014 17:35
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2013.11.22)  26 FEB 2014 17:34
 entering extended mode
-**C:/Users/MnM/Documents/Matex*Projects/Applied*Maths/Dynamical*systems/Main/ma
-in.tex
+**C:/Users/MnM/Documents/Matex*Projects/Applied*Maths/Dynamical*systems/Tasks/l
+aboratory*1.tex
 
-("C:/Users/MnM/Documents/Matex Projects/Applied Maths/Dynamical systems/Main/ma
-in.tex"
+("C:/Users/MnM/Documents/Matex Projects/Applied Maths/Dynamical systems/Tasks/l
+aboratory 1.tex"
 LaTeX2e <2011/06/27>
 Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, ar
 abic, armenian, assamese, basque, bengali, bokmal, bulgarian, catalan, coptic, 
@@ -16,7 +16,18 @@ german-x-2013-05-26, nynorsk, oriya, panjabi, pinyin, polish, portuguese, roman
 ian, russian, sanskrit, serbian, slovak, slovenian, spanish, swedish, swissgerm
 an, tamil, telugu, turkish, turkmen, ukenglish, ukrainian, uppersorbian, usengl
 ishmax, welsh, loaded.
-("C:\Program Files\MiKTeX 2.9\tex\latex\base\book.cls"
+(C:\Users\MnM\AppData\Roaming\MiKTeX\2.9\tex\latex\subfiles\subfiles.cls
+Document Class: subfiles 2012/05/23 Federico Garcia
+("C:\Program Files\MiKTeX 2.9\tex\latex\tools\verbatim.sty"
+Package: verbatim 2003/08/22 v1.5q LaTeX2e package for verbatim enhancements
+\every@verbatim=\toks14
+\verbatim@line=\toks15
+\verbatim@in@stream=\read1
+)
+Preamble taken from file `../Main/main'
+
+("C:\Users\MnM\Documents\Matex Projects\Applied Maths\Dynamical systems\Main\ma
+in.tex" ("C:\Program Files\MiKTeX 2.9\tex\latex\base\book.cls"
 Document Class: book 2007/10/19 v1.4h Standard LaTeX document class
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\bk10.clo"
 File: bk10.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
@@ -43,7 +54,7 @@ For additional information on amsmath, use the `?' option.
 Package: amstext 2000/06/29 v2.01
 ("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsgen.sty"
 File: amsgen.sty 1999/11/30 v2.0
-\@emptytoks=\toks14
+\@emptytoks=\toks16
 \ex@=\dimen103
 )) ("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsbsy.sty"
 Package: amsbsy 1999/11/29 v1.2d
@@ -71,21 +82,21 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
 \dotsspace@=\muskip10
 \c@parentequation=\count95
 \dspbrk@lvl=\count96
-\tag@help=\toks15
+\tag@help=\toks17
 \row@=\count97
 \column@=\count98
 \maxfields@=\count99
-\andhelp@=\toks16
+\andhelp@=\toks18
 \eqnshift@=\dimen106
 \alignsep@=\dimen107
 \tagshift@=\dimen108
 \tagwidth@=\dimen109
 \totwidth@=\dimen110
 \lineht@=\dimen111
-\@envbody=\toks17
+\@envbody=\toks19
 \multlinegap=\skip44
 \multlinetaggap=\skip45
-\mathdisplay@stack=\toks18
+\mathdisplay@stack=\toks20
 LaTeX Info: Redefining \[ on input line 2665.
 LaTeX Info: Redefining \] on input line 2666.
 ) ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\amssymb.sty"
@@ -100,7 +111,7 @@ LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 Package: geometry 2010/09/12 v5.6 Page Geometry
 ("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\keyval.sty"
 Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
-\KV@toks@=\toks19
+\KV@toks@=\toks21
 ) ("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ifpdf.sty"
 Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
 Package ifpdf Info: pdfTeX in PDF mode is detected.
@@ -121,7 +132,7 @@ Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 \Gm@layoutheight=\dimen117
 \Gm@layouthoffset=\dimen118
 \Gm@layoutvoffset=\dimen119
-\Gm@dimlist=\toks20
+\Gm@dimlist=\toks22
 ("C:\Program Files\MiKTeX 2.9\tex\latex\geometry\geometry.cfg")) (C:\Users\MnM\
 AppData\Roaming\MiKTeX\2.9\tex\latex\fancyhdr\fancyhdr.sty
 \fancy@headwidth=\skip46
@@ -436,12 +447,7 @@ LaTeX Font Info:    Redeclaring math accent \vec on input line 1848.
 Excluding comment 'comment') (C:\Users\MnM\AppData\Roaming\MiKTeX\2.9\tex\latex
 \subfiles\subfiles.sty
 Package: subfiles 2012/05/23 Federico Garcia
-("C:\Program Files\MiKTeX 2.9\tex\latex\tools\verbatim.sty"
-Package: verbatim 2003/08/22 v1.5q LaTeX2e package for verbatim enhancements
-\every@verbatim=\toks21
-\verbatim@line=\toks22
-\verbatim@in@stream=\read1
-)) ("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphicx.sty"
+) ("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphicx.sty"
 Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
 ("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphics.sty"
 Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
@@ -632,32 +638,32 @@ File: pppdftex.def 2013/08/25 v0.4v Pdfpages driver for pdfTeX (AM)
 .................................................
 ) ("C:\Program Files\MiKTeX 2.9\tex\latex\matex\logic.sty")
 ("C:\Users\MnM\Documents\Matex Projects\Applied Maths\Dynamical systems\Main\sp
-ecific.sty")
-("C:\Users\MnM\Documents\Matex Projects\Applied Maths\Dynamical systems\Main\ma
-in.aux")
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 10.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 10.
+ecific.sty")))
+("C:\Users\MnM\Documents\Matex Projects\Applied Maths\Dynamical systems\Tasks\l
+aboratory 1.aux")
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 4.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 4.
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\ts1cmr.fd"
 File: ts1cmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    ... okay on input line 4.
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
 * driver: pdftex
-* paper: a5paper
+* paper: <default>
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
 * modes: twoside 
@@ -704,36 +710,41 @@ LaTeX Font Info:    ... okay on input line 10.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
 \AtBeginShipoutBox=\box46
-LaTeX Font Info:    Try loading font information for U+msa on input line 12.
+[1{C:/Users/MnM/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}
+
+
+]
+LaTeX Font Info:    Try loading font information for U+msa on input line 7.
 ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 12.
+LaTeX Font Info:    Try loading font information for U+msb on input line 7.
 ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) [1
+)
 
+C:/Users/MnM/Documents/Matex Projects/Applied Maths/Dynamical systems/Tasks/lab
+oratory 1.tex:188: LaTeX Error: There's no line here to end.
 
-{C:/Users/MnM/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
-("C:\Users\MnM\Documents\Matex Projects\Applied Maths\Dynamical systems\Tasks\m
-ain.tex" [2
-
-]
-("C:\Users\MnM\Documents\Matex Projects\Applied Maths\Dynamical systems\Tasks\l
-aboratory 1.tex" [3]
-
-LaTeX Warning: File `images/image1.pdf' not found on input line 188.
-
-
-C:\Users\MnM\Documents\Matex Projects\Applied Maths\Dynamical systems\Tasks\lab
-oratory 1.tex:188: Package pdftex.def Error: File `images/image1.pdf' not found
-.
-
-See the pdftex.def package documentation for explanation.
+See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help
-Using draft setting for this image.
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+ <images/image1.pdf, id=6, 521.95pt x 321.2pt>
+File: images/image1.pdf Graphic file (type pdf)
+ <use images/image1.pdf>
+Package pdftex.def Info: images/image1.pdf used on input line 188.
+(pdftex.def)             Requested size: 142.26378pt x 87.54854pt.
+
+LaTeX Warning: Command \b invalid in math mode on input line 188.
+
+
+LaTeX Warning: Command \b invalid in math mode on input line 188.
+
+
+LaTeX Warning: Command \b invalid in math mode on input line 188.
 
 
 LaTeX Warning: Command \b invalid in math mode on input line 188.
@@ -744,62 +755,40 @@ LaTeX Warning: Command \b invalid in math mode on input line 188.
 
 LaTeX Warning: Command \b invalid in math mode on input line 188.
 
-
-LaTeX Warning: Command \b invalid in math mode on input line 188.
-
-
-LaTeX Warning: Command \b invalid in math mode on input line 188.
-
-
-LaTeX Warning: Command \b invalid in math mode on input line 188.
-
- [4
-
-]
+ [2]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [5]
+ [3 <C:/Users/MnM/Documents/Matex Projects/Applied Maths/Dynamical systems/Task
+s/images/image1.pdf>]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [6]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [7] [8])
+ [4] [5]
 ("C:\Users\MnM\Documents\Matex Projects\Applied Maths\Dynamical systems\Tasks\l
-aboratory 2.tex" [9
-
-] [10] [11]))
-("C:\Users\MnM\Documents\Matex Projects\Applied Maths\Dynamical systems\Main\ma
-in.aux") ) 
+aboratory 1.aux") ) 
 Here is how much of TeX's memory you used:
- 12236 strings out of 493921
- 200429 string characters out of 3147287
- 252564 words of memory out of 3000000
- 15313 multiletter control sequences out of 15000+200000
- 30286 words of font info for 107 fonts, out of 3000000 for 9000
+ 12146 strings out of 493921
+ 199069 string characters out of 3147287
+ 252684 words of memory out of 3000000
+ 15260 multiletter control sequences out of 15000+200000
+ 11765 words of font info for 42 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 44i,14n,51p,375b,388s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Users/MnM/AppData/Roaming/MiKTeX/2.9/fonts/enc/dvips/mnsymbol/MnS
-ymbolS.enc} <C:\Users\MnM\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\
-dpi600\tcrm1000.pk>{C:/Users/MnM/AppData/Roaming/MiKTeX/2.9/fonts/enc/dvips/mns
-ymbol/MnSymbolC.enc}{C:/Users/MnM/AppData/Roaming/MiKTeX/2.9/fonts/enc/dvips/mn
-symbol/MnSymbolE.enc}{C:/Users/MnM/AppData/Roaming/MiKTeX/2.9/fonts/enc/dvips/m
-nsymbol/MnSymbolD.enc}{C:/Users/MnM/AppData/Roaming/MiKTeX/2.9/fonts/enc/dvips/
-mnsymbol/MnSymbolA.enc}<C:/Users/MnM/AppData/Roaming/MiKTeX/2.9/fonts/type1/pub
-lic/mnsymbol/MnSymbol10.pfb><C:/Users/MnM/AppData/Roaming/MiKTeX/2.9/fonts/type
-1/public/mnsymbol/MnSymbol7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public
-/amsfonts/cm/cmbx10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfont
-s/cm/cmbx12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmm
-i10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb><
-C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Progra
-m Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/M
-iKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program Files/MiKTeX 2.9
-/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program Files/MiKTeX 2.9/fonts/typ
-e1/public/amsfonts/cm/cmtt10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/publi
-c/amsfonts/symbols/msbm10.pfb>
-Output written on main.pdf (11 pages, 170419 bytes).
+ 53i,12n,47p,408b,269s stack positions out of 5000i,500n,10000p,200000b,50000s
+ <C:\Users\MnM\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jkna
+ppen\ec\dpi600\tcrm1000.pk>{C:/Users/MnM/AppData/Roaming/MiKTeX/2.9/fonts/enc/d
+vips/mnsymbol/MnSymbolC.enc}{C:/Users/MnM/AppData/Roaming/MiKTeX/2.9/fonts/enc/
+dvips/mnsymbol/MnSymbolE.enc}{C:/Users/MnM/AppData/Roaming/MiKTeX/2.9/fonts/enc
+/dvips/mnsymbol/MnSymbolD.enc}{C:/Users/MnM/AppData/Roaming/MiKTeX/2.9/fonts/en
+c/dvips/mnsymbol/MnSymbolA.enc}<C:/Users/MnM/AppData/Roaming/MiKTeX/2.9/fonts/t
+ype1/public/mnsymbol/MnSymbol10.pfb><C:/Users/MnM/AppData/Roaming/MiKTeX/2.9/fo
+nts/type1/public/mnsymbol/MnSymbol7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type
+1/public/amsfonts/cm/cmbx10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public
+/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfont
+s/cm/cmmi7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr1
+0.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/
+Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on "laboratory 1.pdf" (5 pages, 129757 bytes).
 PDF statistics:
- 106 PDF objects out of 1000 (max. 8388607)
+ 70 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 6 words of extra memory for PDF output out of 10000 (max. 10000000)
 
