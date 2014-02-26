@@ -331,6 +331,17 @@
 }
 
 
+\newcommand{\laboratory}[2]
+{
+	\addcontentsline{toc}{section}{ $#1$ }
+
+	$#1$\\
+	#2
+
+	\newpage
+}
+
+
 \newcommand{\introduction}[1]
 { 
 	$#1$
@@ -504,6 +515,12 @@
 
 	\begin{math}
 }
+
+\newcommand{\step}[2]
+{
+	\end{math}\tabmath{$#1$}{#2}\begin{math}
+}
+
 
 
 \newcommand{\similarly}[1]
