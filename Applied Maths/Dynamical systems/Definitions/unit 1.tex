@@ -282,6 +282,64 @@
 	}
 	
 	
+	\definition{ $ Saddle point $ }
+	{
+		\letbe
+		{
+			\Uc \subset \R^n.
+			f \in \Cc^1(\Uc).
+			x \in \Uc
+		}
+		\then{ x }{ $ a saddle point $ }
+		{
+			f'(x) = 0
+		}
+	}
+	
+	
+	\definition{ $ Topologically equivalent $ }
+	{
+		\letbe
+		{
+			( M, \N, f ) $ functional dynamical system $.
+			( M, \N, f' ) $ functional dynamical system $
+		}
+		\then{ ( M, \N, f ) }{ $ topologically equivalent to $ ( M, \N, f' ) }
+		{
+			Fix(f) = Fix(f').
+
+			\all{ x \in Fix(f) }
+			{
+				character_f(x) = character_{f'}(x)
+			}
+		}
+		\denote
+		{
+			( M, \N, f ) ~ ( M, \N, f' )
+		}
+	}
+	
+	
+	\definition{ $ Bifurcation point $ }
+	{
+		\letbe
+		{
+			( M, \N, f_\lambda )_{\lambda \in \Lambda} $ functional dynamical system family $.
+			\lambda' \in \Lambda
+		}
+		\then{ \lambda' }{ $ a bifurcation value $ }
+		{
+			\all{ \epsilon \in \R^+ }
+			{
+				\ex{ \lambda'' \in (\lambda' - \epsilon, \lambda' + \epsilon ) }
+				{
+					( M, \N, f_{\lambda''} ) $ not topologically equivalent to $ ( M, \N, f_{\lambda'} )
+				}
+			}
+		}
+	}
+	
+	
 	
 	
 	
