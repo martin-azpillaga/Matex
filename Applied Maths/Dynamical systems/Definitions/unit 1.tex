@@ -4,7 +4,6 @@
 
 \begin{document}
 
-
 \unit{ $ One-dimensional discrete dynamical systems $ }
 {	
 	
@@ -61,7 +60,8 @@
 		}
 		\then{ ( M, T, \phi ) }{ $ continuous $ }
 		{
-			T \subset \R \suchthat T $ open $
+			T \subset \R.
+			T $ open $
 		}
 	}
 
@@ -81,7 +81,8 @@
 		}
 		\denote
 		{
-			( M, T, \phi ) $ dynamical system defined by $ f \as ( M, \N, f )
+			( M, T, \phi ) $ dynamical system defined by $ f \as ( M, \N, f ).
+			f \in \Cc^n( M ) \as ( M, \N, f ) \hspace{5pt} \Cc^n $ dynamical system $
 		}
 	}
 	
@@ -122,7 +123,7 @@
 		}
 		\denote
 		{
-			n = 1 \as x $ fixed point $
+			\set{ x \in M \with f(x) = x } \as Fix(f)
 		}
 	}
 	
@@ -136,29 +137,54 @@
 		}
 		\then{ x }{ $ attractive $ }
 		{
-			\ex{ \Uc \subset M $ open $ }{ \all{ y \in \Uc }
+			\ex{ \Uc \in M }
 			{
-				\ex{ N \in \N }{ \all{ n \in \N }[ n \geq N ]
-				{
-					f^{nm}(y) \in \Uc
-				} }
-			} }
-		}
-		\then{ x }{ $ repulsive $ }
-		{
-			\all{ \Uc \subset M }[ x \in \Uc ]
-			{
-				\all{ y \in \Uc }
+				\Uc $ open $.
+
+				\all{ x' \in \Uc }
 				{
 					\ex{ N \in \N }
 					{
 						\all{ n \in \N }[ n \geq N ]
 						{
-							f^{nm}(x) \nin \Uc
+							f^{nm}(x') \in \Uc
 						}
 					}
 				}
 			}
+		}
+		\then{ x }{ $ repulsive $ }
+		{
+			\all{ \Uc \subset M }[ \Uc $ open $ \logicAnd x \in \Uc ]
+			{
+				\all{ x' \in \Uc }[ x' \neq x ]
+				{
+					\ex{ N \in \N }
+					{
+						\all{ n \in \N }[ n \geq N ]
+						{
+							f^{nm}(x') \nin \Uc
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	
+	\definition{ $ Fixed point character $ }
+	{
+		\letbe
+		{
+			( M, \N, f ) $ functional dynamical system $
+		}
+		\name{ $ Fixed point character $ }
+		{
+			\definedFunction{ f }{ Fix(f) }{ \set{ +,- } }{ x }{ \begin{cases} + & x $ repulsive $ \\ - & x $ attractive $ \end{cases} }
+		}
+		\denote
+		{
+			f \as \chi
 		}
 	}
 	
@@ -196,26 +222,55 @@
 	}
 
 
-	\definition{ $ Feeble attractive \& repulsive points $ }
+	\definition{ $ Feeble point $ }
 	{
 		\letbe
 		{
-			( M, \N, f ) \; \Cc^3 $ dynamical system $.
-			x \in M
+			( M, \N, f ) \hspace{5pt} \Cc^3 $ dynamical system $.
+			x \in M $ neutral point $
 		}
-		\then{ x }{ $ feeble attractive point $ }
+		\then{ x }{ $ feeble point $ }
 		{
-			f'(x) = 1.
-			f''(x) = 0.
-			f'''(x) > 0
-		}
-		\then{ x }{ $ feeble repulsive point $ }
-		{
-			f'(x) = 1.
-			f''(x) = 0.
-			f'''(x) < 0
+			f''(x) = 0
 		}
 	}
+	
+
+	\definition{ $ Saddle point $ }
+	{
+		\letbe
+		{
+			\Uc \subset \R^n.
+			f \in \Cc^1(\Uc).
+			x \in \Uc
+		}
+		\then{ x }{ $ a saddle point $ }
+		{
+			f'(x) = 0
+		}
+	}
+
+	
+	\definition{ $ Homeomorphism $ }
+	{
+		\letbe
+		{
+			( X_1, \tau_1 ), ( X_2, \tau_2 ) $ topological spaces $.
+			\function{ f }{ X_1 }{ X_2 }
+		}
+		\then{ f }{ $ a homeomorphism $ }
+		{
+			f $ biyective $.
+			f \in \Cc( X_1 ).
+			f^{-1} \in \Cc( X_2 )			
+		}
+		\denote
+		{
+			\set{ \function{ f }{ X_1 }{ X_2 } \with f $ homeomorphism $ } \as Homeo( X_1 )
+		}
+	}
+	
+	
 	
 	
 	\definition{ $ Multiplier $ }
@@ -273,28 +328,17 @@
 	{
 		\name{ $ Sarkovskii's order	$ }
 		{
-			naming.
+			a = 2^na', b = 2^mb'.
+			a < b \ifandonlyif \begin{cases} m < n & a' = b' = 1 \\ * & a' = 1, b' \neq 1 \\ a' < b' & a'=b'\neq 1 \\ n < m & 1 \neq a' \neq b'\end{cases}
 		}
 		\denote
 		{
-			property \as notation.
+			a < b \as a \prec b
 		}
 	}
 	
 	
-	\definition{ $ Saddle point $ }
-	{
-		\letbe
-		{
-			\Uc \subset \R^n.
-			f \in \Cc^1(\Uc).
-			x \in \Uc
-		}
-		\then{ x }{ $ a saddle point $ }
-		{
-			f'(x) = 0
-		}
-	}
+	
 	
 	
 	\definition{ $ Topologically equivalent $ }
