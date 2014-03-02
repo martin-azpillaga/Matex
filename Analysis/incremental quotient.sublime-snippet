@@ -1,0 +1,13 @@
+<snippet>
+
+<scope>text.tex.latex</scope>
+<tabTrigger>incremental quotient</tabTrigger>
+<description>.</description>
+
+<content>
+<![CDATA[
+\frac{ ${1:f}(${2:z}) - ${1:f}(${3:z_0}) }{ ${2:z} - ${3:z_0} }
+]]>
+</content>
+
+</snippet>
