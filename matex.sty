@@ -524,9 +524,7 @@
 \newcommand{\similarly}[1]
 {
 	\end{math}
-
 		\tabmath{Similarly}{ #1 }
-
 	\begin{math}
 }
 
@@ -625,14 +623,12 @@
 
 
 \newcommand{\definedFunction}[5]
-{
-	\begin{array}{ r c l }
-		
-		#1 \;: #2 & \longrightarrow & #3 \\
-		#4 & \longmapsto & #5
-	
-	\end{array}
-}
+{%
+	\begin{array}{ r c l }%
+		#1 \;: #2 & \longrightarrow & #3 \\%
+		#4 & \longmapsto & #5%
+	\end{array}%
+}%
 
 
 \newcommand{ \functionSpace }[2]
