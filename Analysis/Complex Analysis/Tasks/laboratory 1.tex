@@ -131,17 +131,72 @@
 		}
 		\holds
 		{
-			Re( f ) \equiv 0 \logicOr Im( f ) \equiv 0 \imp f \in $ Cst$( \C ).
+			f_{Re} = 0 \logicOr f_{Im} = 0 \imp f \in $ Cst$( \Omega ).
 
-			\abs{ f } \in $ Cst$(\C) \imp f \in $ Cst$(\C)
+			\abs{ f } \in $ Cst$(\Omega) \imp f \in $ Cst$(\Omega)
 
 		}
 		\demonstration
 		{
-			demonstration.
+			\step{ f_{Re} = 0 \logicOr f_{Im} = 0 }
+			{
+				\be{ u }{ f_{Re} }.
+				\be{ v }{ f_{Im} }.
+
+				f \in \Hc( \Omega ) \imp f $ satisfies CR in $ \Omega.
+
+				\partialderivative{ u }{ x } =  \partialderivative{ v }{ y } = 0.
+				\partialderivative{ u }{ y } = -\partialderivative{ v }{ x } = 0.
+
+				\step{ $Null diferential test$ }
+				{
+					\Omega $ connex $ \imp u,v \in \constant{ \Omega }.
+				}
+
+				u,v \in \constant{ \Omega } \imp f \in \constant{ \Omega } 
+			}.
+
+			\step{ \abs{ f } \in $ Cst$(\Omega) }
+			{
+				\be{ u }{ f_{Re} }.
+				\be{ v }{ f_{Im} }.
+
+				\definedFunction{ \abs{f} }{ \R^2 }{ \R }{ (x,y) }{ \sqrt{ u(x,y)^2 + v(x,y)^2 } }.
+
+				\abs{f} \in \constant{ \C } \imp \ex{ a \in \R }
+				{
+					\sqrt{ u(x,y)^2 + v(x,y)^2 } = a.
+
+					u(x,y)^2 + v(x,y)^2 = a^2.
+
+					2 \partialderivative{ u(x,y) }{ x } + 2 \partialderivative{ v(x,y) }{ x } = 0.
+					
+					2 \partialderivative{ u(x,y) }{ y } + 2 \partialderivative{ v(x,y) }{ y } = 0.
+
+					f \in \Hc( \Omega ) \imp f $ satisfies CR in $ \Omega.
+
+					2 \partialderivative{ v(x,y) }{ y } + 2 \partialderivative{ v(x,y) }{ x } = 0.
+					
+					-2 \partialderivative{ v(x,y) }{ x } + 2 \partialderivative{ v(x,y) }{ y } = 0.
+
+					+: \; 4\partialderivative{ v(x,y) }{ y } = 0 \imp \partialderivative{ v(x,y) }{ y } = 0.
+
+					-: \; 4\partialderivative{ v(x,y) }{ x } = 0 \imp \partialderivative{ v(x,y) }{ x } = 0.
+
+					\step{ $Null differential test$ }
+					{
+						\Omega $ connex $ \imp u,v \in \constant{ \Omega }
+					}.
+
+					u,v \in \constant{ \Omega } \imp f \in \constant{ \Omega }
+
+				}
+			}
 		}
 	}
 	
+	
+
 	
 	
 }
