@@ -1,0 +1,151 @@
+
+\documentclass[../Main/main]{subfiles}
+
+
+\begin{document}
+
+
+\unit{ $ 1st laboratory $ }
+{
+	\proposition{ $ Existence of holomorphic functions $ }
+	{
+		\letbe
+		{
+			f \in \Hc( \D )
+		}
+		\study
+		{
+			\ex{ f \in \Hc( \D ) }
+			{
+				\all{ n \in \N }[ n \geq 2 ]
+				{
+					a) \; f( \pm \frac{ 1 }{ n } ) = \frac{ 1 }{ 2n + 1 }.
+					b) \; f( \pm \frac{ 1 }{ n } ) = \frac{ 1 }{ n^2 }.
+					c) \; |f( \frac{ 1 }{ n } ) |  = \frac{ 1 }{ \log( n+1 ) }.
+					d) \; |f( \frac{ 1 }{ n } ) |  = \frac{ n }{ n+1 }
+				}
+			}
+		}
+		\demonstration
+		{
+			\step{ a) }
+			{
+				\be{ E_1 }{ \set{ +\frac{ 1 }{ n } + 0i \in \C \with n \in \N } }.
+				\be{ E_2 }{ \set{ -\frac{ 1 }{ n } + 0i \in \C \with n \in \N } }.
+
+				\limit{ \frac{ f(z) - f(0) }{ z - 0 } }{ E_1 } = \limit{ \frac{ f(\frac{ 1 }{ n }) }{ \frac{ 1 }{ n } } - \frac{ f(0) }{ \frac{ 1 }{ n } } }{ n } = \frac{ 1 }{ 2 } - \limit{\frac{ f(0) }{ \frac{ 1 }{ n } } }{ n }.
+				\limit{ \frac{ f(z) - f(0) }{ z - 0 } }{ E_1 } \begin{cases} = \frac{ 1 }{ 2 } & f(0) = 0 \\ \nin \C & f(0) \neq 0 \end{cases}.
+				\case{ f(0) = 0 }
+				{
+					\limit{ \frac{ f(z) - f(0) }{ z - 0 } }{ E_2 } = \limit{ \frac{ f(\frac{ 1 }{ n }) }{ \frac{ 1 }{ n } } }{ n } = - \frac{ 1 }{ 2 } \neq \limit{ \frac{ f(z) - f(0) }{ z - 0 } }{ E_1 }.
+				}.
+				\nexists \; f \in \Hc(0) \suchthat f $ satisfies $ a).
+
+				\particular{ \nexists \; f \in \Hc(\D) \suchthat f $ satisfies $ a) }
+			}.
+
+
+			\step{ b) }
+			{
+				\definedFunction{ f }{ \C }{ \C }{ z }{ z^2 }.
+
+				\all{ n \in \N }[ n \geq 2 ]
+				{
+					f(\pm \frac{ 1 }{ n } ) = \frac{ 1 }{ n^2 }
+				}.
+
+				f $ satisfies $ b).
+
+
+				\definedFunction{ \bar{f} }{ \R^2 }{ \R^2 }{ (x,y) }{ (u(x,y),v(x,y))=(x^2 - y^2, 2xy) }.
+
+				\bar{f} \in $ Pol$( \R^2 ) \imp \bar{f} $ differentiable in $ \R^2.
+
+				\all{ (x,y) \in \R^2 }
+				{
+					\partialderivative{ u(x,y) }{ x } = 2x = \partialderivative{ v(x,y) }{ y }.
+
+					\partialderivative{ u(x,y) }{ y } = -2y=-\partialderivative{ v(x,y) }{ x }
+				}.				
+
+				f $ satisfies CR $.
+
+				\conclude f \in \Hc( \R^2 ).
+
+				\particular{ f \in \Hc( \D ) }
+			}.
+
+			\step{ c) }
+			{
+				$ Suppose $ \exists \; f \in \Hc(\D) \suchthat f $ satisfies $ c).
+				f \in \Cc^0( \D ) \imp f(0) = f( \limit{ \frac{ 1 }{ n } }{ n } ) = \limit{ f( \frac{ 1 }{ n }) }{ n } = 0.
+
+				\abs{ \limit{ \frac{ f(z) - f(0) }{ z - 0 } }{ E_1 } } = \limit{ \frac{ \abs{ f(\frac{ 1 }{ n }) } }{ \frac{ 1 }{ n } } }{ n } \nin \C.
+				f \nin \Hc(0) $ absurd $.
+			}.
+
+			\step{ d) }
+			{
+				\definedFunction{ f }{ \C }{ \C }{ z }{ \frac{ 1 }{ z+1 } }.
+
+				\all{ n \in \N }[ n \geq 2 ]
+				{
+					\abs{ f( \frac{ 1 }{ n } ) } = \frac{ 1 }{ \frac{ 1 }{ n } + 1 } = \frac{ n }{ n+1 }
+				}.
+
+				f $ satisfies $ d).
+
+
+				\definedFunction{ \bar{f} }{ \R^2 }{ \R^2 }{ (x,y) }{ (u(x,y),v(x,y))=(\frac{ x+1 }{ (x+1)^2 + y^2 }, \frac{ -y }{ (x+1)^2 - y^2 }) }.
+
+				\bar{f} \in $ Rat$( \R^2 ) \logicAnd \all{ (x,y) \in \R^2 }
+				{
+					(x+1)^2 + y^2 \neq 0
+				}.
+
+				\bar{f} $ differentiable in $ \R^2.
+
+				\all{ (x,y) \in \R^2 }
+				{
+					\partialderivative{ u(x,y) }{ x } = \frac{ y^2 - (x+1)^2 }{ ((x+1)^2 + y^2)^2 } = \partialderivative{ v(x,y) }{ y }.
+
+					\partialderivative{ u(x,y) }{ y } = \frac{ -2y(x+1) }{ ((x+1)^2 + y^2)^2 }=-\partialderivative{ v(x,y) }{ x }
+				}.				
+
+				f $ satisfies CR $.
+
+				\conclude f \in \Hc( \R^2 ).
+
+				\particular{ f \in \Hc( \D ) }
+			}.
+		}
+	}
+
+
+	\proposition{ $ Constant tests $ }
+	{
+		\letbe
+		{
+			\Omega \subset \C $ region $.
+			f \in \Hc( \Omega )
+		}
+		\holds
+		{
+			Re( f ) \equiv 0 \logicOr Im( f ) \equiv 0 \imp f \in $ Cst$( \C ).
+
+			\abs{ f } \in $ Cst$(\C) \imp f \in $ Cst$(\C)
+
+		}
+		\demonstration
+		{
+			demonstration.
+		}
+	}
+	
+	
+	
+}
+
+
+
+\end{document}
