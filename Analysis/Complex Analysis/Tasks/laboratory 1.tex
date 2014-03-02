@@ -133,7 +133,9 @@
 		{
 			f_{Re} = 0 \logicOr f_{Im} = 0 \imp f \in $ Cst$( \Omega ).
 
-			\abs{ f } \in $ Cst$(\Omega) \imp f \in $ Cst$(\Omega)
+			\abs{ f } \in $ Cst$(\Omega) \imp f \in $ Cst$(\Omega).
+
+			\im{ f } $ circumference $ \imp f \in \constant{ \Omega }
 
 		}
 		\demonstration
@@ -158,12 +160,10 @@
 
 			\step{ \abs{ f } \in $ Cst$(\Omega) }
 			{
-				\be{ u }{ f_{Re} }.
-				\be{ v }{ f_{Im} }.
 
 				\definedFunction{ \abs{f} }{ \R^2 }{ \R }{ (x,y) }{ \sqrt{ u(x,y)^2 + v(x,y)^2 } }.
 
-				\abs{f} \in \constant{ \C } \imp \ex{ a \in \R }
+				\abs{f} \in \constant{ \Omega } \imp \ex{ a \in \R }
 				{
 					\sqrt{ u(x,y)^2 + v(x,y)^2 } = a.
 
@@ -191,12 +191,121 @@
 					u,v \in \constant{ \Omega } \imp f \in \constant{ \Omega }
 
 				}
+			}.
+
+			\step{ \im ( f ) $ circumference $ }
+			{
+				\ex{ (x_0,y_0) \in \R^2, r \in \R^+ }
+				{
+					\im( f ) = C_r(x_0,y_0).
+
+					\definedFunction{ \bar{f} }{ \R^2 }{ C_r(x_0,y_0) }{ (x,y) }{ (r \cos( x-x_0) , r \sin( y-y_0 )) }.
+
+					\all{ (x,y) \in \Omega }
+					{
+						\abs{ \bar{f} }(x,y) = \sqrt{ r^2( \cos^2( x-x_0 ) + \sin^2( y-y_0 ) } = r
+					}.
+
+					\abs{ f } \in \constant{ \Omega } \imp f \constant{ \Omega }
+
+				}
 			}
 		}
 	}
 	
 	
 
+	\proposition{ $ Real part of holomorphic functions $ }
+	{
+		\letbe
+		{
+			\Omega \subset \R^2 $ region $.
+			u \in \Cc^2(\Omega) \suchthat \ex{ f \in \Hc(\Omega) }
+			{
+				f_{Re} = u
+			}
+		}
+		\showthat
+		{
+			\partialderivative{ u }{ xx } + \partialderivative{ u }{ yy } = 0
+		}
+		\study
+		{
+			\ex{ f \in \Hc(\Omega) }
+			{
+				a) \; f_{Re}(x,y) = x^2+y^2.
+				b) \; f_{Re}(x,y) = x(x+1) -y^2.
+				c) \; \all{ \alpha \in \R }
+				{
+					f_{Re} = y^3 + \alpha x^2y \logicAnd \Omega = \C
+				}
+			}
+		}
+		\demonstration
+		{
+			\step{ \partialderivative{ u }{ xx } + \partialderivative{ u }{ yy } = 0 }
+			{
+				\be{ u }{ f_{Re} }, \be{ v }{ f_{Im} }.
+
+				f \in \Hc( \Omega ) \imp f $ satisfies CR in $ \Omega.
+
+				\partialderivative{ u }{ x } = \partialderivative{ v }{ y } \imp \partialderivative{ u }{ xx } = \partialderivative{ v }{ xy }.
+
+				\partialderivative{ u }{ y } = - \partialderivative{ v }{ x } \imp \partialderivative{ u }{ yy } = - \partialderivative{ v }{ xy }.
+
+				\conclude \partialderivative{ u }{ xx } + \partialderivative{ u }{ yy } = 0
+			}.
+
+			\step{ f_{Re}(x,y) = x^2+y^2 }
+			{
+
+				\partialderivative{ u }{ xx } + \partialderivative{ u }{ yy } = 4 \neq 0.
+
+				\nexists f \in \Hc(\Omega) \suchthat f_{Re}(x,y) = x^2 + y^2
+			}.
+
+			\step{ f_{Re}(x,y) = x(x+1) -y^2 }
+			{
+				\definedFunction{ \bar{f} }{ \Omega }{ \R^2 }{ (x,y) }{ (u(x,y),v(x,y))=(x(x+1) - y^2, 2xy + y) }.
+
+				\bar{f} \in \polynomial{ \Omega } \imp \bar{f} $ differentiable in $ \Omega.
+
+				\all{ (x,y) \in \Omega }
+				{
+					\partialderivative{ u(x,y) }{ x } = 2x+1 = \partialderivative{ v(x,y) }{ y }.
+
+					\partialderivative{ u(x,y) }{ y } = -2y = -\partialderivative{ v(x,y) }{ x }.
+				}
+
+				f $ satisfies CR in $ \Omega.
+
+				f \in \Hc(\Omega) \logicAnd f_{Re} = u
+			}.
+
+			\step{ f_{Re}(x,y) = y^3 + \alpha x^2y }
+			{
+				\step{ f $ has to satisfy CR in $ \C }
+				{
+					\all{ (x,y) \in \R^2 }
+					{
+						\partialderivative{ v(x,y) }{ y } = \partialderivative{ u(x,y) }{ x } = 2\alpha xy.
+
+						\partialderivative{ v(x,y) }{ x } = -\partialderivative{ u(x,y) }{ y } = - 3y^2 - \alpha x^2.
+						v(x,y) = \alpha xy^2 + c(x).
+						v(x,y) = -3xy^2 - \frac{ \alpha }{ 3 }x^3 + c(y).
+						
+						\alpha = -3, \; c(x) = x^3, \; c(y) = 0.
+
+						v(x,y) = -3xy^2 + x^3
+
+					}
+				}
+			}
+
+		}
+	}
+	
+	
 	
 	
 }
