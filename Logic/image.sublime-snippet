@@ -1,0 +1,13 @@
+<snippet>
+
+<scope>text.tex.latex</scope>
+<tabTrigger>image</tabTrigger>
+<description>.</description>
+
+<content>
+<![CDATA[
+\im( ${1:of} )
+]]>
+</content>
+
+</snippet>
