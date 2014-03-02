@@ -1,12 +1,12 @@
 <snippet>
 
 <scope>text.tex.latex</scope>
-<tabTrigger>absolut value</tabTrigger>
+<tabTrigger>rational functions</tabTrigger>
 <description>.</description>
 
 <content>
 <![CDATA[
-\abs{ ${1:of} }
+\rational{ ${1:over} }
 ]]>
 </content>
 
