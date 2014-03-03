@@ -89,6 +89,81 @@
 			f' = f
 		}
 	}
+
+
+	\example{ $ Geometric series $ }
+	{
+		\letbe
+		{
+			a \as 0.
+			c_n : 0
+		}
+		\is{ \sum{ z^n }{ n }[ 0 ] }{ $ convergent in $ \D }
+		{
+			R = \frac{ c_n }{ c_{n+1} } = 1
+		}
+		\holds
+		{
+			\sum{ z^n }{ n }[ 0 ] = \frac{ 1 }{ 1-z }.
+			\sum{ nz^{n-1} }{ n }[ 0 ] = \frac{ 1 }{ (1-z)^2 }.
+			\sum{ \frac{ z^{n+1} }{ n+1 } }{ n }[ 0 ] = - \log( 1-z )
+		}
+		\demonstration
+		{
+			\all{ z \in \D }
+			{
+				\sum{ z^n }{ n }[ 0 ] $ geometric series $.
+				\sum{ z^n }{ n }[ 0 ] = \frac{ 1 }{ 1-z }
+			}.
+
+			II $ differentiating $.
+
+			III $ integrating $
+		}
+	}
+	
+	
+	\example{ $ Series not centered in 0 $ }
+	{
+		\letbe
+		{
+			a \as i.
+			c_n \as \frac{ n+1 }{ 5^{n+1} }
+		}
+		\is{ item }{ $ a/an entity $ }
+		{
+			\sum{ \frac{ n(z-i)^{n-1} }{ 5^n } }{ n }[ 1 ].
+
+			 = \frac{ 1 }{ 5 } \sum{ n \frac{ z-i }{ 5 }^{n-1} }{ n }[ 1 ] = \frac{ 1 }{ 5 } \sum{ nu^{n-1} }{ n }[ 1 ].
+
+			 S(u) = \tilde{S'}(u).
+
+			 \tilde{S}(u) = \frac{ 1 }{ 5 } \sum{ u^n }{ n }[ 1 ] = \frac{ u }{ 5(1-u) }.
+
+			 S(u) = \frac{ 1 }{ 5(1-u)^2 }.
+
+			 S(z) = \frac{ 5 }{ (5+i-z)^2 } $ over $ D(i,5).
+
+
+		}
+	}
+	
+	
+	\example{ $ Radius of convergence without quotient test $ }
+	{
+		\letbe
+		{
+			\sum{ \frac{ (-1)^n }{ n(n+1) }(z-2)^{n(n+1)} }{ n }[ 1 ]
+		}
+		\is{ R }{ $ a/an entity $ }
+		{
+			\limit{ c_n }{ c_{n+1} } \nexists.
+
+			\limit{ \frac{ 1 }{ n(n+1) }^{\frac{ 1 }{ n(n+1) }} }{ n } = 1.
+
+			$ ignore zeros $.
+		}
+	}
 }
 
 
