@@ -1,0 +1,46 @@
+\contentsline {part}{ I $ $ Definitions $ $ }{5}
+\contentsline {chapter}{ 1 $ $ Discrete dynamical systems $ $ }{5}
+\contentsline {section}{ $ $ Dynamical system $ $ }{6}
+\contentsline {section}{ $ $ Dimension $ $ }{6}
+\contentsline {section}{ $ $ Discrete \& Continuous$ $ }{6}
+\contentsline {section}{ $ $ Defined by a function $ $ }{7}
+\contentsline {section}{ $ $ Orbit $ $ }{7}
+\contentsline {section}{ $ $ Periodicity $ $ }{8}
+\contentsline {section}{ $ $ Stability $ $ }{8}
+\contentsline {section}{ $ $ Attractive \& Repulsive $ $ }{9}
+\contentsline {section}{ $ $ Fixed point character $ $ }{10}
+\contentsline {section}{ $ $ Attraction set $ $ }{11}
+\contentsline {section}{ $ $ Multiplier $ $ }{11}
+\contentsline {section}{ $ $ Feeble point$ $ }{12}
+\contentsline {section}{ $ $ Sarkovskii's order $ $ }{12}
+\contentsline {section}{ $ $ Chaos $ $ }{13}
+\contentsline {section}{ $ $ Topological equivalence $ $ }{13}
+\contentsline {section}{ $ $ Bifurcation $ $ }{14}
+\contentsline {section}{ $ $ Saddle-node bifurcation $ $ }{14}
+\contentsline {section}{ $ $ Pitchfork bifurcation $ $ }{15}
+\contentsline {section}{ $ $ Period doubling bifurcation $ $ }{16}
+\contentsline {part}{ II $ $ Propositions $ $ }{17}
+\contentsline {chapter}{ 1 $ $ One-dimensional discrete dynamical systems $ $ }{19}
+\contentsline {section}{ $ $ Fixed points theorem $ $ }{21}
+\contentsline {section}{ $ $ Attractiveness of periodic points does not involve the chosen point $ $ }{22}
+\contentsline {section}{ $ $ Partition of attraction set $ $ }{23}
+\contentsline {section}{ $ $ Homeomorphisms are monotonous $ $ }{24}
+\contentsline {section}{ $ $ Homeomorphisms and n-periodic points $ $ }{25}
+\contentsline {section}{ $ $ Sarkovskii's theorem $ $ }{26}
+\contentsline {section}{ $ $ Characterization of sella-node bifurcation points $ $ }{27}
+\contentsline {section}{ $ $ Pitchfork bifurcation $ $ }{28}
+\contentsline {section}{ $ $ Characterization of Pitchfork bifurcations $ $ }{28}
+\contentsline {part}{ III $ $ Examples $ $ }{30}
+\contentsline {chapter}{ 1 $ $ One-dimensional discrete dynamical systems $ $ }{31}
+\contentsline {section}{ $ $ Analysis of logistic dynamical systems $ $ }{33}
+\contentsline {section}{ $ $ Quadratic function bifurcations $ $ }{34}
+\contentsline {part}{ IV $ $ Problems $ $ }{34}
+\contentsline {chapter}{ 1 $ $ One-dimensional discrete dynamical system $ $ }{37}
+\contentsline {section}{ $ $ Decreasing function orbits $ $ }{39}
+\contentsline {section}{ $ $ 9. Periodic points $ $ }{39}
+\contentsline {section}{ $ $ 10. Global orbit analysis $ $ }{40}
+\contentsline {part}{ V $ $ Laboratory $ $ }{41}
+\contentsline {chapter}{ 1 $ $ Orbit analysis $ $ }{43}
+\contentsline {section}{ $ $ Martin Azpillaga $ $ }{44}
+\contentsline {chapter}{ 2 $ $ Fixed points cardinality $ $ }{48}
+\contentsline {section}{ $ $ Martin Azpillaga $ $ }{48}
