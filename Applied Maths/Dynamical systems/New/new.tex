@@ -7,35 +7,147 @@
 
 \unit{ $ New $ }
 {
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-		
 
+	\definition{ $ defined by f $ }
+	{
+		\letbe
+		{
+			\function{ f }{ \R^n }{ \R^n }
+		}
+		\then{ ( \R^n, \N, \phi ) }{ $ defined by $ f }
+		{
+			\definedFunction{ \phi }{ \R^n \times \N }{ \R^n }{ x }{ f^n(x) }
+		}
+		\denote
+		{
+			( \R^n, \N, f ) $ n-D$
+		}
+	}
+	
+	
+	\problem{ $ Henon's application $ }
+	{
+		\letbe
+		{
+			\definedFunction{ f }{ \R^2 }{ \R^2 }{ (x,y) }{ (-x^2 + 0.4y, x ) }
+		}
+		\study
+		{
+			$Fixed points of $ f
+		}
+		\demonstration
+		{
+			(0,0), (-0.6,-0.6) $ fixed points $
+		}
+	}
+	
+	
+	\definition{ $ Invariant curve $ }
+	{
+		\letbe
+		{
+			\gamma $ differentiable curve $.
+			p \in \R^n
+		}
+		\then{ \gamma }{ $ invariant $ }
+		{
+			\all{ x \in \gamma* }
+			{
+				o(x) \subset \gamma*
+			}
+		}
+		\then{ \gamma }{ $ converges to $ p }
+		{
+			\all{ x \in \gamma* }
+			{
+				o(x) \convergesto p
+			}
+		}
+	}
+	
+	
+	\definition{ $ Stable \& Unstable $ }
+	{
+		\letbe
+		{
+			\function{ f }{ \R^n }{ \R^n }.
+			p \in \R^n $ m-periodic point $
+		}
+		\then{ p }{ $ stable $ }
+		{
+			\all{ \epsilon \in \R^+ }
+			{
+				\ex{ \delta \in \R^+ }
+				{
+					\all{ x \in B(p,\epsilon) }
+					{
+						\all{ n \in \N }
+						{
+							f^{nm}(x) \in B(p,\epsilon)
+						}
+					}
+				}
+			}
+		}
+		\then{ p }{ $ unstable $ }
+		{
+			p $ not stable $
+		}
+	}
+	
+	
+	\definition{ $ Attractive \& Repulsive $ }
+	{
+		\letbe
+		{
+			\function{ f }{ \R^n }{ \R^n }.
+			p \in \R^n $ m-periodic point $
+		}
+		\then{ p }{ $ attractive $ }
+		{
+			p $ stable $.
+			\ex{ \epsilon \in \R^+ }
+			{
+				\all{ x \in B(p,\epsilon) }
+				{
+					f^{nm}(x) \convergesto p
+				}
+			}
+		}
+		\then{ p }{ $ repulsive $ }
+		{
+			p $ attractive by $ f^{-1}
+		}
+	}
+	
+	
+	\proposition{ $ Invariance of stability over periods $ }
+	{
+		\letbe
+		{
+			( \R^n, \N, f ) $ n-D dynamical system $.
+			p \in \R^n $ k-periodic point $.
+			\chi $ character of periodic points $
+		}	
+		\holds
+		{
+			\ex{ \sigma \in \im( \chi ) }
+			{
+				\all{ x \in o(p) }
+				{
+					\chi(x) = \sigma
+				}
+			}
+		}
+		\demonstration
+		{
+			$ i will $
+		}
+	}
+	
+	
+	
+	
 }
 
 
