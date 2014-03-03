@@ -4,9 +4,8 @@
 
 \begin{document}
 
-\unit{ $ One-dimensional discrete dynamical systems $ }
+\unit{ $ Discrete dynamical systems $ }
 {	
-	
 	
 	\definition{ $ Dynamical system $ }
 	{
@@ -43,7 +42,7 @@
 		}
 		\denote
 		{
-			dim(M) = n \as ( M, T, \phi ) $ n-D dynamical system $
+			dim(M) = n \as ( M, T, \phi ) $ n-D $
 		}
 	}
 
@@ -82,7 +81,7 @@
 		\denote
 		{
 			( M, T, \phi ) $ dynamical system defined by $ f \as ( M, \N, f ).
-			f \in \Cc^n( M ) \as ( M, \N, f ) \hspace{5pt} \Cc^n $ dynamical system $
+			f \in \Cc^n( M ) \as ( M, \N, f ) \hspace{5pt} \Cc^n 
 		}
 	}
 	
@@ -105,56 +104,76 @@
 	}
 	
 	
-	\definition{ $ n-periodic point $ }
+	\definition{ $ Periodicity $ }
 	{
 		\letbe
 		{
-			( M, \N, f ) $ functional dynamical system $.
+			( M, \N, f ) $ dynamical system $.
 			x \in M.
-			n \in \N
+			m \in \N
 		}
-		\then{ x }{ $ a n-periodic point $ }
+		\then{ x }{ $ a m-periodic point $ }
 		{
-			f^n(x) = x.
-			\all{ n' \in \N }[ n' < n ]
-			{
-				f^{n'}(x) \neq x
-			}
+			f^m(x)=x
 		}
 		\denote
 		{
-			\set{ x \in M \with f(x) = x } \as Fix(f)
+			\set{ x \in M \with f(x) = x } \as \fixed(f)
 		}
 	}
-	
 
-	\definition{ $ Attractive \& Repulsive $ }
+
+	\definition{ $ Stability $ }
 	{
 		\letbe
 		{
-			( M, \N, f ) $ metrical dynamical system $.
-			x \in M $ m-periodic point $
+			\function{ f }{ \R^n }{ \R^n }.
+			p \in \R^n $ m-periodic point $
 		}
-		\then{ x }{ $ attractive $ }
+		\then{ p }{ $ stable $ }
 		{
-			\ex{ \Uc \in M }
+			\all{ \epsilon \in \R^+ }
 			{
-				\Uc $ open $.
-
-				\all{ x' \in \Uc }
+				\ex{ \delta \in \R^+ }
 				{
-					\ex{ N \in \N }
+					\all{ x \in B(p,\delta) }
 					{
-						\all{ n \in \N }[ n \geq N ]
+						\all{ n \in \N }
 						{
-							f^{nm}(x') \in \Uc
+							f^{nm}(x) \in B(p,\epsilon)
 						}
 					}
 				}
 			}
 		}
-		\then{ x }{ $ repulsive $ }
+		\then{ p }{ $ unstable $ }
 		{
+			p $ not stable $
+		}
+	}
+	
+	
+	\definition{ $ Attractive \& Repulsive $ }
+	{
+		\letbe
+		{
+			\function{ f }{ \R^n }{ \R^n }.
+			p \in \R^n $ m-periodic point $
+		}
+		\then{ p }{ $ attractive $ }
+		{
+			p $ stable $.
+			\ex{ \epsilon \in \R^+ }
+			{
+				\all{ x \in B(p,\epsilon) }
+				{
+					f^{nm}(x) \convergesto p
+				}
+			}
+		}
+		\then{ p }{ $ repulsive $ }
+		{
+			p $ attractive by $ f^{-1}.
 			\all{ \Uc \subset M }[ \Uc $ open $ \logicAnd x \in \Uc ]
 			{
 				\all{ x' \in \Uc }[ x' \neq x ]
@@ -172,6 +191,7 @@
 	}
 	
 	
+	
 	\definition{ $ Fixed point character $ }
 	{
 		\letbe
@@ -180,11 +200,11 @@
 		}
 		\name{ $ Fixed point character $ }
 		{
-			\definedFunction{ f }{ Fix(f) }{ \set{ +,- } }{ x }{ \begin{cases} + & x $ repulsive $ \\ - & x $ attractive $ \end{cases} }
+			\definedFunction{ f }{ \fixed(f) }{ \set{ -1,0,1 } }{ x }{ \begin{cases} +1 & x $ repulsive $ \\ -1 & x $ attractive $ \\ 0 & x $ no attractive no repulsive $  \end{cases} }
 		}
 		\denote
 		{
-			f \as \chi
+			f \as \chi_f
 		}
 	}
 	
@@ -206,100 +226,54 @@
 			A( x )
 		}
 	}
-	
-	
-	\definition{ $ Neutral point $ }
-	{
-		\letbe
-		{
-			( M, \N, f ) $ differentiable dynamical system $.
-			x \in M
-		}
-		\then{ x }{ $ a neutral point $ }
-		{
-			f'(x) \in \set{ -1,1 }
-		}
-	}
 
 
-	\definition{ $ Feeble point $ }
-	{
-		\letbe
-		{
-			( M, \N, f ) \hspace{5pt} \Cc^3 $ dynamical system $.
-			x \in M $ neutral point $
-		}
-		\then{ x }{ $ feeble point $ }
-		{
-			f''(x) = 0
-		}
-	}
-	
-
-	\definition{ $ Saddle point $ }
-	{
-		\letbe
-		{
-			\Uc \subset \R^n.
-			f \in \Cc^1(\Uc).
-			x \in \Uc
-		}
-		\then{ x }{ $ a saddle point $ }
-		{
-			f'(x) = 0
-		}
-	}
-
-	
-	\definition{ $ Homeomorphism $ }
-	{
-		\letbe
-		{
-			( X_1, \tau_1 ), ( X_2, \tau_2 ) $ topological spaces $.
-			\function{ f }{ X_1 }{ X_2 }
-		}
-		\then{ f }{ $ a homeomorphism $ }
-		{
-			f $ biyective $.
-			f \in \Cc( X_1 ).
-			f^{-1} \in \Cc( X_2 )			
-		}
-		\denote
-		{
-			\set{ \function{ f }{ X_1 }{ X_2 } \with f $ homeomorphism $ } \as Homeo( X_1 )
-		}
-	}
-	
-	
-	
-	
 	\definition{ $ Multiplier $ }
 	{
 		\letbe
 		{
-			( M, \N, f ) \Cc^1 $ dynamical system $.
+			( M, \N, f ) \hspace{5pt} \Cc^1 $ dynamical system $.
 			x \in M
 		}
 		\name{ $ multiplier of $ x }
 		{
 			f'(x)
 		}
+		\denote
+		{
+			m(x).
+			|m(x)|= 1 \as x $ neutral point $
+		}
 	}
-	
-	
-	\definition{ $ Logistic $ }
+
+
+	\definition{ $ Feeble point$ }
 	{
 		\letbe
 		{
-			\function{ f }{ \R }{ \R }.
-			( M, T, \phi ) $ dynamical system defined by $ f
+			( M, \N, f ) \hspace{5pt} \Cc^3 $ dynamical system $.
+			x \in M
 		}
-		\then{ ( M, T, \phi ) }{ $ a logistic dynamical system $ }
+		\then{ x }{ $ feeble point $ }
 		{
-			\ex{ a \in \R }
-			{
-				\definedFunction{ f }{ \R }{ \R }{ x }{ ax(1-x) }
-			}
+			x $ neutral point $.
+			f''(x) = 0
+		}
+	}
+	
+
+	\definition{ $ Sarkovskii's order $ }
+	{
+		\name{ $ Sarkovskii's order	$ }
+		{
+			a = 2^na', b = 2^mb'.
+			a <_s b \ifandonlyif 
+			\begin{cases} 
+			m < n & a' = b' = 1 \\ 
+			* & a' = 1, b' \neq 1 \\ 
+			a' < b' & a'=b'\neq 1 \\ 
+			n < m & 1 \neq a' \neq b'
+			\end{cases}
 		}
 	}
 	
@@ -308,76 +282,70 @@
 	{
 		\letbe
 		{
-			\function{ f }{ \R }{ \R }.
-			( M, T, \phi ) $ dynamical system defined by $ f
+			( \R, \N, f ) $ dynamical system $
 		}
-		\then{ ( M, T, \phi ) }{ $ chaotic $ }
+		\then{ ( \R, \N, f ) }{ $ chaotic $ }
 		{
-			Fix(f) $ dense in $ \R.
+			\fixed(f) $ dense in $ \R.
 			\ex{ x \in \R }
 			{
 				o(x) $ dense in $ \R
 			}.
 
-			f $ sensibility of $ x_0
+			\all{ x \in \R }
+			{
+				\ex{ \epsilon \in \R^+ }
+				{
+					\all{ \delta \in \R^+ }
+					{
+						\ex{ \tilde{x} \in B(x,\delta) }
+						{
+							\limit{ o(\tilde{x}) }{ n } \nin B(x,\epsilon)
+						}
+					}
+				}
+			}
 		}
-	}
-
-
-	\definition{ $ Sarkovskii's order $ }
-	{
-		\name{ $ Sarkovskii's order	$ }
-		{
-			a = 2^na', b = 2^mb'.
-			a < b \ifandonlyif \begin{cases} m < n & a' = b' = 1 \\ * & a' = 1, b' \neq 1 \\ a' < b' & a'=b'\neq 1 \\ n < m & 1 \neq a' \neq b'\end{cases}
-		}
-		\denote
-		{
-			a < b \as a \prec b
-		}
-	}
+	}	
 	
 	
-	
-	
-	
-	\definition{ $ Topologically equivalent $ }
+	\definition{ $ Topological equivalence $ }
 	{
 		\letbe
 		{
-			( M, \N, f ) $ functional dynamical system $.
-			( M, \N, f' ) $ functional dynamical system $
+			( M, \N, f_1 ), ( M, \N, f_2' ) $ dynamical systems $
 		}
-		\then{ ( M, \N, f ) }{ $ topologically equivalent to $ ( M, \N, f' ) }
+		\then{ ( M, \N, f_1 ) }{ $ topologically equivalent to $ ( M, \N, f_2 ) $ $ }
 		{
-			Fix(f) = Fix(f').
+			\fixed(f) = \fixed(f').
 
-			\all{ x \in Fix(f) }
+			\all{ x \in \fixed(f) }
 			{
-				character_f(x) = character_{f'}(x)
+				\chi_{f_1}(x) = \chi_{f_2}(x)
 			}
 		}
 		\denote
 		{
-			( M, \N, f ) ~ ( M, \N, f' )
+			( M, \N, f ) \sim ( M, \N, f' )
 		}
 	}
 	
 	
-	\definition{ $ Bifurcation point $ }
+	\definition{ $ Bifurcation $ }
 	{
 		\letbe
 		{
-			( M, \N, f_\lambda )_{\lambda \in \Lambda} $ functional dynamical system family $.
-			\lambda' \in \Lambda
+			\Lambda \subset M.
+			( M, \N, f_\lambda )_{\lambda \in \Lambda} $ dynamical systems parametrized by $ \Lambda.
+			\lambda_0 \in \Lambda
 		}
-		\then{ \lambda' }{ $ a bifurcation value $ }
+		\then{ \lambda_0 }{ $ a bifurcation value $ }
 		{
 			\all{ \epsilon \in \R^+ }
 			{
-				\ex{ \lambda'' \in (\lambda' - \epsilon, \lambda' + \epsilon ) }
+				\ex{ \lambda_1,\lambda_2 \in B(\lambda_0,\epsilon) }
 				{
-					( M, \N, f_{\lambda''} ) $ not topologically equivalent to $ ( M, \N, f_{\lambda'} )
+					( M, \N, f_{\lambda_1} ) \not\sim ( M, \N, f_{\lambda_2} )
 				}
 			}
 		}
@@ -388,15 +356,17 @@
 	{
 		\letbe
 		{
-			statements.
+			\Lambda \subset M.
+			( M, \N, f_\lambda )_{\lambda \in \Lambda} $ dynamical systems parametrized by $ \Lambda.
+			\lambda_0 \in \Lambda.
+			x_0 \in M
 		}
-		\then{ item }{ $ a/an entity $ }
+		\then{ \lambda_0 }{ $ a saddle-node bifurcation value at $ x_0 $ $ }
 		{
-			conditions.
-		}
-		\denote
-		{
-			property \as notation.
+			x_0 \in \fixed( f_{\lambda_0} ).
+			x_0 $ neutral point of $ f_{\lambda_0}.
+			\partialderivative{ f_\lambda }{ \lambda }(x_0) \neq 0.
+			\partialderivative{ f_\lambda }{ xx }(x_0) \neq 0
 		}
 	}
 	
@@ -405,15 +375,19 @@
 	{
 		\letbe
 		{
-			statements.
+			\Lambda \subset M.
+			( M, \N, f_\lambda )_{\lambda \in \Lambda} $ dynamical systems parametrized by $ \Lambda.
+			\lambda_0 \in \Lambda.
+			x_0 \in M
 		}
-		\then{ item }{ $ a/an entity $ }
+		\then{ \lambda_0 }{ $ Pitchfork bifurcation value at $ x_0 $ $ }
 		{
-			conditions.
-		}
-		\denote
-		{
-			property \as notation.
+			x_0 \in \fixed( f_{\lambda_0} ).
+			x_0 $ neutral point of $ f_{\lambda_0}.
+			\partialderivative{ f_\lambda }{ \lambda }(x_0,\lambda_0) = 0.
+			\partialderivative{ f_\lambda }{ x^2 }(x_0,\lambda_0) = 0.
+			\partialderivative{ f_\lambda }{ \lambda x }(x_0,\lambda_0) \neq 0.
+			\partialderivative{ f_\lambda }{ x^3 }(x_0,\lambda_0) \neq 0
 		}
 	}
 	
@@ -422,27 +396,16 @@
 	{
 		\letbe
 		{
-			statements.
+			\Lambda \subset M.
+			( M, \N, f_\lambda )_{\lambda \in \Lambda} $ dynamical systems parametrized by $ \Lambda.
+			\lambda_0 \in \Lambda.
+			x_0 \in M
 		}
-		\then{ item }{ $ a/an entity $ }
+		\then{ \lambda_0 }{ $ Period doubling bifurcation value at $ x_0 $ $ }
 		{
-			conditions.
+			\lambda_0 $ Pitchfork bifurcation value at $ x_0 $ of $ f^2
 		}
-		\denote
-		{
-			property \as notation.
-		}
-	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+	}	
 
 }
 

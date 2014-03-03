@@ -66,59 +66,7 @@
 	}
 	
 	
-	\definition{ $ Stable \& Unstable $ }
-	{
-		\letbe
-		{
-			\function{ f }{ \R^n }{ \R^n }.
-			p \in \R^n $ m-periodic point $
-		}
-		\then{ p }{ $ stable $ }
-		{
-			\all{ \epsilon \in \R^+ }
-			{
-				\ex{ \delta \in \R^+ }
-				{
-					\all{ x \in B(p,\epsilon) }
-					{
-						\all{ n \in \N }
-						{
-							f^{nm}(x) \in B(p,\epsilon)
-						}
-					}
-				}
-			}
-		}
-		\then{ p }{ $ unstable $ }
-		{
-			p $ not stable $
-		}
-	}
 	
-	
-	\definition{ $ Attractive \& Repulsive $ }
-	{
-		\letbe
-		{
-			\function{ f }{ \R^n }{ \R^n }.
-			p \in \R^n $ m-periodic point $
-		}
-		\then{ p }{ $ attractive $ }
-		{
-			p $ stable $.
-			\ex{ \epsilon \in \R^+ }
-			{
-				\all{ x \in B(p,\epsilon) }
-				{
-					f^{nm}(x) \convergesto p
-				}
-			}
-		}
-		\then{ p }{ $ repulsive $ }
-		{
-			p $ attractive by $ f^{-1}
-		}
-	}
 	
 	
 	\proposition{ $ Invariance of stability over periods $ }
