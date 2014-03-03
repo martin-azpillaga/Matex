@@ -101,6 +101,170 @@
 		}
 	}
 
+	\proposition{ $ Convergence of complex series $ }
+	{
+		\letbe
+		{
+			\summation{ c_n }{ n }[ 0 ] $ complex series $
+		}
+		\holds
+		{
+			\summation{ c_n }{ n }[ 0 ] $ convergent $ \ifandonlyif \summation{ Re c_n }{ n }[ 0 ] $ convergent $ \logicAnd \sum{ Im c_n }{ n }[ 0 ] $ convergent $	
+		}
+		\demonstration
+		{
+			demonstration.
+		}
+	}
+	
+	
+	
+	
+	\proposition{ $ Absolutely convergent are convergent $ }
+	{
+		\letbe
+		{
+			\sum{ c_n }{ n }[ 0 ] $ absolutely convergent $
+		}
+		\holds
+		{
+			\sum{ c_n }{ n }[ 0 ] $ convergent $
+		}
+		\demonstration
+		{
+			\be{ S_k }{ \sum{ c_n }{ n }[ 0 ][k] }.
+
+			\all{ m \in \N }[ m < k ]
+			{
+				|S_k - S_m | = | \sum{ c_n }{ n }[ m+1 ][k] | \leq \sum{ |c_n| }{ n }[ m+1 ][k].
+
+				\leq \sum{ |c_n| }{ n }[ m+1 ] \convergesto 0.
+
+				|S_k - S_m | \convergesto 0 \imp (S_k)_k $ convergent $ \imp \sum{ c_n }{ n }[ 0 ] $ convergent $
+			}
+		}
+	}
+	
+	
+	\proposition{ $ Series and norm $ }
+	{
+		\letbe
+		{
+			\sum{ c_n }{ n }[ 0 ] $ convergent $
+		}
+		\holds
+		{
+			|c_n| \convergesto 0
+		}
+		\demonstration
+		{
+			\sum{ c_n }{ n }[ 0 ] $ convergent $ \ifandonlyif (S_n)_n $ convergent $.
+
+			\imp $ Cauchy $ |S_n - S_m | \convergesto 0 $ por n y m $ \imp |S_n - S_{n-1}| \convergesto 0.
+
+			\imp |c_n| \convergesto 0
+		}
+	}
+	
+	
+	\proposition{ $ Root test $ }
+	{
+		\letbe
+		{
+			\summation{ c_n }{ n }[ 0 ] $ real series $.
+
+			l \in \R \suchthat \superiorlimit{ |c_k|^{\frac{ 1 }{ k }} }{ k } = l
+		}
+		\holds
+		{
+			l > 1 \imp \summation{ c_n }{ n }[ 0 ] \nin \R.
+
+			l < 1 \imp \summation{ c_n }{ n }[ 0 ] \in \R
+		}
+		\demonstration
+		{
+			demonstration.
+		}
+	}
+	
+	
+	\proposition{ $ Quotient test $ }
+	{
+		\letbe
+		{
+			\summation{ c_n }{ n }[ 0 ] $ real series $.
+
+			l \in \R \suchthat 
+		}
+		\holds
+		{
+			\ex{ l \in \R }
+			{
+				\limit{ \frac{ c_{k+1} }{ c_k }}{ k } = l
+			}.
+
+			\superiorlimit{ |c_k|^{\frac{ 1 }{ k }} }{ c_k }{ k } = l
+		}
+	}
+	
+	
+	
+	
+	
+	\proposition{ $ Power series theorem $ }
+	{
+		\letbe
+		{
+			\summation{ a_nc^n }{ n }[ 0 ] $ power series $
+		}
+		\holds
+		{
+			|z-a| < R \imp $ absolutely convergent $.
+			|z-a| > R \imp $ divergent $.
+
+			$ convergent in $ D(a,R).
+
+			\definedFunction{ f }{ \C }{ \C }{ z }{ \summation{ c_n(z-a)^n }{ n }[ 0 ] } \in \Hc(D(a,R)).
+
+			\all{ z \in \C }
+			{
+				f'(z) = \summation{ nc_n(z-a)^{n-1} }{ n }[ 0 ] $ convergent $ 
+			}.
+
+			$ convergence radius of $ f' = $ convergence radius of $ f
+		}
+		\demonstration
+		{
+			 \all{ z \in \C }[ |z-a| < R ]
+			 {
+			 	$ Root test over $ \summation{ |c_n||z-a|^n }{ n }[ 0 ]
+
+			 	\limit{ (|c_n||z-a|^n)^{\frac{ 1 }{ n }} }{ n } =
+			 	|z-a| \limit{ |c_n|^{\frac{ 1 }{ n }} }{ n } = \frac{ |z-a| }{ R } < 1
+
+			 	$ Root test $ \imp $ absolutely convergent $.
+
+			 }
+
+			 \all{ z \in \C }[ |z-a| < R ]
+			 {
+			 	\all{ \rho \in \R }[ |z-a| < \rho < R ]
+			 	{
+			 		\frac{ 1 }{ \rho } < \frac{ 1 }{ R }.
+
+			 		\limit{ |c_n|^{1/n} }{ n } = \frac{ 1 }{ R } \imp
+
+			 		$ exists partial of $ |c_n|^{1/n}.
+
+			 		|c_n||z-a|^n > \frac{ |z-a|^n }{ \rho^n } $ no $ \convergesto 0.
+
+			 		$ General term test $ \imp $ divergent $
+			 	}
+			}
+		}
+		
+	}
+
 }
 
 

@@ -143,8 +143,70 @@
 			}
 		}
 	}
+
+
+	\proposition{ $ Characterization of sella-node bifurcation points $ }
+	{
+		\letbe
+		{
+			I \subset \R
+			\family*{ \function{ f_\lambda }{ I }{ I } }{ \lambda \in \Lambda }.
+			x \in I
+		}
+		\holds
+		{
+			x $ SN bifurcation point $ \ifandonlyif f(x) = x, f'(x) = 1.
+
+			\partialderivative{ f }{ \lambda } \neq 0.
+
+			f''(x) \neq 0
+		}
+		\demonstration
+		{
+			demonstration.
+		}
+	}
 	
+	\definition{ $ Pitchfork bifurcation $ }
+	{
+		\letbe
+		{
+			( M, T, f_\lambda ) $ dynamical system family $.
+			x \in M
+		}
+		\then{ x }{ $ pitchfork bifurcation $ }
+		{
+			x $ fixed point $.
+			$ born of 2 fixed points $.
+		}
+	}
+
+
 	
+	\proposition{ $ Characterization of Pitchfork bifurcations $ }
+	{
+		\letbe
+		{
+			( M, T, f_\lambda ) $ dynamical system family $.
+			x \in M
+		}
+		\holds
+		{
+			x $ Pitchfork $ \ifandonlyif.
+
+			f(x) = x.
+
+			f'(x) = 1.
+
+			\partialderivative{ f }{ x^2 } = 0.
+
+			\partialderivative{ f }{ \lambda } = 0
+		}
+		\demonstration
+		{
+			$ no demonstration $
+		}
+	}
 	
 
 }

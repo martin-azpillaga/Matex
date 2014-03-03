@@ -69,6 +69,26 @@
 			ang(A,B) = \pi \neq 0 = ang(f(A),f(B))
 		}
 	}
+
+
+	\example{ $ Exponential $ }
+	{
+		\letbe
+		{
+			a \as 0.
+			c_n \as \frac{ 1 }{ n }
+		}
+		\is{ \summation{ c_n(z-a)^n }{ n }[ 0 ] }{ $ convergent in D1 $ }
+		{
+			\limit{ \frac{ |c_n| }{ |c_{n+1}| } }{ n } = \limit{ \frac{ n+1 }{ n } }{ n } = 1 \imp R = 1.
+
+			$CH$ \imp D(0,1) $ convergent $.
+
+			\C \setminus D(0,1) $ divergent $.
+
+			f' = f
+		}
+	}
 }
 
 

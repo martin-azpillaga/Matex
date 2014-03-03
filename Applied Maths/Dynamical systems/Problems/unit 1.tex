@@ -33,7 +33,44 @@
 	}
 	
 	
-	\problem{ $ 10. $ }
+	\problem{ $ 9. Periodic points $ }
+	{
+		\letbe
+		{
+			\definedFunction{ f }{ \R \times \R^+ }{ \R }{ (x,r) }{ r \frac{ x }{ 1 + x^2 } }
+		}
+		\study
+		{
+			$Periodic points of $ f
+		}
+		\demonstration
+		{
+			\step{ $ Graphical analysis $ }
+			{
+				f $ odd $.
+
+				f $ has 2 extrema in $ \pm 1.
+
+				f \convergesto 0
+			}.
+
+
+			\step{ $ Fixed points $ }
+			{
+				f(x) = x \ifandonlyif x = \pm \sqrt{ r - 1 }.
+
+				f'(\pm \sqrt{ r - 1 })  = \frac{ 2 - r }{ r }
+			}.
+
+			\step{ $ n-periodic points $ }
+			{
+				f^n(x) = x 
+			}
+		}
+	}
+
+
+	\problem{ $ 10. Global orbit analysis $ }
 	{
 		\letbe
 		{
@@ -44,7 +81,7 @@
 		}
 		\showthat
 		{
-			\all{ p \in \R^+ \nonzero }
+			\all{ x \in \R^+ \nonzero }
 			{
 				f^n(x) \convergesto p
 			}
@@ -86,6 +123,7 @@
 		}
 	}
 
+	
 }
 
 

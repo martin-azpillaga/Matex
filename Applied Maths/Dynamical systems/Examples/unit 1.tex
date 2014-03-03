@@ -29,6 +29,30 @@
 		}
 	}
 
+
+	\example{ $ Quadratic function bifurcations $ }
+	{
+		\letbe
+		{
+			\definedFunction{ f }{ \R }{ \R }{ x }{ a - x^2 }.
+			( M, T, f_c ) $ dynamical system family $
+		}
+		\is{ f }{ $ bifurcates in -1/4 $ }
+		{
+			f_{-\frac{ 1 }{ 4 }}(x) = x \ifandonlyif x = -\frac{ 1 }{ 2 }.
+
+			f'_{-\frac{ 1 }{ 4 }}(x) = -2x.
+
+			f'_{-\frac{ 1 }{ 4 }}(-\frac{ 1 }{ 2 }) = 1.
+
+			\partialderivative{ f }{ a } = 1 \neq 0.
+
+			\partialderivative{ f }{ x^2 } = -2 \neq 0.
+
+			sgn( 1 * -2 ) = - \imp -\frac{ 1 }{ 2 } $ SN $
+		}
+	}
+
 }
 
 
