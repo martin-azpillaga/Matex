@@ -6,7 +6,7 @@
 
 <content>
 <![CDATA[
-\polynomial{ ${1:over} }
+\polynomial( ${1:over} )
 ]]>
 </content>
 

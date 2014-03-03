@@ -6,7 +6,7 @@
 
 <content>
 <![CDATA[
-\constant{ ${1:over} }
+\constant( ${1:over} )
 ]]>
 </content>
 

@@ -6,7 +6,7 @@
 
 <content>
 <![CDATA[
-\rational{ ${1:over} }
+\rational( ${1:over} )
 ]]>
 </content>
 
