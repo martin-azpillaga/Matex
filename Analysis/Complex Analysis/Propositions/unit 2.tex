@@ -239,8 +239,10 @@
 			 {
 			 	$ Root test over $ \summation{ |c_n||z-a|^n }{ n }[ 0 ]
 
-			 	\limit{ (|c_n||z-a|^n)^{\frac{ 1 }{ n }} }{ n } =
-			 	|z-a| \limit{ |c_n|^{\frac{ 1 }{ n }} }{ n } = \frac{ |z-a| }{ R } < 1
+			 	rlimit{ (|c_n||z-a|^n)^{\frac{ 1 }{ n }} }{ n } =
+			 	|
+	z-a| rlimit{ |c_n|^{\frac{ 1 }{ n }} }{ n } = \frac{ |z-a| }{ R } < 1
+	
 
 			 	$ Root test $ \imp $ absolutely convergent $.
 
@@ -252,8 +254,7 @@
 			 	{
 			 		\frac{ 1 }{ \rho } < \frac{ 1 }{ R }.
 
-			 		\limit{ |c_n|^{1/n} }{ n } = \frac{ 1 }{ R } \imp
-
+			 		rlimit{ |c_n|^{1/n} }{ n } = \frac{ 1 }{ R } \i
 			 		$ exists partial of $ |c_n|^{1/n}.
 
 			 		|c_n||z-a|^n > \frac{ |z-a|^n }{ \rho^n } $ no $ \convergesto 0.
@@ -292,7 +293,9 @@
 
 					\be{ M_n }{ |c_n|\rho^n }.
 
-					\limit{ (|c_n|\rho^n)^{1/n} }{ n } = \rho \limit{ |c_n|^{1/n} }{ n } = \frac{ \rho }{ R } < 1.
+					rlimit{ (|c_n|\rho^n)^{1/n} }{ n } = \rho rlimit{ |c_n|^{1
+	/n} }{ n } = \frac{ \rho }{ R } < 1.
+	
 
 					$Root test$ \imp \summation{ M_n }{ n }[ 0 ] $ convergent $.
 
@@ -312,7 +315,10 @@
 
 				\tilde{f}(z) = \summation{ (n+1)c_{n+1}(z-a)^n }{ n }[ 0 ].
 
-				\frac{ 1 }{ R' } = \limit{ (n+1)|c_{n+1}|^{1/n} }{ n } = \limit{ (n+1)^{1/n}|c_{n+1}|^{1/n} }{ n } = \limit{ (|c_{n+1}|^{1/n+1})^{\frac{ n+1 }{ n }} }{ n } = \frac{ 1 }{ R }.
+				\frac{ 1 }{ R' } = rlimit{ (n+1)|c_{n+1}|^{1/n} }{ n } = rlimit{ (n+1)^{1/n}|c_{n+1
+}|^{1/n} }{ n } = rlimit{ (|c_{n+1}|^{
+1/n+1})^{\frac{ n+1 }{ n }} }{ n } = \frac{ 
+1 }{ R }.
 
 				R' = R
 
