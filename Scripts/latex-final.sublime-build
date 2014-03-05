@@ -4,15 +4,21 @@
 	{
 		"cmd": 
 		[
-			"mode", "200", "&&",
 			"taskkill", "/Im", "sumatrapdf.exe", "&",
 			
+			"pdflatex", "-quiet", "$file", "&&",
+
+			"bibtex", "$file_base_name.aux", "&&",
+
+			"pdflatex", "-quiet", "$file", "&&",
 			"pdflatex", "-quiet", "$file", "&&",
 
 			"del", "$file_base_name.aux", "&&",
 			"del", "$file_base_name.log", "&&",
 			"del", "$file_base_name.toc", "&&",
 			"del", "$file_base_name.out", "&&",
+			"del", "$file_base_name.bbl", "&&",
+			"del", "$file_base_name.blg", "&&",
 			
 			"sumatrapdf", "$file_base_name.pdf", "-presentation"
 		],
