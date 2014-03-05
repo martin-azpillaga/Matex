@@ -1,0 +1,58 @@
+\contentsline {part}{ I $ $ Definitions $ $ }{7}
+\contentsline {chapter}{ 1 $ $ The field of complex numbers $ $ }{7}
+\contentsline {section}{ $ $ The field of complex numbers $ $ }{9}
+\contentsline {section}{ $ $ Conjugation $ $ }{9}
+\contentsline {section}{ $ $ Norm $ $ }{9}
+\contentsline {section}{ $ $ Polar transformation $ $ }{10}
+\contentsline {section}{ $ $ Unit sphere projection $ $ }{10}
+\contentsline {section}{ $ $ Roots of unity $ $ }{10}
+\contentsline {section}{ $ $ Disk $ $ }{11}
+\contentsline {section}{ $ $ Component decomposition $ $ }{11}
+\contentsline {chapter}{ 2 $ $ Holomorphic functions $ $ }{12}
+\contentsline {section}{ $ $ Incremental quotient $ $ }{14}
+\contentsline {section}{ $ $ Holomorphic function $ $ }{14}
+\contentsline {section}{ $ $ Cauchy-Riemman equations $ $ }{15}
+\contentsline {section}{ $ $ Conformal $ $ }{16}
+\contentsline {section}{ $ $ Power series $ $ }{17}
+\contentsline {section}{ $ $ Convergence radius $ $ }{18}
+\contentsline {section}{ $ $ Absolutely convergent $ $ }{18}
+\contentsline {section}{ $ $ Numeric series $ $ }{19}
+\contentsline {part}{ II $ $ Propositions $ $ }{19}
+\contentsline {chapter}{ 1 $ $ The field of complex numbers $ $ }{21}
+\contentsline {chapter}{ 2 $ $ Holomorphic functions $ $ }{23}
+\contentsline {section}{ $ $ Cauchy-Riemman $ $ }{24}
+\contentsline {section}{ $ $ tangent venctor $ $ }{25}
+\contentsline {section}{ $ $ arc images $ $ }{26}
+\contentsline {section}{ $ $ Holomorphic functions are conform $ $ }{27}
+\contentsline {section}{ $ $ Convergence of complex series $ $ }{28}
+\contentsline {section}{ $ $ Absolutely convergent are convergent $ $ }{29}
+\contentsline {section}{ $ $ Series and norm $ $ }{30}
+\contentsline {section}{ $ $ Root test $ $ }{31}
+\contentsline {section}{ $ $ Quotient test $ $ }{32}
+\contentsline {section}{ $ $ Power series theorem $ $ }{33}
+\contentsline {section}{ $ $ Power series theorem $ $ }{35}
+\contentsline {section}{ $ $ functions associated to series are $ \mathcal {C}^{\infty } $ }{38}
+\contentsline {part}{ III $ $ Examples $ $ }{39}
+\contentsline {chapter}{ 1 $ $ Holomorphic functions $ $ }{39}
+\contentsline {chapter}{ 2 $ $ Holomorphic functions $ $ }{41}
+\contentsline {section}{ $ $ Conjugation $ $ }{42}
+\contentsline {section}{ $ $ Quadratic norm $ $ }{42}
+\contentsline {section}{ $ $ Non preserving angles function $ $ }{43}
+\contentsline {section}{ $ $ Exponential $ $ }{44}
+\contentsline {section}{ $ $ Geometric series $ $ }{44}
+\contentsline {section}{ $ $ Series not centered in 0 $ $ }{45}
+\contentsline {section}{ $ $ Radius of convergence without quotient test $ $ }{46}
+\contentsline {part}{ IV $ $ Problems $ $ }{46}
+\contentsline {chapter}{ 1 $ $ The field of complex numbers $ $ }{50}
+\contentsline {section}{ $ $ entity $ $ }{51}
+\contentsline {chapter}{ 2 $ $ Holomorphic functions $ $ }{51}
+\contentsline {section}{ $ $ 3. Cauchy-Riemman $ $ }{52}
+\contentsline {section}{ $ $ B.2 a) $ $ }{53}
+\contentsline {section}{ $ $ Preservation of angles $ $ }{54}
+\contentsline {part}{ V $ $ Tasks $ $ }{56}
+\contentsline {chapter}{ 1 $ $ 1st laboratory $ $ }{57}
+\contentsline {section}{ $ $ Existence of holomorphic functions $ $ }{58}
+\contentsline {section}{ $ $ Constant tests $ $ }{61}
+\contentsline {section}{ $ $ Real part of holomorphic functions $ $ }{63}
+\contentsline {chapter}{ 2 $ $ 2nd laboratory $ $ }{65}
+\contentsline {section}{ $ $ Power series $ $ }{66}
