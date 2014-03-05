@@ -1,0 +1,17 @@
+<snippet>
+
+<tabTrigger>bibliography</tabTrigger>
+<description>.</description>
+
+<content>
+<![CDATA[
+@booklet{${1:surnameYEAR},
+    author	= "${2:author}",
+    title	= "${3:title}",
+    year	= "${4:year}",
+    ${5:url		= "${6:url}",}
+}
+]]>
+</content>
+
+</snippet>

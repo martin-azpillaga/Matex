@@ -29,6 +29,9 @@
 \subfile{"../Tasks/main"}
 
 
+\bibliography{bibliography}
+\nocite{*}
+
 \end{document}
 ]]>
 </content>
