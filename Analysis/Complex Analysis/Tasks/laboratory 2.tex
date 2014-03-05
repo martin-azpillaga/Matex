@@ -4,7 +4,8 @@
 
 \begin{document}
 
-\renewcommand{\blockName}{ Martin Azpillaga }
+\renewcommand{\blockName}{ Martin Azpillaga Aldalur }
+
 \unit{ $ 2nd laboratory $ }
 {
 	\proposition{ $ Power series $ }
@@ -13,53 +14,50 @@
 		{
 			\summation{ n(n+1)z^n }{ n }[ 1 ]
 		}
-		\demonstration
+		\start
 		{
-			\step{ $Naming$ }
-			{
-				R $ radius of convergence of the series $.
-				\all{ n \in \N }
-				{
-					\be{ c_n }{ n(n+1) }
-				}
-			}.
-
 			\step{ $Convergence domain$ }
 			{
-				\limit{ \frac{ c_n }{ c_{n+1} } }{ n } = \limit{ \frac{ n(n+1) }{ (n+1)(n+1) } }{ n } = 1.
+				\limit{ \frac{ n(n+1) }{ (n+1)(n+1) } }{ n } = 1.
 
 				$Quotient test:$.
-				R^{-1} = \superiorlimit{ |c_n|^{\frac{ 1 }{ n }} }{ n } = 1 \imp R = 1.
+				\superiorlimit{ |c_n|^{\frac{ 1 }{ n }} }{ n } = 1 \imp \left(\superiorlimit{ |c_n|^{\frac{ 1 }{ n }} }{ n }\right)^{-1} = 1. 
 
 				$Cauchy-Hadamard theorem:$.
 
-				\summation{ n(n+1)z^n }{ n }[ 1 ] $ convergent over $ \D.
+				\summation{ n(n+1)z^n }{ n }[ 1 ] $ absolutely convergent over $ \D.
 				\summation{ n(n+1)z^n }{ n }[ 1 ] $ divergent  over $ \C \setminus \closed{\D}.
 				\all{ K \subset \D }[ K $ compact $ ]
 				{
 					\summation{ n(n+1)z^n }{ n }[ 1 ] $ uniformly convergent over $  K
-				}.
-
-				$ Define $.
-
-				\definedFunction{ f }{ \D }{ \C }{ z }{ z \summation{ n(n+1)z^{n-1} }{ n }[ 1 ] }
+				}
+				
 			}.
 
 
 			\step{ $Sum$ }
 			{
+				$Consider:$.
+
+				\definedFunction{ f }{ \D }{ \C }{ z }{ \summation{ n(n+1)z^n }{ n }[ 1 ] }.
 				\definedFunction{ g }{ \D }{ \C }{ z }{ \summation{ n(n+1)z^{n-1} }{ n }[ 1 ] }.
+				\definedFunction{ h }{ \D }{ \C }{ z }{ \summation{ (n+1)z^n }{ n }[ 1 ] }.
 
 				$UCI theorem:$.
 
-				\integral{ g(t) }{ dt }{ 0 }[ z ] = \summation{ (n+1)z^n }{ n }[ 1 ].
-				\definedFunction{ h }{ \D }{ \C }{ z }{ \summation{ (n+1)z^n }{ n }[ 1 ] }.
-				\integral{ h(t) }{ dt }{ 0 }[ z ] =  \summation{ z^{n+1} }{ n }[ 1 ] = \summation{ z^n }{ n }[ 0 ] = \frac{ 1 }{ 1-z }.
+				\all{ z \in \D }
+				{
+					\integral{ h(t) }{ dt }{ 0 }[ z ] =  \summation{ z^{n+1} }{ n }[ 1 ] = \summation{ z^n }{ n }[ 0 ] = \frac{ 1 }{ 1-z }.
+					h(z) = \partialderivative{ \frac{ 1 }{ 1-z } }{ z } = \frac{ 1 }{ (1-z)^2 }.
 
-				h(z) = \partialderivative{ \frac{ 1 }{ 1-z } }{ z } = \frac{ 1 }{ (1-z)^2 }.
-				g(z) = \partialderivative{ h(z) }{ z } = \frac{ 2 }{ (1-z)^3 }.
+					\integral{ g(t) }{ dt }{ 0 }[ z ] = \summation{ (n+1)z^n }{ n }[ 1 ] = h(z).
 
-				f(z) = \frac{ 2z }{ (1-z)^3 }
+					g(z) = \partialderivative{ h(z) }{ z } = \frac{ 2 }{ (1-z)^3 }.
+
+					f(z) = zg(z) = \frac{ 2z }{ (1-z)^3 }
+				}
+
+				
 			}.
 
 
