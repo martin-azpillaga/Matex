@@ -1,0 +1,978 @@
+\documentclass[12pt,a4paper,catalan]{article}
+\usepackage{amsthm,amssymb,amsmath,babel}
+
+\usepackage[T1]{fontenc}
+\usepackage[ansinew]{inputenc}
+
+\usepackage[margin=2cm]{geometry}
+
+\usepackage{enumerate}
+
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\Z}{\mathbb{Z}}
+
+\theoremstyle{definition}
+\newtheorem{ex}{Exercici}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\lhead{Estructures Algebraiques}
+\chead{Problemes}
+\rhead{Tardor 2012}
+\cfoot{\thepage}
+
+
+
+\begin{document}
+\vspace{1.5cm}
+
+\begin{center}
+{\Large \bf Grups}
+\end{center}
+\vspace{.1cm}
+
+
+
+\begin{ex}
+Determineu si els conjunts següents amb les operacions que
+s'indiquen són o no grups.
+\begin{enumerate}[(a)]
+\item
+El conjunt dels nombres naturals $\mathbb{N}$
+amb la suma.
+\item
+El conjunt dels nombres racionals $\mathbb{Q}$
+amb la suma;
+el mateix conjunt,
+però amb el producte.
+%\item
+%El conjunt de les permutacions de $n$
+%elements,
+%$S_n$,
+%amb la composició.
+\item
+El conjunt $S^1= \{z\in \mathbb{C} \mid |z|=1 \}$
+amb el producte en $\mathbb C$.
+\item
+El conjunt dels polinomis $P_n=\{ p(x) \in \mathbb R[x]:\,\mathrm{gr}(p(x)) \leq n \}$
+amb la suma habitual;
+el mateix conjunt,
+però amb el producte habitual.
+%\item
+%Sigui $K$
+%un cos;
+%el conjunt $\mathrm{GL}(n,K)=\{ A \in \mathrm{M}_{n \times n}(K):\, \mathrm{det}(A) \neq 0\}$
+%amb el producte de matrius.
+\item
+Sigui $E$
+un espai vectorial sobre un cos $K$;
+el conjunt dels endomorfismes $\mathrm{End}(E)= \{f:E \rightarrow E \text{ aplicacions lineals}\}$
+amb la composició.
+\item
+Sigui $E$
+un espai vectorial sobre un cos $K$;
+el conjunt dels endomorfismes de $E$
+que tenen invers,
+que denotarem per $\mathrm{Aut}(E)$,
+amb la composició.
+\end{enumerate}
+\end{ex}
+
+
+\begin{ex}[$*$]
+Siguin $G$
+un grup i $H \subseteq G$
+un subconjunt no buit.
+Demostreu que els tres enunciats següents són equivalents:
+\begin{enumerate}[(a)]
+\item
+$H$
+satisfà les propietats:
+\begin{enumerate}[(1)]
+\item
+Per a tot $x,y \in H$,
+és que $x y \in H$,
+\item
+$H$
+és un grup amb l'operació de $G$.
+\end{enumerate}
+\item
+$H$
+satisfà les propietats:
+\begin{enumerate}[(1)]
+\item
+$1 \in H$,
+\item
+Per a tot $x \in H$,
+és que $x^{-1}\in H$,
+\item
+Per a tot $x,y \in H$,
+és que $x y \in H$,
+\end{enumerate}
+\item
+Per a tot $x, y \in H$,
+és que $x y^{-1} \in H$.
+\end{enumerate}
+\end{ex}
+
+
+\begin{ex}
+ Considerem
+$$
+\begin{array}{lll}
+\mathrm{GL}(n,\mathbb{Z})&:=
+\{M \in \mathrm{M}_{n \times n}(\mathbb{Z}):\, \det(M) \in \mathbb{Z}^{\ast}\},
+&\text{grup lineal, }\\
+\mathrm{SL}(n,\mathbb{Z})&:=
+\{M \in \mathrm{GL}(n,\mathbb{Z}):\, \det(M)=1 \},
+&\text{grup especial lineal, }\\
+\mathrm{O}(n,\mathbb{Z})\,\,&:=
+\{M \in \mathrm{GL}(n,\mathbb{Z}):\, M^{t}M=Id \},
+&\text{grup ortogonal, }\\
+\mathrm{SO}(n,\mathbb{Z})&:=
+\{M \in \mathrm{O}(n,\mathbb{Z}):\, \det(M)=1 \},
+&\text{grup especial ortogonal. }
+\end{array}
+$$
+\begin{enumerate}[(a)]
+\item
+Demostreu que $\mathrm{GL}(n,\mathbb{Z})$
+és un grup amb la multiplicació de matrius.
+\item
+Demostreu que $\mathrm{SL}(n,\mathbb{Z})$
+i $\mathrm{O}(n,\mathbb{Z})$
+són subgrups del grup $\mathrm{GL}(n,\mathbb{Z})$.
+\item
+Demostreu que $\mathrm{SO}(n,\mathbb{Z})$
+és un subgrup de $\mathrm{O}(n,\mathbb{Z})$.
+\end{enumerate}
+\end{ex}
+
+
+\begin{ex}[$*$]
+Demostreu que,
+donat un cos $K$,
+el grup $\mathrm{SO}(2,K)$
+és abelià.
+Demostreu que,
+en canvi,
+el grup $\mathrm{SO}(3,K)$
+no ho és.
+\end{ex}
+
+
+\begin{ex}
+Demostreu que,
+per a $n\geq 2$,
+el subconjunt de $\mathrm{GL}(n,\mathbb{Z})$
+format per les matrius simètriques no és un subgrup de $\mathrm{GL}(n,\mathbb{Z})$.
+\end{ex}
+
+
+\begin{ex}
+Demostreu que si tots els elements d'un grup $G$,
+llevat del neutre,
+són d'ordre $2$,
+aleshores $G$
+és un grup abelià.
+\end{ex}
+
+
+\begin{ex}[$*$]
+Sigui $G$
+un grup cíclic d'ordre $n$,
+generat per un element $a$.
+Per a tot nombre enter $k$,
+determineu l'ordre del subgrup generat per $a^k$
+i demostreu que $a^k$
+és un generador de $G$
+si, i només si,
+$\mathrm{mcd}(k,n)=1$.
+\end{ex}
+
+
+\begin{ex}
+Sigui $G$
+un grup cíclic d'ordre $n$.
+\begin{enumerate}[(a)]
+\item
+Demostreu que tot subgrup de $G$
+és cíclic.
+\item
+Demostreu que,
+per a cada divisor $d$
+de $n$,
+existeix un únic subgrup de $G$
+d'ordre $d$.
+\end{enumerate}
+\end{ex}
+
+
+\begin{ex}
+Sigui $\mu_n=\{z \in \mathbb{C}:\, z^n=1 \}$
+el conjunt de les arrels $n$-èsimes
+de la unitat complexes.
+Demostreu que $\mu_n$
+amb el producte de $\C$
+és un grup cíclic.
+\end{ex}
+
+
+\begin{ex}
+Siguin $p$,
+$q$
+nombres primers diferents i $r$,
+$s\geq 1$
+nombres enters.
+\begin{enumerate}[(a)]
+\item
+Determineu quants elements del grup $\mathbb{Z}/p\mathbb{Z}$
+el generen.
+\item
+Determineu quants elements del grup $\mathbb{Z}/p^r\mathbb{Z}$
+el generen.
+\item
+Determineu quants elements del grup $\mathbb{Z}/p^rq^s\mathbb{Z}$
+el generen.
+\end{enumerate}
+\end{ex}
+
+
+\begin{ex}
+Siguin $\sigma, \, \tau \in S_9$
+les  permutacions següents:
+$$
+\sigma=
+\begin{pmatrix} 1&2&3&4&5&6&7&8&9 \\
+                          2&9&1&8&7&6&3&4&5 \end{pmatrix},
+\qquad
+\tau=
+\begin{pmatrix} 1&2&3&4&5&6&7&8&9 \\
+                          7&1&3&5&8&2&9&6&4 \end{pmatrix}.
+$$
+\begin{enumerate}[(a)]
+\item
+Calculeu $\sigma \tau$
+i $\tau \sigma$.
+\item
+Descomponeu $\sigma$
+i $\tau$
+com a producte de cicles disjunts,
+i també com a producte de transposicions;
+calculeu les seves signatures.
+\item
+Calculeu $\sigma^{2012}$.
+\end{enumerate}
+\end{ex}
+
+
+\begin{ex}
+Determineu la signatura de totes les permutacions de $S_3$.
+Determineu tots els subgrups de $S_3$.
+\end{ex}
+
+
+\begin{ex}
+Demostreu que,
+per a $n\geq 2$,
+$S_n$
+té el mateix nombre de permutacions parelles que de permutacions senars.
+\end{ex}
+
+
+\begin{ex}[$*$]
+\begin{enumerate}[(a)]
+\item
+Demostreu que,
+donada una permutació $\sigma \in S_n$,
+llavors
+$$
+\sigma \circ (a_1,\cdots,a_r) \circ \sigma^{-1} =
+(\sigma(a_1),\cdots,\sigma(a_r)).
+$$
+\item
+Demostreu que,
+donats dos cicles del mateix ordre $\sigma_1$,
+$\sigma_2$,
+existeix una permutació $\sigma \in S_n$
+tal que $\sigma \circ \sigma_1 \circ \sigma^{-1} = \sigma_2$.
+\item
+Siguin $\sigma_1$,
+$\dots$,
+$\sigma_k\in S_n$
+cicles disjunts dos a dos,
+i també $\tau_1$,
+$\dots$,
+$\tau_k\in S_n$,
+cicles disjunts dos a dos.
+Posem $\sigma:=\sigma_1\circ\cdots\circ\sigma_k$
+i $\tau:=\tau_1\circ\cdots\circ\tau_k$.
+Demostreu que si,
+per a $1\le i\le k$,
+la longitud del cicle $\sigma_i$
+coincideix amb la del cicle $\tau_i$,
+aleshores existeix una permutació $\rho\in S_n$
+tal que $\rho \circ \sigma \circ \rho^{-1} = \tau$.
+\end{enumerate}
+\end{ex}
+
+
+\begin{ex}
+Demostreu que $S_n$
+admet els sistemes de generadors següents:
+\begin{enumerate}[(a)]
+\item
+$(1,2)$,
+$(1,3)$,
+$\cdots$,
+$(1,n)$.
+\item
+$
+(1,2)$,
+$(2,3)$,
+$\cdots$,
+$(n-1,n)$.
+\item
+$
+(1,2,\cdots ,n)$,
+$(1,2)$.
+\end{enumerate}
+\end{ex}
+
+
+\begin{ex}[$*$]
+Sigui $A_n$
+el conjunt de permutacions parelles de $S_n$.
+Demostreu que $A_n$
+és un subgrup d'índex $2$
+de $S_n$
+i que $A_n$
+és generat pels cicles d'ordre $3$.
+$A_n$
+rep el nom de subgrup alternat de $S_n$.
+\end{ex}
+
+
+\begin{ex}[$*$]
+El grup diedral $D_{2n}$
+és el grup de desplaçaments del pla que deixen invariant un polígon regular de $n$
+costats.
+És a dir,
+$D_{2n}=\langle\rho,\sigma\rangle$,
+on $\rho$
+és una rotació d'angle $2\pi/n$
+centrada en el centre de simetria del polígon,
+i $\sigma$
+és una simetria axial respecte d'un dels radis del polígon.
+\begin{enumerate}[(a)]
+\item
+Proveu que $\rho^n=\sigma^2=Id$
+i $\rho\sigma=\sigma\rho^{-1}$.
+\item
+Escriviu tots els elements de $D_{2n}$.
+Quants n'hi ha?
+\item
+Definiu un morfisme injectiu de $D_{2n}$
+en el grup simètric $S_n$.
+\item
+Demostreu que els grups $D_{2\cdot4}$
+i $\mathbb Z/8\mathbb Z$
+no són isomorfs.
+\end{enumerate}
+\end{ex}
+
+
+\begin{ex}
+({\it El grup dels quaternions})
+Sigui $H_8$
+el subgrup de $\mathrm{GL}(2,\C)$
+generat per les matrius
+$$
+\mathrm{Id}:=
+\begin{pmatrix} 1 &0 \\ 0 &1 \end{pmatrix},
+\,
+{\text {\bf i}}:=
+\begin{pmatrix} i &0 \\ 0 &-i \end{pmatrix},
+\,
+{\text {\bf j}}:=
+\begin{pmatrix} 0 &1 \\ -1 &0 \end{pmatrix},
+\,
+{\text {\bf k}}:=
+\begin{pmatrix} 0 &i \\ i &0 \end{pmatrix}.
+$$
+\begin{enumerate}[(a)]
+\item
+Demostreu que $H_8$
+és un grup tal que $\mathrm{Id}$
+és l'element neutre,
+${{\text {\bf i}}}^4=\mathrm{Id}$,
+${\text {\bf i}}^2={\text {\bf j}}^2$
+i ${\text {\bf i}}{\text {\bf j}}  = {\text {\bf j}} {\text {\bf i}}^3$.
+\item
+Calculeu l'ordre de cadascun dels elements de $H_8$.
+\item
+Demostreu que,
+si $H$
+és un grup qualsevol generat per dos elements $a$,
+$b$
+tals que $a^4=1$,
+$a^2=b^2$
+i $ab = ba^3$,
+llavors $H$
+és isomorf a $H_8$.
+\end{enumerate}
+\end{ex}
+
+
+\begin{ex}[$*$]
+Demostreu que tot subgrup d'índex $2$
+d'un grup $G$
+és normal.
+\end{ex}
+
+
+\begin{ex}
+Demostreu que,
+si $G$
+és un grup,
+el seu centre $Z(G):= \{ g \in G :\, gh=hg, \mbox{ per a tot $h \in G$} \}$
+és un subgrup normal de $G$.
+\end{ex}
+
+
+\begin{ex}
+Sigui $K$
+un cos.
+Demostreu que el centre de $\mathrm{GL}(n,K)$
+és format per les matrius de la forma $M= \lambda \mathrm{Id}$,
+per a algun $\lambda \in K^*$.
+\end{ex}
+
+
+\begin{ex}
+Demostreu que,
+si $n\geq3$,
+el centre de $S_n$
+només conté la identitat.
+\end{ex}
+
+
+\begin{ex}[$*$]
+Siguin $f:G_1 \rightarrow G_2$
+un morfisme de grups i $H_1\subseteq G_1$,
+$H_2 \subseteq G_2$
+subgrups.
+\begin{enumerate}[(a)]
+\item
+Demostreu que $f(H_1)$
+és subgrup de $G_2$
+i $f^{-1}(H_2)$
+ho és de $G_1$.
+\item
+Demostreu que si $H_2$
+és normal en $G_2$,
+llavors $f^{-1}(H_2)$
+és normal en $G_1$.
+\item
+Demostreu que si $H_1$
+és normal en $G_1$,
+llavors $f(H_1)$
+és un subgrup normal de la imatge $f(G_1)$;
+i que no és necessàriament normal en $G_2$.
+\end{enumerate}
+\end{ex}
+
+
+\begin{ex}[$*$]
+{\it Teoremes d'isomorfia de grups.}
+\begin{enumerate}[(a)]
+\item
+Siguin $G$
+un grup,
+$H$
+un subgrup normal i $F$
+un subgrup qualsevol.
+Proveu que $HF$
+és un subgrup de $G$,
+que $F\cap H$
+és un subgrup normal de $F$,
+que $H$
+és un subgrup normal de $HF$
+i que tenim un isomorfisme de grups
+$$
+HF/H\simeq F/F\cap H.
+$$
+\item
+Siguin $\varphi:G \rightarrow G'$
+un morfisme exhaustiu de grups,
+$H'$
+un subgrup normal de $G'$
+i $H=\varphi^{-1}(H')$.
+Proveu que $\varphi$
+indueix un isomorfisme entre $G/H$
+i $G'/H'$.
+\item
+Siguin $G$
+un grup i $F\subset H$
+dos subgrups normals de $G$.
+Demostreu que $H/F$
+és un subgrup normal de $G/F$
+i que tenim un isomorfisme de grups
+$$
+(G/F) / (H/F) \simeq G/H.
+$$
+\end{enumerate}
+\end{ex}
+
+
+\begin{ex}(\textit{Examen, gener 2011})
+Sigui $GL(2,\mathbb C)$
+el grup de matrius $2\times 2$,
+invertibles,
+i de coeficients complexos.
+Considerem $T\subset GL(2,\mathbb C)$
+el subgrup de matrius diagonals i
+$D=\langle T, \left(\begin{smallmatrix}0&1\\ 1&0\end{smallmatrix}\right)\rangle
+\subset GL(2,\mathbb C)$
+el subgrup generat per les matrius diagonals i
+$\left(\begin{smallmatrix}0&1\\ 1 &0\end{smallmatrix}\right)$.
+\begin{enumerate}[(a)]
+\item
+Demostreu que $T$
+és un subgrup normal de $D$.
+\item
+Descriviu un isomorfisme entre $D/T$
+i $\mathbb Z/2\mathbb Z$.
+\item
+Estudieu si $D$
+és normal en $GL(2,\mathbb C)$.
+\end{enumerate}
+\end{ex}
+
+
+\begin{ex}
+Considerem el grup diedral $D_{2n}$.
+\begin{enumerate}[(a)]
+\item
+Expliciteu tots els subgrups de $D_{2\cdot4}$
+i digueu quins són normals.
+\item
+Demostreu que $D_{2n}$
+té un subgrup normal d'ordre $n$,
+que és cíclic.
+\item
+Demostreu que $D_{2\cdot3} \simeq S_3$.
+\end{enumerate}
+\end{ex}
+
+
+\begin{ex}
+Calculeu tots els subgrups del grup dels quaternions $H_8$
+i digueu quins són normals.
+\end{ex}
+
+
+\begin{ex}[$*$]
+\begin{enumerate}[(a)]
+\item
+Demostreu que $A_4$
+és l'únic subgrup d'índex $2$
+de $S_4$.
+És cert que $A_n$
+és l'únic subgrup d'índex $2$
+de $S_n$,
+per a un $n$
+qualsevol?
+\item
+Demostreu que $A_4$
+no té subgrups d'índex $2$.
+En té $A_n$
+quan $n\ge 5$?
+\end{enumerate}
+\end{ex}
+
+
+\begin{ex}
+Determineu,
+llevat d'isomorfisme,
+tots els grups d'ordre menor o igual que $8$.
+\end{ex}
+
+
+\begin{ex}
+Sigui $G$
+un grup i considerem l'aplicació $f:G \rightarrow G \times G$
+definida per $f(x):=(x,x)$,
+per a $x \in G$.
+Demostreu que $f$
+és un morfisme injectiu i que $f(G)$
+és un subgrup normal de $G \times G$
+si,
+i només si,
+$G$
+és abelià.
+\end{ex}
+
+
+\begin{ex}
+Determineu tots els subgrups de $\Z/4\Z$,
+els de $\Z/2\Z \times \Z/ 2\Z$
+i els de $\Z/6\Z$.
+\end{ex}
+
+
+\begin{ex}
+Sigui $G$
+un grup cíclic finit.
+Calculeu $\mathrm{Aut}(G)$,
+el grup dels automorfismes de $G$.
+\end{ex}
+
+
+\begin{ex}[$*$]
+Donat un grup $G$,
+denotem per $\mathrm{Aut}(G)$
+el grup dels automorfismes de $G$.
+Denotem per $\mathrm{Int}(G)$
+el conjunt dels automorfismes interns de $G$,
+és a dir,
+dels automorfismes $\varphi_g$
+definits per $\varphi_g (h):= ghg^{-1}$,
+per a $h\in G$
+i $g \in G$
+donat.
+\begin{enumerate}[(a)]
+\item
+Demostreu que $\mathrm{Int}(G)$
+és un subgrup de $\mathrm{Aut}(G)$.
+\item
+Siguin $\sigma \in \mathrm{Aut}(G)$
+i $\varphi_g \in \mathrm{Int}(G)$.
+Demostreu que $\sigma \varphi_g \sigma^{-1}=\varphi_{\sigma(g)}$.
+\item
+Demostreu que $\mathrm{Int}(G)$
+és un subgrup normal de $\mathrm{Aut}(G)$.
+\end{enumerate}
+\end{ex}
+
+
+\begin{ex}
+Demostreu que,
+si $G$ és un grup,
+llavors
+$$
+G/Z(G) \simeq \mathrm{Int}(G).
+$$
+En particular,
+si $Z(G)= \{1\}$,
+llavors $\mathrm{Int}(G) \simeq G$.
+Quin és el grup $\mathrm{Int}(G)$
+quan $G$
+és abelià?
+\end{ex}
+
+
+\begin{ex}
+\begin{enumerate}[(a)]
+\item
+Calculeu les classes de conjugació del grup $S_3$.
+\item
+Calculeu  les classes de conjugació del grup $S_4$.
+\end{enumerate}
+\end{ex}
+
+
+\begin{ex}
+Demostreu que les matrius
+$$
+\begin{pmatrix} 1&1 \\ 0&1 \end{pmatrix},
+\begin{pmatrix} 1&0 \\ 1&1 \end{pmatrix}
+$$
+són elements conjugats en el grup $\mathrm{GL}(2, \R)$,
+però que no ho són en $\mathrm{SL}(2, \R)$.
+\end{ex}
+
+
+\begin{ex}
+Calculeu totes les classes de conjugació del grup diedral $D_{2\cdot4}$.
+\end{ex}
+
+
+\begin{ex}
+Siguin $n$
+un nombre enter i $d$
+un divisor propi de $n$.
+Demostreu que el subgrup $(\rho^d)$
+de $D_{2n}$
+és un subgrup normal i que el grup quocient és isomorf a $D_{2d}$.
+\end{ex}
+
+
+\begin{ex}[$*$]
+\begin{enumerate}[(a)]
+\item
+Escriviu la definició de grup (finit) resoluble.
+\item
+Demostreu que $A_2$,
+$A_3$
+i $A_4$
+són resolubles.
+\item
+Demostreu que,
+per a $n\ge 5$,
+$A_n$
+no és resoluble.
+\end{enumerate}
+\end{ex}
+
+
+\begin{ex}[$*$]
+\begin{enumerate}[(a)]
+\item
+Escriviu la definició de grup finit simple.
+\item
+Demostreu la simplicitat de $A_n$
+per a $n\ge 5$.
+\end{enumerate}
+\end{ex}
+
+
+\begin{ex}
+En aquest exercici calcularem els subgrups de Sylow del grup simètric $S_4$.
+\begin{enumerate}[(a)]
+\item
+Calculeu els $3$-subgrups
+de Sylow de $S_4$.
+De quin ordre són?
+\item
+Descriviu els elements de $S_4$
+que són d'ordre una potència de $2$
+i recordeu que aquests elements estan continguts en un $2$-subgrup
+de Sylow.
+Dedu\"iu que un $2$-subgrup
+de Sylow conté un subgrup cíclic d'ordre $4$.
+Expliciteu els $2$-subgrups
+de Sylow de $S_4$.
+\end{enumerate}
+\end{ex}
+
+
+\begin{ex}
+Sigui $G$
+un grup finit.
+Demostreu que si $|G|=96$,
+aleshores $G$
+no és simple.
+\end{ex}
+
+
+\begin{ex}
+Proveu que tot grup d'ordre $15$
+és cíclic
+\end{ex}
+
+
+\begin{ex}[$*$]
+Proveu que tot grup d'ordre $255$
+és cíclic.
+\end{ex}
+
+
+\begin{ex}[$*$]
+Sigui $G$
+un grup finit d'ordre $2p$,
+on $p$
+és un nombre primer més gran que $2$.
+Demostreu que o bé $G$
+és cíclic o bé $G$
+és isomorf al grup diedral $D_{2p}$.
+\end{ex}
+
+
+\begin{ex}[$*$]
+Sigui $G$
+un grup d'ordre $p q$
+amb $p$,
+$q$
+nombres primers.
+Demostreu que $G$
+és resoluble.
+\end{ex}
+
+
+\begin{ex}
+Sigui $G$
+un grup d'ordre $p q r$,
+amb $p$,
+$q$,
+$r$
+nombres primers.
+Demostreu que $G$
+és resoluble.
+\end{ex}
+
+
+\begin{ex}(\textit{Examen, gener 2011})
+Siguin $p$,
+$q$
+dos nombres primers,
+amb $0<p<q$.
+\begin{enumerate}[(a)]
+\item
+Demostreu que tot grup d'ordre $p^2$
+és resoluble.
+\item
+Sigui $G$
+un grup d'ordre $p^2q$.
+Demostreu que $G$
+té un únic subgrup normal d'ordre $p^2$
+o bé un únic subgrup normal d'ordre $q$.
+\item
+Demostreu que $G$
+és resoluble.
+\end{enumerate}
+\end{ex}
+
+
+\begin{ex}
+Siguin $G_1$
+i $G_2$
+els grups abelians donats per generadors $a$,
+$b$,
+$c$
+i relacions
+$$
+\begin{pmatrix} 1 & 2 & 3 \\
+                          2 & 6 & 8 \\
+                          0 & 3 & 6\end{pmatrix}
+\begin{pmatrix} a\\b\\c \end{pmatrix} =
+\begin{pmatrix} 0\\0\\0 \end{pmatrix}
+\quad
+\textrm{ i }
+\quad
+\begin{pmatrix} 1 & 0 & -3 \\
+                         3 & 12 & 3 \\
+                         \end{pmatrix}
+\begin{pmatrix} a\\b\\c \end{pmatrix}=
+\begin{pmatrix} 0\\0 \end{pmatrix}.
+$$
+\begin{enumerate}[(a)]
+\item
+Determineu els factors invariants i els divisors elementals de $G_1$
+i de $G_2$.
+\item
+Determineu un morfisme injectiu $M_1\longrightarrow M_2$.
+\end{enumerate}
+\end{ex}
+
+
+\begin{ex}
+\begin{enumerate}[(a)]
+\item
+Trobeu els divisors elementals i els factors invariants
+de tots els grups abelians d'ordre $200$.
+\item
+Classifiqueu el grup abelià
+$\mathbb{Z}/(2) \oplus \mathbb{Z}/(5) \oplus \mathbb{Z}/(20)$.
+\end{enumerate}
+\end{ex}
+
+
+\begin{ex}
+Determineu tots els grups abelians $G$
+d'ordre $24$
+que no contenen cap element d'ordre més gran que $12$.
+\end{ex}
+
+
+\begin{ex}
+Demostreu que un grup abelià finit és cíclic si,
+i només si,
+tots els seus subgrups de Sylow ho són.
+\end{ex}
+
+
+\begin{ex}
+Demostreu que si $G$
+és un grup abelià finit no cíclic,
+aleshores existeix un nombre primer $p$
+tal que $G$
+conté un subgrup isomorf a $C_p\times C_p$.
+\end{ex}
+
+
+\begin{ex}
+Demostreu que si $G$
+és un grup abelià finit no cíclic,
+aleshores existeix un nombre primer $p$
+tal que $G$
+admet un quocient isomorf a $C_p\times C_p$.
+\end{ex}
+
+
+\begin{ex}
+Demostreu que un sistema d'equacions lineals $MX=b$,
+on $M\in M_{m\times n}(\mathbb{Z})$,
+$b=(b_1,\dots,b_m)^t\in M_{m\times 1}(\mathbb{Z})$,
+té solució $X=(x_1,\dots,x_n)^t\in M_{n\times 1}(\mathbb{Z})$
+si,
+i només si,
+per a tot $r$,
+el màxim comú divisor dels menors d'ordre $r$
+de la matriu $M$
+i el màxim comú divisor dels menors d'ordre $r$
+de la matriu ampliada $(M:b)$
+coincideixen.
+\end{ex}
+
+
+\begin{ex}
+\begin{enumerate}[(a)]
+\item
+Demostreu que el grup multiplicatiu dels nombres racionals positius
+no és finitament generat.
+\item
+Sabeu donar-ne un conjunt de generadors?
+\end{enumerate}
+\end{ex}
+
+
+\begin{ex}
+\begin{enumerate}[(a)]
+\item
+Demostreu que el grup multiplicatiu dels nombres racionals no nuls
+no és finitament generat.
+\item
+Doneu-ne un conjunt de generadors.
+\end{enumerate}
+\end{ex}
+
+
+\begin{ex}
+Classifiqueu els grups abelians donats pels grups multiplicatius
+$(\mathbb{Z}/p\mathbb{Z})^{\ast}$,
+on $p$
+és un nombre primer $\le 20$.
+\end{ex}
+
+
+\begin{ex}
+Classifiqueu els grups abelians donats pels grups multiplicatius
+$(\mathbb{Z}/n\mathbb{Z})^{\ast}$,
+per a $2\le n \le 15$.
+\end{ex}
+
+
+\begin{ex}
+Doneu l'estructura dels grups abelians donats pels grups multiplicatius
+$(\mathbb{Z}/n\mathbb{Z})^{\ast}$.
+({\em Indicació:}
+reviseu el concepte d'arrel primitiva, explicat en l'assignatura d'Aritmètica.)
+\end{ex}
+
+
+\end{document}
+
+
+

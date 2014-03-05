@@ -1,0 +1,1011 @@
+\documentclass[12pt,a4paper,catalan]{article}
+\usepackage{amsthm,amssymb,amsmath,babel}
+
+\usepackage[T1]{fontenc}
+\usepackage[ansinew]{inputenc}
+
+
+\usepackage[margin=2cm]{geometry}
+
+\usepackage{enumerate}
+
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\Z}{\mathbb{Z}}
+
+
+\theoremstyle{definition}
+\newtheorem{ex}{Exercici}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\lhead{EsAl, grup tarda}
+\chead{Problemes}
+\rhead{Tardor 2012}
+\cfoot{\thepage}
+
+
+
+
+\begin{document}
+\vspace{1.5cm}
+
+\begin{center}
+{\Large \bf Anells}
+\end{center}
+\vspace{.1cm}
+
+
+\noindent
+Per defecte,
+només considerarem anells commutatius i unitaris.
+
+
+
+%\begin{ex}[$*$]
+\begin{ex}[$*$]
+Sigui $A$
+un anell.
+Proveu les propietats següents.
+\begin{enumerate}[(a)]
+\item
+Si $a\in A$
+és una unitat (o sigui,
+un element invertible),
+aleshores $a$
+no és un divisor de zero.
+\item
+Si un ideal $I$
+de $A$
+conté una unitat,
+aleshores $I=A$.
+\item
+Si $a\in A$
+i $u\in A$
+és una unitat,
+aleshores $(ua)=(a)$.
+\item
+Si $A$
+és un domini d'integritat i $a$,
+$b\in A$,
+aleshores $(a)=(b)$
+si,
+i només si,
+$b=au$
+per a alguna unitat $u$
+de $A$.
+\end{enumerate}
+\end{ex}
+
+
+\begin{ex}
+Caracteritzeu,
+en funció del nombre enter $m>1$,
+quins són els elements invertibles
+i quins els divisors de zero
+de l'anell $\mathbb{Z}/m \mathbb{Z}$.
+Deduïu que $\mathbb{Z}/m \mathbb{Z}$
+és un domini d'integritat si,
+i només si,
+$\mathbb{Z}/m \mathbb{Z}$
+és un cos;
+si,
+i només si,
+$m$
+és un nombre primer.
+\end{ex}
+
+
+\begin{ex}
+Demostreu que l'ideal $(2,X)$
+de $\mathbb{Z}[X]$
+no és principal.
+\end{ex}
+
+
+\begin{ex}[$*$]
+Siguin $A$
+un anell,
+$a$,
+$b$,
+$d \in A$.
+Recordem que es diu que $d$
+és un màxim comú divisor de $a$
+i $b$
+si se satisfan les dues propietats
+\begin{enumerate}[(1)]
+\item
+$d\mid a$,
+$d\mid b$;
+i
+\item
+si $c\in A$
+satisfà que $c\mid a$
+i $c\mid b$,
+aleshores $c\mid d$.
+\end{enumerate}
+\begin{enumerate}[(a)]
+\item
+Proveu que si $d$
+és un màxim comú divisor de $a$
+i $b$,
+aleshores tenim la inclusió d'ideals $(a,b)\subseteq (d)$.
+Doneu un exemple en $\mathbb{Z}[X]$
+on no hi hagi igualtat.
+\item
+Proveu que si $A$
+és un domini,
+aleshores dos màxims comuns divisors de $a$
+i $b$
+difereixen multiplicativament en una unitat.
+\item
+Proveu que si $A$
+és un domini d'ideals principals,
+llavors $d$
+és un màxim comú divisor de $a$
+i $b$
+si,
+i només si,
+$(a,b)=(d)$.
+Deduïu que en un domini d'ideals principals,
+sempre existeix el màxim comú divisor de dos elements.
+\end{enumerate}
+\end{ex}
+
+
+\begin{ex}
+Siguin $A$
+un anell i $f$,
+$g\in A[X]$.
+\begin{enumerate}[(a)]
+\item
+Demostreu que si $g$
+és mònic,
+aleshores existeixen polinomis $q$,
+$r\in A[X]$
+tals que $f=gq+r$,
+amb $r=0$
+o bé $gr(r)<gr(g)$.
+Demostreu que $q$
+i $r$
+són únics per a aquestes condicions.
+Una igualtat $f=gq+r$
+s'anomena la {\it divisió entera}
+de $f$
+per $g$
+si $r=0$
+o bé $gr(r)<gr(g)$;
+els polinomis $q$
+i $r$
+s'anomenen el {\it quocient}
+i el {\it residu}
+de la divisió entera.
+Si el residu de la divisió entera de $f$
+per $g$
+és $0$,
+es té que $f$
+és un múltiple de $g$
+i que $g$
+és un divisor de $f$.
+\item
+Doneu un exemple de no-unicitat i un de no-existència en el cas en què $g$
+no sigui mònic.
+\end{enumerate}
+\end{ex}
+
+
+\begin{ex}
+Siguin $I$,
+$J_1$,
+$J_2$
+ideals d'un anell $A$.
+Proveu que
+\begin{enumerate}[(a)]
+\item
+$I + (J_1 \cap J_2) \subseteq (I + J_1) \cap (I + J_2)$.
+Si $I \subseteq J_1$
+o bé $I \subseteq J_2$
+llavors tenim
+igualtat.
+\item
+$I \cap (J_1 + J_2) \supseteq (I\cap J_1)+(I\cap J_2)$
+(Llei modular).
+Si $I \supseteq J_1$
+o bé $I \supseteq J_2$
+llavors hi ha igualtat.
+\end{enumerate}
+\end{ex}
+
+
+\begin{ex}
+Siguin $A$ un anell,
+$I\subseteq A$
+un ideal.
+Es defineix el {\em radical}
+de $I$,
+$\mathrm{rad}(I)$,
+com el conjunt d'elements $x \in A$
+tals que existeix $n \in \mathbb N$
+tal que $x^n \in I$.
+Proveu que
+si $I$,
+$J$
+són ideals de $A$,
+llavors
+\begin{enumerate}[(a)]
+\item
+$\mathrm{rad}(I)$
+és un  ideal de $A$.
+\item
+Direm que $I$
+és un {\em ideal radical}
+si $\mathrm{rad}(I)=I$.
+Proveu que $\mathrm{rad}(I)$
+és un ideal radical.
+\item
+$\mathrm{rad}(IJ)=\mathrm{rad}(I\cap J)=\mathrm{rad}(I ) \cap \mathrm{rad}(J)$.
+\item
+$\mathrm{rad}(I + J)= \mathrm{rad}(\mathrm{rad}(I)+ \mathrm{rad}(J))$.
+\end{enumerate}
+\end{ex}
+
+
+\begin{ex}
+Sigui $A= \mathbb{R}[X]$
+i considerem $I=(X^2+1)$,
+$J=(X^2+3)$,
+ideals de $A$.
+\begin{enumerate}[(a)]
+\item
+Determineu un sistema de representants de $A/I$.
+\item
+Demostreu que $A/I \cong A/J$
+i expliciteu un isomorfisme.
+\end{enumerate}
+\end{ex}
+
+
+\begin{ex}
+Siguin $A$,
+$B$
+anells.
+En el producte cartesià $A\times B$
+definim les operacions $(a,b) + (c, d) = (a+c, b+d)$,
+$(a,b)\cdot (c, d) = (a\cdot c, b\cdot d)$.
+\begin{enumerate}[(a)]
+\item
+Proveu que $(A\times B, + ,\cdot)$
+és un anell i determineu quan és un domini d'integritat.
+\item
+Proveu que si $I\subseteq A$,
+$J\subseteq B$
+són ideals, 
+llavors $I\times J$
+és un ideal de $A\times B$
+i que 
+$$
+(A\times B)/(I\times J)\cong A/I \times B/J.
+$$
+\item
+Proveu que tot ideal de $A\times B$
+és de la forma $I\times J$.
+\item
+Proveu que els únics ideals primers de $A\times B$
+són els de la forma $I\times B$,
+amb $I\subseteq A$
+primer,
+o bé els de la forma $A\times J$,
+amb $J\subseteq B$
+primer.
+\item
+Demostreu el resultat que s'obté de (d)
+en substituir \lq\lq primer\rq\rq\
+per \lq\lq maximal\rq\rq.
+\end{enumerate}
+\end{ex}
+
+
+\begin{ex}[$*$]
+Siguin $f:A\longrightarrow B$
+un morfisme d'anells,
+$I$
+un ideal de $A$
+i $J$
+un ideal de $B$.
+\begin{enumerate}[(a)]
+\item
+Demostreu que $J^c := f^{-1}(J)$
+és un ideal de $A$.
+L'anomenarem la {\em contracció} de $J$
+en $A$.
+\item
+Proveu amb un exemple que,
+en general,
+$f(I)$
+no és un ideal de $B$.
+Definim l'{\em extensió} de $I$
+en $B$,
+que denotarem per $I^e$,
+com l'ideal de $B$
+generat per $f(I)$.
+\item
+Demostreu que $I \subseteq (I^e)^c$
+i que $J \supseteq (J^c)^e$.
+\item
+Demostreu que $I^e=I^{ece}$
+i que $J^c=J^{cec}$.
+\item
+Deduïu que existeix una bijecció entre el conjunt d'ideals contrets de $A$
+i el conjunt d'ideals extesos de $B$.
+\end{enumerate}
+\end{ex}
+
+
+\begin{ex}
+\begin{enumerate}[(a)]
+\item
+Siguin $J$
+un ideal de $A$
+i $\pi: A \rightarrow A/J$
+el morfisme de pas al quocient.
+Proveu que $I^e = (I+J)/J$.
+\item
+Considerem el morfisme d'inclusió $i: A \rightarrow A[X]$.
+Proveu que $I^e = I[X]$
+i que $$
+\dfrac{A[X]}{I[X]} \cong \dfrac{A}{I}[X].
+$$
+\end{enumerate}
+\end{ex}
+
+
+\begin{ex}[$*$]
+\begin{enumerate}[(a)]
+\item
+Sigui $f:A\longrightarrow B$
+un morfisme d'anells.
+Demostreu que si $J$
+és un ideal de $B$,
+llavors tenim un morfisme injectiu d'anells $A/f^{-1}(J)\longrightarrow B/J$.
+\item
+Siguin $A$
+un anell i $I$
+un ideal de $A$.
+Proveu que existeix una correspondència bijectiva entre el conjunt dels ideals de $A/I$
+i el conjunt dels ideals de $A$
+que contenen  $I$.
+Proveu també que la bijecció es pot establir de manera que
+ideals primers es corresponguin amb ideals primers
+i ideals maximals amb ideals maximals.
+\end{enumerate}
+\end{ex}
+
+
+\begin{ex}
+\begin{enumerate}[(a)]
+\item
+Demostreu que la contracció d'un ideal primer és un ideal primer.
+\item
+Considerem la injecció de $\mathbb{Z}$
+en $\mathbb{Z}[i]$.
+Proveu que l'extensió de l'ideal $(2)$
+no és un ideal primer.
+\item
+Siguin $A$
+un anell i $\mathfrak{p}$
+un ideal primer.
+Proveu que l'extensió de $\mathfrak{p}$
+en $A[X]$
+és un ideal primer.
+\end{enumerate}
+\end{ex}
+
+
+\begin{ex}[$*$]
+Siguin $r$,
+$s$
+nombres enters $\ge 1$
+i sigui $d=\textrm{mcd}(r,s)$.
+\begin{enumerate}[(a)]
+\item
+Proveu que
+$\textrm{Hom}_{\textrm{grups}}\big(\mathbb{Z}/r\mathbb{Z},\mathbb{Z}/s\mathbb{Z}\big) \cong
+\mathbb{Z}/d\mathbb{Z}$.
+\item
+Què és $\textrm{Hom}_{\textrm{anells}}
+\big(\mathbb{Z}/r\mathbb{Z},\mathbb{Z}/s\mathbb{Z}\big)$?
+\end{enumerate}
+\end{ex}
+
+
+\begin{ex}
+Sigui $A$
+un anell en el qual per a cada element $y\in A$
+se satisfà una igualtat $y^n=y$
+per a algun nombre enter $n\ge 2$
+(que depèn de $y$).
+Proveu que tot ideal primer és maximal.
+\end{ex}
+
+
+\begin{ex}
+Proveu que tot domini d'integritat finit és un cos.
+\end{ex}
+
+
+\begin{ex}[$*$]
+Sigui $A$
+un anell.
+Demostreu que si $A$
+té un nombre finit $n\ge 2$
+de divisors de zero,
+aleshores $A$
+és finit i $card(A)\le n^2$.
+({\em Nota:}
+$0\in z(A)$,
+on $z(A)$
+denota el conjunt de divisors de zero de $A$.)
+\end{ex}
+
+
+\begin{ex}[$*$]
+Sigui $A$
+un anell commutatiu finit en el qual no suposem en principi que hi hagi element unitat.
+Demostreu que si en $A$
+hi ha un element no divisor de zero,
+llavors $A$
+conté un element unitat.
+Sabríeu donar-ne un contraexemple en el cas $A$
+no finit?
+\end{ex}
+
+
+\begin{ex}[$*$]
+Sigui $A$
+un anell.
+Utilitzeu l'axioma de Zorn per a demostrar que el conjunt d'ideals primers de $A$
+admet elements minimals.
+%({\em Indicació:}
+%considereu el conjunt dels complementaris $A-P$
+%dels ideals primers $P\subseteq A$.)
+\end{ex}
+
+
+\begin{ex}[$*$]
+\label{nil}
+Sigui $A$
+un anell.
+Es diu que un element $x \in A$
+és {\em nilpotent}
+si $x^n = 0$
+per a algun nombre enter positiu $n$.
+Proveu que
+\begin{enumerate}[(a)]
+\item
+Si $x$
+és nilpotent,
+aleshores $1-x$
+és invertible.
+\item
+El conjunt d'elements nilpotents de $A$
+és un ideal radical,
+que notem $\eta(A)$
+i s'anomena nilradical de $A$.
+\item
+$\eta (A)$
+està contingut dins de tots els ideals primers de $A$.
+\item
+$\eta(A)$
+és la intersecció de tots els ideals primers de $A$.
+({\em Indicació:}
+Sigui $y\notin \eta(A)$
+i definim $\Sigma$
+com el conjunt d'ideals $K\subseteq A$
+tals que $y^n\notin K$
+per a tot $n>0$.
+Vegeu que $\Sigma$
+té un element maximal i que aquest és un ideal primer.)
+\item
+Sigui $J$
+un ideal de $A$.
+Proveu que el radical de $J$
+és la intersecció de tots els ideals primers de $A$
+que contenen $J$.
+\end{enumerate}
+\end{ex}
+
+
+\begin{ex}[$*$]
+Siguin $J$,
+$K$
+dos ideals d'un anell $A$.
+\begin{enumerate}[(a)]
+\item
+Vegeu que $(J+K) \cdot (J\cap K) \subseteq J K$.
+\item
+Demostreu que si $J$,
+$K$
+són ideal primers entre si (comaximals)
+llavors $J\cap K = J K$.
+\item
+Siguin $I_1,\dots,I_n \subseteq A$
+ideals primers entre si dos a dos.
+Proveu que ${\displaystyle \prod^n_{j=1}} I_j =
+{\displaystyle\bigcap^{n}_{j=1}} I_j$.
+\item
+Donats $I_1,\dots,I_n \subseteq A$
+ideals,
+considerem l'homomorfisme d'anells
+$$
+\begin{array}{rccl}
+\varphi:& A &\longrightarrow & \displaystyle\prod^n_{j=1} A/I_j
+\\
+        & x &\longrightarrow & (\bar x,\dots, \bar x).
+\end{array}
+$$
+Demostreu que si $I_1,\dots,I_n$
+són primers entre si dos a dos,
+llavors $\varphi$
+és exhaustiva.
+(Aquesta és una versió de l'anomenat teorema xinès del residu.)
+Calculeu $\textrm{Ker}\varphi$
+en qualsevol cas.
+({\em Indicació:}
+trobeu una antiimatge de $(1,0,\dots,0).)$
+\item
+Demostreu que $\operatorname{mcd}(r,s) = 1$
+implica que $\mathbb{Z}/rs\mathbb{Z} \simeq \mathbb{Z}/r\mathbb{Z} \times \mathbb{Z}/s\mathbb{Z}$.
+\end{enumerate}
+\end{ex}
+
+
+\begin{ex}[$*$]
+Sigui $A$
+un anell commutatiu tal que $a^2=a$
+per a tot $a\in A$,
+i sigui $\textrm{Max}(A)$
+el conjunt d'ideals maximals de $A$.
+Demostreu que:
+\begin{enumerate}[(a)]
+\item
+Tot ideal primer $\mathfrak{p}$
+de $A$
+és maximal i $A/\mathfrak{p}\cong\mathbb{Z}/2\mathbb{Z}$.
+\item
+$\displaystyle\bigcap_{\mathfrak{m}\in \textrm{Max}(A)}
+\mathfrak{m}=0$.
+\item
+Per a cada $\mathfrak{m}\in \textrm{Max}(A)$,
+sigui $\varphi_{\mathfrak{m}}:A\longrightarrow A/\mathfrak{m}$
+el morfisme de pas al quocient.
+Proveu que
+$$
+\begin{array}{rcl}
+\Phi: A & \longrightarrow &\displaystyle\prod_{\mathfrak{m}\in Max(A)} A/\mathfrak{m}\\
+a & \longmapsto & (\varphi_{\mathfrak{m}}(a))
+\end{array}
+$$
+és un morfisme injectiu d'anells,
+i que si $\textrm{Max}(A)$
+és finit,
+llavors $\Phi$
+és un isomorfisme.
+Deduïu que $A$
+és finit si,
+i només si,
+$\textrm{Max}(A)$
+és un conjunt finit.
+\item
+Se satisfà que $2a=0$
+per a tot $a\in A$,
+i que tot ideal finitament generat de $A$
+és principal.
+({\em Indicació:} 
+$(a,b)=(a+b+ab)$.)
+\end{enumerate}
+\end{ex}
+
+
+\begin{ex}
+Sigui $A[X]$
+l'anell de polinomis en una indeterminada sobre l'anell $A$.
+Prenem $f= a_0 + a_1 X + a_2 X^2+\cdots+ a_n X^n \in A[X]$
+un polinomi de grau $n$,
+amb $a_0$,
+\dots,
+$a_n\in A$.
+Demostreu que
+\begin{enumerate}[(a)]
+\item
+$f$
+és una unitat en $A[X]$
+si,
+i només si,
+$a_0$
+és una unitat en $A$
+i $a_1,\dots, a_n$
+són nilpotents.
+%({\em Indicació:}
+%Feu primer el cas $A$
+%domini i després utilitzeu el problema $19$ (d).)
+\item
+$f$
+és nilpotent si,
+i només si,
+$a_0,a_1,\dots, a_n$
+són nilpotents.
+\item
+$f$
+és divisor de zero en $A[X]$
+si,
+i només si,
+existeix $a\in A-\{0\}$
+tal que $a f=0$.
+({\em Indicació:}
+es pot començar per prendre un polinomi $g$
+de grau mínim per al qual se satisfaci que $fg=0$).
+\end{enumerate}
+\end{ex}
+
+
+\begin{ex}\label{series}
+Sigui $A[[X]]$
+l'anell de sèries de potències de coeficients en $A$.
+Prenem $f=\sum_{i\ge 0}a_iX^i\in A[[X]]$,
+$a_i\in A$.
+Demostreu que
+\begin{enumerate}[(a)]
+\item
+$f$
+és una unitat en $A[[X]]$
+si,
+i només si,
+$a_0$
+és una unitat de $A$.
+\item
+Si
+$f$
+és nilpotent,
+aleshores $a_i$
+és nilpotent,
+per a tot $i\in \mathbb{N}$.
+És cert el recíproc?
+\item
+Sigui $k$
+un cos.
+Proveu que els ideals no nuls de $k[[X]]$
+són de la forma $(X^i)$.
+\end{enumerate}
+\end{ex}
+
+
+\begin{ex}
+Sigui $A$
+un anell commutatiu.
+\begin{enumerate}[(a)]
+\item
+Demostreu que $A- A^*$
+(el conjunt complementari de les unitats)
+és un ideal si,
+i només si,
+$A$
+té un únic ideal maximal.
+\item
+Demostreu que $A$
+té un únic ideal primer si,
+i només si,
+tot element de $A$
+és invertible o nilpotent.
+\end{enumerate}
+\end{ex}
+
+
+\begin{ex}
+Sigui $A$
+un domini d'integritat.
+Proveu que l'anell de polinomis $A[X]$
+és un domini d'ideals principals si,
+i només si,
+$A$
+és un cos.
+\end{ex}
+
+
+\begin{ex}[$*$]
+Siguin $A$
+un domini d'ideals principals,
+$B$
+un domini d'integritat,
+i $f: A \rightarrow B$
+un morfisme d'anells exhaustiu.
+Demostreu que o bé $B$
+és un cos,
+o bé $f$
+és un isomorfisme.
+\end{ex}
+
+
+\begin{ex}
+Sigui $A$
+un domini d'integritat amb la propietat que donada una cadena descendent d'ideals
+$I_1\supseteq I_2\supseteq\ldots\supseteq I_n\supseteq\ldots$,
+existeix un nombre enter $m$
+tal que $I_n=I_m$
+per a tot $n\ge m$.
+Demostreu que $A$
+és un cos.
+\end{ex}
+
+
+\begin{ex}[$*$]
+Sigui $A$
+un domini.
+Considerem els parells ordenats $(a,b)$
+on $a$,
+$b \in A$
+i $b\neq 0$,
+amb la relació següent:
+$$
+(a,b) \sim (c,d) \Leftrightarrow ad-bc=0.
+$$
+\begin{enumerate}[(a)]
+\item
+Comproveu que $\sim$
+és una relació d'equivalència.
+Denotem per $\dfrac{a}{b}$
+la classe d'equivalència de $(a,b)$
+i $K$
+el conjunt de classes d'equivalència.
+En $K$,
+definim les operacions següents:
+$$
+\dfrac{a}{b} + \dfrac{c}{d} = \dfrac{ad+bc}{bd},
+\quad \quad
+\dfrac{a}{b}  \cdot \dfrac{c}{d} = \dfrac{ac}{bd}
+$$
+amb $a,b,c,d\in A$, $b\neq 0$ i $d\neq 0$. Comproveu que estan ben
+definides. \item[(ii)] Demostreu que $K$ és un cos. El cos $K$
+s'anomena el \emph{cos de fraccions} de $A$.
+
+ \item[(iii)] Demostreu que l'aplicació
+$$ \begin{array}{rcl}
+ A &\longrightarrow &K\\
+ a & \longmapsto & \dfrac{a}{1}
+\end{array} $$
+és un morfisme d'anells injectiu.
+\end{enumerate}
+\end{ex}
+
+
+\begin{ex}[$*$]
+Siguin $A$
+un domini d'integritat i $K$
+el seu cos de fraccions.
+Demostreu que se satisfà la propietat següent:
+
+\noindent
+Si $f:A\longrightarrow B$
+és un morfisme d'anells tal que $f(a)\in B^{\ast}$
+per a tot $a\in A-\{ 0 \}$,
+aleshores $f$
+s'estén de manera única a un morfisme d'anells $\widetilde f:K\longrightarrow B$.
+
+\noindent
+Deduïu que $K$
+és el més petit de tots els cossos que contenen $A$
+com a subanell.
+\end{ex}
+
+
+\begin{ex}
+Determineu quins dels  anells següents són dominis d'integritat
+i doneu-ne els  cossos de fraccions corresponents:
+
+(a) $\mathbb{Z}[X]/(X)$;
+(b) $\mathbb{Z}[X]/(X^2)$;
+(c) $\mathbb{Z}/n\mathbb{Z}[X]$;
+(d) $\mathbb{Z}[X]/(p,X) $,
+amb $ p\in \mathbb{Z}$
+primer.
+\end{ex}
+
+
+\begin{ex}
+Demostreu que la característica d'un domini d'integritat és o bé zero o bé un nombre primer.
+Deduïu que tot cos conté un subcòs isomorf a $\mathbb{Q}$
+o a $\mathbb{Z}/p\mathbb{Z}$,
+per a un cert nombre primer $p$.
+\end{ex}
+
+
+\begin{ex}
+Per a un nombre enter lliure de quadrats,
+$d$,
+considerem $\mathbb{Z}[\sqrt{d}]:=\{a+b\sqrt{d}:\, a,b\in \mathbb{Z}\} \subseteq \mathbb{C}$
+i l'aplicació $N:\mathbb{Z}[\sqrt{d}]\longrightarrow\mathbb{Z}$
+definida per
+$N(a+b\sqrt{d})=(a+b\sqrt{d})(a-b\sqrt{d})=a^2-db^2$,
+per a $a,b\in\mathbb{Z}$.
+\begin{enumerate}[(a)]
+\item
+Demostreu que $\mathbb{Z}[\sqrt{d}]$
+és un anell.
+\item
+Demostreu que l'aplicació $N$
+és multiplicativa;
+és a dir,
+que $N(\alpha \beta)=N(\alpha)N(\beta)$,
+per a tot $\alpha$,
+$\beta \in \mathbb{Z}[\sqrt{d}]$.
+Aquesta aplicació es coneix amb el nom de \emph{norma}.
+\item
+Demostreu que $\alpha\in \mathbb{Z}[\sqrt{d}]$
+és una unitat si,
+i només si,
+$N(\alpha)=\pm 1$.
+\end{enumerate}
+\end{ex}
+
+
+\begin{ex}
+Considerem l'anell
+$\mathbb{Z}[i] :=\{a+b\,i:\, a,b\in \mathbb{Z} \} \subseteq \mathbb{C}$
+i la seva norma $N(a+b\,i)=a^2+b^2$,
+$a,b\in\mathbb{Z}$.
+\begin{enumerate}[(a)]
+\item
+Demostreu que per a tota parella d'elements $x,y \in \mathbb{Z}[i]$,
+$y \neq 0$,
+existeixen $q$,
+$r \in \mathbb{Z}[i]$
+tals que $x=qy+r$,
+amb $r=0$ o bé $N(r)<N(y)$.
+\item
+Deduïu que $\mathbb{Z}[i]$
+és un domini d'ideals principals.
+\end{enumerate}
+\end{ex}
+
+
+\begin{ex}
+Considerem l'anell
+$\mathbb{Z}\left[\sqrt{-2}\,\right]:=\{a+b\,\sqrt{-2}:\, a,b\in \mathbb{Z}\} \subseteq \mathbb{C}$
+i la seva norma $N(a+b\,\sqrt{-2} )=a^2+2b^2$,
+$a$,
+$b\in\mathbb{Z}$.
+Proveu que $\mathbb{Z}\left[\sqrt{-2}\,\right]$
+és un domini d'ideals principals.
+\end{ex}
+
+
+\begin{ex}
+Considerem l'anell
+$\mathbb{Z}\left[\sqrt{-3}\,\right] \subseteq \mathbb{C}$.
+\begin{enumerate}[(a)]
+\item
+Trobeu les unitats d'aquest anell.
+\item
+Proveu que $2$,
+$1+2\sqrt{-3}$
+i $1+\sqrt{-3}$
+són elements irreductibles.
+És $\mathbb{Z}\left[\sqrt{-3}\right]$ un domini de factorització única?
+\item
+Demostreu que l'ideal $(7,2+ \sqrt{-3}\,)$
+és primer.
+\end{enumerate}
+\end{ex}
+
+
+\begin{ex}
+L'anell $\mathbb{Z}\left[\sqrt{2}\,\right]$
+és un domini de factorització única.
+\begin{enumerate}[(a)]
+\item
+Comproveu que
+$23=(3+ 4 \sqrt{2})(-3+ 4 \sqrt{2})=(11+7\sqrt{2})(11-7\sqrt{2})$.
+Contradiu aquesta igualtat el fet que $\mathbb{Z}\left[\sqrt{2}\,\right]$
+sigui domini de factorització única?
+\item
+Proveu que $\mathbb{Z}\left[\sqrt{2}\,\right]$
+té infinites unitats.
+\end{enumerate}
+\end{ex}
+
+
+\begin{ex}
+Considereu el domini d'integritat $\mathbb{Z}[\sqrt{-6}]$.
+\begin{enumerate}[(a)]
+\item
+Demostreu que $\mathbb{Z}[\sqrt{-6}]^*=\{+1,-1\}$
+i que,
+en aquest anell,
+no hi ha elements de norma $5$.
+\item
+És $1+2\sqrt{-6}$
+un element irreductible?
+\item
+És $1+2\sqrt{-6}$
+un element primer?
+\item
+És $\mathbb{Z}[\sqrt{-6}]$
+un domini de factorització única?
+\end{enumerate}
+\end{ex}
+
+
+\begin{ex}[$*$]
+Siguin $d$
+un nombre enter lliure de quadrats i
+$A=\mathbb{Z}[\sqrt{d}]=\{a+b\sqrt{d}: a,b\in \mathbb{Z}\} \subseteq \mathbb{C}.$
+\begin{enumerate}[(a)]
+\item
+A partir de la igualtat $(d+\sqrt{d})(d-\sqrt{d})=d(d-1)$,
+proveu que $2$
+no és un element primer de l'anell $A$.
+Deduïu que,
+si $A$
+és un domini de factorització única,
+$2$
+no és irreductible a $A$.
+\item
+Demostreu que,
+si $d$
+és negatiu,
+$A$
+és un domini de factorització única si,
+i només si,
+$d=-1$
+o $d=-2$.
+\item
+Proveu que $5$
+és irreductible a $\mathbb{Z}\left[\sqrt{-2}\,\right]$
+i que l'anell quocient $\mathbb{Z}\left[\sqrt{-2}\,\right]/(5)$
+té un subcòs isomorf a $\mathbb{Z} /5\mathbb{Z}$.
+\end{enumerate}
+\end{ex}
+
+
+\begin{ex}
+Es considera l'anell $\mathbb{Z}[\sqrt{d}\,]$,
+on $d \in \mathbb{Z}$
+no és un quadrat perfecte.
+Sigui $x+\sqrt{d} \in \mathbb{Z}[\sqrt{d}\,]$,
+$x\in\mathbb{Z}$,
+un element de norma $N(x+\sqrt{d})=n$.
+\begin{enumerate}[(a)]
+\item
+Demostreu que l'aplicació
+$$
+\begin{array}{llcl}
+f: & \mathbb{Z}[\sqrt{d}\,] &\rightarrow & \mathbb{Z}/n\mathbb{Z}    \\
+   & a+b\sqrt{d}                 & \mapsto     & \overline{a-xb}
+\end{array}
+$$
+és un morfisme d'anells que factoritza en un isomorfisme
+$\overline{f}: \mathbb{Z}[\sqrt{d}\,]/(x+\sqrt{d})\simeq \mathbb{Z}/n\mathbb{Z}$.
+
+\noindent
+Sigui $d=15$
+i considerem l'anell $\mathbb{Z}\left[\sqrt{15}\,\right]$.
+
+\item
+Esbrineu si els elements $1+\sqrt{15}$,
+$2+\sqrt{15}$
+són primers.
+Són irreductibles?
+
+\noindent
+{\textit{Indicació}:
+Demostreu que l'equació $z^2=\pm 2$
+no té solucions en $\mathbb{Z}/5\mathbb{Z}$.}
+
+\item
+És $\mathbb{Z}\left[\sqrt{15}\,\right]$
+un domini de factorització única?
+\end{enumerate}
+\end{ex}
+
+
+
+\end{document}

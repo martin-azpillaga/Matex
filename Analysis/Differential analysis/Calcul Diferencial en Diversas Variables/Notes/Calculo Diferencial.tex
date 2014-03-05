@@ -1,0 +1,279 @@
+\documentclass[twoside]{article}
+\usepackage{amsfonts}
+\usepackage{ amssymb }
+\usepackage[utf8]{inputenc}
+\pagenumbering{arabic}
+
+% \pagebreak %
+
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\s}{\hspace{20pt}}
+\newcommand{\all}{\forall \;}
+\newcommand{\ex}{\exists \;}
+\newcommand{\tq}{\; {,,} \;}
+\newcommand{\m}{\setminus}
+\newcommand{\dlim}{\displaystyle\lim}
+\begin{document}
+\setlength{\baselineskip}{1.5\baselineskip}
+\renewcommand{\labelitemi}{$\bullet$}
+\renewcommand{\labelitemii}{$\cdot$}
+
+\section{Topología}
+
+\begin{itemize}
+
+\item Encontrar la adherencia
+
+\begin{itemize}
+
+\item Suponemos que C es la adherencia de A
+
+\item $\bar{A} \subset C$:
+
+\begin{itemize}
+
+\item C es un cerrado ya que es anti-imagen de un cerrado por una aplicación continua.
+
+\item $A \subset C$ ya que todo punto de $A$ cumple las condiciones de C.
+
+\item $\bar{A}$ contiene a todos los cerrado que contienen A $\rightarrow$ $\bar{A} \subset C$
+
+\end{itemize}
+
+\item $C \subset \bar{A}:$
+
+\begin{itemize}
+
+\item $C = A \cup (C \setminus A)$
+
+\item $A \subset \bar{A}$ siempre.
+
+\item $\all (x,y) \in (C \setminus A):$ Defino una sucesión $(x_n,y_n)$ tal que 
+
+\begin{itemize}
+
+\item $\all n \in \mathbb{N}: x_n, y_n \in A$
+
+\item $lim_{n \rightarrow \infty} (x_n,y_n) = (x,y)$
+\end{itemize}
+
+\item Procedimiento general:
+
+\begin{itemize}
+
+\item $x_n = x + 1/n*l$ donde $x+l \in A$.
+
+\item $y_n$ se logra sustituyendo la expresión de $x_n$ en la expresión de la grafica que define $y$ en función de x.
+
+\end{itemize}
+\end{itemize}
+\end{itemize}
+
+\item Encontrar el interior
+
+\begin{itemize}
+
+\item Suponemos $U$ el interior de A
+
+\item $U \subset \AA$:
+
+\begin{itemize}
+
+\item $U$ es abierto ya que es anti-imagen de un abierto por una aplicación continua.
+
+\item $U \in A$ ya que todo punto de $U$ cumple las condiciones de $A$
+
+\item $\AA$ contiene a todos los abiertos contenidos en $A \rightarrow U \in \AA$
+
+\end{itemize}
+
+\item $\AA \subset U$:
+
+\begin{itemize}
+
+\item Descomponemos $A = U \cup (A \setminus U)$.
+
+\item $\AA \subset A \rightarrow \AA \subset U \cup (A \setminus U)$.
+
+\item Quiero ver: $\AA \cap (A \setminus U) = \emptyset$. Para ello:
+
+\item $\forall p \in (A \setminus U):$
+
+$\s \forall r \in \mathbb{R^+}$:
+
+$\s \s \exists q \in \mathbb{R^n}$ tal que $q \in B(p,r)$ y $q \notin A \rightarrow p \notin \AA$
+
+\end{itemize}
+\end{itemize}
+
+\item Encontrar la frontera
+
+\begin{itemize}
+\item $Fr(A) = \bar{A} \setminus \AA$
+\end{itemize}
+
+\item Analizar si es compacto.
+
+\begin{itemize}
+
+\item $A$ es cerrado ya que es anti-imagen de un cerrado por una aplicación continua
+
+\item $A$ es acotado ya que $\ex r \in \mathbb{R}$ tal que $A \subset B(0,r)$. Esto se hace acotando la norma de $p \in A$. $\forall p \in A: ||p|| <= C \rightarrow A \subset B(0,C).$
+\end{itemize}
+\end{itemize}
+
+\section{Límites y Continuidad}
+
+\subsection{Limites mediante Taylor}
+
+\begin{itemize}
+
+\item Desarrollamos cada función que 
+\end{itemize}
+\subsection{Análisis de continuidad de una función definida por trozos}
+
+\begin{itemize}
+
+\item Sea C el conjunto de puntos donde cambia la definición de f
+
+\item f es continua en $\mathbb{R}^n \setminus C$ ya que es composición de funciones continuas y el denominador no se anula en $\mathbb{R}^n \setminus C$
+
+\item Análisis de continuidad en C
+
+\begin{itemize}
+\item Caso en que en el denominador haya una suma. $\all c \in C$:
+
+\begin{itemize}
+
+\item Sea $N$ la norma del denominador
+
+\item Acotamos el enumerador en función de $N$
+
+\item Logramos $0 \leq |\; \dlim_{x \rightarrow c} f(x) - f(c) \; | \leq N^p$
+
+\begin{itemize}
+\item $p >0$: Por el Teorema del Sandwich, $\dlim_{x \rightarrow c} f(x) = f(c) \rightarrow f$ es continua en $c$.
+
+\item $p=0$ Hay que ver que f no es continua mediante límites direccionales. Normalmente se intenta igualar las potencias del denominador.
+
+\item $\dlim_{x \rightarrow c, x \in E} f(x) \neq f(c) \rightarrow \dlim_{x \rightarrow c} f(x) \neq f(c) \rightarrow f$ no es continua en $c$.
+
+\end{itemize} 
+\end{itemize}
+
+\item Caso en que en el denominador haya una resta:
+
+\begin{itemize}
+
+\item Defino Z el conjunto de puntos de C que anulan el enumerador también.
+
+\item $f = \frac{P}{Q}$.
+
+\item $\forall c \in C \m Z: \dlim_{x\rightarrow c} \frac{P(x)}{Q(x)} = \infty \neq f(x) \rightarrow f$ no es continua en $c$. 
+
+\item $\all (x_0,y_0) \in Z:$
+
+$\s$ Defino $E= \{(x,y) | P(x,y) = Q(x,y) \} = \{(x,y) | y = g(x) \}$
+
+\item $(x_0,y_0)$ es punto de acumulación de $E$ ya que $\dlim_{n \rightarrow \infty} (x_0 + 1/n, g(x)) = (x_0,y_0)$
+
+\item $\dlim_{(x,y) \rightarrow (x_0,y_0), (x,y) \in E} f(x,y) = 1 \rightarrow \dlim_{(x,y) \rightarrow (x_0,y_0)} f(x,y) \neq f(x_0,y_0) \rightarrow f$ no es continua en $(x_0,y_0)$.
+  
+\end{itemize}
+\end{itemize}
+\end{itemize}
+
+\section{Difernciabilidad}
+
+\subsection{Análisis de diferenciabilidad de una función definida por trozos}
+
+\begin{enumerate}
+
+\item Sea C el conjunto donde f cambia de expresión
+
+\item f es diferenciable en $\R^n \m C$ ya que es composición de funciones diferenciables y en denominador no se anula.
+
+\item $\all p \in C:$ calculamos su matriz jacobiana $D_f(p)$
+
+\item f es diferenciable en p si $ \dlim_{x \rightarrow p} \frac{f(x)-f(p)-D_f(p)(x-p)}{||x-p||} = 0$
+
+\item f no es diferenciable si $\ex E \subset \R^n$ tal que $ \dlim_{x \rightarrow p, x \in E} \frac{f(x)-f(p)-D_f(p)(x-p)}{||x-p||} \neq 0$. Normalmente se prueba con $x > 0, \alpha > 0, y = \alpha x$.
+\end{enumerate}
+
+\section{Extremos y Puntos de silla}
+
+\subsection{Análisis de Máximos y mínimos}
+
+\begin{itemize}
+
+
+\item Sea $C = \{ p \in \R^n | D_f(p) = 0\}$
+
+\item $\all p \in C$:
+\begin{itemize}
+\item Caso $H_f(p)$ definida positiva: $p$ es un mínimo local de f
+
+\item Caso $H_f(p)$ definida negativa: $p$ es un máximo local de f
+
+\item Caso $H_f(p)$ indefinida, $p$ es un punto de silla.
+
+\end{itemize} 
+\end{itemize}
+
+\section{Función implícita e inversa}
+
+\subsection{Ver que una ecuación define una función implícita}
+
+\begin{itemize}
+
+\item Sea V el conjunto de las variables libres e D el de los dependientes
+
+\item Defino $F: \R^{\#V} \times \R^{\#D} \rightarrow \R$ como la función que envía las variables a la ecuación igualada a 0.
+
+\item $F \in C^1$ ya que es composición de diferenciables.
+
+\item $F(p) = 0$
+
+\item Si $\ex d \in D$ tal que $ \frac{\delta f}{\delta d} \neq 0$, se puede aplicar el Teorema de la función implícita:
+
+\item $\ex W$ entorno de $(x,y)$
+\item $\ex V$ entorno de $x$
+\item $\ex g: \R^{\#V} \rightarrow \R^{\#D} \in C^1$ tal que:
+
+$\s \all (x,y) \in W:$
+
+$\s \s F((x,y)) = 0 \leftrightarrow y = g(x)$
+
+\subsection{Teorema de la función inversa}
+
+\item $f \in C^1$
+
+\item $\all p \in \R^n $ tal que $det(J_f(p)) \neq 0:$
+
+\begin{itemize}
+\item Sea $q = f(p)$
+
+\item $\ex $ U entorno de p y V entorno de q tal que f:U $\rightarrow V$ es un difeomorfismo. En particular tiene inversa y se cumple
+
+$$J_f^{-1}(b) = [J_f(a)]^{-1}$$
+\end{itemize}
+
+\subsection{Multiplicadores de Lagrange}
+
+\item Sea K el conjunto donde queremos maximizar la función f
+
+\item K es compacto, por el teorema de WeierStrass existe máximo y mínimo de f sobre K
+
+\item Descomponemos K = $Int K \cup Fr K$
+
+\item P es el conjunto de puntos críticos de $IntK$
+
+\item Sea g la función que envía las variables a las ecuaciones de K igualadas a cero.
+
+\item Por el teorema de Lagrange, si un punto es extremo ha de cumplir $\nabla f = \lambda \nabla g$. Sea L el conjunto de estos puntos.
+
+\item $\all p \in P \cup L:$ evalúo los puntos y veo cuales son los extremos. Si uno de ellos era de $p$ confirmo que es extremo mediante la Hessiana.
+
+
+\end{itemize}
+\end{document}
