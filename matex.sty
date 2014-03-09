@@ -861,10 +861,19 @@
 %					*** Imaging ***
 
 
-\newcommand{\includeimage}[1]
+\newcommand{\includeimage}[3]
 {
+	\begin{center}
+	#1
+	\end{center}
 	\centering
-	\includegraphics[width=10cm]{#1.pdf}
+	\includegraphics[width=#2]{#3}
+}
+
+\newcommand{\includecode}[3]
+{
+	\lstset{title=#1,tabsize=2,breaklines=true}
+	\lstinputlisting[language=#2]{#3}
 }
 
 \newcommand{\s}
