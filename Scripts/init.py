@@ -2,7 +2,7 @@ import os
 
 def main(path,units):
 
-    blockNames = ["Definitions","Propositions","Examples"]
+    blockNames = ["Definitions","Propositions","Examples","New"]
 
     for blockName in blockNames:
 
@@ -19,6 +19,7 @@ def main(path,units):
     if not os.path.exists(path+"\\Main"): os.makedirs( path+"\\Main" )
     f = open(path+"\\Main\\main.tex","w")
     f = open(path+"\\Main\\specific.sty","w")
+    f = open(path+"\\Main\\bibliography.bib","w")
     f.close()
 
     if not os.path.exists(path+"\\Problems"): os.makedirs( path+"\\Problems" )
