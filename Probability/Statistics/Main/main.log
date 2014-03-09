@@ -1,10 +1,7 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2013.11.22)  5 MAR 2014 21:27
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2013.11.22)  9 MAR 2014 18:21
 entering extended mode
-**C:/Users/MnM/Documents/Matex*Projects/Algebra/Algebraic*Structures/Propositio
-ns/main.tex
-
-("C:/Users/MnM/Documents/Matex Projects/Algebra/Algebraic Structures/Propositio
-ns/main.tex"
+**C:/Users/MnM/Documents/Matex*Projects/Probability/Statistics/Main/main.tex
+("C:/Users/MnM/Documents/Matex Projects/Probability/Statistics/Main/main.tex"
 LaTeX2e <2011/06/27>
 Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, ar
 abic, armenian, assamese, basque, bengali, bokmal, bulgarian, catalan, coptic, 
@@ -16,18 +13,7 @@ german-x-2013-05-26, nynorsk, oriya, panjabi, pinyin, polish, portuguese, roman
 ian, russian, sanskrit, serbian, slovak, slovenian, spanish, swedish, swissgerm
 an, tamil, telugu, turkish, turkmen, ukenglish, ukrainian, uppersorbian, usengl
 ishmax, welsh, loaded.
-(C:\Users\MnM\AppData\Roaming\MiKTeX\2.9\tex\latex\subfiles\subfiles.cls
-Document Class: subfiles 2012/05/23 Federico Garcia
-("C:\Program Files\MiKTeX 2.9\tex\latex\tools\verbatim.sty"
-Package: verbatim 2003/08/22 v1.5q LaTeX2e package for verbatim enhancements
-\every@verbatim=\toks14
-\verbatim@line=\toks15
-\verbatim@in@stream=\read1
-)
-Preamble taken from file `../Main/main'
-
-("C:\Users\MnM\Documents\Matex Projects\Algebra\Algebraic Structures\Main\main.
-tex" ("C:\Program Files\MiKTeX 2.9\tex\latex\base\book.cls"
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\book.cls"
 Document Class: book 2007/10/19 v1.4h Standard LaTeX document class
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\bk10.clo"
 File: bk10.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
@@ -54,7 +40,7 @@ For additional information on amsmath, use the `?' option.
 Package: amstext 2000/06/29 v2.01
 ("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsgen.sty"
 File: amsgen.sty 1999/11/30 v2.0
-\@emptytoks=\toks16
+\@emptytoks=\toks14
 \ex@=\dimen103
 )) ("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsbsy.sty"
 Package: amsbsy 1999/11/29 v1.2d
@@ -82,21 +68,21 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
 \dotsspace@=\muskip10
 \c@parentequation=\count95
 \dspbrk@lvl=\count96
-\tag@help=\toks17
+\tag@help=\toks15
 \row@=\count97
 \column@=\count98
 \maxfields@=\count99
-\andhelp@=\toks18
+\andhelp@=\toks16
 \eqnshift@=\dimen106
 \alignsep@=\dimen107
 \tagshift@=\dimen108
 \tagwidth@=\dimen109
 \totwidth@=\dimen110
 \lineht@=\dimen111
-\@envbody=\toks19
+\@envbody=\toks17
 \multlinegap=\skip44
 \multlinetaggap=\skip45
-\mathdisplay@stack=\toks20
+\mathdisplay@stack=\toks18
 LaTeX Info: Redefining \[ on input line 2665.
 LaTeX Info: Redefining \] on input line 2666.
 ) ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\amssymb.sty"
@@ -111,7 +97,7 @@ LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 Package: geometry 2010/09/12 v5.6 Page Geometry
 ("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\keyval.sty"
 Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
-\KV@toks@=\toks21
+\KV@toks@=\toks19
 ) ("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ifpdf.sty"
 Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
 Package ifpdf Info: pdfTeX in PDF mode is detected.
@@ -132,7 +118,7 @@ Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 \Gm@layoutheight=\dimen117
 \Gm@layouthoffset=\dimen118
 \Gm@layoutvoffset=\dimen119
-\Gm@dimlist=\toks22
+\Gm@dimlist=\toks20
 ("C:\Program Files\MiKTeX 2.9\tex\latex\geometry\geometry.cfg")) (C:\Users\MnM\
 AppData\Roaming\MiKTeX\2.9\tex\latex\fancyhdr\fancyhdr.sty
 \fancy@headwidth=\skip46
@@ -447,7 +433,12 @@ LaTeX Font Info:    Redeclaring math accent \vec on input line 1848.
 Excluding comment 'comment') (C:\Users\MnM\AppData\Roaming\MiKTeX\2.9\tex\latex
 \subfiles\subfiles.sty
 Package: subfiles 2012/05/23 Federico Garcia
-) ("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphicx.sty"
+("C:\Program Files\MiKTeX 2.9\tex\latex\tools\verbatim.sty"
+Package: verbatim 2003/08/22 v1.5q LaTeX2e package for verbatim enhancements
+\every@verbatim=\toks21
+\verbatim@line=\toks22
+\verbatim@in@stream=\read1
+)) ("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphicx.sty"
 Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
 ("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphics.sty"
 Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
@@ -524,102 +515,158 @@ File: pppdftex.def 2013/08/25 v0.4v Pdfpages driver for pdfTeX (AM)
 \AM@toc@title=\toks23
 \c@AM@survey=\count138
 \AM@templatesizebox=\box44
-)
-\c@indentation=\count139
-\c@tabSpace=\count140
+) (C:\Users\MnM\AppData\Roaming\MiKTeX\2.9\tex\latex\listings\listings.sty
+\lst@mode=\count139
+\lst@gtempboxa=\box45
+\lst@token=\toks24
+\lst@length=\count140
+\lst@currlwidth=\dimen162
+\lst@column=\count141
+\lst@pos=\count142
+\lst@lostspace=\dimen163
+\lst@width=\dimen164
+\lst@newlines=\count143
+\lst@lineno=\count144
+\lst@maxwidth=\dimen165
+(C:\Users\MnM\AppData\Roaming\MiKTeX\2.9\tex\latex\listings\lstmisc.sty
+File: lstmisc.sty 2014/03/04 1.5c (Carsten Heinz)
+\c@lstnumber=\count145
+\lst@skipnumbers=\count146
+\lst@framebox=\box46
+) (C:\Users\MnM\AppData\Roaming\MiKTeX\2.9\tex\latex\listings\listings.cfg
+File: listings.cfg 2014/03/04 1.5c listings configuration
+))
+Package: listings 2014/03/04 1.5c (Carsten Heinz)
+\c@indentation=\count147
+\c@tabSpace=\count148
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
 . Defining document command \tabtext with arg. spec. ' m >{\SplitList {.}} m '
-. on line 71.
+. on line 72.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
 . Defining document command \tabmath with arg. spec. ' m >{\SplitList {.}} m '
-. on line 80.
+. on line 81.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
 . Defining document command \multiple with arg. spec. 'O{.}O{.} >{\SplitList
-. {.}} m' on line 93.
+. {.}} m' on line 94.
 .................................................
-\c@unitCounter=\count141
-\c@blockCounter=\count142
-.................................................
-. LaTeX info: "xparse/define-command"
-. 
-. Defining document command \all with arg. spec. ' m o m ' on line 576.
-.................................................
+\c@unitCounter=\count149
+\c@blockCounter=\count150
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining document command \ex with arg. spec. ' m m ' on line 583.
+. Defining document command \all with arg. spec. ' m o m ' on line 590.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining document command \union with arg. spec. ' s m m o o ' on line 679.
+. Defining document command \ex with arg. spec. ' m m ' on line 597.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining document command \union with arg. spec. ' s m m o o ' on line 693.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
 . Defining document command \disjunctUnion with arg. spec. ' s m m o o ' on
-. line 700.
+. line 714.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
 . Defining document command \intersection with arg. spec. ' s m m o o ' on
-. line 721.
+. line 735.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
 . Defining document command \summation with arg. spec. ' s m m o o ' on line
-. 742.
+. 756.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
 . Defining document command \product with arg. spec. ' s m m o o ' on line
-. 763.
+. 777.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining document command \set with arg. spec. ' m o ' on line 784.
+. Defining document command \set with arg. spec. ' m o ' on line 798.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining document command \family with arg. spec. ' s m m o o ' on line 804.
+. Defining document command \family with arg. spec. ' s m m o o ' on line 818.
 .................................................
 *************************************************
 * LaTeX warning: "xparse/redefine-command"
 * 
-* Redefining document command \vector with arg. spec. ' m m o o ' on line 819.
+* Redefining document command \vector with arg. spec. ' m m o o ' on line 833.
 *************************************************
+) ("C:\Program Files\MiKTeX 2.9\tex\latex\matex\analysis.sty"
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining document command \limit with arg. spec. ' m m o ' on line 12.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining document command \superiorlimit with arg. spec. ' m m o ' on line
+. 21.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining document command \inferiorlimit with arg. spec. ' m m o ' on line
+. 30.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining document command \convergesto with arg. spec. ' O{n} ' on line 34.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining document command \convergesuniformlyto with arg. spec. ' O{n} ' on
+. line 35.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining document command \integral with arg. spec. ' m m m O{} ' on line
+. 37.
+.................................................
 )
 
-! LaTeX Error: File `specific.sty' not found.
+! LaTeX Error: File `statistics.sty' not found.
 
 Type X to quit or <RETURN> to proceed,
 or enter new name. (Default extension: sty)
 
 Enter file name: 
- :6: Emergency stop
+ :7: Emergency stop
 *** (cannot \read from terminal in nonstop modes)
 
  
 Here is how much of TeX's memory you used:
- 11693 strings out of 493921
- 191576 string characters out of 3147287
- 227689 words of memory out of 3000000
- 14866 multiletter control sequences out of 15000+200000
+ 12880 strings out of 493921
+ 208811 string characters out of 3147287
+ 245895 words of memory out of 3000000
+ 16043 multiletter control sequences out of 15000+200000
  3640 words of font info for 14 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 53i,0n,47p,404b,85s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 44i,0n,45p,366b,219s stack positions out of 5000i,500n,10000p,200000b,50000s
 
- :6:  ==> Fatal error occurred, no output PDF file produced!
+ :7:  ==> Fatal error occurred, no output PDF file produced!
