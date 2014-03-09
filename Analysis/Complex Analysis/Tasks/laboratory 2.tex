@@ -41,14 +41,20 @@
 				\definedFunction{ g }{ \D }{ \C }{ z }{ \summation{ n(n+1)z^{n-1} }{ n }[ 1 ] }.
 				\definedFunction{ h }{ \D }{ \C }{ z }{ \summation{ (n+1)z^n }{ n }[ 1 ] }.
 
-				$UCI theorem:$.
+				\all{ z \in \D }
+				{
+					f(z) = zg(z).
+					$UCI theorem:$.
+					\integral{ g(t) }{ dt }{ 0 }[ z ] = \summation{ (n+1)z^n }{ n }[ 1 ] = h(z)
+				}.
+				g,h $ well defined $.
 
 				\all{ z \in \D }
 				{
+					$UCI theorem:$.
 					\integral{ h(t) }{ dt }{ 0 }[ z ] =  \summation{ z^{n+1} }{ n }[ 1 ] = \summation{ z^n }{ n }[ 0 ] = \frac{ 1 }{ 1-z }.
+					
 					h(z) = \partialderivative{ \frac{ 1 }{ 1-z } }{ z } = \frac{ 1 }{ (1-z)^2 }.
-
-					\integral{ g(t) }{ dt }{ 0 }[ z ] = \summation{ (n+1)z^n }{ n }[ 1 ] = h(z).
 
 					g(z) = \partialderivative{ h(z) }{ z } = \frac{ 2 }{ (1-z)^3 }.
 
