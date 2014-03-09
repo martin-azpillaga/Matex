@@ -16,15 +16,14 @@ void plot( char *input_file, char *output_file )
 	fflush(gnuplot);
 	fclose(gnuplot);
 }
-
 double example_function( double param, double point )
 {
 	return pow(point,3) - 3*pow(point,2) + (5-param)*point - 2 + param;
 }
 
 void bifurcation_diagram( int param_min, int param_max, double param_step,
-						 int point_min, int point_max, int num_points,
-						 double (*f)(double,double), int num_iter, int tolerancy)
+ int point_min, int point_max, int num_points,
+ double (*f)(double,double), int num_iter, int tolerancy)
 {
 	FILE* file;
 	double param, point;
@@ -52,6 +51,7 @@ void bifurcation_diagram( int param_min, int param_max, double param_step,
 	}
 	plot( "data.dat", "graph.svg" );
 }
+
 int main(int argc, char const *argv[])
 {
 	bifurcation_diagram( 0, 5, 10e-3, 0, 5, 100, &example_function, 100, 10e1);
