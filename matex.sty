@@ -28,7 +28,8 @@
 \RequirePackage{subfiles}
 \RequirePackage{graphicx}
 \RequirePackage{caption}
-\usepackage[final]{pdfpages}
+\RequirePackage[final]{pdfpages}
+\RequirePackage{listings}
 
 
 
@@ -334,14 +335,23 @@
 }
 
 
-\newcommand{\laboratory}[2]
+\newcommand{\laboratory}[1]
 {
-	\addcontentsline{toc}{section}{ $#1$ }
+	\addtocounter{unitCounter}{1}
 
-	$#1$\\
-	#2
+	\renewcommand{\unitName}{ Martin Azpillaga Aldalur }
+	\renewcommand{\blockName}{ Laboratory }
+	\addcontentsline{toc}{chapter}{ $#1$ }
 
-	\newpage
+	\begin{center}
+	{
+		\fbox{ {\bf\Roman{unitCounter}. $#1$} }
+	}
+	\end{center}
+
+	\setlength{\baselineskip}{24pt} % blank space
+	\endlinechar=-1\relax			% ignore breaks
+	\setlength{\parindent}{0cm} 	% no paragraph indentation
 }
 
 
@@ -416,6 +426,10 @@
 }
 
 
+\newcommand{\start}[1]
+{
+	\tabmath{Start}{#1}
+}
 
 
 
@@ -850,9 +864,13 @@
 \newcommand{\includeimage}[1]
 {
 	\centering
-	\includegraphics[width=5cm]{#1.pdf}
+	\includegraphics[width=10cm]{#1.pdf}
 }
 
+\newcommand{\s}
+{
+	\hspace{5pt}
+}
 
 
 
