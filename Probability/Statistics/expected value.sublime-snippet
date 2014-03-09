@@ -1,0 +1,13 @@
+<snippet>
+
+<scope>text.tex.latex</scope>
+<tabTrigger>expected value</tabTrigger>
+<description>.</description>
+
+<content>
+<![CDATA[
+\expectedValue{ ${1:respect} }{ ${2:of} }
+]]>
+</content>
+
+</snippet>
