@@ -11,6 +11,128 @@
 \unit{ $ New $ }
 {
 
+	\proposition{ $ logarithm is holomorphic $ }
+	{
+		\letbe
+		{
+			\function{ log }{ \C \setminus e^{i\alpha}(-\infty,0] }{ B_\alpha }
+		}
+		\holds
+		{
+			log \in \Hc.
+			log' = \frac{ 1 }{ z }
+		}
+		\demonstration
+		{
+			log $ continuous $.
+			\exp( \log( z ) ) = z.
+			\omega = \log( z ).
+			\omega_0 = \log( z_0 ).
+			\exp( \omega ) = z.
+			\exp( \omega_0 ) = z_0.
+			log $ continuous $ \imp w \convergesto w_0 $ if $ z = z_0.
+			\frac{ log(z) - log(z_0) }{ z - z_0 } = \frac{ w- w_0 }{ e^w - e^{w_0} }.
+			 = \limit{ \frac{ 1 }{ \frac{ e^w - e^{w_0} }{ w - w_0 } } }{ w }[ w_0 ] = \frac{ 1 }{ e^{w_0} } = \frac{ 1 }{ z_0 }
+		}
+	}
+	
+	
+	\proposition{ $ Complex Powers $ }
+	{
+		\letbe
+		{
+			z^w = e^{wlog z} = e^{w(log|z| + iarg(z)}
+		}
+		\holds
+		{
+			z^w = \exp( n \log( z ) )
+		}
+		\demonstration
+		{
+			z = \exp( \log( z ) ).
+			z^w = \exp( \log( z ) )^n = \product{ \exp( \log( z ) ) }{ i }[ 1 ][ n ] = \exp( n \log( z ) )
+		}
+	}
+	
+	
+	\example{ $ i powers $ }
+	{
+		\letbe
+		{
+			i \in \C
+		}
+		\is{ i^i }{ $ an infinite value set $ }
+		{
+			\all{ k \in \Z }
+			{
+				i^i = \exp( i \log( i ) )=\exp( i^2(\frac{ \pi }{ 2 } + 2k\pi) ) = \exp( -(\frac{ \pi }{ 2 } + 2k\pi) )
+			}
+			
+		}
+	}
+	
+	
+	\proposition{ $ Different values of powers $ }
+	{
+		\letbe
+		{
+			z,w \in \C
+		}
+		\holds
+		{
+			w \in \Z \imp z^w $ unique $.
+			w = \frac{ p }{ q } \in \Q \imp z^w $ has q values $.
+			w \in \R \setminus \Q \imp z^w $ has infinite values $ 
+		}
+	}
+	
+	
+	\example{ $ Different logarithm definitions $ }
+	{
+		\letbe
+		{
+			\Omega = \C \setminus \set{ (x,y) \in \C \with x < 0, y = 0 }.
+			\Omega_2 = \C \setminus \set{ (x,y) \in \C \with x > 0, y = x }.
+			\Omega_3 = \C \setminus \set{ (x,y) \in \C \with x \in (-1,0), y = 0 } \cup \set{ (x,y) \in \C \with x=-1,y\in(0,\pi) } \cup \set{ (x,y= \in \C \with x > -1, y = \frac{ \pi }{ 2 } }
+		}
+		\study
+		{
+			arg(i),arg(2i) $ in function of $ arg(1)
+		}	
+		\start
+		{
+			arg(1) = 0 \imp arg(i) = \frac{ \pi }{ 2 }.
+			arg(1) = -2\pi \imp arg(i) = \frac{ -3\pi }{ 2 }.
+			arg(i) = \frac{ -3\pi }{ 2 } \imp arg(1) = -2\pi..
+
+			
+			arg(1) = 0 \imp arg(i) = \frac{ -3\pi }{ 2 }.
+			arg(1) = -2\pi \imp arg(\pi) = \frac{ -7\pi }{ 2 }..
+
+			arg(1) = 0 \imp arg(i) = \frac{ \pi }{ 2 }.
+			arg(1) = 0 \imp arg(2i) =\frac{ -3\pi }{ 2 }.
+			arg(i) = \frac{ -3\pi }{ 2 } \imp arg(2i) = \frac{ -7\pi }{ 2 }
+		}
+	}
+	
+	
+	\definition{ $ Simple fraction form $ }
+	{
+		\letbe
+		{
+			f \in \rational( \C )
+		}
+		\name{ $ simple fraction form of $ f }
+		{
+			\summation{ \frac{ a_i }{ (x-a_i) } }{ i }[ 1 ][ r ] = f
+		}
+	}
+	
+	
+	
+	
+	
+	
 	
 
 }
