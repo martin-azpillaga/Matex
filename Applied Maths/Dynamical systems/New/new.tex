@@ -8,7 +8,75 @@
 \unit{ $ New $ }
 {
 	
-		
+	\proposition{ $  $ }
+	{
+		\letbe
+		{
+			|\lambda| < 1 < |\mu|
+		}
+		\holds
+		{
+			A^n = \lambda^n, \mu^n.
+			\all{ (x,y) \in \R^2 }[ y \neq 0 ]
+			{
+				o((x,y)) \convergesto (0,\infty)
+			}.
+			\all{ (x,y) \in \R^2 }[ y = 0 ]
+			{
+				o((x,y)) \convergesto (0,0)
+			}
+		}
+		\demonstration
+		{
+			x_n = \lambda^n x \convergesto 0.
+			y_n = \mu^n y \convergesto \begin{cases} 0 & y = 0 \\ \infty & y \neq 0 \end{cases} 
+		}
+	}
+	
+	
+	\definition{ $ Stable \& Unstable subspaces $ }
+	{
+		\letbe
+		{
+			A \in \Mc_{2\times 2}(\R)
+		}
+		\name{ $ stable subspace of $ A	}
+		{
+			
+		}
+		\name{ $ unstable subspace of $ A }
+		{
+
+		}
+		\denote
+		{
+			E^s, E^u
+		}
+	}
+
+
+	\proposition{ $ abstract $ }
+	{
+		\letbe
+		{
+			A = \lambda, 1 \lambda, 0
+		}
+		\holds
+		{
+			\abs{ \lambda } < 1 \imp o(x,y)\convergesto (0,0).
+			\abs{ \lambda } > 1 \imp o(x,y)\convergesto (\infty,\infty)			
+		}
+		\demonstration
+		{
+			A^n = \lambda^{n-1}( \lambda, n, 0, \lambda ).
+		}
+	}
+	
+	
+	
+	
+	
+	
 	
 }
 
