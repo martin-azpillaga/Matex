@@ -6,4 +6,18 @@
 \newcommand{ \substructure 	}	{ \; < \; }
 \newcommand{ \extends 		}	{ \; | \; }
 \newcommand{\isomorph}{\simeq}
-\newcommand{ \Ker }{ $ Ker$ }
+\newcommand{ \Ker }[1]{ $ Ker$\left( #1 \right) }
+
+% Matrices
+\newcommand{\cell}[1]{ & #1 \let\firstcell\cell }
+\newcommand{\firstcell}[1]{ #1 \let\firstcell\cell }
+\DeclareDocumentCommand{\row}{ >{\SplitList{,}} m }
+{
+	\ProcessList{ #1 }{ \firstcell }\\
+}
+\DeclareDocumentCommand{\mat}{ >{\SplitList{.}} m }
+{
+	\begin{matrix} \ProcessList{ #1 }{\row} \end{matrix}
+}
+\newcommand{\Matrix}[1]{\left(\mat{#1}\right)}
+\newcommand{\Determinant}[1]{\left|\mat{#1}\right|}
