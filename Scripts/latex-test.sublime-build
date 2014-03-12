@@ -15,7 +15,7 @@
 			
 			"sumatrapdf", "$file_base_name.pdf", "-presentation"
 		],
-		"file_regex": "(?s)(^C.*(?:\n).*tex):([0-9]+):",
+		//"file_regex": "(?s)(^C.*(?:\n).*tex):([0-9]+):",
 		"selector": "source.latex"
 	}
 }

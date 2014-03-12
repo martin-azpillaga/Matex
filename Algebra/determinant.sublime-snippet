@@ -1,12 +1,12 @@
 <snippet>
 
 <scope>text.tex.latex</scope>
-<tabTrigger>series</tabTrigger>
+<tabTrigger>determinant</tabTrigger>
 <description>.</description>
 
 <content>
 <![CDATA[
-\summation{ ${1:a_nf_n} }{ n }[ ${2:0} ] ${3:\$ series \$}
+\determinant{ ${1:a,b . c,d } }
 ]]>
 </content>
 
