@@ -1,0 +1,67 @@
+
+\documentclass[../Main/main]{subfiles}
+
+\usepackage{bbold}
+
+\begin{document}
+
+\laboratory{ $ Linear systems $ }
+{
+	\proposition{ $ Real sequences of order 2 $ }{
+	\letbe
+	{
+		p,q \in \R.
+		\all{ a,b \in \R }
+		{
+			\be{ x_0 }{ a }.
+			\be{ x_1 }{ b }.
+			\all{ n \in \N }
+			{
+				\be{x_{n+2}}{ px_{n+1} + q_{x_n}}
+			}
+		}
+		
+	}
+	\study
+	{
+		\limit{ \frac{ x_n }{ x_{n+1} } }{ n }
+	}
+	\start
+	{
+		$Consider:$.
+		A = \Matrix{ p,q.1,0 }.
+		A \Matrix{ x_{n+1} . x_n } = \Matrix{ x_{n+2} . x_{n+1} }.
+		
+		$Eigenvalue analysis:$.
+		\chi_A(t) = t^2 - \trace{ A }t + \det(A) = t^2 - pt - q.
+		\sigma( A ) = \set{ \lambda \in \C \with \chi_A(\lambda) = 0 } = \set{ \frac{ p }{ 2 } }.
+
+		\be{ \lambda }{ \frac{ p }{ 2 } }.
+		E_\lambda(A) = \kernel{ A - \lambda \1 } = \set{ (x,y) \in \R^2 \with ---------- }.
+		\dim(A) = 2 \logicAnd \sigma(A) = \set{ \lambda } \logicAnd \gamma_A(\lambda) = 1 \imp A $ no diagonalizable $.
+
+		$Jordan form:$.
+		\be{ J }{ \Matrix{ \lambda, 1 . 0, \lambda } }.
+		J^n = \Matrix{ \lambda^n, n\lambda^{n-1} . 0, \lambda^n }.
+		\be{ v_2 }{ \Matrix{ 1.0 } }, \s \s\be{ v_1 }{ (A - \lambda \1)v_2 } = \Matrix{ p - \lambda. 1 } = \Matrix{ \lambda. 1 }.
+
+		\be{ C }{ (v_1|v_2) = \Matrix{ \lambda, 1. 1,0 } }.
+		C^{-1} = \Matrix{ a,b.c,d }.
+		A = CJC^{-1} \imp A^n = CJ^nC^{-1} = \Matrix{ 0,1.1,-\lambda }.
+
+		$Sequence analysis:$.
+		\all{ a,b \in \R }
+		{
+			\Matrix{ x_{n+1}.x_n } = A^n \Matrix{ b. a } = \Matrix{ 99.99 }.
+
+			\limit{ \frac{ x_n }{ x_{n+1} } }{ n } = \lambda = \frac{ p }{ 2 }
+		}.
+
+		$Graphical interpretation:$.
+		asdfghjkl
+
+	}}
+}
+
+
+\end{document}
