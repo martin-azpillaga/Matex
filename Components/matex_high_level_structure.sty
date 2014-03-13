@@ -1,0 +1,147 @@
+% High level structures
+
+\newcommand{\definition}[2]
+{
+	\addcontentsline{toc}{section}{ $#1$ }
+
+	\begin{noBreak}
+
+		{\bf $#1$} \\
+		#2
+	
+	\end{noBreak}
+}
+
+
+\newcommand{\proposition}[2]
+{
+	\addcontentsline{toc}{section}{ $#1$ }
+
+	{\bf $#1$} \\
+	#2
+
+	\newpage
+}
+
+
+\newcommand{\example}[2]
+{
+	\addcontentsline{toc}{section}{ $#1$ }
+
+	\begin{noBreak}
+
+		{\bf $#1$} \\
+		#2
+	
+	\end{noBreak}
+}
+
+
+\newcommand{\problem}[2]
+{
+	\addcontentsline{toc}{section}{ $#1$ }
+
+	\begin{noBreak}
+
+		{\bf $#1$} \\
+		#2
+	
+	\end{noBreak}
+}
+
+
+\newcommand{\laboratory}[1]
+{
+	\addtocounter{unitCounter}{1}
+
+	\renewcommand{\unitName}{ Martin Azpillaga Aldalur }
+	\renewcommand{\blockName}{ Laboratory }
+	\addcontentsline{toc}{chapter}{ $#1$ }
+
+	\begin{center}
+	{
+		\fbox{ {\bf\Roman{unitCounter}. $#1$} }
+	}
+	\end{center}
+
+	\setlength{\baselineskip}{24pt} % blank space
+	\endlinechar=-1\relax			% ignore breaks
+	\setlength{\parindent}{0cm} 	% no paragraph indentation
+}
+
+
+\newcommand{\introduction}[1]
+{ 
+	$#1$
+
+	\cleardoublepage
+}
+
+
+
+% High level inner sections
+
+\newcommand{\letbe}[1]
+{
+	\tabtext{Let}{#1}
+}
+
+
+\newcommand{\then}[3]
+{
+	\tabtext{Then, $#1$ is$#2$if}{#3}
+}
+
+
+\newcommand{\name}[2]
+{
+	\tabtext{We name$#1$ to}{#2}
+}
+
+
+\newcommand{\denote}[1]
+{
+	\tabtext{We denote}{#1}
+}
+
+
+\newcommand{\holds}[1]
+{
+	\tabtext{Then, holds}{#1}
+}
+
+
+\newcommand{\demonstration}[1]
+{
+	\tabmath{Demonstration}{#1}
+}
+
+
+\newcommand{\is}[3]
+{
+	\tabmath{Then, $#1$ is $#2$}{#3}
+}
+
+
+\newcommand{\isNot}[3]
+{
+	\tabmath{Then, $#1$ is not $#2$}{#3}
+}
+
+
+\newcommand{\showthat}[1]
+{
+	\tabtext{Show that}{#1}
+}
+
+
+\newcommand{\study}[1]
+{
+	\tabtext{Study}{#1}
+}
+
+
+\newcommand{\start}[1]
+{
+	\tabmath{Start}{#1}
+}

@@ -1,0 +1,27 @@
+%					*** Imaging ***
+
+
+\newcommand{\includeimage}[3]
+{
+	\begin{center}
+	#1
+	\end{center}
+	\centering
+	\includegraphics[width=#2]{#3}
+}
+
+\newcommand{\includecode}[3]
+{
+	\lstset{title=#1,tabsize=2,breaklines=true}
+	\lstinputlisting[language=#2]{#3}
+}
+
+\newcommand{\includepages}[1]
+{
+	\includepdf[pages=-]{#1}
+}
+
+\newcommand{\s}
+{
+	\hspace{5pt}
+}

@@ -1,0 +1,81 @@
+%					*** Structure ***
+
+
+% Title page, table of contents and bibliography
+
+\newcommand{\titlePage}[2]
+{
+	\title{$#1$}
+	\author{$#2$}
+	\maketitle
+}
+
+
+\newcommand{\contents}
+{
+	\tableofcontents
+	\cleardoublepage
+}
+
+
+\bibliographystyle{plain}
+
+
+
+
+
+
+
+% Low level structure
+
+\newcounter{unitCounter}
+\newcounter{blockCounter}[unitCounter]
+
+
+\newcommand{\unitName}{unit name}
+\newcommand{\blockName}{block name}
+
+
+\newcommand{\block}[1]
+{
+	\addtocounter{blockCounter}	{1}
+	\setcounter	 {unitCounter}	{0}
+
+	\renewcommand{\blockName}{ $#1$ }
+	\addcontentsline{toc}{part}{ \Roman{blockCounter} $#1$ }
+
+	\cleardoublepage{}
+	\vspace*{\fill}
+	\begin{center}
+	{
+		\bf \Huge{ Block \Roman{blockCounter} } 
+	}
+	\end{center}
+	\vspace*{1cm}
+	\begin{center}
+	{
+		\bf \Huge{ $#1$ } 
+	}
+	\end{center}
+	\vspace*{\fill}
+}
+
+
+\newcommand{\unit}[1]
+{
+	\addtocounter{unitCounter}{1}
+
+	\renewcommand{\unitName}{ $#1$ }
+	\addcontentsline{toc}{chapter}{ \arabic{unitCounter} $#1$ }
+	
+	\cleartoleftpage{}
+	\begin{center}
+	{
+		\fbox{{ \bf \arabic{unitCounter}. $#1$ }}
+	}
+	\end{center}
+
+	\setlength{\baselineskip}{24pt} % blank space
+	\endlinechar=-1\relax			% ignore breaks
+	\setlength{\parindent}{0cm} 	% no paragraph indentation
+}
