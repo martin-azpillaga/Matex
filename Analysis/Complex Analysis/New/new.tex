@@ -129,6 +129,201 @@
 	}
 	
 	
+	\definition{ $ argument wedge $ }
+	{
+		\letbe
+		{
+			\gamma $ differentiable curve $
+		}
+		\then{ \gamma }{ $ an argument curve $ }
+		{
+			\gamma(0) = 0.
+			\gamma(1) = \infty
+		}
+	}
+	
+	
+	log(f(z))?\\
+
+	\definition{ $ log(f(x)) determination $ }
+	{
+		\letbe
+		{
+			(X,d) $ metric space $.
+			\function{ f }{ X }{ \C \nonzero } $ continuous $.
+			\function{ h }{ X }{ \C }
+		}
+		\then{ h }{ $ a log(f) determination $ }
+		{
+			h $ continuous $.
+			\exp( h(x) ) = f(x).
+			$ h selecciona uno de los posibles valores log(h(x) para cada x de manera continua en x $
+
+		}
+	}
+	
+	
+	\definition{ $ argument determination $ }
+	{
+		\letbe
+		{
+			(X,d) $ metric space $.
+			\function{ f }{ X }{ \C \nonzero } $ continuous $.
+			\function{ a }{ X }{ \R }
+		}
+		\then{ a }{ $ an argument determination $ }
+		{
+			a $ continuous $.
+			|f(x)|\exp( ia(x) ) = f(x)
+		}
+	}
+	
+	
+	\proposition{ $ induced argument/logarithm determination $ }
+	{
+		\letbe
+		{
+			statements.
+		}
+		\holds
+		{
+			log(f(x) = ln|f(x)| + i arg(f(x)).
+			h(x) = ln|f(x)| + ia(x)
+		}
+		\demonstration
+		{
+			demonstration.
+		}
+	}
+	
+	
+	\definition{ $ principal logarithm $ }
+	{
+		\letbe
+		{
+			\function{ log }{ \C \setminus (-\infty,0) }{ \C }
+		}
+		\then{ log }{ $ principal logarithm $ }
+		{
+			log(1) = 0
+		}
+		\denote
+		{
+			property \as notation.
+		}
+	}
+	
+	
+	\definition{ $ principal argument $ }
+	{
+		\letbe
+		{
+			\function{ Arg }{ \C }{ (-\pi,\pi) }
+		}
+		\then{ Arg }{ $ principal argument $ }
+		{
+			Log(z) = ln|z| + i Arg(z)
+		}
+	}
+	
+	
+	\example{ $ identity logarithm determination $ }
+	{
+		\letbe
+		{
+			X = \C \nonzero.
+			f(z) \as z
+		}
+		\holds
+		{
+			\nexists \; log $ logarithm determination over $ X
+		}
+	}
+	
+	
+	\example{ $ exponential logarithm determination $ }
+	{
+		\letbe
+		{
+			X = [0,1].
+			f(x) = \exp( 4\pi i x )
+		}
+		\is{ h(x) = 4i\pi x }{ $ a logarithm determination of $ f $ $ }
+		{
+			h $ continuous over $ X.
+			\exp( 4\pi i x ) = 4\pi i x = f(x)
+		}
+	}
+	
+	
+	\proposition{ $ logarithm determinations over image f $ }
+	{
+		\letbe
+		{
+			statements.
+		}
+		\holds
+		{
+			$exists det of log in Im f $\imp $ exists det log in X $.
+			$exists det log in X $\suchthat $no exists det log in Im f$
+		}
+		\demonstration
+		{
+			demonstration.
+		}
+	}
+	
+	
+	\proposition{ $ two determinations of log f $ }
+	{
+		\letbe
+		{
+			(X,d) $ connex metric space $.
+			\function{ f }{ X }{ \C } $ continuous $.
+			h_1,h_2 $ determination of logarithm of $ f
+		}
+		\holds
+		{
+			\ex{ k \in \N }
+			{
+				h_1 = h_2 + 2k\pi i
+			}
+			
+		}
+		\demonstration
+		{
+			\all{ x \in X }
+			{
+				k(x) = \frac{ h_1(x) - h_2(x) }{ 2\pi i } $ continuous $.
+				k $integer function $.
+				X $connex $ \imp k $ constant $
+			}
+			\be{ k }{ k(x) }
+		}
+	}
+	
+	
+	\proposition{ $ curves have logarithm determination $ }
+	{
+		\letbe
+		{
+			\function{ \gamma }{ [a,b] }{ \C \nonzero } $ continuous curve $
+		}
+		\holds
+		{
+			\ex{ \function{ log }{ \gamma* }{ \C } }
+			{
+				log $ logaithm determination over $ \gamma*
+			}
+		}
+		\demonstration
+		{
+			demonstration.
+		}
+	}
+	
+	
+	
 	
 	
 	
