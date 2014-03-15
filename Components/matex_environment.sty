@@ -1,1 +1,64 @@
-\newcommand{\martin}{judgment}
+
+
+%					*** Environment ***
+
+
+
+% Variables
+
+
+\def \entryMark{\cdot}
+
+\newcounter{indentation}
+\setcounter{indentation}{0}
+
+\newcounter{tabSpace}
+\setcounter{tabSpace}{20}
+
+
+
+% Non lexicographical order writing modes
+
+\DeclareDocumentCommand{\tab}{ m m >{\SplitList{.}} m }
+{
+	\def \entryMark { #1 }
+	#2:
+	\addtocounter{indentation}{ \value{tabSpace} }
+	\ProcessList{ #3 }{ \entry }
+	\addtocounter{indentation}{ -\value{tabSpace} }
+}
+
+
+\newcommand{\entry}[1]
+{
+	\\
+	\hspace*{\value{indentation}pt}
+	\begin{math}
+		\entryMark \; #1
+	\end{math}
+}
+
+
+% Page Layout 
+
+\pagestyle{fancy}
+
+\fancyhead[RO,LE]{\thepage}
+\fancyhead[RE]{\arabic{unitCounter} \unitName }
+\fancyhead[LO]{\Roman{blockCounter} \blockName }
+
+\fancyfoot[C]{\thepage}
+
+
+
+\newenvironment{noBreak}
+  {\par\nobreak\vfil\penalty0\vfilneg
+   \vtop\bgroup}
+  {\par\xdef\tpd{\the\prevdepth}\egroup
+   \prevdepth=\tpd}
+
+
+
+
+
+
