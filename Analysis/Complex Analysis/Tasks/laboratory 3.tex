@@ -7,33 +7,94 @@
 
 \laboratory{ $Logarithm determinations$ }
 {
-	\proposition{ $ Logarithm determinations $ }
+	\proposition{ $ Martin Azpillaga $ }
 	{
 		\letbe
 		{
-			\definedFunction{ log }{ \C \setminus (-\infty,0] }{ \C }{ 1 }{ 4\pi i } $ logarithm determination $.
-			\definedFunction{  f  }{ \C \setminus [1,\infty) }{ \C }{ z }{ -log(2-2z) }
+			\definedFunction{ log }{ \mathbb{\C} \setminus (-\infty,0] }{ \mathbb{\C} }{ 1 }{ 4\pi i } $ logarithm determination $.
+			\definedFunction{  f  }{ \mathbb{\C} \setminus [1,\infty) }{ \mathbb{\C} }{ z }{ -log(2-2z) }.
+			\all{ z \in \D(\frac{ 1 }{ 2 },\frac{ 1 }{ 2 }) }
+			{
+				S(z) = \summation{ \frac{ (2z-1)^n }{ n } }{ n }[ 1 ]
+			}
 		}
 		\holds
 		{
-			f \in \Hc( \C \setminus [1,\infty) )
+			f \in \Hc( \mathbb{\C} \setminus [1,\infty) ).
+			f = S + 4\pi i $ over $ \D(\frac{ 1 }{ 2 },\frac{ 1 }{ 2 })
 		}
 		\demonstration
 		{
-			\definedFunction{ g }{ \C \setminus [1,\infty) }{ \C \setminus (-\infty,0] }{ z }{ 2-2z }.
+			\definedFunction{ g }{ \mathbb{\C} \setminus [1,\infty) }{ \mathbb{\C} \setminus (-\infty,0] }{ z }{ 2-2z }.
 
 			g $ well defined $:.
 
-			\all{ z \in \C \setminus [1,\infty) }[Im(g(z)) = 0 ]
+			\all{ z \in \mathbb{\C} \setminus [1,\infty) }[Im(g(z)) = 0 ]
 			{
 				Im(2-2z) = 0 \imp -2Im(z) = 0 \imp Im(z) = 0 \imp Re(z) < 1.
 				Re(g(z)) = Re(2-2z) = 2 -2Re(z) > 0
 			}.
-			g \in \polynomial( \C \setminus [1,\infty) ) \imp g \in \Hc( \C \setminus [1,\infty) ).
+			g \in \polynomial( \mathbb{\C} \setminus [1,\infty) ) \imp g \in \Hc( \mathbb{\C} \setminus [1,\infty) ).
 
-			log \in \Hc( \C \setminus (-\infty,0] ).
+			log \in \Hc( \mathbb{\C} \setminus (-\infty,0] ).
 
-			f = -log \circ g \in \Hc( \C \setminus [1,\infty) )
+			f = -log \circ g \in \Hc( \mathbb{\C} \setminus [1,\infty) ).
+
+			$In particular$:.
+
+			log(1) = 4\pi i \imp ln(1) + i arg(1) = 4\pi i \imp arg(1) = 4\pi i.
+
+			f(0) = -log(2) = -ln(\abs{ 2 }) - i\arg(2) = -ln(2) - i\arg(1) = -ln(2) - 4\pi i.
+			f(-i) = -log(2+2i) = -ln(\abs{ 2+2i }) -i\arg( 2 + 2i) = -ln(\sqrt{ 8 }) -i(\arg(1) + \frac{ \pi }{ 2 }) = -ln(\sqrt{ 8 }) - i(\frac{ 17\pi }{ 4 })..
+
+			S $ well defined:$.
+			\summation{ \frac{ (2z-1)^n }{ n } }{ n }[ 1 ] = \summation{ \frac{ 2^n(z- \frac{ 1 }{ 2 })^n }{ n } }{ n }[ 1 ].
+
+			\limit{ \frac{ \frac{ 2^{n+1} }{ n+1 } }{ \frac{ 2^{n} }{ n } } }{ n } = \limit{ \frac{ 2(n+1) }{ n } }{ n } = 2.
+
+			$Quotient test:$.
+
+			\limit{ (\frac{ 2^n }{ n })^{-\frac{ 1 }{ n }} }{ n } = 2^{-1} = \frac{ 1 }{ 2 }.
+
+			$Cauchy-Hadamard theorem:$.
+
+			S(z) $ convergent over $ \D(\frac{ 1 }{ 2 },\frac{ 1 }{ 2 }).
+
+			$Sum of $ S:.
+
+			\be{ x }{ z- \frac{ 1 }{ 2 } }.
+
+			\summation{ \frac{ (2z-1)^n }{ n } }{ n }[ 1 ] = \summation{ \frac{ 2^nx^n }{ n } }{ n }[ 1 ] = \summation{ \frac{ (2x)^n }{ n } }{ n }[ 1 ].
+
+			$UCD theorem$:.
+
+			S'(z) = \summation{ 2^nx^{n-1} }{ n }[ 1 ] = 2\summation{ (2x)^{n-1} }{ n }[ 1 ] = \frac{ 2 }{ 1-2x }.
+
+			S \in \int \frac{ 2 }{ 1-2x } dx = \family*{ \definedFunction{ f_c }{ \D(\frac{ 1 }{ 2 },\frac{ 1 }{ 2 } }{ \mathbb{\C} }{ x }{ -log(1-2x)+c } }{ c \in \mathbb{\C} }.
+
+			S(0) = 0 \imp S = -log(1-2x) = -log(2-2z).
+
+			\D(\frac{ 1 }{ 2 },\frac{ 1 }{ 2 }) \cap \mathbb{\C} \setminus (-\infty,0] = \emptyset \imp S(z) = Log(2-2z)..
+
+			$log and Log relationship:$.
+
+			log, Log $ well defined over $ \mathbb{\C} \setminus (-\infty,0].
+
+			\all{ z \in \mathbb{\C} \setminus (-\infty,0]}
+			{
+				log(z) - Log(z) = ln(z) + i arg(z) - ln(z) -iArg(z) = i(arg(z) -Arg(z))=.
+				= i((Arg(z)+arg(1))- Arg(z)) = 4\pi i.
+
+				log(z) = Log(z) + 4 \pi i
+			}.
+
+			\all{ z \in \D(\frac{ 1 }{ 2 },\frac{ 1 }{ 2 }) }
+			{
+				S(z) - f(z) = -Log(2-2z) + log(2-2z) = 4 \pi i.
+
+				S(z) = f(z) + 4\pi i
+			}
+
 		}
 	}
 }
