@@ -1,29 +1,41 @@
 
-\documentclass[../Main/main]{subfiles}
+\documentclass{book}
 
+\usepackage{matex}
 
 \begin{document}
 
-\laboratory{ $ Complex logarithm $ }
+\laboratory{ $Logarithm determinations$ }
 {
-	\proposition{ $ holomorphisms with different definitions $ }
+	\proposition{ $ Logarithm determinations $ }
 	{
 		\letbe
 		{
-			\definedFunction{ \bar{log} }{ \C \setminus \set{ z \in \C \with Re(z) < 0, Im(z) = 0 } }{ \C }{ z }{ log(z) + 4\pi i }
+			\definedFunction{ log }{ \C \setminus (-\infty,0] }{ \C }{ 1 }{ 4\pi i } $ logarithm determination $.
+			\definedFunction{  f  }{ \C \setminus [1,\infty) }{ \C }{ z }{ -log(2-2z) }
 		}
-		\showthat
+		\holds
 		{
-			\bar{log} \in \Hc(\C \setminus \set{ z \in \C \with Re(z) < 0, Im(z) = 0 }).
-			$series expansion of $ \bar{log}
+			f \in \Hc( \C \setminus [1,\infty) )
 		}
 		\demonstration
 		{
-			
+			\definedFunction{ g }{ \C \setminus [1,\infty) }{ \C \setminus (-\infty,0] }{ z }{ 2-2z }.
+
+			g $ well defined $:.
+
+			\all{ z \in \C \setminus [1,\infty) }[Im(g(z)) = 0 ]
+			{
+				Im(2-2z) = 0 \imp -2Im(z) = 0 \imp Im(z) = 0 \imp Re(z) < 1.
+				Re(g(z)) = Re(2-2z) = 2 -2Re(z) > 0
+			}.
+			g \in \polynomial( \C \setminus [1,\infty) ) \imp g \in \Hc( \C \setminus [1,\infty) ).
+
+			log \in \Hc( \C \setminus (-\infty,0] ).
+
+			f = -log \circ g \in \Hc( \C \setminus [1,\infty) )
 		}
 	}
-	
-
 }
 
 
