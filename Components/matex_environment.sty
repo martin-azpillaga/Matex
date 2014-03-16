@@ -26,8 +26,8 @@
 	\addtocounter{indentation}{ \value{tabSpace} }
 	\ProcessList{ #3 }{ \entry }
 	\addtocounter{indentation}{ -\value{tabSpace} }
+	\\
 }
-
 
 \newcommand{\entry}[1]
 {
@@ -37,6 +37,31 @@
 		\entryMark \; #1
 	\end{math}
 }
+
+
+
+\DeclareDocumentCommand{\mat}{ >{\SplitList{.}} m }
+{
+	\begin{matrix} \ProcessList{ #1 }{ \row } \end{matrix}
+}
+
+\DeclareDocumentCommand{\row}{ >{\SplitList{,}} m }
+{
+	\ProcessList{ #1 }{ \firstcell }\\
+}
+
+\newcommand{\firstcell}[1]{ #1 \let\firstcell\cell }
+\newcommand{\cell}[1]{ & #1 \let\firstcell\cell }
+
+
+\newenvironment{noBreak}
+{
+	\par\nobreak\vfil\penalty0\vfilneg\vtop\bgroup
+}
+{
+	\par\xdef\tpd{\the\prevdepth}\egroup\prevdepth=\tpd
+}
+
 
 
 % Page Layout 
@@ -49,13 +74,6 @@
 
 \fancyfoot[C]{\thepage}
 
-
-
-\newenvironment{noBreak}
-  {\par\nobreak\vfil\penalty0\vfilneg
-   \vtop\bgroup}
-  {\par\xdef\tpd{\the\prevdepth}\egroup
-   \prevdepth=\tpd}
 
 
 

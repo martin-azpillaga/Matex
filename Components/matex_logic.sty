@@ -8,11 +8,11 @@
 	\IfValueTF{#2}%
 	{%
 		\end{math}%
-			\tabmath{$\forall \; #1 \suchthat #2$ }{ #3 }%
+			\tab{\hbox{}}{$\forall \; #1 \suchthat #2$ }{ #3 }%
 		\begin{math}%
 	}{%
 		\end{math}%
-			\tabmath{$\forall \; #1$ }{ #3 }% 
+			\tab{\hbox{}}{$\forall \; #1$ }{ #3 }% 
 		\begin{math}%
 	}%
 }%
@@ -20,7 +20,7 @@
 \DeclareDocumentCommand{ \ex }{ m m }
 {
 	\end{math}
-	\tabmath{$\exists \; #1$ }{ #2 }
+	\tab{\hbox{}}{$\exists \; #1$ }{ #2 }
 	\begin{math}
 }
 

@@ -79,3 +79,10 @@
 	\endlinechar=-1\relax			% ignore breaks
 	\setlength{\parindent}{0cm} 	% no paragraph indentation
 }
+
+\newcommand{\cleartoleftpage}
+{
+  \clearpage
+  \ifodd\value{page}
+  \hbox{}\newpage\fi
+}
