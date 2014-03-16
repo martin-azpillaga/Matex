@@ -1,5 +1,5 @@
 
-\documentclass{book}
+\documentclass[12pt]{book}
 
 \usepackage{matex}
 
@@ -7,6 +7,7 @@
 
 \laboratory{ $Logarithm determinations$ }
 {
+	\baselineskip=35pt
 	\proposition{ $ Martin Azpillaga $ }
 	{
 		\letbe
@@ -70,12 +71,12 @@
 
 			S'(z) = \summation{ 2^nx^{n-1} }{ n }[ 1 ] = 2\summation{ (2x)^{n-1} }{ n }[ 1 ] = \frac{ 2 }{ 1-2x }.
 
-			S \in \int \frac{ 2 }{ 1-2x } dx = \family*{ \definedFunction{ f_c }{ \D(\frac{ 1 }{ 2 },\frac{ 1 }{ 2 } }{ \mathbb{\C} }{ x }{ -log(1-2x)+c } }{ c \in \mathbb{\C} }.
+			S \in \int \frac{ 2 }{ 1-2x } dx = \family*{ -log(1-2x)+c }{ c \in \mathbb{\C} }.
 
 			S(0) = 0 \imp S = -log(1-2x) = -log(2-2z).
 
-			\D(\frac{ 1 }{ 2 },\frac{ 1 }{ 2 }) \cap \mathbb{\C} \setminus (-\infty,0] = \emptyset \imp S(z) = Log(2-2z)..
-
+			\D(\frac{ 1 }{ 2 },\frac{ 1 }{ 2 }) \cap \mathbb{\C} \setminus (-\infty,0] = \emptyset \imp S(z) = -Log(2-2z).
+			
 			$log and Log relationship:$.
 
 			log, Log $ well defined over $ \mathbb{\C} \setminus (-\infty,0].
@@ -90,7 +91,9 @@
 
 			\all{ z \in \D(\frac{ 1 }{ 2 },\frac{ 1 }{ 2 }) }
 			{
-				S(z) - f(z) = -Log(2-2z) + log(2-2z) = 4 \pi i.
+				S(z) - f(z) = -Log(2-2z) + log(2-2z) = i(arg(2-2z) - Arg(z)).
+
+				z \in \C \setminus (-\infty,0] \imp S(z) - f(z) = 4 \pi i.
 
 				S(z) = f(z) + 4\pi i
 			}
