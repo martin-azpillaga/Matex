@@ -1,0 +1,57 @@
+\contentsline {part}{ I $ $ Definitions $ $ }{5}
+\contentsline {chapter}{ 1 $ $ Discrete dynamical systems $ $ }{5}
+\contentsline {section}{ $ $ Dynamical system $ $ }{6}
+\contentsline {section}{ $ $ Dimension $ $ }{6}
+\contentsline {section}{ $ $ Discrete \& Continuous$ $ }{6}
+\contentsline {section}{ $ $ Defined by a function $ $ }{7}
+\contentsline {section}{ $ $ Orbit $ $ }{7}
+\contentsline {section}{ $ $ Periodicity $ $ }{8}
+\contentsline {section}{ $ $ Stability $ $ }{8}
+\contentsline {section}{ $ $ Attractive \& Repulsive $ $ }{9}
+\contentsline {section}{ $ $ Fixed point character $ $ }{10}
+\contentsline {section}{ $ $ Attraction set $ $ }{11}
+\contentsline {section}{ $ $ Multiplier $ $ }{11}
+\contentsline {section}{ $ $ Feeble point$ $ }{12}
+\contentsline {section}{ $ $ Sarkovskii's order $ $ }{12}
+\contentsline {section}{ $ $ Chaos $ $ }{13}
+\contentsline {section}{ $ $ Topological equivalence $ $ }{13}
+\contentsline {section}{ $ $ Bifurcation $ $ }{14}
+\contentsline {section}{ $ $ Saddle-node bifurcation $ $ }{14}
+\contentsline {section}{ $ $ Pitchfork bifurcation $ $ }{15}
+\contentsline {section}{ $ $ Period doubling bifurcation $ $ }{16}
+\contentsline {section}{ $ $ Invariant curve $ $ }{17}
+\contentsline {chapter}{ 2 $ $ 2-D linear dynamical systems $ $ }{17}
+\contentsline {section}{ $ $ Linear system $ $ }{18}
+\contentsline {section}{ $ $ Multiplier $ $ }{18}
+\contentsline {part}{ II $ $ Propositions $ $ }{18}
+\contentsline {chapter}{ 1 $ $ Discrete dynamical systems $ $ }{19}
+\contentsline {section}{ $ $ Fixed points theorem $ $ }{21}
+\contentsline {section}{ $ $ Attractiveness of periodic points does not involve the chosen point $ $ }{22}
+\contentsline {section}{ $ $ Partition of attraction set $ $ }{23}
+\contentsline {section}{ $ $ Homeomorphisms are monotonous $ $ }{24}
+\contentsline {section}{ $ $ Homeomorphisms and n-periodic points $ $ }{25}
+\contentsline {section}{ $ $ Sarkovskii's theorem $ $ }{26}
+\contentsline {section}{ $ $ Invariance of stability over periods $ $ }{27}
+\contentsline {chapter}{ 2 $ $ 2-D linear dynamical systems $ $ }{28}
+\contentsline {section}{ $ $ Invariance of stability over orbits $ $ }{28}
+\contentsline {section}{ $ $ Linear property $ $ }{30}
+\contentsline {section}{ $ $ Fixed points of linear applications $ $ }{31}
+\contentsline {section}{ $ $ Jordan form of 2-D real linear maps $ $ }{32}
+\contentsline {section}{ $ $ Topology of 2-D real linear maps $ $ }{33}
+\contentsline {part}{ III $ $ Examples $ $ }{34}
+\contentsline {chapter}{ 1 $ $ One-dimensional discrete dynamical systems $ $ }{35}
+\contentsline {section}{ $ $ logistic function $ $ }{37}
+\contentsline {section}{ $ $ Quadratic function $ $ }{37}
+\contentsline {section}{ $ $ Henon's application $ $ }{37}
+\contentsline {part}{ IV $ $ Problems $ $ }{38}
+\contentsline {chapter}{ 1 $ $ One-dimensional discrete dynamical system $ $ }{41}
+\contentsline {section}{ $ $ Decreasing function orbits $ $ }{43}
+\contentsline {section}{ $ $ 9. Periodic points $ $ }{43}
+\contentsline {section}{ $ $ 10. Global orbit analysis $ $ }{44}
+\contentsline {part}{ V $ $ Laboratory $ $ }{46}
+\contentsline {chapter}{ 1 $ $ Fixed points cardinality $ $ }{47}
+\contentsline {chapter}{ $ $ Martin Azpillaga $ $ }{48}
+\contentsline {chapter}{ $ $ Bifurcation Theory $ $ }{49}
+\contentsline {section}{ $ $ Bifurcation diagram $ $ }{49}
+\contentsline {chapter}{ $ $ Linear maps $ $ }{54}
+\contentsline {section}{ $ $ Real sequence of order 2 $ $ }{54}
