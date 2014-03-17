@@ -284,6 +284,205 @@
 	}
 	
 	
+	\proposition{ $ Stable manifold theorem $ }
+	{
+		\letbe
+		{
+			\Uc \subset \R^n $ open $.
+			\function{ f }{ \Uc }{ \R^n } \in \Cc^r(\Uc).
+			p \in \R^2 $ sella fixed point $
+		}
+		\holds
+		{
+			\ex{ \function{ \gamma }{ [a,b] }{ \R^2 } \in \Cc^r([a,b]) }
+			{
+				\gamma(0) = p.
+				\gamma'(0) \neq 0.
+
+				\all{ i \in \indexes{ 1 }{ r } }
+				{
+					Df^r(p) = \gamma^r(0)
+				}
+
+				W^s(p) $ tangent $ W^s(p).
+				W^u(p) $ tangent $ E^u(p)
+			}
+		}
+		\demonstration
+		{
+			$ no demonstration $
+		}
+	}
+	
+	
+	\example{ $ 45. Stability of periodic points $ }
+	{
+		\letbe
+		{
+			\definedFunction{ f }{ \R^2 }{ \R^2 }{ (x,y) }{ (2x+y^2 - 2, x^2 -x -y^3) }
+		}
+		\study
+		{
+			$Stability of $ \fixed( f )
+		}
+		\start
+		{
+			f(1,1) = (2+1-2,1-1-1) = (1,-1).
+
+			f(1,-1) = (2+1-2,1-1+1) = (1,1).
+
+			(1,1) $ period $ 2 $ point $.
+
+			Df(x,y) = \Matrix{ 2,2y. 2x-1,-3y^2 }.
+
+			Df^2(1,1) = \Matrix{ 2,10,-1,11 } \neq Df^2(1,-1).
+
+			\chi_A(t) = t^2 - 13t + 32.
+
+			\sigma(A) = \set{ 3,29---, 9,70--- }.
+
+			\all{ \lambda \in \sigma(A) }
+			{
+				\abs{ \lambda } > 1
+			}.
+
+			$Stability theorem$:
+
+			(1,1) $ repulsive $
+		}
+	}
+	
+	
+	\example{ $ 46. Explicit solution of non-linear applications $ }
+	{
+		\letbe
+		{
+			\definedFunction{ f }{ \R^2 }{ \R^2 }{ (x,y) }{ (2x-y^3,1/2y) }
+		}
+		\holds
+		{
+			\Matrix{ 2x-y = t. 1/2y = s } $ determinated system $ \imp f $ inyective $.
+
+			$Suppose$ (x_{n+1},y_{n+1}) = (2^n(2x_0-y_0^3 - ... - \frac{ 1 }{ 4^{2n} }y_0^3), \frac{ 1 }{ 2^{n+1} }y_0).
+
+			\induction{ n }
+			{
+				n = 1.
+
+				(x_1,y_1) = (2^0(2x_0-y_0^3), 1/2 y^0) $ok$.
+
+				\all{ n \in \N }
+				{
+					$ Suppose true for $ n.
+
+					(x_{n+1},y_{n+1}) = f(x_n,y_n) $ok$
+				}
+			}..
+
+			\be{ C }{ \set{ (x,y) \in \R^2 \with x = \frac{ 8 }{ 15 }y^3 } }.
+
+			c $ stable manifold of the origin $.
+
+			\all{ (x,y) \in C }
+			{
+				\all{ n \in \N }
+				{
+					(x_n,y_n) \in C.
+					$calculus----$.
+				}.
+
+				o(x,y) \convergesto (0,0).
+
+				y_{n+1} = \frac{ 1 }{ 2^{n+1} }y_0 \convergesto 0.
+
+				x_{n+1} = \frac{ 8 }{ 15 }y_{n+1}^3 \convergesto 0.
+
+			}
+
+			f $ inyective $ \imp \all{ (x,y) \in \C }
+			{
+				f^{-1}(x,y) \in C
+			}.
+
+			C $ is The invariant manifold over the origin $
+		}
+	}
+	
+
+	\definition{ $ Contractive application $ }
+	{
+		\letbe
+		{
+			statements.
+		}
+		\then{ item }{ $ a/an entity $ }
+		{
+			conditions.
+		}
+		\denote
+		{
+			property \as notation.
+		}
+	}
+	
+	
+	
+	
+	\proposition{ $ Fixed point theorem $ }
+	{
+		\letbe
+		{
+			\Uc \subset \R^n $ closed $.
+			\function{ f }{ \Uc }{ \Uc } \lambda-$contractive$
+		}
+		\holds
+		{
+			\fixed( f ) = \{ p \}.
+			p $ global attractive fixed point $.
+			a.
+			b		
+		}
+		\demonstration
+		{
+			\all{ x \in \Uc }
+			{
+				\be{ x_n }{ f^n(x) }
+			}.
+
+			f $ contractive $ \imp ||x_n - y_n|| \leq \lambda^n||x_0-y_0||.
+
+			$In particular:$.
+
+			y = f(x) = x_1 \imp ||x_n - x_{n+1}|| \leq \lambda^n||x_0-x_1||.
+
+			\sequence{ x_n }{ n } $ Cauchy sequence $.
+
+			\sequence{ x_n }{ n } \subset \R^n, \R^n $ complete $ \imp \sequence{ x_n }{ n } $ convergent $.
+
+			f $ contractive $ \imp f $ continuous$.
+
+			f(p) = f(\limit{ x_n }{ n }) = \limit{ f(x_n) }{ n } = \limit{ x_{n+1} }{ n } = p.
+
+			p $ fixed point $.
+
+			\all{ p,q \in \Uc }[ p,q $ fixed points $ ]
+			{
+				||f^n(p) - f^n(q)|| \leq \lambda^n||p-q|| \convergesto 0.
+
+				||p-q|| \convergesto 0.
+
+				$absurd$
+			}.
+
+			\all{ x \in \R^n }
+			{
+				||f^n(x) - p || = ||f^n(x)-f^n(p)|| \leq \lambda^n||x-p|| \convergesto 0
+			}
+		}
+	}
+	
+	
+	
 	
 	
 	
