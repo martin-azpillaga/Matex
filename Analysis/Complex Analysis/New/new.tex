@@ -550,6 +550,176 @@
 	
 	
 	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	\problem{ $ 9.Root determination $ }
+	{
+		\letbe
+		{
+			\definedFunction{ \sqrt{ - } }{ \C \setminus [0,\infty) }{ \C }{ -1 }{ i }.
+			\definedFunction{ f }{ \C \setminus [0,\infty) }{ \C }{ z }{ \sqrt{ 3z + 2 } }
+		}
+		\showthat
+		{
+			$express$ \sqrt{ - } $ in terms of $ log $ and $ \arg
+		}
+		\demonstration
+		{
+			z^w = \exp( w \log( z ) ) = \exp( w(ln|z|+i\arg(z) ).
+
+			z^{\frac{ 1 }{ 2 }) = \exp( \frac{ 1 }{ 2 }(ln|z|+i\arg(z)) ).
+
+			\sqrt{ -1 } = i \imp \exp( \frac{ 1 }{ 2 }(ln|-1|+iarg(-1) ) = -i \imp arg(-1) = \frac{ \pi }{ 2 }?.
+
+			arg(z) \in (0,2\pi),(4\pi,6\pi)---.
+
+			$la raiz divide el argumento por dos$.
+
+			arg(z) \in (0,2\pi) \imp arg(\sqrt{ z }) \in (0,\pi)..
+
+
+			w = 3z + 2 \imp z = \frac{ w-2 }{ 3 }.
+
+			\C \setminus [0,\infty) \imp \C [-2,\infty) \imp \C [-\frac{ 2 }{ 3 },\infty).
+
+			f $ defined over $ \C \setminus [-\frac{ 2 }{ 3 },\infty).
+
+			\im( f ) = \set{ z \in \C \with Im z > 0 }.
+
+			f(\frac{ i-2 }{ 3 }) = \sqrt{ i } = \sqrt{ \abs{ i } }\exp( \frac{ 1 }{ 2 }arg(i) ) = \exp( i \frac{ \pi }{ 4 } = \frac{ \sqrt{ 2 } }{ 2 }(1+i) )
+		}
+	}
+	
+	
+	\proposition{ $ Calculus fundamental theorem $ }
+	{
+		\letbe
+		{
+			\function{ \gamma }{ [a,b] }{ \C } $ open curve $.
+			\Omega \subset \C $ open $ \suchthat \gamma^* \subset \Omega.
+			\function{ f }{ \Omega }{ \C }
+		}
+		\holds
+		{
+			\all{ \function{ F }{ \Omega }{ \C } }[ F' = f ]
+			{
+				\integral{ f(z) }{ dz }{ \gamma } = F(\gamma(b))-F(\gamma(a))
+			}
+		}
+		\demonstration
+		{
+			$be $F(\gamma(t)) = g(t) = u(t) +iv(t).
+			F'(\gamma(t)) = g'(t) = u'(t) + iv'(t).
+			\integral{ f(z) }{ dz }{ \gamma } = \integral{ f(\gamma(t) \gamma'(t) }{ dt }{ a }[ b ] = \integral{ F'(\gamma(t))\gamma'(t) }{ dt }{ a }[ b ].
+
+			= \integral{ u'(t) }{ dt }{ a }[ b ] + i \integral{ v'(t) }{ dt }{ a }[ b ].
+
+			$CFT over $ \R.
+
+			= u(b) - u(a) + i(v(b)-v(a)) = F(\gamma(b)) - F(\gamma(a))
+		}
+	}
+	
+	
+	\example{ $ polynomial integrals $ }
+	{
+		\letbe
+		{
+			n \in \Z
+			\definedFunction{ f }{ \C }{ \C }{ z }{ z^n }.
+			a,b \in \C
+		}
+		\holds
+		{
+			\all{ \function{ \gamma }{ [a,b] }{ \C } $ curve $ }
+			{
+				\definedFunction{ F }{ \C }{ \C }{ z }{ \frac{z^{n+1}}{n+1} }.
+
+				F \in \Hc(\C).
+
+				\integral{ f(z) }{ dz }{ \gamma } = F(b) - F(a)
+			}
+		}
+	}
+	
+	
+	\example{ $ logarithm primitive $ }
+	{
+		\letbe
+		{
+			\definedFunction{ f }{ \C \nonzero }{ \C }{ z }{ \frac{ 1 }{ z } }
+		}
+		\holds
+		{
+			\ex{ a,b \in \C }
+			{
+				\ex{ \function{ \gamma_1,\gamma_2 }{ [a,b] }{ \C } $ curve $ }
+				{
+					\integral{ f(z) }{ dz }{ \gamma_1 } \neq \integral{ f(z) }{ dz }{ \gamma_2 }
+				}
+			}
+		}
+	}
+	
+	
+	
+	
+
+
+
+
+
+
+
+
+
+
+
 	
 	
 	
