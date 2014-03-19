@@ -29,6 +29,15 @@
 	\\
 }
 
+\DeclareDocumentCommand{\tabb}{ m m >{\SplitList{.}} m }
+{
+	\def \entryMark { #1 }
+	#2:
+	\addtocounter{indentation}{ \value{tabSpace} }
+	\ProcessList{ #3 }{ \entry }
+	\addtocounter{indentation}{ -\value{tabSpace} }
+}
+
 \newcommand{\entry}[1]
 {
 	\\
