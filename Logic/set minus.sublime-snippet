@@ -1,0 +1,13 @@
+<snippet>
+
+<scope>text.tex.latex</scope>
+<tabTrigger>set minus</tabTrigger>
+<description>.</description>
+
+<content>
+<![CDATA[
+\setminus
+]]>
+</content>
+
+</snippet>
