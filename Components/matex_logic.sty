@@ -7,9 +7,11 @@
 {%
 	\IfValueTF{#2}%
 	{%
-		\end{math}%
-			\tabb{\hbox{}}{$\forall \; #1 \suchthat #2$ }{ #3 }%
-		\begin{math}%
+		\text{
+			\parbox{100em}{
+				\tabb{\hbox{}}{$\forall \; #1 \suchthat #2$ }{ #3 }%
+			}
+		}
 	}{%
 		\end{math}%
 			\tabb{\hbox{}}{$\forall \; #1$ }{ #3 }% 
