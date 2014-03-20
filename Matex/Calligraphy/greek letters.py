@@ -12,7 +12,7 @@ def main():
     for letter in lowercase:
         
         f = open( letter + ".sublime-snippet" ,"w" )
-        f.write("<snippet>\n\n<scope>text.tex.latex</scope>\n<tabTrigger>"+letter+"</tabTrigger>\n<description>.</description>\n\n<content>\n<![CDATA[\n\\"+letter+" \n]]>\n</content>\n\n</snippet>")
+        f.write("<snippet>\n\n<scope>text.tex.latex</scope>\n<tabTrigger>"+letter+"</tabTrigger>\n<description>.</description>\n\n<content>\n<![CDATA[\n\\"+letter+"\n]]>\n</content>\n\n</snippet>")
         f.close()
     for letter in uppercase:
         
