@@ -1,0 +1,13 @@
+<snippet>
+
+<scope>text.tex.latex</scope>
+<tabTrigger>Theta</tabTrigger>
+<description>.</description>
+
+<content>
+<![CDATA[
+\Theta 
+]]>
+</content>
+
+</snippet>

@@ -1,0 +1,13 @@
+<snippet>
+
+<scope>text.tex.latex</scope>
+<tabTrigger>nu</tabTrigger>
+<description>.</description>
+
+<content>
+<![CDATA[
+\nu 
+]]>
+</content>
+
+</snippet>

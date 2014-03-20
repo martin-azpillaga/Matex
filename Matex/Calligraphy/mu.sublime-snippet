@@ -1,0 +1,13 @@
+<snippet>
+
+<scope>text.tex.latex</scope>
+<tabTrigger>mu</tabTrigger>
+<description>.</description>
+
+<content>
+<![CDATA[
+\mu 
+]]>
+</content>
+
+</snippet>

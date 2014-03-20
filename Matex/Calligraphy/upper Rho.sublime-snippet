@@ -1,0 +1,13 @@
+<snippet>
+
+<scope>text.tex.latex</scope>
+<tabTrigger>Rho</tabTrigger>
+<description>.</description>
+
+<content>
+<![CDATA[
+\Rho 
+]]>
+</content>
+
+</snippet>
