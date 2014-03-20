@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2013.11.22)  17 MAR 2014 02:42
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2013.11.22)  20 MAR 2014 22:59
 entering extended mode
 **C:/Users/MnM/Documents/Matex*Projects/Analysis/Complex*Analysis/New/new.tex
 ("C:/Users/MnM/Documents/Matex Projects/Analysis/Complex Analysis/New/new.tex"
@@ -542,13 +542,16 @@ File: lstmisc.sty 2014/03/04 1.5c (Carsten Heinz)
 File: listings.cfg 2014/03/04 1.5c listings configuration
 ))
 Package: listings 2014/03/04 1.5c (Carsten Heinz)
-(C:\Users\MnM\AppData\Roaming\MiKTeX\2.9\tex\latex\bbold\bbold.sty
-Package: bbold 1994/04/06 Bbold symbol package
-LaTeX Font Info:    Redeclaring math alphabet \mathbb on input line 42.
-) ("C:\Program Files\MiKTeX 2.9\tex\latex\matex\Math Fields\matex_algebra.sty")
-("C:\Program Files\MiKTeX 2.9\tex\latex\matex\Math Fields\matex_geometry.sty") 
-("C:\Program Files\MiKTeX 2.9\tex\latex\matex\Math Fields\matex_topology.sty") 
-("C:\Program Files\MiKTeX 2.9\tex\latex\matex\Math Fields\matex_analysis.sty"
+(C:\Users\MnM\AppData\Roaming\MiKTeX\2.9\tex\latex\dstroke\dsfont.sty
+Package: dsfont 1995/08/01 v0.1 Double stroke roman fonts
+) (C:\Users\MnM\AppData\Roaming\MiKTeX\2.9\tex\latex\xifthen\xifthen.sty
+Package: xifthen 2009/04/17 v1.3 Extended ifthen features
+(C:\Users\MnM\AppData\Roaming\MiKTeX\2.9\tex\latex\ifmtarg\ifmtarg.sty
+Package: ifmtarg 2009/09/02 v1.2a check for an empty argument
+)) ("C:\Program Files\MiKTeX 2.9\tex\latex\matex\Math Fields\matex_algebra.sty"
+) ("C:\Program Files\MiKTeX 2.9\tex\latex\matex\Math Fields\matex_geometry.sty"
+) ("C:\Program Files\MiKTeX 2.9\tex\latex\matex\Math Fields\matex_topology.sty"
+) ("C:\Program Files\MiKTeX 2.9\tex\latex\matex\Math Fields\matex_analysis.sty"
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
@@ -602,20 +605,14 @@ ment.sty"
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining document command \tabb with arg. spec. ' m m >{\SplitList {.}} m '
-. on line 39.
-.................................................
-.................................................
-. LaTeX info: "xparse/define-command"
-. 
 . Defining document command \mat with arg. spec. ' >{\SplitList {.}} m ' on
-. line 55.
+. line 47.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
 . Defining document command \row with arg. spec. ' >{\SplitList {,}} m ' on
-. line 60.
+. line 52.
 .................................................
 )
 ("C:\Program Files\MiKTeX 2.9\tex\latex\matex\Components\matex_low_level_struct
@@ -629,41 +626,41 @@ ty") ("C:\Program Files\MiKTeX 2.9\tex\latex\matex\Components\matex_logic.sty"
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining document command \all with arg. spec. ' m o m ' on line 18.
+. Defining document command \all with arg. spec. ' m o m ' on line 20.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining document command \ex with arg. spec. ' m m ' on line 25.
+. Defining document command \ex with arg. spec. ' m m ' on line 27.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining document command \union with arg. spec. ' s m m o o ' on line 121.
+. Defining document command \union with arg. spec. ' s m m o o ' on line 123.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
 . Defining document command \disjunctUnion with arg. spec. ' s m m o o ' on
-. line 142.
+. line 144.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
 . Defining document command \intersection with arg. spec. ' s m m o o ' on
-. line 163.
+. line 165.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
 . Defining document command \summation with arg. spec. ' s m m o o ' on line
-. 184.
+. 186.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
 . Defining document command \product with arg. spec. ' s m m o o ' on line
-. 205.
+. 207.
 .................................................
 ) ("C:\Program Files\MiKTeX 2.9\tex\latex\matex\Components\matex_object.sty"
 .................................................
@@ -684,24 +681,132 @@ ty") ("C:\Program Files\MiKTeX 2.9\tex\latex\matex\Components\matex_logic.sty"
 ) ("C:\Program Files\MiKTeX 2.9\tex\latex\matex\Components\matex_inclusion.sty"
 ) ("C:\Program Files\MiKTeX 2.9\tex\latex\matex\Components\matex_calligraphy.st
 y"))
+("C:\Users\MnM\Documents\Matex Projects\Analysis\Complex Analysis\Main\specific
+.sty"))) ("C:\Users\MnM\Documents\Matex Projects\Analysis\Complex Analysis\New\
+new.aux")
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 8.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 8.
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\ts1cmr.fd"
+File: ts1cmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    ... okay on input line 8.
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: <default>
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: twoside 
+* h-part:(L,W,R)=(56.9055pt, 307.28978pt, 56.9055pt)
+* v-part:(T,H,B)=(56.9055pt, 483.69687pt, 56.9055pt)
+* \paperwidth=421.10078pt
+* \paperheight=597.50787pt
+* \textwidth=307.28978pt
+* \textheight=483.69687pt
+* \oddsidemargin=-15.36449pt
+* \evensidemargin=-15.36449pt
+* \topmargin=-45.43198pt
+* \headheight=12.0pt
+* \headsep=18.06749pt
+* \topskip=10.0pt
+* \footskip=25.29494pt
+* \marginparwidth=51.0pt
+* \marginparsep=7.0pt
+* \columnsep=10.0pt
+* \skip\footins=9.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidetrue
+* \@mparswitchtrue
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-! LaTeX Error: File `analysis.sty' not found.
+(C:\Users\MnM\AppData\Roaming\MiKTeX\2.9\tex\context\base\supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count151
+\scratchdimen=\dimen166
+\scratchbox=\box47
+\nofMPsegments=\count152
+\nofMParguments=\count153
+\everyMPshowfont=\toks25
+\MPscratchCnt=\count154
+\MPscratchDim=\dimen167
+\MPnumerator=\count155
+\makeMPintoPDFobject=\count156
+\everyMPtoPDFconversion=\toks26
+)
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: listings package is loaded.
+Package caption Info: End \AtBeginDocument code.
+\AtBeginShipoutBox=\box48
+\c@lstlisting=\count157
+[1{C:/Users/MnM/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}
 
-Type X to quit or <RETURN> to proceed,
-or enter new name. (Default extension: sty)
 
-Enter file name: 
- :6: Emergency stop
-*** (cannot \read from terminal in nonstop modes)
+]
+LaTeX Font Info:    Try loading font information for U+msa on input line 11.
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 11.
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+C:/Users/MnM/Documents/Matex Projects/Analysis/Complex Analysis/New/new.tex:734
+: Missing $ inserted
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
 
- 
+
+C:/Users/MnM/Documents/Matex Projects/Analysis/Complex Analysis/New/new.tex:734
+: Display math should end with $$
+The `$' that I just saw supposedly matches a previous `$$'.
+So I shall assume that you typed `$$' both times.
+
+ [2]
+("C:\Users\MnM\Documents\Matex Projects\Analysis\Complex Analysis\New\new.aux")
+ ) 
 Here is how much of TeX's memory you used:
- 13012 strings out of 493921
- 213466 string characters out of 3147287
- 248980 words of memory out of 3000000
- 16118 multiletter control sequences out of 15000+200000
- 3640 words of font info for 14 fonts, out of 3000000 for 9000
+ 13475 strings out of 493921
+ 221057 string characters out of 3147287
+ 258555 words of memory out of 3000000
+ 16523 multiletter control sequences out of 15000+200000
+ 11277 words of font info for 42 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 53i,0n,47p,391b,219s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 53i,12n,47p,399b,222s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/Users/MnM/AppData/Roaming/MiKTeX/2.9/fonts/enc/dvips/mnsymbol/MnSymbolS.e
+nc}{C:/Users/MnM/AppData/Roaming/MiKTeX/2.9/fonts/enc/dvips/mnsymbol/MnSymbolC.
+enc}{C:/Users/MnM/AppData/Roaming/MiKTeX/2.9/fonts/enc/dvips/mnsymbol/MnSymbolD
+.enc}{C:/Users/MnM/AppData/Roaming/MiKTeX/2.9/fonts/enc/dvips/mnsymbol/MnSymbol
+E.enc}{C:/Users/MnM/AppData/Roaming/MiKTeX/2.9/fonts/enc/dvips/mnsymbol/MnSymbo
+lF.enc}<C:/Users/MnM/AppData/Roaming/MiKTeX/2.9/fonts/type1/public/mnsymbol/MnS
+ymbol10.pfb><C:/Users/MnM/AppData/Roaming/MiKTeX/2.9/fonts/type1/public/mnsymbo
+l/MnSymbol5.pfb><C:/Users/MnM/AppData/Roaming/MiKTeX/2.9/fonts/type1/public/mns
+ymbol/MnSymbol7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm
+/cmbx10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.
+pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/P
+rogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Program Fi
+les/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTe
+X 2.9/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Program Files/MiKTeX 2.9/font
+s/type1/public/amsfonts/cm/cmr7.pfb>
+Output written on new.pdf (2 pages, 117872 bytes).
+PDF statistics:
+ 66 PDF objects out of 1000 (max. 8388607)
+ 0 named destinations out of 1000 (max. 500000)
+ 1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
- :6:  ==> Fatal error occurred, no output PDF file produced!
