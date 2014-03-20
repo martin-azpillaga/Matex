@@ -22,29 +22,21 @@
 \DeclareDocumentCommand{\tab}{ m m >{\SplitList{.}} m }
 {
 	\def \entryMark { #1 }
-	#2:
+	\ifmmode \text{#2:} \else #2: \fi
 	\addtocounter{indentation}{ \value{tabSpace} }
-	\ProcessList{ #3 }{ \entry }
+	\ProcessList{#3}{\entry}
 	\addtocounter{indentation}{ -\value{tabSpace} }
 	\\
-}
-
-\DeclareDocumentCommand{\tabb}{ m m >{\SplitList{.}} m }
-{
-	\def \entryMark { #1 }
-	#2:
-	\addtocounter{indentation}{ \value{tabSpace} }
-	\ProcessList{ #3 }{ \entry }
-	\addtocounter{indentation}{ -\value{tabSpace} }
 }
 
 \newcommand{\entry}[1]
 {
-	\\
-	\hspace*{\value{indentation}pt}
-	\begin{math}
-		\entryMark \; #1
-	\end{math}
+	\ifthenelse{\isempty{#1}}
+	{}
+	{
+		\\ \hspace*{\value{indentation}pt}
+		\ifmmode \entryMark \; #1 \else $\entryMark \; #1$ \fi
+	}
 }
 
 
