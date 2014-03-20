@@ -26,12 +26,13 @@
 	}
 	\start
 	{
+		\C\1
 		$Consider:$.
 		A = \Matrix{ p,q.1,0 }.
 		A \Matrix{ x_{n+1} . x_n } = \Matrix{ x_{n+2} . x_{n+1} }.
 		
-		$Eigenvalue analysis:$.
-		\chi_A(t) = t^2 - \trace{ A }t + \det(A) = t^2 - pt - q.
+		$Eigenvalue analysis where $ q = -\frac{ p^2 }{ 2 }:.
+		\chi_A(t) = t^2 - \trace{ A }t + \det(A) = t^2 - pt + \frac{ p^2 }{ 2 }.
 		\sigma( A ) = \set{ \lambda \in \C \with \chi_A(\lambda) = 0 } = \set{ \frac{ p }{ 2 } }.
 
 		\be{ \lambda }{ \frac{ p }{ 2 } }.
