@@ -1,0 +1,13 @@
+<snippet>
+
+<scope>text.tex.latex</scope>
+<tabTrigger>matrix space</tabTrigger>
+<description>.</description>
+
+<content>
+<![CDATA[
+\matrixSpace{ ${2:over} }
+]]>
+</content>
+
+</snippet>
