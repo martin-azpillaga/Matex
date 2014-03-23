@@ -1,6 +1,6 @@
-% High level structures
 
-\newcommand{\definition}[2]
+
+\newcommand{\thread}[2]
 {
 	\addcontentsline{toc}{section}{ $#1$ }
 
@@ -13,60 +13,10 @@
 }
 
 
-\newcommand{\proposition}[2]
+\newcommand{\laboratory}
 {
-	\addcontentsline{toc}{section}{ $#1$ }
-
-	{\bf $#1$} \\
-	#2
-
-	\newpage
-}
-
-
-\newcommand{\example}[2]
-{
-	\addcontentsline{toc}{section}{ $#1$ }
-
-	\begin{noBreak}
-
-		{\bf $#1$} \\
-		#2
-	
-	\end{noBreak}
-}
-
-
-\newcommand{\problem}[2]
-{
-	\addcontentsline{toc}{section}{ $#1$ }
-
-	\begin{noBreak}
-
-		{\bf $#1$} \\
-		#2
-	
-	\end{noBreak}
-}
-
-
-\newcommand{\laboratory}[1]
-{
-	\addtocounter{unitCounter}{1}
-
 	\renewcommand{\unitName}{ Martin Azpillaga Aldalur }
 	\renewcommand{\blockName}{ Laboratory }
-	\addcontentsline{toc}{chapter}{ $#1$ }
-
-	\begin{center}
-	{
-		\fbox{ {\bf\Roman{unitCounter}. $#1$} }
-	}
-	\end{center}
-
-	\setlength{\baselineskip}{24pt} % blank space
-	\endlinechar=-1\relax			% ignore breaks
-	\setlength{\parindent}{0cm} 	% no paragraph indentation
 }
 
 
@@ -83,47 +33,47 @@
 
 \newcommand{\letbe}[1]
 {
-	\tab{\cdot}{Let}{#1}
+	\tab{Let}{#1}[\cdot]
 }
 
 
 \newcommand{\then}[3]
 {
-	\tab{\cdot}{Then, $#1$ is$#2$if}{#3}
-}
-
-
-\newcommand{\name}[2]
-{
-	\tab{\hbox{}}{We name$#1$ to}{#2}
+	\tab{Then, $#1$ is$#2$if}{#3}[\cdot]
 }
 
 
 \newcommand{\denote}[1]
 {
-	\tab{\cdot}{We denote}{#1}
+	\tab{We denote}{#1}[\cdot]
+}
+
+
+\newcommand{\name}[2]
+{
+	\tab{We name$#1$ to}{#2}
 }
 
 
 \newcommand{\holds}[1]
 {
-	\tab{\cdot}{Then, holds}{#1}
+	\tab{Then, holds}{#1}[\cdot]
 }
 
 
 \newcommand{\demonstration}[1]
 {
-	\tab{\hbox{}}{Demonstration}{#1}
+	\tab{Demonstration}{#1}
 }
 
 
 \newcommand{\study}[1]
 {
-	\tab{\cdot}{Study}{#1}
+	\tab{Study}{#1}[\cdot]
 }
 
 
 \newcommand{\start}[1]
 {
-	\tab{\hbox{}}{Start}{#1}
+	\tab{Start}{#1}[\cdot]
 }

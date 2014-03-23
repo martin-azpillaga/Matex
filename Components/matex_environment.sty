@@ -7,35 +7,46 @@
 % Variables
 
 
-\def \entryMark{\cdot}
+\def \entryMark{\hbox{}}
+\def \tabSpace {20}
 
 \newcounter{indentation}
-\setcounter{indentation}{0}
-
-\newcounter{tabSpace}
-\setcounter{tabSpace}{20}
 
 
 
 % Non lexicographical order writing modes
 
-\DeclareDocumentCommand{\tab}{ m m >{\SplitList{.}} m }
+\DeclareDocumentCommand{\tab}{ m >{\SplitList{.}} m O{\hbox{}} }
 {
-	\def \entryMark { #1 }
-	#2:
-	\addtocounter{indentation}{ \value{tabSpace} }
-	\ProcessList{#3}{\entry}
-	\addtocounter{indentation}{ -\value{tabSpace} }
+	\def \entryMark { #3 }
+	#1:
+	\addtocounter{indentation}{ \tabSpace }
+	\ProcessList{#2}{\entry}
+	\addtocounter{indentation}{ -\tabSpace }
 	\\
 }
+
+
+%\NewDocumentEnvironment{tab}{ m >{\SplitList{.}} m O{\hbox{}} }
+%{
+%	\def \entryMark { #3 }
+%	#1:
+%	\addtocounter{indentation}{ \tabSpace }
+%	\ProcessList{#2}{\entry}
+%}
+%{
+%	\addtocounter{indentation}{ -\tabSpace }
+%	\\
+%}
+
 
 \newcommand{\entry}[1]
 {
 	\ifthenelse{\isempty{#1}}
 	{}
 	{
-		\\ \hspace*{\value{indentation}pt}
-		\begin{math} \entryMark \; #1 \end{math}
+		\\\hspace*{ \value{indentation}pt }
+		\ifmmode \entryMark \; #1 \else \begin{math} \entryMark \; #1 \end{math} \fi
 	}
 }
 
@@ -62,22 +73,6 @@
 {
 	\par\xdef\tpd{\the\prevdepth}\egroup\prevdepth=\tpd
 }
-
-
-
-% Page Layout 
-
-\pagestyle{fancy}
-
-\fancyhead[RO,LE]{\thepage}
-\fancyhead[RE]{\arabic{unitCounter} \unitName }
-\fancyhead[LO]{\Roman{blockCounter} \blockName }
-
-\fancyfoot[C]{\thepage}
-
-
-
-
 
 
 
