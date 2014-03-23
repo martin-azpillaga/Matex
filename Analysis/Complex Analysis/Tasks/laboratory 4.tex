@@ -1,0 +1,129 @@
+
+\documentclass[12pt]{book}
+
+\usepackage{matex}
+
+\begin{document}
+
+\block{ $ Martin Azpillaga $ }
+{
+
+\unit{ $ nth root determinations of a function $ }
+{
+	\laboratory
+	\baselineskip=30pt
+
+	\thread{ $ Relationship between nth root determinations $ }
+	{
+		\letbe
+		{
+			X $ connected topological space $.
+			\function{ f }{ X }{ \C \nonzero } $ continuous $.
+			g,h $ nth root determinations of $ f.
+		}
+		\holds
+		{
+			\ex{ \zeta \in \mu_n(\C) }
+			{
+				h = \zeta g
+			}
+		}
+		\demonstration
+		{
+			h,g $ continuous $, g \neq 0 \imp h/g $ continuous $.
+
+			\all{ x \in X }
+			{
+				h(x)^n = f(x), \s g(x)^n = f(x).
+
+				\left(\frac{ h(x) }{ g(x) }\right)^n = \frac{ h(x)^n }{ g(x)^n } =  \frac{ f(x) }{ f(x) } = 1.
+				\frac{ h(x) }{ g(x) } \in \mu_n(\C).
+			}.
+			\im( h/g ) = \mu_n(\C) $ finite $.
+
+			h/g $ constant over connected components $.
+
+			X $ connected $ \imp h/g $ constant $.
+
+			\ex{ \zeta \in \mu_n(\C) }
+			{
+				h = \zeta g
+			}
+		}
+
+		
+	}
+	\thread{ $ Cubic root determinations $ }
+	{
+		\letbe
+		{
+			h_0,h_1,h_2 $ cubic root determinations over $ \C \setminus (\R^- \times \{0\}) $ with $.
+			h_0(1) = 1.
+			h_1(1) = \exp( \frac{ 2\pi i }{ 3 } ).
+			h_2(1) = \exp( \frac{ 4\pi i }{ 3 } ).
+		}
+		\study
+		{
+			\im( h_0 ), \im( h_1 ), \im( h_2 ).
+			$Relationship with $ Log $ and $ Arg.
+		}
+		\demonstration
+		{
+			\all{ z \in \C \setminus (\R^- \times \{0\}) }
+			{
+				\sqrt[3]{ z } = \sqrt[3]{ \abs{ z } }\exp( \frac{ i(Arg(z) + 2k\pi) }{ 3 } ).
+
+				\all{ k \in \dot{3} }
+				{
+					\sqrt[3]{ z } = \sqrt[3]{ \abs{ z } }\exp( \frac{ iArg(z) }{ 3 } ).
+					arg(z) = \frac{ Arg(z) }{ 3 }.
+					Arg(z) \in (-\pi,\pi) \imp arg(z) \in ( \frac{ -\pi }{ 3 }, \frac{ \pi }{ 3 }).
+				}.
+
+				\be{ \Omega_0 }{ \set{ z \in \C \with Arg(z) \in ( \frac{ -\pi }{ 3 }, \frac{ \pi }{ 3 }) } }.
+
+				\all{ k \in \dot{3} + 1 }
+				{
+					\sqrt[3]{ z } = \sqrt[3]{ \abs{ z } }\exp( \frac{ i(Arg(z) + 2\pi)}{ 3 } ).
+					arg(z) = \frac{ Arg(z) }{ 3 } + \frac{ 2\pi }{ 3 }.
+					Arg(z) \in (-\pi,\pi) \imp arg(z) \in ( \frac{ \pi }{ 3 },  \pi  ).
+				}.
+
+				\be{ \Omega_1 }{ \set{ z \in \C \with Arg(z) \in ( \frac{ \pi }{ 3 },  \pi  ) } }.
+
+				\all{ k \in \dot{3} + 2 }
+				{
+					\sqrt[3]{ z } = \sqrt[3]{ \abs{ z } }\exp( \frac{ iArg(z) }{ 3 } ).
+					arg(z) = \frac{ Arg(z) }{ 3 } + \frac{ 4\pi }{ 3 }.
+					Arg(z) \in (-\pi,\pi) \imp arg(z) \in ( \pi, \frac{ 5\pi }{ 3 } ).
+				}
+
+				\be{ \Omega_2 }{ \set{ z \in \C \with Arg(z) \in ( \pi, \frac{ 5\pi }{ 3 } ) } }.
+
+				h_0(1) = 1 \imp \im( h_0 ) = \Omega_0.
+				h_1(1) = \exp( \frac{ 2\pi i }{ 3 } ) \imp \im( h_1 ) = \Omega_1.
+				h_2(1) = \exp( \frac{ 4\pi i }{ 3 } ) \imp \im( h_2 ) = \Omega_2.
+			}.
+
+			\particular
+			{
+				h_0(i) = \sqrt[3]{ \abs{ i } }\exp( \frac{ iArg(i) }{ 3 } )= \exp( \frac{ \pi }{ 6 } i ).
+				h_0(i) = \sqrt[3]{ \abs{ i } }\exp( \frac{ iArg(i)+2\pi }{ 3 } )= \exp( \frac{ 5\pi }{ 6 } i ).
+				h_0(i) = \sqrt[3]{ \abs{ i } }\exp( \frac{ i(Arg(i)+4\pi) }{ 3 } )= \exp( \frac{ 9\pi }{ 6 } i ).
+			}
+		}
+	}
+	
+	\baselineskip=30pt
+	
+
+
+	
+	
+	
+
+		
+}}
+
+
+\end{document}

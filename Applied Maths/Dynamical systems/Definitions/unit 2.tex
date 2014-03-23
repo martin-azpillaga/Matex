@@ -4,38 +4,51 @@
 
 \begin{document}
 
-\unit{ $ 2-D linear dynamical systems $ }
+\unit{ $ Linear dynamical systems $ }
 {
 	
-	\definition{ $ Linear system $ }
+	\thread{ $ Linear $ }
 	{
 		\letbe
 		{
-			( M, \N, f ) $ functional dynamical system $
+			( \R^n, f ) $ euclidean functional dynamical system $
 		}
-		\then{ ( M, \N, f ) }{ $ linear $ }
+		\then{ ( \R^n, f ) }{ $ linear $ }
 		{
-			\ex{ A \in \Mc_{n\times n}(\R) }
+			\ex{ A \in \matrixSpace{ \R } }
 			{
-				\definedFunction{ f }{ \R^n }{ \R^n }{ x }{ Ax }
+				\all{ x \in \R^n }
+				{
+					f(x) = Ax
+				}
 			}
 		}
 	}
-
-
-	\definition{ $ Multiplier $ }
-	{
-		\letbe
-		{
-			( M, \N, f ) $ functional dynamical system $.
-			x \in M
-		}
-		\name{ $multiplier of $ x }
-		{
-			Df(p)
-		}
-	}
-
 }
+
+% 	\thread{ $ Invariant curve $ }
+% 	{
+% 		\letbe
+% 		{
+% 			\gamma $ differentiable curve $.
+% 			p \in \R^n
+% 		}
+% 		\then{ \gamma }{ $ invariant $ }
+% 		{
+% 			\all{ x \in \gamma* }
+% 			{
+% 				o(x) \subset \gamma*
+% 			}
+% 		}
+% 		\then{ \gamma }{ $ converges to $ p }
+% 		{
+% 			\all{ x \in \gamma* }
+% 			{
+% 				o(x) \convergesto p
+% 			}
+% 		}
+% 	}
+
+% }
 
 \end{document}
