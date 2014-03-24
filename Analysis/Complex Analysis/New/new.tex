@@ -1006,6 +1006,159 @@
 			\integral{ \frac{ \cos( \frac{ \pi }{ 2 }\omega )/(\omega^2 + 4) }{ \omega } }{ d \omega }{ \gamma } = 2 \pi i \frac{ 1 }{ 4 } 1. 
 		}
 	}
+
+
+	\thread{ $ Basic exercises $ }
+	{
+		\letbe
+		{
+			\definedFunction{ \gamma }{ [0,\pi] }{ \C }{ t }{ 1 - cos(t) + isin(t) }.
+			\definedFunction{ f }{ \C }{ \C }{ z }{ \frac{ 1 }{ 2+z^2 } }.
+			\definedFunction{ f_2 }{ \C }{ \C }{ z }{ \frac{ sin(z) }{ z^2 } }.
+			\definedFunction{ f_3 }{ \C }{ \C }{ z }{ \frac{ (1+z)^n }{ z^{m+1} } }
+		}
+		\holds
+		{
+			\abs{\integral{ f(z) }{ dz }{ \gamma }} \leq \pi.
+			\abs{\integral{ f_2(z) }{ dz }{ \gamma }} \leq 2\pi(sin(1)^2+sinh(1)^2).
+		}
+		\demonstration
+		{
+			\abs{\integral{ f(z) }{ dz }{ \gamma }} \leq \sup_{z \in \gamma^*} \abs{ f(z) } long(\gamma).
+
+			\min_{z\in \gamma^*} |2+z^2| = 1 \imp \sup_{z \in \gamma^*} = 1.
+
+			\sup_{z \in \gamma^*} \abs{ f(z) } long(\gamma) \leq \pi.
+
+			\abs{ sin(z) }^2 = \sin( x )^2 + \sin( hy ) \leq (\sin(1))^2 + (sinh(1))^2.
+
+			\abs{\integral{ f_2(z) }{ dz }{ \gamma }} \leq 2\pi(sin(1)^2+sinh(1)^2).
+
+			\abs{\integral{ f_3(z) }{ dz }{ \gamma }} $Formula binomio$.
+		}
+	}
+	
+	
+	Power Series II\\
+
+	\thread{ $ Analytic $ }
+	{
+		\letbe
+		{
+			\function{ f }{ \C }{ \C }
+		}
+		\then{ f }{ $ analytic $ }
+		{
+			$exists power series development of $ f.
+		}
+	}
+	
+	
+	
+
+	\thread{ $ Holomorphic functions are power series $ }
+	{
+		\letbe
+		{
+			\Omega \subset \C $ open $.
+			f \in \Hc(\C).
+			D(a,R) \subset \Omega.
+		}
+		\holds
+		{
+			f(z) = \summation{ c_n(z-a)^n }{ n }[ 0 ] $ where $.
+
+			c_n = \frac{ 1 }{ 2\pi i }\integral{ \frac{ f(\omega) }{ (\omega-a)^{n+1} } }{ d \omega }{ \partial D(a,\rho) }, \rho < R.
+
+			f \in \Cc^{\infty}(\Omega).	
+		}
+		\demonstration
+		{
+			\all{ \rho \in (0,R) }
+			{
+				\definedFunction{ \gamma }{ (0,2\pi) }{ \C }{ t }{ a + \rhoe^{it} }.
+
+				\all{ z \in \Omega }[ \abs{ z - a } < \rho ]
+				{
+					Ind(\gamma,z) = 1.
+
+					$Integral formula$:.
+
+					f(z) = \frac{ 1 }{ 2\pi i }\integral{ \frac{ f(\omega) }{ \omega-z) } }{ d \omega }{ \gamma } = *.
+				}.
+
+				\frac{ 1 }{ \omega-z } = \frac{ 1 }{ \omega-a }\frac{ 1 }{ 1 - \frac{ z-a }{ \omega-a } }.
+
+				\abs{ \frac{ z-a }{ \omega-a } } < 1.
+
+				\frac{ 1 }{ 1 - \frac{ z-a }{ \omega-a } } = \summation{ (\frac{ z-a }{ \omega -a })^n }{ n }[ 0 ].
+
+				\frac{ 1 }{ \omega-z } = \summation{ (\frac{ z-a }{ \omega -a })^{n+1} }{ n }[ 0 ].
+
+				$UCI theorem:$.
+
+				f(z) = * = \frac{ 1 }{ 2\pi i }\integral{ f(\omega)\summation{ \frac{ (z-a)^n }{ (\omega-a)^{n+1} } }{ n }[ 0 ] }{ d \omega }{ \gamma }.
+
+				= \frac{ 1 }{ 2\pi i }\summation{ \integral{ \frac{ f(\omega) }{ (\omega-a)^{n+1} } }{ d \omega }{ \abs{ \omega-a }=\rho } (z-a)^n }{ n }[ 0 ].
+
+				= \summation{ c_{n,\rho}(z-a)^n }{ n }[ 0 ].
+
+				\be{ c_{n,\rho} }{ \frac{ 1 }{ 2\pi }\integral{ \frac{ f(\omega) }{ (\omega-a)^{n+1} } }{ d \omega }{ \abs{ \omega - a } = \rho } }.
+
+				$ Taylor coefficients of power series:$.
+
+				c_{n,\rho} = \frac{ f^{n)}(a) }{ n! }.
+
+				$ no dependency of rho $.
+
+
+			}
+
+			c_n = \frac{ 1 }{ 2\pi i }\integral{ \frac{ f(\omega) }{ (\omega-a)^{n+1} } }{ d \omega }{ \partial D(a,\rho) }, \rho < R.
+
+		}
+	}
+
+
+	\thread{ $ Integral formula for derivatives $ }
+	{
+		\letbe
+		{
+			\Omega \subset \C $ open $.
+			D(a,r) \subset \Omega.
+			f \in \Hc(\Omega).
+		}
+		\holds
+		{
+			f^{n)}(a) = \frac{ n! }{ 2\pi i }\integral{ \frac{ f(\omega) }{ (\omega-a)^{n+1} } }{ d \omega }{ \abs{ \omega-a } = \rho }.
+		}
+		\demonstration
+		{
+			$ Taylor coefficients substitution $.
+		}
+	}
+	
+	
+	\thread{ $ Integral formula for derivatives application $ }
+	{
+		\letbe
+		{
+			statements.
+		}
+		\holds
+		{
+			\integral{ \frac{ ze^z }{ (z-1)^2 } }{ dz }{ \abs{ z-1 } = 1 } = \frac{ 2\pi i }{ 1! }f'(1) = 2\pi i 2e
+		}
+		\demonstration
+		{
+			demonstration.
+		}
+	}
+	
+	
+	
+	
+	
 	
 	
 	
