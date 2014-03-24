@@ -1,0 +1,13 @@
+<snippet>
+
+<scope>text.tex.latex</scope>
+<tabTrigger>subset</tabTrigger>
+<description>.</description>
+
+<content>
+<![CDATA[
+\subset
+]]>
+</content>
+
+</snippet>

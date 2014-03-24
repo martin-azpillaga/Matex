@@ -1,0 +1,13 @@
+<snippet>
+
+<scope>text.tex.latex</scope>
+<tabTrigger>S</tabTrigger>
+<description>.</description>
+
+<content>
+<![CDATA[
+\S 
+]]>
+</content>
+
+</snippet>
