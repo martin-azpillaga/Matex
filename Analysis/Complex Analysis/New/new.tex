@@ -707,7 +707,7 @@
 	% }
 	
 	
-	\example{ $ Intergal of power series $ }
+	\thread{ $ Intergal of power series $ }
 	{
 		\holds
 		{
@@ -884,24 +884,128 @@
 	% }
 	
 	
-	% \proposition{ $ Integral formula of Cauchy over convex open sets $ }
-	% {
-	% 	\letbe
-	% 	{
-	% 		\gamma $ closed curve $.
-	% 		\Omega \subset \C $ open $ \suchthat \gamma^* \subset \Omega.
-	% 		f \in \Hc(\Omega).
-	% 		z \nin \gamma^*
-	% 	}
-	% 	\holds
-	% 	{
-	% 		\frac{ 1 }{ 2\pi i }\integral{ \frac{ f(\omega) }{ \omega - z } }{ d\omega }{ \gamma } = f(z) Ind(\gamma,z)
-	% 	}
-	% 	\demonstration
-	% 	{
-	% 		demonstration.
-	% 	}
-	% }
+	\thread{ $ Integral formula of Cauchy over convex open sets $ }
+	{
+		\letbe
+		{
+			\gamma $ closed curve $.
+			\Omega \subset \C $ convex open $ \suchthat \gamma^* \subset \Omega.
+			f \in \Hc(\Omega).
+			z \nin \gamma^*.
+		}
+		\holds
+		{
+			\frac{ 1 }{ 2\pi i }\integral{ \frac{ f(\omega) }{ \omega - z } }{ d\omega }{ \gamma } = f(z) Ind(\gamma,z)
+		}
+		\demonstration
+		{
+			\all{ z \nin \gamma^* }
+			{
+				\definedFunction{ \tilde{f} }{ \Omega }{ \C }{ \omega }{ \begin{cases} \frac{ f(\omega) - f(z) }{ \omega - z } & \omega \neq z \\ f'(z) & \omega = z \end{cases} }.
+
+				\tilde{f} \in \Cc(\Omega).
+
+				\tilde{f} \in \Hc(\Omega \setminus \{z\}).
+
+				$Cauchy's theorem:$.
+
+				\integral{ \tilde{f}(w) }{ dw }{ \gamma } = 0.
+
+				z \nin \gamma^* \imp \omega \neq z.
+
+				\integral{ \tilde{f}(\omega) }{ d \omega }{ \gamma } = \integral{ \frac{ f(\omega) - f(z) }{ \omega - z } }{ d \omega }{ \gamma }.
+
+				= \integral{ \frac{ f(\omega) }{ \omega - z } }{ d \omega }{ \gamma } - f(z) \integral{ \frac{ 1 }{ \omega - z } }{ d \omega }{ \gamma } =.
+
+				= \integral{ \frac{ f(\omega) }{ \omega - z } }{ d \omega }{ \gamma } - f(z)2\pi i Ind(\gamma,z) = 0.
+
+				\frac{ 1 }{ 2\pi i }\integral{ \frac{ f(\omega) }{ \omega - z } }{ d\omega }{ \gamma } = f(z) Ind(\gamma,z)
+
+			}
+		}
+	}
+
+
+	\thread{ $ Mean property $ }
+	{
+		\letbe
+		{
+			\Omega \subset \C $ open $.
+			f \in \Hc(\Omega).
+			D(a,r) \subset \Omega.
+		}
+		\holds
+		{
+			f(a) = \frac{ 1 }{ 2\pi }\integral{ f(a+re^{i\theta}) }{ d \theta }{ 0 }[ 2\pi ].
+		}
+		\demonstration
+		{
+			$Integral formula$:.
+
+			f(a) = \frac{ 1 }{ 2\pi i }\integral{ \frac{ f(z) }{ z-a } }{ dz }{ \partial D(a,r) }.
+
+			\be{ \gamma }{ \partial D(a,r) }.
+
+			\gamma(\theta) = a + re^{i \theta}.
+
+			\gamma'(\theta) = rie^{i \theta}.
+
+			f(a) = \frac{ 1 }{ 2\pi i }\integral{ \frac{ f(a+re^{i\theta} }{ re^{i \theta} }re^{i \theta} }{ d \theta }{ 0 }[ 2\pi ].
+		}
+	}
+	
+	
+	\thread{ $ Independence of $ \gamma }
+	{
+		\letbe
+		{
+			\Omega \subset \C $ open $.
+			f \in \Hc(\Omega).
+			\gamma, \tilde{\gamma} $ closed curve $ \suchthat \gamma^* \subset \Omega.
+			z \in \Omega \suchthat Ind(\gamma,z) = Ind(\tilde{\gamma},z).
+		}
+		\holds
+		{
+			\integral{ \frac{ f(\omega) }{ \omega-z } }{ d \omega }{ \gamma } = \integral{ \frac{ f(\omega) }{ \omega-z } }{ d \omega }{ \tilde{\gamma} }
+		}
+		\demonstration
+		{
+			$ no demonstration $
+		}
+	}
+	
+	
+	
+	
+	
+	\thread{ $ Integral formula application $ }
+	{
+		\letbe
+		{
+			\gamma $ pasa por en medio de i,-i y rodea 1/2 $.
+		}
+		\holds
+		{
+			\integral{ \frac{ \cos( \frac{ pi }{ 2 }\omega ) }{ \omega } }{ d \omega }{ \gamma }.
+			\integral{ \frac{ \cos( \frac{ pi }{ 2 }\omega ) }{ \omega - \frac{ 1 }{ 2 }} }{ d \omega }{ \gamma }.
+		}
+		\demonstration
+		{
+			f(\omega) = \cos( \frac{ \pi }{ 2 }\omega ) \in \Hc(\C) $ convex $.
+
+			\integral{ \frac{ \cos( \frac{ pi }{ 2 }\omega ) }{ \omega } }{ d \omega }{ \gamma } = 2 \pi i 1 1 = 2\pi i.
+
+			\integral{ \frac{ \cos( \frac{ pi }{ 2 }\omega ) }{ \omega - \frac{ 1 }{ 2 } } }{ d \omega }{ \gamma } = 2\pi i \frac{ \sqrt{ 2 } }{ 2 } (-1).
+			
+			\integral{ \frac{ \cos( \frac{ pi }{ 2 }\omega ) }{ \omega - i } }{ d \omega }{ \gamma } = 2\pi i f(i) 0 = 0.
+
+			\integral{ \frac{ \cos( \frac{ pi }{ 2 }\omega ) }{ \omega(\omega^2 + 4) } }{ d \omega }{ \gamma } = \integral{ \frac{ \cos( \frac{ pi }{ 2 }\omega ) }{ \omega(\omega+2i)(\omega-2i) } }{ d \omega }{ \gamma }.
+
+			2i , -2i \nin \gamma^*.
+
+			\integral{ \frac{ \cos( \frac{ \pi }{ 2 }\omega )/(\omega^2 + 4) }{ \omega } }{ d \omega }{ \gamma } = 2 \pi i \frac{ 1 }{ 4 } 1. 
+		}
+	}
 	
 	
 	
@@ -948,6 +1052,26 @@
 	
 	
 	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 	
 	
 
