@@ -19,7 +19,7 @@
 \DeclareDocumentCommand{\tab}{ m >{\SplitList{.}} m O{\hbox{}} }
 {
 	\def \entryMark { #3 }
-	#1:
+	\ifmmode \end{math} #1: \begin{math} \else #1: \fi
 	\addtocounter{indentation}{ \tabSpace }
 	\ProcessList{#2}{\entry}
 	\addtocounter{indentation}{ -\tabSpace }
