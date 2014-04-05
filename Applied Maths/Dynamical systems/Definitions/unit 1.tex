@@ -30,6 +30,19 @@
 	}
 
 
+	\thread{ $ Discrete $ }
+	{
+		\letbe
+		{
+			( M, T, \phi ) $ dynamical system $.
+		}
+		\then{ ( M, T, \phi ) }{ $ discrete $ }
+		{
+			T \countable.
+		}
+	}
+
+
 	\thread{ $ Dimension $ }
 	{
 		\letbe
@@ -43,22 +56,6 @@
 		\denote
 		{
 			dim(M) = n \as ( M, T, \phi ) $ n-D $.
-		}
-	}
-
-	\thread{ $ Discrete \& Continuous $ }
-	{
-		\letbe
-		{
-			( M, T, \phi ) $ dynamical system $.
-		}
-		\then{ ( M, T, \phi ) }{ $ discrete $ }
-		{
-			T \countable.
-		}
-		\then{ ( M, T, \phi ) }{ $ continuous $ }
-		{
-			T \subset \R $ open $.
 		}
 	}
 
@@ -83,8 +80,8 @@
 		}
 		\denote
 		{
-			T = \N \as ( M, f ) $ functional discrete dynamical system $.
-			f \in \Cc^n( M ) \as ( M, \N, f ) \s \Cc^n.
+			T = \N \as ( M, f ) $ functional dynamical system $.
+			f \in \Cc^n( M ) \as ( M, f ) \s \Cc^n.
 		}
 	}
 	
@@ -93,7 +90,7 @@
 	{
 		\letbe
 		{
-			( M, f ) $ functional discrete dynamical system $.
+			( M, f ) $ functional dynamical system $.
 			x \in M.
 		}
 		\name{ $ orbit of $ x }
@@ -111,7 +108,7 @@
 	{
 		\letbe
 		{
-			( M, f ) $ functional discrete dynamical system $.
+			( M, f ) $ functional dynamical system $.
 			x \in M.
 			m \in \N.
 		}
@@ -174,7 +171,7 @@
 	{
 		\letbe
 		{
-			( M, \N, f ) $ dynamical system $.
+			( M, f ) $ functional dynamical system $.
 			x \in M $ attractive m-periodic point $.
 			o(x) $ orbit of $ x
 		}
@@ -184,7 +181,7 @@
 		}
 		\denote
 		{
-			A( x )
+			A( o(x) )
 		}
 	}
 
@@ -193,7 +190,7 @@
 	{
 		\letbe
 		{
-			( M, \N, f ) \hspace{5pt} \Cc^1 $ dynamical system $.
+			( M, f ) \hspace{5pt} \Cc^1 $ functional dynamical system $.
 			x \in M
 		}
 		\name{ $ multiplier of $ x }
@@ -212,11 +209,11 @@
 	{
 		\letbe
 		{
-			( M, f ) $ functional discrete dynamical system $.
+			( M, f ) $ functional dynamical system $.
 		}
-		\name{ $ Fixed point character $ }
+		\name{ $ fixed point character$ }
 		{
-			\definedFunction{ f }{ \fixed(f) }{ \set{ -1,0,1 } }{ x }{ \begin{cases} +1 & x $ repulsive $ \\ -1 & x $ attractive $ \\ 0 & x $ no attractive no repulsive $  \end{cases} }
+			\definedFunction{ f }{ \fixed(f) }{ \set{ -2,-1,0,1,2 } }{ x }{ \begin{cases} +2 & x $ repulsive $ \\ +1 & x $ unstable $ \\ 0 & * \\ -1 & x $ stable $ \\ -2 & x $ attractive $ \end{cases} }
 		}
 		\denote
 		{
@@ -229,7 +226,7 @@
 	{
 		\letbe
 		{
-			( M, f_1 ), ( M, f_2 ) $ functional discrete dynamical systems $.
+			( M, f_1 ), ( M, f_2 ) $ functional dynamical systems $.
 		}
 		\then{ ( M, \N, f_1 ) }{ $ topologically equivalent to $ ( M, \N, f_2 ) $ $ }
 		{
@@ -251,7 +248,7 @@
 	{
 		\letbe
 		{
-			\family*{ ( M, f_\lambda ) }{ \lambda \in \Lambda } $ functional discrete dynamical systems $.
+			\family*{ ( M, f_\lambda ) }{ \lambda \in \Lambda } $ functional dynamical systems $.
 			\lambda_0 \in \Lambda.
 		}
 		\then{ \lambda_0 }{ $ a bifurcation parameter $ }
@@ -271,8 +268,7 @@
 	{
 		\letbe
 		{
-			\Lambda \subset M.
-			( M, \N, f_\lambda )_{\lambda \in \Lambda} $ dynamical systems parametrized by $ \Lambda.
+			( M, \N, f_\lambda )_{\lambda \in \Lambda} $ functional dynamical systems $.
 			\lambda_0 \in \Lambda.
 			x_0 \in M
 		}
@@ -290,8 +286,7 @@
 	{
 		\letbe
 		{
-			\Lambda \subset M.
-			( M, \N, f_\lambda )_{\lambda \in \Lambda} $ dynamical systems parametrized by $ \Lambda.
+			( M, \N, f_\lambda )_{\lambda \in \Lambda} $ functional dynamical systems $.
 			\lambda_0 \in \Lambda.
 			x_0 \in M
 		}
@@ -312,7 +307,7 @@
 		\letbe
 		{
 			\Lambda \subset M.
-			( M, \N, f_\lambda )_{\lambda \in \Lambda} $ dynamical systems parametrized by $ \Lambda.
+			( M, \N, f_\lambda )_{\lambda \in \Lambda} $ functional dynamical systems $.
 			\lambda_0 \in \Lambda.
 			x_0 \in M
 		}
@@ -371,7 +366,8 @@
 				}
 			}
 		}
-	}	
+	}
+}
 
 
 
