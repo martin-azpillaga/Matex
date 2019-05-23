@@ -1,0 +1,69 @@
+%					*** Object ***
+
+
+% Sets 
+
+\DeclareDocumentCommand{\set}{ m o }
+{
+	\IfValueTF {#2}
+	{
+		\{#1 \with #2 \}
+	}{
+		\{ #1 \}
+	}
+}
+
+\DeclareDocumentCommand{\family}{ s m m o o }
+{
+	\IfBooleanTF {#1}
+	{
+		\{ #2 \}_{ #3 }
+	}{
+		\IfValueTF {#4}
+		{
+			\IfValueTF {#5}
+			{
+				\{ #2 \}_{ #3 = #4 }^{ #5 }
+			}{
+				\{ #2 \}_{ #3 \geq #4 } 
+			}
+		}{
+			\{ #2 \}_{ #3 \in \uppercase{ #3 } }
+		}
+	}
+}
+
+\DeclareDocumentCommand{\vector}{ m m o o }
+{
+	\IfValueTF {#3}
+	{
+		\IfValueTF {#4}
+		{
+			( #1 )_{ #2 = #3 }^{ #4 }
+		}{
+			( #1 )_{ #2 \geq #3 } 
+		}
+	}{
+		( #1 )_{ #2 \in \uppercase{ #2 } }
+	}
+}
+
+
+\newcommand{\indexes}[2]
+{
+	[#1,#2]_\N
+}
+
+
+% Set properties
+
+\newcommand{\countable}
+{
+	\stackrel{ \subset }{ \sim } \N
+}
+
+
+\newcommand{\nonzero}
+{
+	\setminus \{0\}
+}

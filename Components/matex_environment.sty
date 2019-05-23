@@ -1,0 +1,78 @@
+
+
+%					*** Environment ***
+
+
+
+% Variables
+
+
+\def \entryMark{\hbox{}}
+\def \tabSpace {20}
+
+\newcounter{indentation}
+
+
+
+% Non lexicographical order writing modes
+
+\DeclareDocumentCommand{\tab}{ m >{\SplitList{.}} m O{\hbox{}} }
+{
+	\def \entryMark { #3 }
+	\ifmmode \end{math} #1: \begin{math} \else #1: \fi
+	\addtocounter{indentation}{ \tabSpace }
+	\ProcessList{#2}{\entry}
+	\addtocounter{indentation}{ -\tabSpace }
+	\\
+}
+
+
+%\NewDocumentEnvironment{tab}{ m >{\SplitList{.}} m O{\hbox{}} }
+%{
+%	\def \entryMark { #3 }
+%	#1:
+%	\addtocounter{indentation}{ \tabSpace }
+%	\ProcessList{#2}{\entry}
+%}
+%{
+%	\addtocounter{indentation}{ -\tabSpace }
+%	\\
+%}
+
+
+\newcommand{\entry}[1]
+{
+	\ifthenelse{\isempty{#1}}
+	{}
+	{
+		\\\hspace*{ \value{indentation}pt }
+		\ifmmode \entryMark \; #1 \else \begin{math} \entryMark \; #1 \end{math} \fi
+	}
+}
+
+
+
+\DeclareDocumentCommand{\mat}{ >{\SplitList{.}} m }
+{
+	\begin{matrix} \ProcessList{ #1 }{ \row } \end{matrix}
+}
+
+\DeclareDocumentCommand{\row}{ >{\SplitList{,}} m }
+{
+	\ProcessList{ #1 }{ \firstcell }\\
+}
+
+\newcommand{\firstcell}[1]{ #1 \let\firstcell\cell }
+\newcommand{\cell}[1]{ & #1 \let\firstcell\cell }
+
+
+\newenvironment{noBreak}
+{
+	\par\nobreak\vfil\penalty0\vfilneg\vtop\bgroup
+}
+{
+	\par\xdef\tpd{\the\prevdepth}\egroup\prevdepth=\tpd
+}
+
+
+

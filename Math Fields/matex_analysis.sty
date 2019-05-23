@@ -1,0 +1,48 @@
+% Analysis
+
+\newcommand{ \sequence }[2]{ ( #1 )_{ #2 \in \N } }
+\NewDocumentCommand{ \limit }{ m m o }
+{
+	\IfValueTF {#3}
+	{
+		\displaystyle\lim_{ #2 \to #3 } \; #1
+	}{
+		\displaystyle\lim_{ #2 } \; #1 
+	}
+}
+\NewDocumentCommand{ \superiorlimit }{ m m o }
+{
+	\IfValueTF {#3}
+	{
+		\displaystyle\overline{\lim_{ #2 \to #3 }} \; #1
+	}{
+		\displaystyle\overline{\lim_{ #2 }} \; #1 
+	}
+}
+\NewDocumentCommand{ \inferiorlimit }{ m m o }
+{
+	\IfValueTF {#3}
+	{
+		\displaystyle\underline{\lim_{ #2 \to #3 }} \; #1
+	}{
+		\displaystyle\underline{\lim_{ #2 }} \; #1 
+	}
+}
+\newcommand{ \open }[1]{ \mathring{ #1 }}
+\newcommand{ \closed }[1]{ \overline{ #1 }}
+
+\NewDocumentCommand{ \convergesto }{ O{n} }{ \overset{ #1 }{ \longrightarrow } }
+\NewDocumentCommand{ \convergesuniformlyto }{ O{n} }{ \overset{ #1 }{ \rightrightarrows } }
+
+\NewDocumentCommand{ \integral }{ m m m O{} }{ \displaystyle\int_{ #3 }^{ #4 } #1 #2 }
+
+\newcommand{ \partialderivative }[2]{ \partial_{#2} #1 }
+\newcommand{ \partialsuccesion  }{ \vdash }
+
+\newcommand{ \abs }[1]{ \left| \; #1 \; \right| }
+
+\newcommand{ \constant }[1]  { $ Cst$ }
+\newcommand{ \polynomial }[1]{ $ Pol$ }
+\newcommand{ \rational   }[1]{ $ Rat$ }
+
+\newcommand{ \im }{ $Im$ }
