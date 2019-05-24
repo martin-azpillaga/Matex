@@ -1,0 +1,13 @@
+<snippet>
+
+<scope>text.tex.latex</scope>
+<tabTrigger>polynomial functions</tabTrigger>
+<description>.</description>
+
+<content>
+<![CDATA[
+\polynomial( ${1:over} )
+]]>
+</content>
+
+</snippet>

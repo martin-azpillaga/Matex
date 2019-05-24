@@ -1,0 +1,13 @@
+<snippet>
+
+<scope>text.tex.latex</scope>
+<tabTrigger>determinant</tabTrigger>
+<description>.</description>
+
+<content>
+<![CDATA[
+\determinant{ ${1:a,b . c,d } }
+]]>
+</content>
+
+</snippet>

@@ -1,0 +1,22 @@
+<snippet>
+
+<scope>text.tex.latex</scope>
+<tabTrigger>cases</tabTrigger>
+<description>.</description>
+
+<content>
+<![CDATA[
+\$ Separate ${1:n} cases: \$.
+
+\case{ ${2:condition} }
+{
+	${3:proof.}
+}
+\case{ ${4:condition} }
+{
+	${5:proof.}
+}
+]]>
+</content>
+
+</snippet>

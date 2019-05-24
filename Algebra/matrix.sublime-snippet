@@ -1,0 +1,13 @@
+<snippet>
+
+<scope>text.tex.latex</scope>
+<tabTrigger>matrix</tabTrigger>
+<description>.</description>
+
+<content>
+<![CDATA[
+\Matrix{ ${1:a,b.c,d} }
+]]>
+</content>
+
+</snippet>

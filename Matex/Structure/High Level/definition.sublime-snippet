@@ -1,0 +1,30 @@
+<snippet>
+
+<scope>text.tex.latex</scope>
+<description>.</description>
+<tabTrigger>definition</tabTrigger>
+
+<content>
+<![CDATA[
+\definition{ \$ ${1:entity} \$ }
+{
+	\letbe
+	{
+		${2:statements.}
+	}
+	\then{ ${3:item} }{ \$ ${4:a/an entity} \$ }
+	{
+		${5:conditions.}
+	}${6:
+	\denote
+	{
+		${7:property} \as ${8:notation.}
+	\}}
+\}
+
+
+
+]]>
+</content>
+
+</snippet>

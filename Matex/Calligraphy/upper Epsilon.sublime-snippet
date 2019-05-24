@@ -1,0 +1,13 @@
+<snippet>
+
+<scope>text.tex.latex</scope>
+<tabTrigger>Epsilon</tabTrigger>
+<description>.</description>
+
+<content>
+<![CDATA[
+\Epsilon
+]]>
+</content>
+
+</snippet>

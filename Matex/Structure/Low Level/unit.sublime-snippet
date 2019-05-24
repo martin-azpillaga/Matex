@@ -1,0 +1,32 @@
+<snippet>
+
+<scope>text.tex.latex</scope>
+<tabTrigger>unit</tabTrigger>
+<description>.</description>
+
+<content>
+<![CDATA[
+
+\documentclass[../Main/main]{subfiles}
+
+
+\begin{document}
+
+
+\unit{ \$ ${1:unit name} \$ }
+{
+	\introduction
+	{ 
+		\$${2:introduction\\\\}\$ 
+	}
+
+	${3:go}
+
+}
+
+
+\end{document}
+]]>
+</content>
+
+</snippet>

@@ -1,0 +1,30 @@
+<snippet>
+
+<scope>text.tex.latex</scope>
+<description>.</description>
+<tabTrigger>proposition</tabTrigger>
+
+<content>
+<![CDATA[
+\proposition{ \$ ${1:abstract} \$ }
+{
+	\letbe
+	{
+		${2:statements.}
+	}
+	\holds
+	{
+		${3:then, holds.}
+	}
+	\demonstration
+	{
+		${4:demonstration.}
+	}
+}
+
+
+
+]]>
+</content>
+
+</snippet>

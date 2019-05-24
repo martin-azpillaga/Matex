@@ -1,0 +1,13 @@
+<snippet>
+
+<scope>text.tex.latex</scope>
+<tabTrigger>square root</tabTrigger>
+<description>.</description>
+
+<content>
+<![CDATA[
+\sqrt{ ${1:radical} }
+]]>
+</content>
+
+</snippet>

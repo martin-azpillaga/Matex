@@ -1,0 +1,38 @@
+<snippet>
+
+<scope>text.tex.latex</scope>
+<tabTrigger>block</tabTrigger>
+<description>.</description>
+
+<content>
+<![CDATA[
+
+\documentclass[../Main/main]{subfiles}
+
+
+\begin{document}
+
+
+\block{ \$ ${1:block name} \$ }
+
+
+\subfile{"../${1:block name}/${2:unit\space 1}"}
+
+${3:\subfile{"../${1:block name}/${4:unit\space 2}"\}}
+
+${5:\subfile{"../${1:block name}/${6:unit\space 3}"\}}
+
+${7:\subfile{"../${1:block name}/${8:unit\space 4}"\}}
+
+${9:\subfile{"../${1:block name}/${10:unit\space 5}"\}}
+
+${11:\subfile{"../${1:block name}/${12:unit\space 6}"\}}
+
+${13:\subfile{"../${1:block name}/${14:unit\space 7}"\}}
+
+
+\end{document}
+]]>
+</content>
+
+</snippet>

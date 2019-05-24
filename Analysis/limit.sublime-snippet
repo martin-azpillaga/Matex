@@ -1,0 +1,13 @@
+<snippet>
+
+<scope>text.tex.latex</scope>
+<tabTrigger>limit</tabTrigger>
+<description>.</description>
+
+<content>
+<![CDATA[
+\limit{ ${1:general term} }{ ${3:over} }${4:[ ${5:approaching} ]}
+]]>
+</content>
+
+</snippet>

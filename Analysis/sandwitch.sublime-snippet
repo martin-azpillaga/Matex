@@ -1,0 +1,23 @@
+<snippet>
+
+<scope>text.tex.latex</scope>
+<tabTrigger>sandwitch</tabTrigger>
+<description>.</description>
+
+<content>
+<![CDATA[
+\$Sandwitch \$ ${1:chocolate} \$ with \$ ${2:bread} \$ :\$.
+
+\lowerBound
+{
+	${3:bread <= chocolate.}
+}.
+
+\upperBound
+{
+	${4:chocolate <= bread.}
+}
+]]>
+</content>
+
+</snippet>

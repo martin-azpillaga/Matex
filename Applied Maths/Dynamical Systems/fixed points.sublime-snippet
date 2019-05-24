@@ -1,0 +1,13 @@
+<snippet>
+
+<scope>text.tex.latex</scope>
+<tabTrigger>fixed points</tabTrigger>
+<description>.</description>
+
+<content>
+<![CDATA[
+\fixed( ${1:f} )
+]]>
+</content>
+
+</snippet>

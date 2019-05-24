@@ -1,0 +1,13 @@
+<snippet>
+
+<scope>text.tex.latex</scope>
+<tabTrigger>parametrized statistical model</tabTrigger>
+<description>.</description>
+
+<content>
+<![CDATA[
+( \Omega, \Ac, \family*{ P_\theta }{ \theta \in \Theta }) \$ d-D statistical model \$
+]]>
+</content>
+
+</snippet>

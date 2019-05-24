@@ -1,0 +1,13 @@
+<snippet>
+
+<scope>text.tex.latex</scope>
+<tabTrigger>or</tabTrigger>
+<description>.</description>
+
+<content>
+<![CDATA[
+${1:option 1} \logicOr ${2:option 2} 
+]]>
+</content>
+
+</snippet>

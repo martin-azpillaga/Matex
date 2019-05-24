@@ -1,0 +1,13 @@
+<snippet>
+
+<scope>text.tex.latex</scope>
+<tabTrigger>integral</tabTrigger>
+<description>.</description>
+
+<content>
+<![CDATA[
+\integral{ ${1:of} }{ ${2:dx} }{ ${3:base} }${4:[ ${5:top} ]}
+]]>
+</content>
+
+</snippet>

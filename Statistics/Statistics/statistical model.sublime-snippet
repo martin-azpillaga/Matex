@@ -1,0 +1,13 @@
+<snippet>
+
+<scope>text.tex.latex</scope>
+<tabTrigger>statistical model</tabTrigger>
+<description>.</description>
+
+<content>
+<![CDATA[
+( \Omega, \Ac, \Pc ) \$ statistical model \$
+]]>
+</content>
+
+</snippet>

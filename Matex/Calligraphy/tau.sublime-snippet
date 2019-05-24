@@ -1,0 +1,13 @@
+<snippet>
+
+<scope>text.tex.latex</scope>
+<tabTrigger>tau</tabTrigger>
+<description>.</description>
+
+<content>
+<![CDATA[
+\tau
+]]>
+</content>
+
+</snippet>

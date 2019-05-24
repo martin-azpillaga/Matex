@@ -1,0 +1,13 @@
+<snippet>
+
+<scope>text.tex.latex</scope>
+<tabTrigger>holomorphic function</tabTrigger>
+<description>.</description>
+
+<content>
+<![CDATA[
+f \in \Hc( ${1:\Uc} )
+]]>
+</content>
+
+</snippet>

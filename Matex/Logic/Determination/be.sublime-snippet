@@ -1,0 +1,13 @@
+<snippet>
+
+<scope>text.tex.latex</scope>
+<tabTrigger>be</tabTrigger>
+<description>.</description>
+
+<content>
+<![CDATA[
+\be{ ${1:letter} }{ ${2:definition} }
+]]>
+</content>
+
+</snippet>

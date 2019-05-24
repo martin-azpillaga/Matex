@@ -1,0 +1,13 @@
+<snippet>
+
+<scope>text.tex.latex</scope>
+<tabTrigger>union freestyle</tabTrigger>
+<description>.</description>
+
+<content>
+<![CDATA[
+\union*{ ${1:general term} }{ ${2:over.} }
+]]>
+</content>
+
+</snippet>

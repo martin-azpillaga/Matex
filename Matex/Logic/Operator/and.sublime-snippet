@@ -1,0 +1,13 @@
+<snippet>
+
+<scope>text.tex.latex</scope>
+<tabTrigger>and</tabTrigger>
+<description>.</description>
+
+<content>
+<![CDATA[
+${1:statement 1} \logicAnd ${2:statement 2} 
+]]>
+</content>
+
+</snippet>

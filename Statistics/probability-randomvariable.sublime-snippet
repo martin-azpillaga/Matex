@@ -1,0 +1,13 @@
+<snippet>
+
+<scope>text.tex.latex</scope>
+<tabTrigger>random variable</tabTrigger>
+<description>.</description>
+
+<content>
+<![CDATA[
+\function{ ${1:X} }{ \Omega }{ \R } \$ random variable \$
+]]>
+</content>
+
+</snippet>

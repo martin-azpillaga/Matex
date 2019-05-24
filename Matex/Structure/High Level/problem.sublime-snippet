@@ -1,0 +1,30 @@
+<snippet>
+
+<scope>text.tex.latex</scope>
+<description>.</description>
+<tabTrigger>problem</tabTrigger>
+
+<content>
+<![CDATA[
+\problem{ \$ ${1:description} \$ }
+{
+	\letbe
+	{
+		${2:declarations.}
+	}
+	\showthat
+	{
+		${5:statements.}
+	}
+	\demonstration
+	{
+		${6:proof.}
+	}
+\}
+
+
+
+]]>
+</content>
+
+</snippet>

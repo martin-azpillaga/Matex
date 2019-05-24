@@ -1,0 +1,13 @@
+<snippet>
+
+<scope>text.tex.latex</scope>
+<tabTrigger>defined function</tabTrigger>
+<description>.</description>
+
+<content>
+<![CDATA[
+\definedFunction{ ${1:letter} }{ ${2:from} }{ ${3:to} }{ ${4:element} }{ ${5:image} }
+]]>
+</content>
+
+</snippet>

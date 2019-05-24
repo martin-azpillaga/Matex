@@ -1,0 +1,16 @@
+<snippet>
+
+<scope>text.tex.latex</scope>
+<tabTrigger>multiple definition</tabTrigger>
+<description>.</description>
+
+<content>
+<![CDATA[
+\multiple${1:[ ${2:\\\{} ]}${3:[ ${4:\\\}} ]}
+{
+	${5:rows.} 
+}
+]]>
+</content>
+
+</snippet>

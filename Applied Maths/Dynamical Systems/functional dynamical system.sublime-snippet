@@ -1,0 +1,13 @@
+<snippet>
+
+<scope>text.tex.latex</scope>
+<tabTrigger>functional discrete dynamical system</tabTrigger>
+<description>.</description>
+
+<content>
+<![CDATA[
+( M, f ) \$ functional discrete dynamical system \$
+]]>
+</content>
+
+</snippet>

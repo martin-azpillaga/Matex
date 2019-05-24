@@ -1,0 +1,13 @@
+<snippet>
+
+<scope>text.tex.latex</scope>
+<tabTrigger>constant functions</tabTrigger>
+<description>.</description>
+
+<content>
+<![CDATA[
+\constant( ${1:over} )
+]]>
+</content>
+
+</snippet>

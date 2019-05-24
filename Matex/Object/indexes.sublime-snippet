@@ -1,0 +1,13 @@
+<snippet>
+
+<scope>text.tex.latex</scope>
+<tabTrigger>indexes</tabTrigger>
+<description>.</description>
+
+<content>
+<![CDATA[
+\indexes{ ${1:from} }{ ${2:to} }
+]]>
+</content>
+
+</snippet>

@@ -1,0 +1,16 @@
+<snippet>
+
+<scope>text.tex.latex</scope>
+<tabTrigger>ex</tabTrigger>
+<description>.</description>
+
+<content>
+<![CDATA[
+\ex{ ${1:elem} \in ${2:set} }
+{
+	${3:such that}
+}
+]]>
+</content>
+
+</snippet>

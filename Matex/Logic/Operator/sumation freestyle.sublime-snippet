@@ -1,0 +1,13 @@
+<snippet>
+
+<scope>text.tex.latex</scope>
+<tabTrigger>summation freestyle</tabTrigger>
+<description>.</description>
+
+<content>
+<![CDATA[
+\summation*{ ${1:general term} }{ ${2:over.} }
+]]>
+</content>
+
+</snippet>

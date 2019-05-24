@@ -1,0 +1,13 @@
+<snippet>
+
+<scope>text.tex.latex</scope>
+<tabTrigger>set explicit</tabTrigger>
+<description>.</description>
+
+<content>
+<![CDATA[
+\set{ ${1:elements,} }
+]]>
+</content>
+
+</snippet>

@@ -1,0 +1,13 @@
+<snippet>
+
+<scope>text.tex.latex</scope>
+<tabTrigger>series</tabTrigger>
+<description>.</description>
+
+<content>
+<![CDATA[
+\summation{ ${1:a_nf_n} }{ n }[ ${2:0} ] ${3:\$ series \$}
+]]>
+</content>
+
+</snippet>

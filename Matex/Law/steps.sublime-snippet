@@ -1,0 +1,23 @@
+<snippet>
+
+<scope>text.tex.latex</scope>
+<tabTrigger>steps</tabTrigger>
+<description>.</description>
+
+<content>
+<![CDATA[
+\$ Follow ${1:n} steps \$.
+
+\step{ 1 }{ ${2:first step name} }
+{
+	${3:rows.}
+}.
+
+\step{ 2 }{ ${4:second step name} }
+{
+	${5:rows.}
+}
+]]>
+</content>
+
+</snippet>

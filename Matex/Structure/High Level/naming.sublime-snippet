@@ -1,0 +1,30 @@
+<snippet>
+
+<scope>text.tex.latex</scope>
+<description>.</description>
+<tabTrigger>name</tabTrigger>
+
+<content>
+<![CDATA[
+\definition{ \$ ${1:entity} \$ }
+{
+	\letbe
+	{
+		${2:statements.}
+	}
+	\name{ \$ ${3:entity} \$ }
+	{
+		${4:naming.}
+	}${5:
+	\denote
+	{
+		${6:property} \as ${7:notation.}
+	\}}
+}
+
+
+
+]]>
+</content>
+
+</snippet>

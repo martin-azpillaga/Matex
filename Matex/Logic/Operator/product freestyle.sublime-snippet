@@ -1,0 +1,13 @@
+<snippet>
+
+<scope>text.tex.latex</scope>
+<tabTrigger>product freestyle</tabTrigger>
+<description>.</description>
+
+<content>
+<![CDATA[
+\product*{ ${1:general term} }{ ${2:over.} }
+]]>
+</content>
+
+</snippet>

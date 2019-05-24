@@ -1,0 +1,13 @@
+<snippet>
+
+<scope>text.tex.latex</scope>
+<tabTrigger>set implicit</tabTrigger>
+<description>.</description>
+
+<content>
+<![CDATA[
+\set{ ${1:elem} \in ${2:set} \with ${3:property} }
+]]>
+</content>
+
+</snippet>

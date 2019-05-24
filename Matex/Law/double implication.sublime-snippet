@@ -1,0 +1,20 @@
+<snippet>
+
+<scope>text.tex.latex</scope>
+<tabTrigger>double implication</tabTrigger>
+<description>.</description>
+
+<content>
+<![CDATA[
+\rightway
+{
+	${1:proof.}
+}
+\leftway
+{
+	${2:proof.}
+}	
+]]>
+</content>
+
+</snippet>

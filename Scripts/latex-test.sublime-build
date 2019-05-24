@@ -1,0 +1,21 @@
+{
+	"shell" : true,
+	"windows":
+	{
+		"cmd": 
+		[
+			"taskkill", "/Im", "sumatrapdf.exe", "&",
+			
+			"pdflatex", "-quiet", "$file", "&&",
+
+			"del", "$file_base_name.aux", "&&",
+			"del", "$file_base_name.log", "&&",
+			"del", "$file_base_name.toc", "&&",
+			"del", "$file_base_name.out", "&&",
+			
+			"sumatrapdf", "$file_base_name.pdf", "-presentation"
+		],
+		//"file_regex": "(?s)(^C.*(?:\n).*tex):([0-9]+):",
+		"selector": "source.latex"
+	}
+}

@@ -1,0 +1,14 @@
+<snippet>
+
+<scope>text.tex.latex</scope>
+<tabTrigger>$</tabTrigger>
+<description>.</description>
+
+<content>
+<![CDATA[
+\$ ${1:property} \$
+]]>
+</content>
+
+</snippet>
+

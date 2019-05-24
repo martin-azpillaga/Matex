@@ -1,0 +1,13 @@
+<snippet>
+
+<scope>text.tex.latex</scope>
+<tabTrigger>omicron</tabTrigger>
+<description>.</description>
+
+<content>
+<![CDATA[
+\omicron
+]]>
+</content>
+
+</snippet>

@@ -1,0 +1,13 @@
+<snippet>
+
+<scope>text.tex.latex</scope>
+<tabTrigger>if and only if</tabTrigger>
+<description>.</description>
+
+<content>
+<![CDATA[
+\ifandonlyif
+]]>
+</content>
+
+</snippet>

@@ -1,0 +1,26 @@
+<snippet>
+
+<scope>text.tex.latex</scope>
+<description>.</description>
+<tabTrigger>example</tabTrigger>
+
+<content>
+<![CDATA[
+\example{ \$ ${1:entity} \$ }
+{
+	\letbe
+	{
+		${2:statements.}
+	}
+	\is{ ${3:item} }{ \$ ${4:a/an entity} \$ }
+	{
+		${5:proof.}
+	}
+\}
+
+
+
+]]>
+</content>
+
+</snippet>

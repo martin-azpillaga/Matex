@@ -1,0 +1,13 @@
+<snippet>
+
+<scope>text.tex.latex</scope>
+<tabTrigger>exponential</tabTrigger>
+<description>.</description>
+
+<content>
+<![CDATA[
+\exp( ${1:go} )
+]]>
+</content>
+
+</snippet>

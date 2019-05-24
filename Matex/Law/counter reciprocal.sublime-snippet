@@ -1,0 +1,16 @@
+<snippet>
+
+<scope>text.tex.latex</scope>
+<tabTrigger>counter-reciprocal</tabTrigger>
+<description>.</description>
+
+<content>
+<![CDATA[
+\counter-reciprocal{ ${1:Supposition} }{ ${2:Result} }
+{
+	${3:Proof.}	
+}
+]]>
+</content>
+
+</snippet>

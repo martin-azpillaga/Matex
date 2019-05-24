@@ -1,0 +1,13 @@
+<snippet>
+
+<scope>text.tex.latex</scope>
+<tabTrigger>union</tabTrigger>
+<description>.</description>
+
+<content>
+<![CDATA[
+\union{ ${2:general term} }{ ${3:indexed by} }${4:[ ${5:from} ]}${6:[ ${7:to} ]}
+]]>
+</content>
+
+</snippet>

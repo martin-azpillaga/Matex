@@ -1,0 +1,13 @@
+<snippet>
+
+<scope>text.tex.latex</scope>
+<tabTrigger>probability space</tabTrigger>
+<description>.</description>
+
+<content>
+<![CDATA[
+(\Omega,\Ac,\Pc) \$ probability space \$
+]]>
+</content>
+
+</snippet>

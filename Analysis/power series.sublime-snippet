@@ -1,0 +1,13 @@
+<snippet>
+
+<scope>text.tex.latex</scope>
+<tabTrigger>power series</tabTrigger>
+<description>.</description>
+
+<content>
+<![CDATA[
+\sum{ a_nx^n }{ n }[ 0 ] \$ power series \$
+]]>
+</content>
+
+</snippet>

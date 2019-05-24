@@ -1,0 +1,13 @@
+<snippet>
+
+<scope>text.tex.latex</scope>
+<tabTrigger>Kappa</tabTrigger>
+<description>.</description>
+
+<content>
+<![CDATA[
+\Kappa
+]]>
+</content>
+
+</snippet>
