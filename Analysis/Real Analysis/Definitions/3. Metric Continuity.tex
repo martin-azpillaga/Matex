@@ -1,0 +1,93 @@
+\unit{ $Metric Continuity$ }
+{
+	\introduction{ 
+		$
+		The field of real numbers is the transcendent extension \\
+		of the rational numbers that represent all the possible \\
+		values that can be obtained once a reference is set in a \\
+		line. This set and its properties have been used since the \\
+		very beggining of the mathematics but its formalization didn't \\
+		come off till the 20th century. As we will discuss in this unit, \\
+		the field of real numbers is the defined by a field that \\
+		accomplishes some special properties. The point is that exists \\
+		one unique field ( over isomorphisms ) that has this properties \\
+		and thats why its calles The field of real numbers. Lets start \\
+		From the very beggining:
+		$
+	}
+	\definition{ $Limit$ }
+	{
+	\letbe
+	{
+		(A_1,d_1), (A_2,d_2) $ metric spaces $.
+		\function{ f }{ A_1 }{ A_2 }.
+		B \subset A_1.
+		x \in B'.
+		l \in A_1
+
+	}
+	\then{ l }{ $the limit of f in $ x }
+	{
+		\all{ \eps \in \R^+ }
+		{
+			\ex{ \delta \in \R^+ }{ \all{ y \in B }[ d_1(x,y) < \delta ]
+			{
+				d_2( l, f(y) ) < \eps
+			} }
+		}
+	}
+	\denote
+	{
+		l : \limit{ f(t) }{ t }[ x ]
+	}
+	}
+
+
+	\definition{ $Continuity$ }
+	{
+	\letbe
+	{
+		(A_1,d_1), (A_2, d_2) $ metric spaces $.
+		B \subset A_1.
+		\function{ f }{ B }{ A_2 }.
+		x \in B'
+	}
+	\then{ f }{ $continuous in $ x }
+	{
+		f(x) = \limit{ f(t) }{ t }[ x ]
+	}
+	\then{ f }{ $continuous in $ B }
+	{
+		\all{ x \in B }
+		{
+			f $ continuous in $ x
+		}
+	}
+	\denote
+	{
+		f $ continuous in $ A \as f \in \Cc(A_1)
+	}}
+
+
+
+	\definition{ $Uniform Continuity$ }
+	{
+	\letbe
+	{
+		(A_1,d_1), (A_2,d_2) $ metric spaces $.
+		B \subset A.
+		\function{ f }{ B }{ A_2 }
+	}
+	\then{ f }{ $uniformly continuous in $ B }
+	{
+		\all{ \eps \in \R^+ }
+		{
+			\ex{ \delta \in \R^+ }{ \all{ x,y \in B }[ d_1(x,y) < \delta ]
+			{
+				d_2(f(x),f(y)) < \eps
+			} }
+		}
+	}
+	}
+
+}

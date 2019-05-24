@@ -1,0 +1,104 @@
+
+\documentclass[../Main/main]{subfiles}
+
+
+\begin{document}
+
+
+\unit{ $ Holomorphic functions $ }
+{
+	\problem{ $ 3. Cauchy-Riemman $ }
+	{
+		\letbe
+		{
+			f \in \Hc( \C ) \suchthat Re f + Im f = c_a
+		}
+		\showthat
+		{
+			\ex{ a' \in \C }{ f = c_{a'} }
+		}
+		\demonstration
+		{
+			u,v $ real components of $ f.
+			u(x,y) + v(x,y) = a.
+			$ differentiate respect x and y $.
+			u_x + v_x = 0.
+			u_y + v_y = 0.
+			f $ holomorphic $ \imp f $ CR $.
+			u_x - u_y = 0.
+			u_y + u_x = 0..
+
+			u_x, u_y, v_x, v_y = 0.
+			\ex{ a_1 \in \R }{ u = c_{a_1} }.
+			\ex{ a_2 \in \R }{ v = c_{a_2} }.
+			f = c_{(a_1,a_2)}
+		}
+	}
+
+
+	\problem{ $ B.2 a) $ }
+	{
+		\letbe
+		{
+			\definedFunction{ u }{ \R^2 }{ \R^2 }{ (x,y) }{ \exp( y )\cos( x ) }
+		}
+		\showthat
+		{
+			\ex{ f \in \Hc(\C) }{ u $ real component of $ f }
+		}
+		\demonstration
+		{
+			$lab 1$ \imp u_{xx} + v_{yy} = 0.
+			u_x = \exp( x )\cos( y ).
+			u_{xx} = \exp( x )\cos( y ).
+			u_y = -\exp( x )\sin( y ).
+			u_{yy} = - \exp( x )\cos( y ).
+
+			$ok$..
+
+			$ Calculate v using CR $.
+
+			v_y = u_x = \exp( x )\cos( y ).
+			v(x,y) = \integral{ \exp( x )\sin( y ) }{ dy }{ \C } = \exp( x )\sin( y ) + \phi(x).
+
+			v_x = \partialderivative{ x }{ v } = \exp( x )\sin( y ) + \phi'(x).
+			-u_y = \exp( x )\sin( y ) + \phi'(x).
+
+			$CR$ \imp \phi'(x) = 0.
+
+			\all{ c \in \R }
+			{
+				\phi(x) = c $ ok $.
+			}
+
+			v(x,y) = \exp( x )\sin( y ).
+
+			\definedFunction{ f }{ \C }{ \C }{ (x,y) }{ (u(x,y),v(x,y)) }
+
+
+		}
+	}
+
+
+	
+	
+	\proposition{ $ Preservation of angles $ }
+	{
+		\letbe
+		{
+			\gamma_1, \gamma_2 $ plane arcs $ \suchthat \gamma_1(0) = \gamma_2(0)
+		}
+		\holds
+		{
+			$ angle of $ \gamma_1'(0) $ and $ \gamma_2'(0) = $ angle $ \sigma_1'(0), \sigma_2'(0) 
+		}
+		\demonstration
+		{
+			$ rotations and homotecies let angles invariant $
+		}
+	}
+
+}
+
+
+\end{document}

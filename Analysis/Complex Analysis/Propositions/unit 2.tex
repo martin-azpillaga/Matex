@@ -1,0 +1,413 @@
+
+\documentclass[../Main/main]{subfiles}
+
+
+\begin{document}
+
+
+\unit{ $ Holomorphic functions $ }
+{
+	
+	\proposition{ $ Cauchy-Riemman $ }
+	{
+		\letbe
+		{
+			\function{ f }{ \R^2 }{ \R^2 } $ satisfies CR $
+		}
+		\holds
+		{
+			f_x = f'(z).
+			f_y = -if_y.
+			\partialderivative{ z }{ f(z) } = 0
+		}
+		\demonstration
+		{
+			f_x = u_x + iv_x = a + bi = f'(z).
+			f_y = i(a+ib) = if'(z).
+			f'(z) = -if_y.
+			$notation$
+		}
+	}
+
+
+	\proposition{ $ tangent venctor $ }
+	{
+		\letbe
+		{
+			\gamma $ differentiable plane arc $ \suchthat \all{ t \in I }
+			{
+				\gamma'(t) \neq 0
+			}
+		}
+		\holds
+		{
+			\gamma'(t) $ tangent to $ \gamma
+		}
+		\demonstration
+		{
+			demonstration.
+		}
+	}
+
+
+	\proposition{ $ arc images $ }
+	{
+		\letbe
+		{
+			f \in \Hc(\Uc).
+			\gamma $ differentiable plane arc $ \suchthat \gamma \subset \Uc.
+			\sigma = f(\gamma).
+			z_0 = \gamma(0)
+		}
+		\holds
+		{
+			\sigma' = f'(\gamma)\gamma'.
+			\gamma'(0) \neq 0 \imp f'(z_0) \neq 0.
+			\sigma'(0) = f'(z_0)\gamma'(0).
+			|\sigma'(0)| = |f'(z_0)||\gamma'(0)|.
+			arg \sigma'(0) = arg \gamma'(0) + arg f(z_0).
+			$ f aplica una homotecia mas una rotacion constante a todos los \\ vectores tangentes que salen de z0 $
+		}
+		\demonstration
+		{
+			$obvio$
+		}
+	}
+
+
+	
+	
+	\proposition{ $ Holomorphic functions are conform $ }
+	{
+		\letbe
+		{
+			\function{ f }{ \Uc }{ \C }.
+			
+		}
+		\holds
+		{
+			f $holomorph in $ z \suchthat f'(z) \neq 0 \ifandonlyif f $ conform $
+		}
+		\demonstration
+		{
+			\rightway
+			{
+				$ already seen $
+			}
+			\leftway
+			{
+				$ too hard $
+			}	
+		}
+	}
+
+	\proposition{ $ Convergence of complex series $ }
+	{
+		\letbe
+		{
+			\summation{ c_n }{ n }[ 0 ] $ complex series $
+		}
+		\holds
+		{
+			\summation{ c_n }{ n }[ 0 ] $ convergent $ \ifandonlyif \summation{ Re c_n }{ n }[ 0 ] $ convergent $ \logicAnd \sum{ Im c_n }{ n }[ 0 ] $ convergent $	
+		}
+		\demonstration
+		{
+			demonstration.
+		}
+	}
+	
+	
+	
+	
+	\proposition{ $ Absolutely convergent are convergent $ }
+	{
+		\letbe
+		{
+			\sum{ c_n }{ n }[ 0 ] $ absolutely convergent $
+		}
+		\holds
+		{
+			\sum{ c_n }{ n }[ 0 ] $ convergent $
+		}
+		\demonstration
+		{
+			\be{ S_k }{ \sum{ c_n }{ n }[ 0 ][k] }.
+
+			\all{ m \in \N }[ m < k ]
+			{
+				|S_k - S_m | = | \sum{ c_n }{ n }[ m+1 ][k] | \leq \sum{ |c_n| }{ n }[ m+1 ][k].
+
+				\leq \sum{ |c_n| }{ n }[ m+1 ] \convergesto 0.
+
+				|S_k - S_m | \convergesto 0 \imp (S_k)_k $ convergent $ \imp \sum{ c_n }{ n }[ 0 ] $ convergent $
+			}
+		}
+	}
+	
+	
+	\proposition{ $ Series and norm $ }
+	{
+		\letbe
+		{
+			\sum{ c_n }{ n }[ 0 ] $ convergent $
+		}
+		\holds
+		{
+			|c_n| \convergesto 0
+		}
+		\demonstration
+		{
+			\sum{ c_n }{ n }[ 0 ] $ convergent $ \ifandonlyif (S_n)_n $ convergent $.
+
+			\imp $ Cauchy $ |S_n - S_m | \convergesto 0 $ por n y m $ \imp |S_n - S_{n-1}| \convergesto 0.
+
+			\imp |c_n| \convergesto 0
+		}
+	}
+	
+	
+	\proposition{ $ Root test $ }
+	{
+		\letbe
+		{
+			\summation{ c_n }{ n }[ 0 ] $ real series $.
+
+			l \in \R \suchthat \superiorlimit{ |c_k|^{\frac{ 1 }{ k }} }{ k } = l
+		}
+		\holds
+		{
+			l > 1 \imp \summation{ c_n }{ n }[ 0 ] \nin \R.
+
+			l < 1 \imp \summation{ c_n }{ n }[ 0 ] \in \R
+		}
+		\demonstration
+		{
+			demonstration.
+		}
+	}
+	
+	
+	\proposition{ $ Quotient test $ }
+	{
+		\letbe
+		{
+			\summation{ c_n }{ n }[ 0 ] $ real series $.
+
+			l \in \R \suchthat 
+		}
+		\holds
+		{
+			\ex{ l \in \R }
+			{
+				\limit{ \frac{ c_{k+1} }{ c_k }}{ k } = l
+			}.
+
+			\superiorlimit{ |c_k|^{\frac{ 1 }{ k }} }{ c_k }{ k } = l
+		}
+	}
+	
+	
+	
+	
+	
+	\proposition{ $ Power series theorem $ }
+	{
+		\letbe
+		{
+			\summation{ a_nc^n }{ n }[ 0 ] $ power series $
+		}
+		\holds
+		{
+			|z-a| < R \imp $ absolutely convergent $.
+			|z-a| > R \imp $ divergent $.
+
+			$ convergent in $ D(a,R).
+
+			\definedFunction{ f }{ \C }{ \C }{ z }{ \summation{ c_n(z-a)^n }{ n }[ 0 ] } \in \Hc(D(a,R)).
+
+			\all{ z \in \C }
+			{
+				f'(z) = \summation{ nc_n(z-a)^{n-1} }{ n }[ 0 ] $ convergent $ 
+			}.
+
+			$ convergence radius of $ f' = $ convergence radius of $ f
+		}
+		\demonstration
+		{
+			 \all{ z \in \C }[ |z-a| < R ]
+			 {
+			 	$ Root test over $ \summation{ |c_n||z-a|^n }{ n }[ 0 ]
+
+			 	rlimit{ (|c_n||z-a|^n)^{\frac{ 1 }{ n }} }{ n } =
+			 	|
+	z-a| rlimit{ |c_n|^{\frac{ 1 }{ n }} }{ n } = \frac{ |z-a| }{ R } < 1
+	
+
+			 	$ Root test $ \imp $ absolutely convergent $.
+
+			 }
+
+			 \all{ z \in \C }[ |z-a| < R ]
+			 {
+			 	\all{ \rho \in \R }[ |z-a| < \rho < R ]
+			 	{
+			 		\frac{ 1 }{ \rho } < \frac{ 1 }{ R }.
+
+			 		rlimit{ |c_n|^{1/n} }{ n } = \frac{ 1 }{ R } \i
+			 		$ exists partial of $ |c_n|^{1/n}.
+
+			 		|c_n||z-a|^n > \frac{ |z-a|^n }{ \rho^n } $ no $ \convergesto 0.
+
+			 		$ General term test $ \imp $ divergent $
+			 	}
+			}
+		}
+		
+	}
+
+
+	\proposition{ $ Power series theorem $ }
+	{
+		\letbe
+		{
+			
+		}
+		\holds
+		{
+			Part II,III,IV
+		}
+		\demonstration
+		{
+			$ Follow 3 steps $.
+			
+			\steps{ 1 }{ Uniform convergence in compacts of $D(a,R)$ }
+			{
+				\definedFunction{ g_n }{ \C }{ \C }{ z }{ c_n(z-a)^n }.
+				\all{ \rho \in \R }[ \rho < R ]
+				{
+					\all{ z \in \closed{D(a,\rho)} }
+					{
+						|g_n(z)| = |c_n||z-a|^n \leq |c_n|\rho^n
+					}.
+
+					\be{ M_n }{ |c_n|\rho^n }.
+
+					rlimit{ (|c_n|\rho^n)^{1/n} }{ n } = \rho rlimit{ |c_n|^{1
+	/n} }{ n } = \frac{ \rho }{ R } < 1.
+	
+
+					$Root test$ \imp \summation{ M_n }{ n }[ 0 ] $ convergent $.
+
+					$M-Weierstrass$ \imp \summation{ c_n(z-a)^n }{ n }[ 0 ] $ uniformly convergent over compacts of $ D(a,\rho)
+				}.
+
+				\summation{ c_n(z-a)^n }{ n }[ 0 ] $ uniformly convergent over compacts of $ D(a,r).
+
+				\be{ f(z) }{ \summation{ g_n(z) }{ n }[ 0 ] }.
+
+				g $ uniformly convergent $ \imp f $ continuous $
+			}.
+			
+			\steps{ 2 }{ IV. R' }
+			{
+				\be{ \tilde{f}(z) }{ \summation{ nc_n(z-a)^{n-1} }{ n }[ 1 ] }.
+
+				\tilde{f}(z) = \summation{ (n+1)c_{n+1}(z-a)^n }{ n }[ 0 ].
+
+				\frac{ 1 }{ R' } = rlimit{ (n+1)|c_{n+1}|^{1/n} }{ n } = rlimit{ (n+1)^{1/n}|c_{n+1
+}|^{1/n} }{ n } = rlimit{ (|c_{n+1}|^{
+1/n+1})^{\frac{ n+1 }{ n }} }{ n } = \frac{ 
+1 }{ R }.
+
+				R' = R
+
+			}
+
+			\steps{ 3 }{ III }
+			{
+				\tilde{f} $well defined in $ D(a,R).
+				\all{ z_0 \in D(a,R) }
+				{
+					
+						\abs{ \frac{ f(z) - f(z_0) }{ z - z_0 } - \tilde{f}(z_0)} \convergesto 0?.
+
+						\all{ n \in \N }
+						{
+							\be{ S_n(z) }{ \summation{ f_k(z) }{ k }[ 0 ][ n ] }.
+							\be{ R_n(z) }{ \summation{ f_k(z) }{ k }[ n+1 ] }.
+							f(z) = S_n(z) + R_n(z).
+
+							\tilde{f}(z) = \tilde{S_n}(z) + \tilde{R_n}(z).
+
+							R_n(z), \tilde{R_n}(z) \convergesto 0
+
+						}.
+
+
+						\all{ \epsilon \in \R^+ }
+						{
+							\abs{ \frac{ f(z) - f(z_0) }{ z - z_0 } } = \abs{ \frac{ S_n(z) - S_n(z_0) }{ z - z_0 } + \frac{ R_n(z) - R_n(z_0) }{ z - z_0 } - \tilde{S_n}(z_0) - \tilde{R_n}(z_0) }.
+
+							\all{ \rho \in \R }[ |z_0 - a| < \rho < R ]
+							{
+								\abs{ \tilde{R_n}(z_0) } \leq \summation{ k|c_k|\rho^{k-1} }{ k }[ n+1 ] < \frac{ \epsilon }{ 3 } ( n \geq n_1 ).
+							}.
+
+							\abs{ \frac{ R_n(z) - R_n(z_0) }{ z - z_0 } } \leq \summation{ |c_k||\frac{ (z-a)^k - (z_0 - a)^k }{ z - z_0 }| }{ k }[ n+1 ].
+
+							\frac{ a^k - b^k }{ a-b } = a^{k-1} - a^{k-2}b + --- + b^{k-1}.
+
+							\leq \summation{ |c_k|(|z-a|^{k-1} + |z-a|^{k-2}|z_0-a| + --- + |z_0 -a|^{k-1} }{ k }[ n+1 ].
+
+							|z-a|, |z_0| < \rho.
+
+							\leq \summation{ |c_k|k\rho^{k-1} }{ k }[ n+1 ] < \frac{ \epsilon }{ 3 } ( n \geq n_1 ).
+
+							\abs{ \frac{ S_n(z) - S_n(z_0) }{ z - z_0 } - \tilde{S_n}(z_0) } < \frac{ \epsilon }{ 3 } ( S_n' = \tilde{S_n} ) ( n \geq n_2 ).
+
+							\all{ n \in \N }[ n \geq \max( n_1, n_2 )  ]
+							{
+								\abs{ \frac{ f(z) - f(z_0) }{ z - z_0 } } < \epsilon
+							}
+						}		
+				}
+			}
+		}
+	}
+	
+	
+			
+	\proposition{ $ functions associated to series are $ \Cc^{\infty} }
+	{
+		\letbe
+		{
+			f(z) = \sum{ c_n(z-a)^n }{ n }[ 0 ] $ series $.
+			R $ radius of convergence of $ f
+		}
+		\holds
+		{
+			f \in \Cc^{\infty} $ over $ D(a,R).
+			\all{ n \in \N }
+			{
+				f^{n)} \in \Hc(D(a,R))
+			}.
+
+			c_k = \frac{ f^{k)} }{ k! }.
+
+			$ series associated to $ f $ is unique $
+		}
+		\demonstration
+		{
+			f^{k)}(z) = \sum{ n(n-1)---(n-k+1)c_n(z-a)^{n-k} }{ n }[ k ].
+
+			f^{k)}(a) = k! c_k.
+
+			c_k = \frac{ f^{k)}(a) }{ k! }
+		}
+	}
+
+}
+
+
+\end{document}

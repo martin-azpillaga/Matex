@@ -1,0 +1,1 @@
+start gource -f -1920x1080 --multi-sampling --camera-mode track --file-idle-time 0 --key --title "Matex" --font-size 18

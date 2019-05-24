@@ -1,0 +1,101 @@
+
+\documentclass[../Main/main]{subfiles}
+
+\begin{document}
+
+\unit{ $ Non-linear maps $ }
+{
+	\laboratory{}
+	
+	\thread{ $  $ }
+	{
+		\letbe
+		{
+			\definedFunction{ f }{ \R^2 }{ \R^2 }{ (x,y) }{ (2y+x^2-2xy, 2-2x+2y+xy-y^2) }.
+		}
+		\study	
+		{
+			$Stability of fixed points of $ f.
+		}
+		\demonstration
+		{
+			$Fixed points:$.
+
+			f(x,y) = (x,y) \ifandonlyif \begin{cases} 2y +x^2 -2xy = x \\ 2-2x+y +xy - y^2 = 0 \end{cases}.
+
+			$Case $ x \neq 1.
+
+			\ifandonlyif \begin{cases} y = \frac{ x(x-1) }{ 2(x-1) } \\ 2-2x+y +xy - y^2 = 0 \end{cases}
+
+			\ifandonlyif \begin{cases} y = \frac{ x }{ 2 } \\ 2-2x+x/2 +x^2/2 - x^2/4 = 0 \end{cases}.
+
+			\ifandonlyif \begin{cases} y = \frac{ x }{ 2 } \\ x^2 - 6x + 8 = 0 \end{cases}
+
+			\ifandonlyif \begin{cases} y = \frac{ x }{ 2 } \\ x \in \set{ 2,4 } \end{cases}.
+
+			$Case $ x = 1.
+
+			2 -2 + y + y - y^2 = 0 \ifandonlyif y^2 -2y = 0 \ifandonlyif y \in \set{ 0,2 }.
+
+			\fixed( f ) = \set{ (1,0),(1,2),(2,1),(4,2) }.
+
+			$Stability:$.
+
+			Df(x,y) = \Matrix{ 2x-2y, 2-2x. y-2,-2y+x+2 }.
+
+			Df(1,0) = \Matrix{ 2,0.-2,3 }.
+
+			Df(1,2) = \Matrix{ -2,0.0,-1 }.
+
+			Df(2,1) = \Matrix{ 4,-2.0,2 }.
+
+			Df(4,2) = \Matrix{ 2,-2.-1,2 }.
+
+			\chi_{Df(1,0)}(t) = t^2 - 5t + 6.
+
+			\chi_{Df(1,2)}(t) = t^2 + 3t + 2.
+
+			\chi_{Df(2,1)}(t) = t^2 - 6t + 8.
+
+			\chi_{Df(4,2)}(t) = t^2 - 4t + 2.
+
+			\sigma( Df(1,0) ) = \set{ 2,3 } \imp (1,0) $ repulsive node $.
+
+			\sigma( Df(1,2) ) = \set{ -2,-1 } $ degenerated case $.
+
+			\sigma( Df(2,1) ) = \set{ 2,4 } \imp (2,1) $ repulsive node $.
+
+			\sigma( Df(4,2) ) = \set{ 2 \pm \sqrt{ 2 } } \imp (4,2) $ saddle point $.
+
+			x = 1 $is an invariant curve:$.
+
+			\all{ (x,y) \in \R^2 }[x=1]
+			{
+				f_1(1,y) = 2y +1^2 -2y = 1.
+
+				f(1,y) \in \set{ (x,y) \in \R^2 \with x = 1 }.
+			}.
+
+			$Stable \& Unstable invariant subspaces $.
+
+			\be{ \lambda_1 }{ 2 + \sqrt{ 2 } }.
+			\be{ \lambda_2 }{ 2 - \sqrt{ 2 } }.
+
+			E_{\lambda_1}(A) = Ker \Matrix{ -\sqrt{ 2 }, -2. -1, -\sqrt{ 2 } } = \set{ (x,y) \in \R^2 \with y = -\frac{ \sqrt{ 2 } }{ 2 }x }.
+
+			E_{\lambda_2}(A) = Ker \Matrix{ \sqrt{ 2 }, -2. -1, \sqrt{ 2 } } = \set{ (x,y) \in \R^2 \with y = \frac{ \sqrt{ 2 } }{ 2 }x }.
+
+			E^s = <(1,-\frac{ \sqrt{ 2 } }{ 2 }>.
+
+			E^u = <(1,\frac{ \sqrt{ 2 } }{ 2 }>.
+
+			f $ has an invariant attractive variety tangent to $ (4,2) + E^s $ and an invariant repulsive variety tangent to $ (4,2) + E^u 
+		}
+	}
+	
+	
+	
+}
+
+
+\end{document}

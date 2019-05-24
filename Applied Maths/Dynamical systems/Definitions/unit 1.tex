@@ -1,0 +1,374 @@
+
+\documentclass[../Main/main]{subfiles}
+
+
+\begin{document}
+
+\unit{ $ Discrete dynamical systems $ }
+{	
+	
+	\thread{ $ Dynamical system $ }
+	{
+		\letbe
+		{
+			M $ manifold $.
+			(T,+) $ monoid $.
+			\function{ \phi }{ T \times M }{ M }.
+		}
+		\then{ ( M, T, \phi ) }{ $ a dynamical system $ }
+		{
+			\all{ x \in X }
+			{
+				\phi( x, 0 ) = 0.
+
+				\all{ t_1,t_2 \in T }
+				{
+					\phi( \phi( x, t_1 ), t_2 ) = \phi( x, t_1+t_2 ).
+				}
+			}
+		}
+	}
+
+
+	\thread{ $ Discrete $ }
+	{
+		\letbe
+		{
+			( M, T, \phi ) $ dynamical system $.
+		}
+		\then{ ( M, T, \phi ) }{ $ discrete $ }
+		{
+			T \countable.
+		}
+	}
+
+
+	\thread{ $ Dimension $ }
+	{
+		\letbe
+		{
+			( M, T, \phi ) $ dynamical system $.
+		}
+		\name{ $ dimension of $ ( M, T, \phi ) }
+		{
+			\dim(M).
+		}
+		\denote
+		{
+			dim(M) = n \as ( M, T, \phi ) $ n-D $.
+		}
+	}
+
+
+	\thread{ $ Functional $ }
+	{
+		\letbe
+		{
+			( M, T, \phi ) $ discrete dynamical system $.
+		}
+		\then{ ( M, T, \phi ) }{ $ functional $ }
+		{
+			T \subset \N.
+
+			\ex{ \function{ f }{ M }{ M } }
+			{
+				\all{ (t,x) \in T \times M }
+				{
+					\phi(t,x) = f^t(x).
+				}
+			}
+		}
+		\denote
+		{
+			T = \N \as ( M, f ) $ functional dynamical system $.
+			f \in \Cc^n( M ) \as ( M, f ) \s \Cc^n.
+		}
+	}
+	
+	
+	\thread{ $ Orbit $ }
+	{
+		\letbe
+		{
+			( M, f ) $ functional dynamical system $.
+			x \in M.
+		}
+		\name{ $ orbit of $ x }
+		{
+			\family*{ f^n(x) }{ n \in \N }.
+		}
+		\denote
+		{
+			o(x).
+		}
+	}
+	
+	
+	\thread{ $ Periodicity $ }
+	{
+		\letbe
+		{
+			( M, f ) $ functional dynamical system $.
+			x \in M.
+			m \in \N.
+		}
+		\then{ x }{ $ a period $ m $ point $ }
+		{
+			f^m(x)=x
+		}
+		\denote
+		{
+			\set{ x \in M \with x $ period $ 1 $ point $ } \as \fixed(f)
+		}
+	}
+
+
+	\thread{ $ Stability $ }
+	{
+		\letbe
+		{
+			( \R^n, f ) $ functional dynamical system $.
+			p \in \R^n $ period $ m $ point $.
+		}
+		\then{ p }{ $ stable for $ f $ $ }
+		{
+			\all{ \epsilon \in \R^+ }
+			{
+				\ex{ \delta \in \R^+ }
+				{
+					\all{ x \in B(p,\delta) }
+					{
+						\all{ n \in \N }
+						{
+							f^{nm}(x) \in B(p,\epsilon).
+						}
+					}
+				}
+			}
+		}
+		\then{ p }{ $ unstable $ }
+		{
+			p $ not stable $.
+		}
+		\then{ p }{ $ attractive for $ f $ $ }
+		{
+			p $ stable $.
+			\ex{ \epsilon \in \R^+ }
+			{
+				\all{ x \in B(p,\epsilon) }
+				{
+					f^{nm}(x) \convergesto p.
+				}
+			}
+		}
+		\then{ p }{ $ repulsive $ }
+		{
+			p $ attractive by $ f^{-1}.
+		}
+	}
+	
+	\thread{ $ Attraction set $ }
+	{
+		\letbe
+		{
+			( M, f ) $ functional dynamical system $.
+			x \in M $ attractive m-periodic point $.
+			o(x) $ orbit of $ x
+		}
+		\name{ $ attraction set of $ o(x) }
+		{
+			\set{ y \in M \with \exists \; x' \in o(x) \as f^{nm}(y) \convergesto x' }
+		}
+		\denote
+		{
+			A( o(x) )
+		}
+	}
+
+
+	\thread{ $ Multiplier $ }
+	{
+		\letbe
+		{
+			( M, f ) \hspace{5pt} \Cc^1 $ functional dynamical system $.
+			x \in M
+		}
+		\name{ $ multiplier of $ x }
+		{
+			m(x) = f'(x)
+		}
+		\denote
+		{
+			|m(x)|= 1 \as x $ neutral point $.
+			|m(x)|= 1 \logicAnd f''(x) = 0 \as x $ feeble point $
+		}
+	}
+
+
+	\thread{ $ Character $ }
+	{
+		\letbe
+		{
+			( M, f ) $ functional dynamical system $.
+		}
+		\name{ $ fixed point character$ }
+		{
+			\definedFunction{ f }{ \fixed(f) }{ \set{ -2,-1,0,1,2 } }{ x }{ \begin{cases} +2 & x $ repulsive $ \\ +1 & x $ unstable $ \\ 0 & * \\ -1 & x $ stable $ \\ -2 & x $ attractive $ \end{cases} }
+		}
+		\denote
+		{
+			f \as \chi_f
+		}
+	}
+	
+
+	\thread{ $ Topological equivalence $ }
+	{
+		\letbe
+		{
+			( M, f_1 ), ( M, f_2 ) $ functional dynamical systems $.
+		}
+		\then{ ( M, \N, f_1 ) }{ $ topologically equivalent to $ ( M, \N, f_2 ) $ $ }
+		{
+			\fixed(f_1) = \fixed(f_2).
+
+			\all{ x \in \fixed(f_1) }
+			{
+				\chi_{f_1}(x) = \chi_{f_2}(x)
+			}
+		}
+		\denote
+		{
+			( M, f_1 ) \sim ( M, f_2 )
+		}
+	}
+	
+
+	\thread{ $ Bifurcation $ }
+	{
+		\letbe
+		{
+			\family*{ ( M, f_\lambda ) }{ \lambda \in \Lambda } $ functional dynamical systems $.
+			\lambda_0 \in \Lambda.
+		}
+		\then{ \lambda_0 }{ $ a bifurcation parameter $ }
+		{
+			\all{ \epsilon \in \R^+ }
+			{
+				\ex{ \lambda' \in B(\lambda_0,\epsilon) }
+				{
+					( M, f_{\lambda'} ) \not\sim ( M, f_{\lambda_0} )
+				}
+			}
+		}
+	}
+	
+	
+	\thread{ $ Saddle-node bifurcation $ }
+	{
+		\letbe
+		{
+			( M, \N, f_\lambda )_{\lambda \in \Lambda} $ functional dynamical systems $.
+			\lambda_0 \in \Lambda.
+			x_0 \in M
+		}
+		\then{ \lambda_0 }{ $ a saddle-node bifurcation value at $ x_0 $ $ }
+		{
+			x_0 \in \fixed( f_{\lambda_0} ).
+			x_0 $ neutral point of $ f_{\lambda_0}.
+			\partialderivative{ f_\lambda }{ \lambda }(x_0) \neq 0.
+			\partialderivative{ f_\lambda }{ xx }(x_0) \neq 0
+		}
+	}
+	
+	
+	\thread{ $ Pitchfork bifurcation $ }
+	{
+		\letbe
+		{
+			( M, \N, f_\lambda )_{\lambda \in \Lambda} $ functional dynamical systems $.
+			\lambda_0 \in \Lambda.
+			x_0 \in M
+		}
+		\then{ \lambda_0 }{ $ Pitchfork bifurcation value at $ x_0 $ $ }
+		{
+			x_0 \in \fixed( f_{\lambda_0} ).
+			x_0 $ neutral point of $ f_{\lambda_0}.
+			\partialderivative{ f_\lambda }{ \lambda }(x_0,\lambda_0) = 0.
+			\partialderivative{ f_\lambda }{ x^2 }(x_0,\lambda_0) = 0.
+			\partialderivative{ f_\lambda }{ \lambda x }(x_0,\lambda_0) \neq 0.
+			\partialderivative{ f_\lambda }{ x^3 }(x_0,\lambda_0) \neq 0
+		}
+	}
+	
+	
+	\thread{ $ Period doubling bifurcation $ }
+	{
+		\letbe
+		{
+			\Lambda \subset M.
+			( M, \N, f_\lambda )_{\lambda \in \Lambda} $ functional dynamical systems $.
+			\lambda_0 \in \Lambda.
+			x_0 \in M
+		}
+		\then{ \lambda_0 }{ $ Period doubling bifurcation value at $ x_0 $ $ }
+		{
+			\lambda_0 $ Pitchfork bifurcation value at $ x_0 $ of $ f^2
+		}
+	}
+
+	\newpage
+
+
+	\thread{ $ Sarkovskii's order $ }
+	{
+		\name{ $ Sarkovskii's order	$ }
+		{
+			\all{ a,b \in \N }[ a = 2^na', b = 2^mb', 2^n || a, 2^m || b ]
+			{
+				a <_s b \ifandonlyif 
+			\begin{cases} 
+			m < n & a' = b' = 1 \\ 
+			* & a' = 1, b' \neq 1 \\ 
+			a' < b' & a'=b'\neq 1 \\ 
+			n < m & 1 \neq a' \neq b'
+			\end{cases}
+			}
+		}
+	}
+	
+	
+	\thread{ $ Chaos $ }
+	{
+		\letbe
+		{
+			( \R, \N, f ) $ dynamical system $
+		}
+		\then{ ( \R, \N, f ) }{ $ chaotic $ }
+		{
+			\fixed(f) $ dense in $ \R.
+			\ex{ x \in \R }
+			{
+				o(x) $ dense in $ \R
+			}.
+
+			\all{ x \in \R }
+			{
+				\ex{ \epsilon \in \R^+ }
+				{
+					\all{ \delta \in \R^+ }
+					{
+						\ex{ \tilde{x} \in B(x,\delta) }
+						{
+							\limit{ o(\tilde{x}) }{ n } \nin B(\limit{ o(x) }{ n } ,\epsilon)
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+
+
+\end{document}

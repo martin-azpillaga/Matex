@@ -1,0 +1,1721 @@
+
+\documentclass[a5paper]{book}
+
+\usepackage{matex}
+
+
+\begin{document}
+
+\titlePage{ $ Algebraic Equations $ }{ $ Martin Azpillaga $ }
+
+
+
+
+
+\part{ $ Definitions $ }
+
+\chapter{ $ Roots of unity, Extensions and Galois Group $ }
+
+\introduction
+{ 
+	$ 
+	In this first chapter, we discuss the definitions involved in the subsequent three sections:\\
+	1. Roots of the unity who form cyclotomic polynomials and cyclotomic fields.\\
+	2. Algebraic and Transcendent extensions over fields. Normal extensions.\\
+	3. Galois Group of an algebraic extension.
+	$ 
+}
+
+
+
+
+\section{ $ Roots of unity $ }
+{
+	\subsection{ $ nth root of unity $ }
+
+	\letbe
+	{
+		K $ field $.
+		n \in \N.
+		x \in \K
+	}
+	\then{ x }{ $ a nth root of unity in $ K }
+	{
+		x^n = 1
+	}
+	\denote
+	{
+		\set{ x \in \K }[ x^n = 1 ] \as \mu_n(\K).
+		\set{ x \in \K }[ \ex{ n \in \N }{ x^n = 1 } ] \as \mu(K)
+	}
+
+	\subsection{ $ nth Primitive root of unity $ }
+
+	\letbe
+	{
+		K $ field $.
+		x \in \mu_n(K)
+	}
+	\then{ x }{ $ a primitive root of unity in $ K }
+	{
+		\order{ x } = n
+	}
+	\denote
+	{
+		\set{ x \in \mu_n(\K) }[ \order{ x } = n ] \as \mu_n^*(K)
+	}
+
+
+	\subsection{ $ nth Cyclotomic Polynomial $ }
+
+	\letbe
+	{
+		n \in \N
+	}
+	\call{ $ nth Cyclotomic Polynomial $ }
+	{
+		f(X) = \productoryoverset{ (X - \zeta ) }{ \zeta }{ \mu_n^*(\K) } \in \C[X]
+	}
+	\denote
+	{
+		f(X) \as \Phi_n(X)
+	}
+
+
+
+	\subsection{ $ Mobius' function $ }
+
+	\call{ $ Mobius' function $ }
+	{
+		\definedfunction{ f }{ \N }{ \set{ 0,+1,-1 } }{ x }{ \multiple[ \{ ]
+		{
+			+1, \qquad n = 1.
+			+0, \qquad \ex{ p \in \N }{ p $ prime $ \logicand a^2 | n }.
+			-1, \qquad * 
+		} }
+	}
+	\denote
+	{
+		f \as \mu
+	}
+
+	\newpage
+
+}
+
+\section{ $ Classification of Field Extensions $ }
+{
+	\subsection{ $ Field Extension $ }
+
+	\letbe
+	{
+		K, k $ fields $
+	}
+	\then{ K }{ $ an extension of $ k }
+	{
+		k \subset K
+	}
+	\denote
+	{
+		k \subset K \as K|k
+	}
+
+	\subsection{ $ Algebraic extension $ }
+
+	\letbe
+	{
+		K|k $ field extension $
+	}
+	\then{ \theta \in K }{ $ an algebraic element over $ k }
+	{
+		\ex f(X) \in k[X] \suchthat f(\theta) = 0 
+	}
+	\then{ K|k }{ $ an algebraic extension $ }
+	{
+		\all{ \theta \in K }
+		{
+			\theta $ algebraic over $ k
+		}
+	}
+	\denote
+	{
+		K|k $ no algebraic extension $ \as K|k $ transcendent extension $
+	}
+
+	\subsection{ $ Cyclotomic Extension $ }
+
+	\letbe
+	{
+		n \in \N.
+		\zeta \in \mu_n^*(\C)
+	}
+	\call{ $ nth cyclotomic field $ }
+	{
+		Q( \zeta ) \extends \Q
+	}
+
+
+	\subsection{ $ Quadratic extension $ }
+
+	\letbe
+	{
+		k $ field $ \suchthat car(k) \neq 2.
+		K|k $ field extension $
+	}
+	\then{ K|k }{ $ a quadratic extension $ }
+	{
+		[ K : k ] = 2
+	}
+
+
+	\subsection{ $ Normal Extension $ }
+
+	\letbe
+	{
+		K|k $ algebraic extension $
+	}
+	\then{ K|k }{ $ a normal extension over $ k }
+	{
+		\ex{ f(X) \in k(X) $ irreductible $ }{ f(X) $ splits in $ K }
+	}	
+
+
+	\subsection{ $ Separable extension $ }
+	
+	\letbe
+	{
+		K|k $ algebraic extension $
+	}
+	\then{ \theta \in K }{ $ a separable element over $ k }
+	{
+		\ex{ f(X) \in k[X] }{ f(\theta) = 0 \logicand f(X) $ separable in $ K[X] }
+	}
+	\then{ K|k }{ $ a separable extension $ }
+	{
+		\all{ \theta \in K }
+		{
+			\theta $ separable over $ k
+		}
+	}
+	
+
+	\subsection{ $ Simple extension $ }
+	
+	\letbe
+	{
+		K \extends k $ field extension $.
+	}
+	\then{ K \extends k }{ $ a simple extension $ }
+	{
+		\ex{ \theta \in K }{ K = k(\theta) }
+	}
+	\denote
+	{
+		\theta \as $ primitive element of $ K \extends k 
+	}
+
+
+	\subsection{ $ Galois extension $ }
+	
+	\letbe
+	{
+		K \extends k $ algebraic extension $
+	}
+	\then{ K \extends k }{ $ a Galois extension $ }
+	{
+		K \extends k $ normal extension $.
+		K \extends k $ separable extension $
+	}
+
+}
+
+
+
+\section{ $ Properties of field extensions $ }
+{
+	\subsection{ $ Evaluation function $ }
+
+	\letbe
+	{
+		K|k $ field extension $.
+		\theta \in K
+	}
+	\call{ $ Evaluation function of $ \theta $ over $ k }
+	{
+		\definedfunction{ f }{ k[X] }{ K }{ p(X) }{ p(\theta) }
+	}
+	\denote
+	{
+		f \as \Psi_\theta.
+		Im \; \psi_\theta \as k[\theta].
+		$ fraction field of $ k[\theta] \as k(\theta)
+	}
+
+
+	\subsection{ $ Minimal Polynomial $ }
+
+	\letbe
+	{
+		K|k $ field extension $.
+		\theta \in K $ algebraic over $ k
+	}
+	\call{ $ Minimal Polynomial of $ \theta $ in $ K|k }
+	{
+		f(X) \in k[X] \suchthat \logicand \multiple[ \{ ]
+		{
+			f(X) \neq 0.
+			f(X) $ irreducible $.
+			f(\theta) = 0 
+		}
+	}
+	\denote
+	{
+		f(X) \as Irr(\theta,k)(X)
+	}
+
+	\subsection{ $ Extension Degree $ }
+
+	\letbe
+	{
+		K|k $ field extension $
+	}
+	\call{ $ degree of $ K|k }
+	{
+		\dim_k K \in \N \cup \set{ \infty }
+	}
+	\denote
+	{
+		\dim_k K \as [ K : k ].
+		[K:k] \in \N : K|k $ finite extension $
+	}
+
+
+	\newpage
+
+
+	\subsection{ $ Splitting field $ }
+
+	\letbe
+	{
+		k $ field $.
+		f \in k[X].
+		\family{ \theta_i }{ i }[ 1 ][ n ] $ roots of $ f
+	}
+	\call{ $ splitting field of $ f }
+	{
+		k \vect{ \theta_i }{ i }[ 1 ][ n ]
+	}
+
+
+	\subsection{ $ Field Composition $ }
+
+	\letbe
+	{
+		K_1|k, K_2|k $ field extensions $ 
+	}
+	\call{ $ the composition of $ K_1 $ and $ K_2 }
+	{
+		<K_1,K_2>
+	}
+	\denote
+	{
+		<K_1,K_2> \as K_1K_2
+	}
+	
+	
+
+	\subsection{ $ Separability degree $ }
+	
+	\letbe
+	{
+		k|k $ algebraic extension $.
+		\closed{k} $ algebraic closure of $ k
+	}
+	\call{ $ separability degree of $ K|k }
+	{
+		\# \set{ \sigma \in \functionspace{ K }{ \closed{k} } }[ \sigma \; k$-immersion$ ]
+	}
+	\denote
+	{
+		\# \set{ \sigma \in \functionspace{ K }{ \closed{k} } }[ \sigma \; k$-immersion$ ] \as [K:k]_s
+	}
+}
+
+
+\section{ $ Galois Group $ }
+{
+	
+
+
+	\subsection{ $ Fixed Field $ }
+
+	\letbe
+	{
+		K_1, K_2 $ fields $.
+		\function{ \sigma }{ K_1 }{ K_2 }
+	}
+	\call{ $ the fixed field of $ k_1 $ by $ \sigma }
+	{
+		\set{ x \in K_1 }[ \sigma(x) = x ]
+	}
+	\denote
+	{
+		\set{ x \in K_1 }[ \sigma(x) = x ] \as K_1^\sigma
+	}
+
+	\newpage
+
+
+	\subsection{ $ k-Immersion $ }
+
+	\letbe
+	{
+		K_1|k, K_2|k $ field extensions $.
+		\function{ \sigma }{ K_1 }{ K_2 }
+	}
+	\then{ \sigma }{ $ a $k$-immersion $ }
+	{
+		k \subset K_1^\sigma
+	}
+	\denote
+	{
+		\sigma \; k $-immersion $ \logicand \sigma $ automorphism $ \as \sigma $ $ k $-automorphism $
+	}
+
+
+	\subsection{ $ k-Automorphism $ }
+
+	\letbe
+	{
+		K \extends k $ field extensions $.
+		\function{ \sigma }{ K }{ K }
+	}
+	\then{ \sigma }{ $ a $k$-automorphism $ }
+	{
+		\sigma \; k$-immersion$.
+		\sigma $ isomorphism $
+	}
+	\denote
+	{
+		\sigma \; k $-immersion $ \logicand \sigma $ automorphism $ \as \sigma $ $ k $-automorphism $
+	}
+
+	\subsection{ $ Galois Group $ }
+
+	\letbe
+	{
+		K|k $ field extension $
+	}
+	\call{ $ Galois group of $ K|k }
+	{
+		\set{ \sigma \in \functionspace{ K }{ K } }[ \sigma $ $ k $-autmorphism $ ]
+	}
+	\denote
+	{
+		\set{ \sigma \in \functionspace{ K }{ K } }[ \sigma $ $ k $ autmorphism $ ] \as Gal(K|k)
+	}
+
+	\newpage
+
+}
+
+
+
+\section{ $ Finite Fields $ }
+{
+
+	\subsection{ $ Finite Field $ }
+
+	\letbe
+	{
+		k $ field $
+	}
+	\then{ k }{ $ a finite field $ }
+	{
+		\# k \in \N
+	}
+	\denote
+	{
+		\ex{ p,n \in \N  }{ p $ prime $ \logicand \# k = p^n } \as \F_{p^n}
+	}
+
+
+
+	\subsection{ $ Frobenius' Automorphism $ }
+
+	\letbe
+	{
+		\F_{p^n} $ finite field $
+	}
+	\call{ $ Frobenius' automorphism of $ \F_{p^n} }
+	{
+		\definedfunction{ f }{ \F_{p^n} }{ \F_{p^n} }{ x }{ x^p }
+	}
+	\denote
+	{
+		f \as \phin_p
+	}
+
+	\newpage
+
+}
+
+
+
+\section{ $ Separability $ }
+{
+	
+	
+
+	
+
+	
+	
+}
+
+
+
+\section{ $ Norm and trace $ }
+{
+	
+	\subsection{ $ Norm $ }
+	
+	\letbe
+	{
+		K|k $ finite extension $
+	}
+	\call{ $ Norm of $ K|k }
+	{
+		\definedfunction{ f }{ K }{ k }{ \theta }{ det( m_\theta ) }
+	}
+	\denote
+	{
+		f \as N_{K|k}
+	}
+
+
+	\subsection{ $ Trace $ }
+	
+	\letbe
+	{
+		K|k $ finite extension $
+	}
+	\call{ $ trace of $ K|k }
+	{
+		\definedfunction{ f }{ K }{ k }{ \theta }{ tr( m_\theta ) }
+	}
+	\denote
+	{
+		f \as Tr_{K|k}
+	}
+
+	
+
+
+	\subsection{ $ Cyclic extension $ }
+	
+	\letbe
+	{
+		K|k $ Galois extension $
+	}
+	\then{ K|k }{ $ a cyclic extension $ }
+	{
+		Gal(K|k) $ cyclic $
+	}
+
+
+	\subsection{ $ Abelian extension $ }
+	
+	\letbe
+	{
+		K|k $ Galois extension $
+	}
+	\then{ K|k }{ $ an abelian extension $ }
+	{
+		Gal(K|k) $ abelian $
+	}
+
+
+	\subsection{ $ Resoluble by radicals $ }
+	
+	\letbe
+	{
+		k $ field $.
+		f(X) \in k[X]
+	}
+	\then{ f(X) }{ $ resoluble by radicals $ }
+	{
+		\ex{ K|k }{ K|k $radical extension $ }
+	}
+	\denote
+	{
+		property \as notation.
+	}
+}
+
+
+
+
+\part{ $ Propositions $ }
+
+\chapter{ $ Roots of unity, Field extensions and Galois Group $ }
+
+\introduction
+{
+	$
+	Basic propositions over:\\
+	1. Roots of unity. \\
+	2. Field extensions. \\
+	3. Galois Group
+	$
+}
+
+
+\section{ $ Roots of unity $ }
+{
+	
+	\subsection{ $ The Group of Roots of Unity $ }
+	
+	\letbe
+	{
+		K $ field $
+	}
+	\proposition
+	{
+		\mu(K) \substructure K^*
+	}
+	\demonstration
+	{
+		\all{ x,y \in \mu(K) }
+		{
+			1
+		}
+		\mu(K) \substructure K^*
+	}
+	\newpage
+
+
+
+	\subsection{ $ The group of nth roots $ }
+	
+	\letbe
+	{
+		K $ field $.
+		n \in N
+	}
+	\proposition
+	{
+		\mu_m(K) \normal K^*
+	}
+	\demonstration
+	{
+		$ Follow 3 steps $.
+		
+		\step{ 1 }{ \mu_n(K) \subset K^* }
+		{
+			\mu_n(K) \subset \mu(K) \subset K^*
+		}.
+
+		\step{ 2 }{ $ Define a group morphism $ }
+		{
+			\definedfunction{ \phi_n }{ K^* }{ K^* }{ x }{ x^n }.
+
+			\all{ x,y \in K^* }
+			{
+				\phi_n(x)\phi_n(y) = x^ny^n = (xy)^n = \phi_n(xy)
+			}
+		}
+		
+		\step{ 3 }{ $ Identify $ \mu_n(K) $ with the kernel $ }
+		{
+			Ker \phi_n = \mu_n(K)
+		}
+		
+	}
+	\newpage
+
+
+	\subsection{ $ Finite subgroups of the multiplicative group $ }
+	
+	\letbe
+	{
+		K $ field $.
+		G \substructure K^* $ finite $
+	}
+	\proposition
+	{
+		\ex{ m \in \N }{ G = \mu_m(K) }.
+		G $ cyclic $
+	}
+	\demonstration
+	{
+		$ Follow 2 steps $.
+		
+		\step{ 1 }{ $ Find $ m }
+		{
+			\be{ m }{ \max \set{ \order{ x } }[ x \in G ] } \in \N.
+
+			\all{ x \in G }
+			{
+				\order{x} \divides m \imp x^m = 1.
+
+				x \in \mu(K)
+			}
+
+			G = \mu_m(K)
+
+		}
+
+		\step{ 2 }{ G $ cyclic $ }
+		{
+			\ex{ \zeta \in G }{ \order{\zeta} = m }.
+
+			<\zeta> \subset G = \mu_m(K).
+
+			\multiple[ \{ ][ \} ]
+			{
+			 	\card{ G } \geq \order{\zeta} = m.
+			 	\card{ G } \leq \card{\mu_m(K)} \leq m 
+			} \imp \card{ G } = m.
+
+			G = <\zeta> \imp G $ cyclic $
+		}
+	}
+	\newpage
+
+	\subsection{ $ Characterization of nth roots by cyclotomic polynomials $ }
+	
+	\letbe
+	{
+		n \in \N
+	}
+	\proposition
+	{
+		X^n-1 = \prod_{ d \divides n } \Phi_d(X)
+	}
+	\demonstration
+	{
+		\be{ f(X) }{ X^n-1 } \in \C[X].
+
+		\be{ g(X) }{ \prod_{d \divides n} \Phi_d(X) } \in \C[X].
+
+		$ Follow 3 steps $.
+		
+		\step{ 1 }{ f(X) $ and $ g(X) $ have the same roots $ }
+		{
+			\all{ x \in \C }[ f(x) = 0 ]
+			{
+				x \in \mu_n(\C).
+
+				\be{ d }{ \order{x} } \in \N.
+
+				x \in \mu_d^*(\C) \imp \Phi_d(x) = 0 \imp g(x) = 0
+			}
+
+			\all{ y \in \C }[ g(y) = 0 ]
+			{
+				\ex{ d \in \N }{ d|n \logicand \Phi_d(y) = 0 }.
+
+				y \in \mu_d^*(\C) \imp y^d = 1 \imp y^n = 1 \imp f(y) = 06
+			}
+		}
+		
+		\step{ 2 }{ f(X) $ and $ g(X) $ are monic $ }
+		{
+			f $ monic $.
+
+			\all{ d \in \N }[ d \divides n ]
+			{
+				\Phi_d(X) $ monic $
+			}
+
+			g(X) $ monic $
+		}
+
+		\step{ 3 }{ f(X) $ and $ g(X) $ are separable $ }
+		{
+			D(f(X)) = nX^{n-1}.
+
+			mcd \set{ X^n-1, nX^{n-1} } = 1.
+
+			f(X) $ separable $.
+
+			\all{ x \in \C }[ x \in \mu_d^*(\C) ]
+			{
+				\all{ d' \in \N }[ d \divides n \logicand d' \neq d ]
+				{
+					x \nin \mu_{d'}^*(\C)
+				}
+			}
+
+			g(X) $ separable $
+		}
+
+		f(X) = g(X)
+		
+	}
+	\newpage
+
+
+
+	\subsection{ $ Mobius' lemma $ }
+	
+	\letbe
+	{
+		n \in \N
+	}
+	\proposition
+	{
+		\sum_{d \divides n } \mu(d) = 0
+	}
+	\demonstration
+	{
+		\ex{ \family{ p_i}{ i }[ 1 ][ r ], \family{ a_i }{ i }[ 1 ][ r ] \subset \N }{ \productory{ p_i^{a_i} }{ i }[ 1 ][ r ] $ prime factorization of $ n}.
+
+		\all{ d \in \N }[ d \divides n ]
+		{
+			\ex{ \family{ b_i }{ i }[ 1 ][ r ] \subset \N }{ \all{ i \in \indexes{1}{r} }
+			{
+				b_i \leq a_i.
+				\productory{ p_i^{b_i} }{ i }[ 1 ][ r ] $ prime factorization of $ n
+			} }
+
+			\mu(d) \neq 0 \ifandonlyif \all{ i \in \indexes{1}{r} }
+			{
+				b_i \in \set{ 0,1 }
+			}
+		}
+
+		\sum_{d \divides n } \mu(d) = \sumatory{ \combinatory{ r }{ k } (-1)^k }{ k }[ 0 ][ r ] = \sumatory{ \combinatory{ r }{ k } (-1)^k1^{r-k} }{ k }[ 0 ][ r ] = (-1+1)^r = 0
+	}
+	\newpage
+
+
+	\subsection{ $ Recursive formula for cyclotomic polynomials $ }
+	
+	\letbe
+	{
+		n \in \N
+	}
+	\proposition
+	{
+		\Phi_n(X) = \prod_{d \divides n} (X^d - 1)^{\mu(\frac{n}{d})}
+	}
+	\demonstration
+	{
+		\prod_{d|n}(X^d-1)^{\mu(\frac{n}{d})} =.
+
+		= \prod_{d|n}(X^{\frac{n}{d}}-1)^{\mu(d)} =.
+
+		= \prod_{d|n} \prod_{\delta|\frac{n}{d}} \Phi_{\delta}(X)^{\mu(d)}.
+
+		= \prod_{\delta|n} \prod_{d|\frac{n}{\delta}} \Phi_{\delta}(X)^{\mu(d)} =.
+
+		= \prod_{\delta|n} \Phi_{\delta}(X)^{\sum_{d|\frac{n}{\delta}} \mu(d)}.
+
+		\sum_{d|\frac{n}{\delta}} \mu(d) \neq 0 \ifandonlyif \delta = n.
+
+		\prod_{\delta|n} \Phi_{\delta}(X)^{\sum_{d|\frac{n}{\delta}} \mu(d)} = \Phi_n(X)^1 = \Phi_n(X)
+	}
+	\newpage
+
+	\subsection{ $ Classification of cyclotomic polynomials $ }
+	
+	\letbe
+	{
+		n \in \N
+	}
+	\proposition
+	{
+		\Phi_n(X) \in \Z[X]
+	}
+	\demonstration
+	{
+		\Phi_n(X) = \prod_{d|n}(X^{\frac{n}{d}}-1)^{\mu(d)}.
+
+		\mu(d) = 1 \ifandonlyif d = 1 \imp \Phi_n(X) = \frac{ X^n - 1 }{\prod_{1<d|n}(X^{\frac{n}{d}}-1)^{\mu(d)}}.
+
+		\be{ f(X) }{ X^n - 1 }.
+
+		\be{ g(X) }{ \prod_{1<d|n}(X^{\frac{n}{d}}-1)^{\mu(d) }}.
+
+		\Phi_1(X) = X - 1 \in \Z[X] \imp $ induction $ \imp g(X) \in \Z[X].
+
+		\multiple[ \{ ][ \} ]
+		{
+			f(X), g(X) $ monics $.
+			f(X), g(X) \in \Z[X] 
+		}\imp \Phi_n(X) = \frac{f(X)}{g(X)} \in \Z[X]
+	}
+	\newpage
+
+	\subsection{ $ Irreductibility of cyclotomic polynomials $ }
+	
+	\letbe
+	{
+		n \in \N
+	}
+	\proposition
+	{
+		\Phi_n(X) $ irreductible over $ \Q[X]
+	}
+	\demonstration
+	{
+		I dont want to do this
+	}
+	\newpage
+}
+
+
+
+\section{Extensiones de cuerpos}
+{
+
+	\subsection{ $ Classification of the image of the evaluation function $ }
+	
+	\letbe
+	{
+		K \divides k $ field extension $.
+		\theta \in K
+	}
+	\proposition
+	{
+		\theta $ algebraic over $ k \imp k[\theta] = k(\theta).
+		\theta $ transcendent over $ k \imp k[\theta] \isomorph k(\theta)
+	}
+	\demonstration
+	{
+		$ Separate 2 cases: $.
+		
+		\case{ \theta $ algebraic over $ k }
+		{
+			k $ field $ \imp k $ PID $ \imp k[X] $ PID $.
+
+			Ker(\Phi_\theta) $ principal $ \imp \ex{ f(X) \in k[X] }{ Ker(\Phi_\theta) = (f(X)) }.
+
+			K $ field $ \imp K $ integral domain $.
+
+			k[\theta] \subset K \imp k[\theta] $ integral domain $.
+
+			$ Isomorphy theorem :$ k[X]/f(X) \isomorph k[\theta].
+
+			\multiple[ \{ ][ \} ]
+			{
+				k[X]/f(X) \isomorph k[\theta].
+				k[\theta] $ integral domain $ 
+			} \imp (f(X)) $ prime ideal $.
+
+			k[X] $ UFD $ \imp (f(X)) $ irreductible ideal $ \imp (f(X)) $ maximal ideal $.
+
+			k[X]/(f(X)) $ field $ \imp k[\theta] $ field $.
+
+			k[\theta] = k(\theta)
+		}
+		\case{ \theta $ transcendent over $ k }
+		{
+			Ker( \Psi_\theta ) = (0).
+
+			$Isomorphy theorem: $ k[\theta] \isomorph k[X]/(0) \isomorph k[X]
+		}
+
+	}
+	\newpage
+
+
+	\subsection{ $ Inclusion of finite extensions in algebraic extensions $ }
+	
+	\letbe
+	{
+		K \extends k $ finite field extension $
+	}
+	\proposition
+	{
+		K \extends k $ algebraic extension $
+	}
+	\demonstration
+	{
+		\all{ \theta \in K }
+		{
+			\be{ n }{ dim_k K } \in \N.
+
+			\family{ \theta^i }{ i }[ 0 ][ n ] $linearly dependent$.
+
+			\ex{ \family{ a_i }{ i }[ 0 ][ n ] \subset k }{ \ex{ i \in \indexes{1}{n} }{ \sumatory{ a_i\theta^i }{ i }[ 0 ][ n ] = 0 } }.
+
+			\be{ f(X) }{ \sumatory{ a_i\theta^i }{ i }[ 0 ][ n ] } \in k[X].
+
+			f(X) \neq 0 \logicand f(\theta) = 0 \imp \theta $ algebraic over $ k 
+		}
+
+		K \extends k $ algebraic extension $
+	}
+	\newpage	
+
+
+
+	\subsection{ $ Degree behaviour in extension towers $ }
+	
+	\letbe
+	{
+		K \extends k, L \extends K $ field extensions $
+	}
+	\proposition
+	{
+		[L:k] = [L:K][K:k]
+	}
+	\demonstration
+	{
+		\exists \; \family{ \theta_i }{ i } \subset K \; k$-base of $ K.
+
+		\exists \; \family{ \theta'_j }{ j } \subset K \; K$-base of $ L.
+
+		\all{ \theta \in K }
+		{
+			\ex{ \family{ a'_k }{ j } \subset K }{ \theta = \sumatory{ a'_j\theta'_j }{ j } }.
+
+			\all{ j \in J }
+			{
+				\ex{ \family{ a_{i,j} }{ i } \subset k }{ a'_j = \sumatory{ a'_{i,j}\theta_i }{ i } }
+			}
+
+			\theta = \sumatory{ a_{i,j}\theta_i\theta'_j }{ (i,j) }
+			
+		}
+
+		\set{ \theta_i\theta'_j}_{(i,j) \in I \times J } \; k-$base of $ L.
+
+		[L:k] = dim_k L = \# (I \times J) = \#I \cdot \#J = [K:k][L:K]
+	}
+	\newpage
+
+
+	
+	\subsection{ $ Degree behaviour in base exchanges $ }
+	
+	\letbe
+	{
+		K \extends k, L \extends k $ finite extensions $
+	}
+	\proposition
+	{
+		[KL:K] \leq [L:k]
+	}
+	\demonstration
+	{
+		\be{ n }{ dim_k L } \in \N.
+
+		\ex{ \family{ \theta_i }{ i }[ 1 ][ n ] \subset L }{ L = k \vect{ \theta_i }{ i }[ 1 ][ n ] }.
+
+		KL = K \vect{ \theta_i }{ i }[ 1 ][ n ].
+
+		[KL:K] = \productory{ [K \vect{ \theta_i }{ i }[ 1 ][ r+1 ] : K \vect{ \theta_i }{ i }[ 1 ][ r ] ] }{ r }[ 1 ][ n-1 ].
+
+		[L:k] = \productory{ [k \vect{ \theta_i }{ i }[ 1 ][ r+1 ] : k \vect{ \theta_i }{ i }[ 1 ][ r ] ] }{ r }[ 1 ][ n-1 ].
+
+		\all{ r \in \indexes{1}{n-1} }
+		{
+			k \subset K \imp k \vect{ \theta_i }{ i }[ 1 ][ r ] \subset K \vect{ \theta_i }{ i }[ 1 ][ r ].
+
+			[K \vect{ \theta_i }{ i }[ 1 ][ r+1 ] : K \vect{ \theta_i }{ i }[ 1 ][ r ] ] \leq [k \vect{ \theta_i }{ i }[ 1 ][ r+1 ] : k \vect{ \theta_i }{ i }[ 1 ][ r ]
+		}
+
+		[KL:K] \leq [L:k]
+	}
+	\newpage
+}
+
+
+
+\section{ $ Classification of field extensions $ }
+{
+	
+	\subsection{ $ Invariancy of Cyclotomic prime extensions by composition and intersection $ }
+	
+	\letbe
+	{
+		n,m \in \N \suchthat mcd(n,m) = 1.
+		\Q(\zeta_n) \extends \Q(\zeta_m) $ cyclotomic extensions $
+	}
+	\proposition
+	{
+		\Q(\zeta_n,\zeta_m) = \Q(\zeta_n\zeta_m)
+
+		\Q(\zeta_n) \cap \Q(\zeta_m) = \Q
+	}
+	\demonstration
+	{
+		$ Follow 2 steps $.
+		
+		\step{ 1 }{ \Q(\zeta_n,\zeta_m) $ cyclotomic extension $ }
+		{
+			\rightinclusion
+			{
+				\order{ \zeta_n\zeta_m } = \order{ \zeta_n }\order{ \zeta_m } = \phin(n)\phin(m).
+
+				mcd(m,n) = 1 \imp \phin(n)\phin(m) = \phin(nm) \imp \zeta_n\zeta_m \in \mu_{nm}(\C).
+
+				\be{ \zeta }{ \zeta_n\zeta_m } \in \mu_{nm}(\C).
+
+				(\zeta^m)^n = 1 \imp \zeta^m \in \mu_n(\C).
+
+				\ex{ r \in \N }{ (\zeta^m)^r = \zeta_n }.
+
+				\zeta_n \in \Q(\zeta).
+
+				\similarly{ \zeta_m \in \Q(\zeta) }.
+
+				\Q(\zeta_n,\zeta_m) \subset \Q(\zeta) 
+			}
+			\leftinclusion
+			{
+				\zeta_n, \zeta_m \in \Q(\zeta_n,\zeta_m) \imp \zeta_n\zeta_m \in \Q(\zeta_n,\zeta_m)
+			}
+		}
+		
+		\step{ 2 }{ \Q(\zeta_n) \cap \Q(\zeta_m) = \Q }
+		{
+			[\Q(\zeta_n,\zeta_m):\Q] = [\Q(\zeta_m,\zeta_n):\Q(\zeta_n)][ \Q(\zeta_n) : \Q].
+
+			\phin(mn) = [\Q(\zeta_m,\zeta_n) : \Q(\zeta_n)]\phin(n).
+
+			[\Q(\zeta_m,\zeta_n): \Q(\zeta_n) ] = \phin(m).
+
+			[\Q(\zeta_m,\zeta_n): \Q(\zeta_n) ] \leq [ \Q(\zeta_m) : \Q(\zeta_m) \cap \Q(\zeta_n) ] \leq [\Q(\zeta_m) : \Q ].
+
+			\phin(m) \leq [ \Q(\zeta_m) : \Q(\zeta_m) \cap \Q(\zeta_n) ] \leq \phin(m).
+
+			[ \Q(\zeta_m) : \Q(\zeta_m) \cap \Q(\zeta_n) ] = \phin(m).
+
+			[\Q(\zeta_m) \cap \Q(\zeta_n) : \Q ] = \frac{ \phin(m) }{ \phin(m) } = 1.
+
+			\Q(\zeta_m) \cap \Q(\zeta_n) = \Q 
+		}
+	}
+	\newpage
+
+
+	\subsection{ $ Inclusion of Quadratic extensions in Simple extensions $ }
+	
+	\letbe
+	{
+		K \extends k $ quadratic extension $
+	}
+	\proposition
+	{
+		K \extends k $ simple extension $
+	}
+	\demonstration
+	{
+		[K : k ] = 2 \imp \ex{ \theta \in K }{ \theta \nin k }.
+
+		k \subset k(\theta) \subset K.
+
+		2 = [ K : k ] = [ K : k(\theta) ][k(\theta):k].
+
+		\theta \nin k \imp [k(\theta):k] \geq 2.
+
+		[K : k(\theta) ] = 1 \imp K = k(\theta).
+
+		K \extends k $ simple extension $
+	}
+	\newpage
+
+
+	\subsection{ $ Inclusion of Quadratic extensions in Normal extensions $ }
+	
+	\letbe
+	{
+		K \extends k $ quadratic extension $
+	}
+	\proposition
+	{
+		K \extends k $ normal extension $
+	}
+	\demonstration
+	{
+		K \extends k $ quadratic extension $ \imp K \extends k $ simple extension $.
+
+		\ex{ \theta \in K }{ \theta \nin k \logicand K = k(\theta) }.
+
+		\set{ 1,\theta } k$-base of $ K.
+
+		\set{ 1,\theta, \theta^2 } $ linearly dependent $ \imp \ex{ b,c \in k }{ \theta^2 + b\theta + c = 0 }.
+
+		\be{ \eta }{ 2\eta + b } \in K.
+
+		\eta^2 = 4\eta^2 + b^2 + 4b\eta = b^2 - 4c \in k.
+
+		\be{ f(X) }{ X^2 - \eta^2 } \in k[X].
+
+		\eta, -\eta \nin k \imp f(X) $ irreductible over $ k[X].
+
+		\eta, -\eta \in K \imp f(X) $ splits over $ K[X].
+
+		k(\theta) $ splitting field of $ f(X).
+
+		K \extends k $ normal extension $
+
+
+
+
+	}
+	\newpage
+
+}
+
+
+
+\section{ $ Galois Group $ }
+{
+	
+	\subsection{ $ Determination of automorphisms by minimal polynomial root images $ }
+	
+	\letbe
+	{
+		K \extends k $ algebraic extension $.
+		f(X) $ irreductible over $ k[X].
+		\theta, \theta' \in K $ roots of $ f(X) 
+	}
+	\proposition
+	{
+		\ex{ ! \; \function{ \sigma }{ k(\theta) }{ k(\theta') } }{ \sigma \; k$-automorphism $ \logicand \sigma(\theta) = \theta' }
+	}
+	\demonstration
+	{
+		$ Follow 2 steps $.
+		
+		\step{ 1 }{ $ Existence of $ \sigma }
+		{
+			\exists \rho: k[X]/(Irr(\theta,k)(X)) \to k(\theta) $ isomorphism $.
+
+			\exists \rho': k[X]/(Irr(\theta',k)(X)) \to k(\theta') $ isomorphism $.
+
+			\be{ \sigma }{ \rho' \circ \rho^{-1} } \in \functionspace{ k(\theta) }{ k(\theta') }.
+
+			\sigma $ isomorphism $ 			
+		}
+		
+		\step{ 2 }{ \sigma $ determined by $ \theta $'s image $ }
+		{
+			\all{ \function{ \sigma' }{ k(\theta) }{ k(\theta') } }[ \sigma' \; k$-isomorphism $ \logicand \sigma'(\theta) = \theta' ]
+			{
+				\all{ x \in k(\theta) }
+				{
+					\ex{ \family{ a_i }{ i }[ 1 ][ r ] \subset k }{ x = \sumatory{ a_i\theta^i }{ i }[ 1 ][ r ] }.
+
+					\sigma'(x) = \sumatory{ \sigma'(a_i)\sigma'(\theta)^i }{ i }[ 1 ][ r ] = \sumatory{ a_i\theta'^i }{ i }[ 1 ][ r ].
+
+					\sigma(x) = \sigma'(x)
+				}
+
+				\sigma' = \sigma
+			}
+		}
+	}
+	\newpage
+
+
+	\subsection{ $ Inclusion of immersions in automorphims $ }
+	
+	\letbe
+	{
+		K \extends k $ algebraic extension $.
+		\function{ \sigma }{ K }{ K } k$-immersion$
+	}
+	\proposition
+	{
+		\sigma \in Aut(K)
+	}
+	\demonstration
+	{
+		demonstration.
+	}
+	\newpage
+
+
+	\subsection{ $ Fundamental theorem of Galois theory $ }
+	
+	\letbe
+	{
+		K \extends k $ algebraic extension $.
+		S(Gal(K \extends k)) $ set of all subgroups of $ Gal(K \extends k).
+		C(K \extends k) $ set of all subfields between $ K \extends k
+	}
+	\proposition
+	{
+		\ex{ \phi \in \functionspace{ S(Gal(K \extends k) }{ C(K \extends k) } }{ \phi $ biyective $ }
+	}
+	\demonstration
+	{
+		demonstration.
+	}
+	\newpage
+
+}
+\section{ $ Finite Fields $ }
+{
+
+	\subsection{ $ Fermat's little theorem $ }
+	
+	\letbe
+	{
+		\F_{p^n} $ finite field $
+	}
+	\proposition
+	{
+		\all{ x \in \F }[ x \neq 0 ]
+		{
+			x^{p^n-1} = 1
+		}.
+
+		\all{ x \in \F }
+		{
+			x^{p^n} = x
+		}
+	}
+	\demonstration
+	{
+		$ Separate 2 cases: $.
+		
+		\case{ x = 0 }
+		{
+			0^{p^n} = 0
+		}
+		\case{ x \neq 0 }
+		{
+			\order{ x } \divides \card{ F^* } = p^n-1.
+
+			x^{p^n-1} = 1 \imp x^p = x
+		}
+	}
+	\newpage
+
+	\subsection{ $ Polynomials over finite prime fields $ }
+	
+	\letbe
+	{
+		\F_p $ finite field $.
+		f(X) \in \F_p[X]
+	}
+	\proposition
+	{
+		f(X)^p = f(X^p)
+	}
+	\demonstration
+	{
+		\all{ i \in \family{ k }{ k }[ 1 ][ p-1 ] \subset \N  }
+		{
+			p \divides \combinatory{p}{i} \imp \combinatory{p}{i} \congruent{p} 0 
+		}
+
+		\all{ a,b \in \F_p }
+		{
+			(a+b)^p = \sumatory{ \combinatory{p}{i} a^ib^{p-i} }{ i }[ 0 ][ p ] \congruent{p} a^p + b^p
+		}
+
+		\be{ n }{ gr(f(X)) } \in \N.
+
+		\ex{ \family{ a_i }{ i }[ 0 ][ n ] \subset \F_p }{ f(X) = \sumatory{ a_iX^i }{ i }[ 0 ][ n ] }.
+
+		f(X)^p = \sumatory{ a_i^pX^{pi} }{ i }[ 0 ][ n ].
+
+		$Fermat's little theorem$ \imp f(X)^p \congruent{p} \sumatory{ a_i(X^p)^i }{ i }[ 0 ][ n ] \congruent{p} f(X^p) 
+	}
+	\newpage
+	
+
+	\subsection{ $ Classification of characteristic and order $ }
+	
+	\letbe
+	{
+		\F $ finite field $
+	}
+	\proposition
+	{
+		\ex{ p \in \N }{ p $ prime $ \logicand car(\F) = p }.
+
+		\ex{ r \in \N }{ \# \F = p^r }
+	}
+	\demonstration
+	{
+		demonstration.
+	}
+	\newpage
+
+
+	\subsection{ $ Cyclotomic finite fields $ }
+	
+	\letbe
+	{
+		let.
+	}
+	\proposition
+	{
+		proposition.
+	}
+	\demonstration
+	{
+		demonstration.
+	}
+	\newpage
+
+
+	\subsection{ $ Determination of Galois group over Finite fields $ }
+	
+	\letbe
+	{
+		q \in \N $ prime power $.
+		n \in \N
+	}
+	\proposition
+	{
+		Gal( \F_{q^n} \extends \F_q ) = < \phin_q >
+	}
+	\demonstration
+	{
+		demonstration.
+	}
+	\newpage
+}
+
+% \subsection{Los carácteres ciclotómicos son isomorfismos de grupos}
+
+% \sean
+
+% \item $\f{\chi_n}{Gal(\Q(\zeta_n) | \Q ) }{ \Z/n\Z }$ carácter ciclotómico $n$-ésimo
+
+% \teorema 
+
+% \item $\chi_n$ isomorfismo de grupos
+
+% \demostracion
+
+% \item Bien definido
+
+% $\sigma|_\Q(\zeta_n)^*$ automorfismo de grupos
+
+% $\order{ \sigma( \zeta_n ) } = \order{ \zeta_n } \rightarrow \sigma( \zeta_n ) \in \mu_n(\Q(\zeta_n))$
+
+% $\nex{ r }{ (\Z/n\Z)^* }{ \sigma(\zeta_n) = \zeta_n^r }$
+
+% $\chi(\sigma) \in \Z/n\Z$
+
+% \item Independiente de la raíz n-ésima
+
+% \nall{ \zeta_n' }{ \mu_n(\C) }{
+
+% $\nex{ r }{ (\Z/n\Z)^* }{ \zeta_n' = \zeta_n^r }$
+
+% $\sigma(\zeta_n') = \sigma(\zeta_n^r) = \sigma(\zeta_n)^r = \zeta_n^{\chi(\sigma)r} = \zeta_n'^{\chi(\sigma)}$
+
+% }
+
+% \item Morfismo de grupos
+
+% \nall{ \sigma, \tau }{ Gal( \Q(\zeta_n) | \Q ) }{
+
+% $(\zeta_n)^{\chi(\sigma\circ\tau)} = (\sigma\circ\tau)(\zeta_n) = \sigma(\tau(\zeta_n)) = \sigma(\zeta_n^{\chi(\tau)}) = \sigma(\zeta_n)^{\chi(\tau)} = \zeta_n^{\chi(\tau)\chi(\sigma)}$
+
+% $ \chi( \sigma \circ \tau ) = \chi(\sigma) \chi(tau)$
+
+% }
+
+% \item Inyectivo
+
+% \nall{ \sigma, \tau }{ Gal( \Q(\zeta_n) | \Q ) }{
+
+% $\chi(\sigma) = \chi(\tau)$
+
+% $\sigma(\zeta_n) = \tau(\zeta_n)$
+
+% \nall{ q }{ \Q }{
+
+% $\sigma( q ) = \tau( q ) = q$
+
+% }
+
+% $\sigma = \tau$
+
+% }
+
+% \item Exhaustivo: \nall{ r }{ (\Z/n\Z)^* }{
+
+% $\ex \f{\rho}{\Q(\zeta_n)}{\Q(\zeta_n)} \tq \rho(\zeta_n) = \zeta_n^r$
+
+% }
+
+% \fin{}
+
+% \subsection{El subcuerpo de cuerpos ciclotómicos que queda fijo por todo automorfismo}
+
+% \sean
+
+% \item $\zeta_n \in \mu_n(\C)$
+% \item $K < \Q(\zeta_n)$
+
+% \teorema 
+
+% \item $K$ fijo para todo automorismo de $\Q(\zeta_n) \leftrightarrow K = \Q$
+
+% \demostracion
+
+% \item $\sea{ \zeta }{\zeta_n}$
+
+% $\sea{ G }{ Gal( \Q(\zeta) | \Q ) }$
+
+% $\sea{K}{ \Q(\zeta)^G }$
+
+% $\Q \subset K \rightarrow K(\zeta) = \Q(\zeta)$
+
+% $\sea{ f(X) }{ Irr(\zeta,K)(X) }$
+
+% \nall{ \sigma }{ G }{
+
+% $f(\sigma(\zeta)) = \sigma(f(\zeta)) = \sigma(0) = 0$
+
+% }
+
+% \nall{ \zeta' }{ \mu_n(\C) }{
+
+% $\zeta'$ raiz de $f(X)$
+
+% }
+
+% $gr(f(X)) > \phin(n) \rightarrow [\Q(\zeta) : K ] > \phin(n)$
+
+% $[\Q(\zeta) : K ] \leq [\Q(\zeta) : \Q ] \rightarrow [\Q(\zeta) : K ] = \phin(n)$
+
+% $[K:\Q] = \frac{[\Q(\zeta) : \Q]}{[\Q(\zeta) : K ]} = 1$
+
+% $K = \Q$
+
+% \fin{\newpage}
+
+% \section{Grupo de Galois}
+
+% \subsection{Existe un unico k-isomorfismo que envia la raiz de una extension a la otra raíz}
+
+% \sean
+
+% \item $K \ext k$, $L \ext k$ extensiones algebraicas de cuerpos
+% \item $f(X) \in k[X]$ irreductible
+% \item $\theta \in K$, $\theta' \in L$ raíces de f(X)
+
+% \teorema 
+
+% \item $ \ex ! \f{ \sigma }{ k(\theta) }{ k(\theta') } \tq \sigma k$-isomorfismo $\y \sigma(\theta) = \theta'$
+
+% \demostracion
+
+% \item Existencia
+
+% $\ex \f{\sigma}{k[X]/(Irr(\theta,k)(X))}{k(\theta)}$ isomorfismo
+
+% $\ex \f{\sigma'}{k[X]/(Irr(\theta',k)(X))}{k(\theta')}$ isomorfismo
+
+% $\sea{\rho}{\sigma'^{-1} \circ \sigma}$
+
+% $\rho$ isomorfismo de $k(\theta)$ a $k(\theta')$
+
+% \item Unicidad
+
+% $\sigma$ $k$-inmersión $\rightarrow \all a \in k: \sigma(a) = a$
+
+% $\threepartfunction{ \sigma : K}{ K }{ a \in k }{ a }{ \theta }{ \theta' }$
+
+% Es la única $k$-inmersión
+
+% \fin{\newpage}
+
+% \subsection{Toda k-inmersión de K en K es un k-automorfismo}
+
+% \sean
+
+% \item $K \ext k$ extension algebraica de cuerpos
+% \item $\f{\sigma}{ K }{ K } k-$inmersión
+
+% \teorema 
+
+% \item $\sigma$ $k$-automorfismo
+
+% \demostracion
+
+% \item $\sigma$ morfismo de anillos $\rightarrow \sigma$ inyectivo
+
+% Caso $K | k$ finito:
+
+% $\sigma$ endomorfismo inyectivo de espacios vectoriales finito $\rightarrow \sigma$ exhaustivo
+
+% Caso $K | k$ no finito:
+
+% \nall{ \theta' }{ K }{
+
+% $\sea{ f(X) }{ Irr(\theta',k)(X) }$
+
+% $\sea{ K' }{ <k, \theta_i>_{i=1}^r} \tq \theta_i $ raíz de $f(X) \y \theta_i \in K$
+
+% $K'|k$ algebraica $\rightarrow K'|k$ finito
+
+% $\sea{ \sigma' }{ \sigma|_K' }$
+
+% $\sigma'$ $k$-inmersión de $K'$ en $K$
+
+% $\sigma(K') \subset K' \rightarrow \sigma k$-inmersión $K'$ en $K'$
+
+% $K' \ext k$ finito $\rightarrow \sigma'$ $k$-automorfismo
+
+% $\nex{ \theta }{ K' }{ \sigma(\theta) = \theta' }$
+
+% }
+
+% $\sigma$ exhaustivo
+
+% \fin{\newpage}
+
+% \section{ Cuerpos finitos }
+
+% \subsection{La característica de un cuerpo finito es primo y su cardinal potencia de ese primo}
+
+% \sean
+
+% \item $\F$ cuerpo finito
+
+% \teorema 
+
+% \item $\nex{ p }{ \N }{ p $primo $\y car(F) = p}$
+
+% \item $\nex{ r }{ \N }{ \#F = p^r }$
+
+% \demostracion
+
+% \item $\ex C $cuerpo $\tq C \iso \Z/p\Z \y C < \F$
+
+% $car(\F) = p$
+
+% $\F$ es $C$-espacio vectorial
+
+% $\sea{ r }{ dim_C \F }$
+
+% $\#F = p^r$
+
+% \fin{}
+
+% \subsection{Los cuerpos finitos de orden primo ampliados por una raíz de la unidad de orden no multiplo de p son cuerpos finitos de orden una potencia de dicho primo}
+
+% \sean
+
+% \item $p \in \N$ primo
+% \item $d \in \N \tq p\nmid d$
+% \item $\zeta_d \in \mu_d(\cerr{\F_p})$
+
+% \teorema 
+
+% \item $\nex{ r }{ \Nm }{ \F_p(\zeta_d) = \F_{p^r}}$
+
+% \item $\all s \in \N \tq d | p^s -1$: $r|s$
+
+% \demostracion
+
+% \item $\F_p(\zeta) \ext \F_p$
+
+% $\sea{ r }{ dim_{\F_p} \F_p(\zeta) }$
+
+% $\# F_p(\zeta) = p^r$
+
+% $\F_{p^r}^*$ cíclico $\y \#\F_{p^r}^* = p^r -1 $
+
+% $d | p^r - 1$
+
+% \item \alltq{ s }{ \N }{ d | p^s -1 }{
+
+% $\zeta \in \mu_{p^s-1}(\cerr{F_p}) \rightarrow \zeta \in \F_{p^s}$
+
+% $\F_{p^r} \subset \F_{p^s} \rightarrow p^r | p^s$
+
+% $r|s$
+
+% }
+
+
+% \fin{\newpage}
+
+% \subsection{Los grupos de Galois sobre cuerpos finitos están generados por el autormorfismo de Frobenius}
+
+% \sean
+
+% \item $q \in \N$ primo
+% \item $n \in \N$
+
+% \teorema 
+
+% \item $Gal( \F_{q^n} | \F_q ) = < \phin_q>$
+
+% \demostracion
+
+% \item $[\F_{q^n} : \F_q ] = n$
+
+% $\# Gal( \F_{q^n} | \F_q ) \leq [\F_{q^n} : \F_q ] = n$
+
+% \item $\order{ \phin_q } = n$:
+
+% $\ex{ \zeta }{ \mu_{q^n-1}(\cerr{\F_q}) }{ \F_{q^n} = \F(\zeta)}$
+
+% \nall{ k }{ \Nm }{
+
+% $\phin_{q}^k(\zeta) = (\zeta^q)^k = \zeta^{q^k} = \phin_{q^k}(\zeta)$
+
+% $\phin_q^k = Id \leftrightarrow \zeta^{q^k} = \zeta$
+
+% $\zeta^{q^n-1} = 1 \rightarrow n | k$
+
+% }
+
+% $\order{\phin_q} = n$
+
+% $\# Gal( \F_{q^n} | \F_q ) = n$
+
+% $Gal( \F_{q^n} | \F_q ) =  < \phin_q>$
+% \fin{\newpage}
+
+% \subsection{Teoría de Galois sobre cuerpos finitos}
+
+% \sean
+
+% \item $\sea{ \mathcal{S}(q^n,q) }{ \conj{ H \subset Gal( \F_{q^n} \ext \F_q ) }{ H \sub Gal ( \F_{q^n} \ext \F_q )}}$
+% \item $\sea{ \mathcal{C}(q^n,q) }{ \conj{ K \ext \F_q }{ \F_{q^n} \ext K }}$ 
+
+% \teorema 
+
+% \item $\ex \f{ \phi }{ \mathcal{S}(q^n, q) }{ \mathcal{C}(q^n,q)} \tq \phi$ biyectiva
+
+% \demostracion
+
+% \item \alltq{ d }{ \N }{ d | n}{
+
+% $Gal(\F_{q^n} \ext \F_{q^d} ) < Gal(\F_{q^n} \ext \F_{q} )$
+
+% }
+
+% $\sea{ \phi(\F_{q^d} \ext \F_{q}) }{ Gal(\F_{q^n} \ext \F_{q^d} ) }$
+
+% \item $\all H < G:$
+
+% $\sea{ phi^{-1}(H) }{ \F_{q^n}^H | \F_q }$
+
+% \item Inversas mutuas
+
+% $\all H < G:$
+
+% $\ex d \in \N \tq d|n \y H = <\phin_q^d>$
+
+% $\F_{q^n}^{<\phin_q^d>} = \F_{q^d}$
+
+% $\phi^{-1}(<\phin_q^d>) = \F_{q^d} \ext \F_q$
+
+% $\phi(\F_{q^d} \ext \F_q) = Gal(\F_{q^n} \ext \F_{q^d}) = <\phin_q^d>$
+
+% \item $\phi \circ \phi^{-1} = Id$
+
+% \fin{}
+
+\end{document}

@@ -1,0 +1,56 @@
+
+\documentclass[../Main/main]{subfiles}
+
+
+\begin{document}
+
+
+\unit{ $ Statistic models $ }
+{
+	\introduction
+	{ 
+		$introduction\\$ 
+	}
+
+	\example{ $ Exponential model $ }
+	{
+		\letbe
+		{
+			\Omega : \R^n.
+			\Ac : \B(\R^n).
+			\theta : (\mu, \sigma^2).
+			\Theta : \R \times \R^+.
+			\Pc : \family*{ N(\theta) }{ \theta \in \Theta }
+		}
+		\is{ ( \Omega, \Ac, \Pc ) }{ $ an exponential model $ }
+		{
+			\all{ x \in \R^n }
+			{
+				f_\theta(x) = \product{ \frac{ 1 }{ \sqrt{ 2\pi\sigma^2 } }\exp( -\frac{ 1 }{ 2\sigma^2 } (x_i - \mu)^2) }{ i }[ 1 ][ n ].
+
+				= (\frac{ 1 }{ \sqrt{ 2\pi\sigma^2 }})^n \exp( -\frac{ 1 }{ 2\sigma^2 } \summation{ (x_i-\mu)^2 }{ i }[ 1 ][ n ]).
+
+				
+				L(x,\theta) = \exp( \frac{ n }{ 2 } \log( \frac{ 1 }{ 2\pi\sigma^2 }) - \frac{ 1 }{ 2\sigma^2 }\summation{ x_i^2 }{ i }[ 1 ][ n ] + \frac{ n\bar{x}\mu }{ \sigma^2 } - \frac{ n\mu^2 }{ 2\sigma^2 }).
+
+								
+				\definedFunction{ \phi }{ \Theta }{ \R^2 }{ (\mu,\sigma^2) }{ (-\frac{ \mu }{ 2\sigma^2 }, \frac{ n\mu }{ \sigma^2 }) }.
+				
+				\definedFunction{ \phi' }{ \Theta }{ \R }{ (\mu, \sigma^2) }{ \frac{ n }{ 2 } \log( \frac{ 1 }{ 2\pi\sigma^2 }) - \frac{ n\mu^2 }{ 2\sigma^2 }}.
+
+				\definedFunction{ f }{ \Omega }{ \R^2 }{ x }{ (\summation{ x_i^2 }{ i }[ 1 ][ n ], \bar{x}) }.
+
+
+
+				L(x,\theta) = \exp( \phi'(\theta) - \phi(\theta)f(x) ).
+
+				\conclude ( \Omega, \Ac, \Pc ) $ exponential model $
+			}
+		}
+	}
+	
+
+}
+
+
+\end{document}

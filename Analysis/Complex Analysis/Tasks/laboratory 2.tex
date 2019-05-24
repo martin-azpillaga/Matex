@@ -1,0 +1,79 @@
+
+\documentclass[../Main/main]{subfiles}
+
+
+\begin{document}
+
+\laboratory{ $ Power series $ }
+{
+	\proposition{ $ Power series $ }
+	{
+		\study
+		{
+			\summation{ n(n+1)z^n }{ n }[ 1 ]
+		}
+		\start
+		{
+			\step{ $Convergence domain$ }
+			{
+				\limit{ \frac{ n(n+1) }{ (n+1)(n+1) } }{ n } = 1.
+
+				$Quotient test:$.
+				\superiorlimit{ |c_n|^{\frac{ 1 }{ n }} }{ n } = 1 \imp \left(\superiorlimit{ |c_n|^{\frac{ 1 }{ n }} }{ n }\right)^{-1} = 1. 
+
+				$Cauchy-Hadamard theorem:$.
+
+				\summation{ n(n+1)z^n }{ n }[ 1 ] $ absolutely convergent over $ \D.
+				\summation{ n(n+1)z^n }{ n }[ 1 ] $ divergent  over $ \C \setminus \closed{\D}.
+				\all{ K \subset \D }[ K $ compact $ ]
+				{
+					\summation{ n(n+1)z^n }{ n }[ 1 ] $ uniformly convergent over $  K
+				}
+				
+			}.
+
+
+			\step{ $Sum$ }
+			{
+				$Consider:$.
+
+				\definedFunction{ f }{ \D }{ \C }{ z }{ \summation{ n(n+1)z^n }{ n }[ 1 ] }.
+				\definedFunction{ g }{ \D }{ \C }{ z }{ \summation{ n(n+1)z^{n-1} }{ n }[ 1 ] }.
+				\definedFunction{ h }{ \D }{ \C }{ z }{ \summation{ (n+1)z^n }{ n }[ 1 ] }.
+
+				\all{ z \in \D }
+				{
+					f(z) = zg(z).
+					$UCI theorem:$.
+					\integral{ g(t) }{ dt }{ 0 }[ z ] = \summation{ (n+1)z^n }{ n }[ 1 ] = h(z)
+				}.
+				g,h $ well defined $.
+
+				\all{ z \in \D }
+				{
+					$UCI theorem:$.
+					\integral{ h(t) }{ dt }{ 0 }[ z ] =  \summation{ z^{n+1} }{ n }[ 1 ] = \summation{ z^n }{ n }[ 0 ] = \frac{ 1 }{ 1-z }.
+					
+					h(z) = \partialderivative{ \frac{ 1 }{ 1-z } }{ z } = \frac{ 1 }{ (1-z)^2 }.
+
+					g(z) = \partialderivative{ h(z) }{ z } = \frac{ 2 }{ (1-z)^3 }.
+
+					f(z) = zg(z) = \frac{ 2z }{ (1-z)^3 }
+				}
+
+				
+			}.
+
+
+			\step{ $Application$ }
+			{
+				\summation{ (-1)^n \frac{ n(n+1) }{ 2^n } }{ n }[ 1 ] = f(-\frac{ 1 }{ 2 } ) = \frac{ -2^3 }{ 3^3 }
+			}
+		}
+	}
+	
+}
+
+
+
+\end{document}

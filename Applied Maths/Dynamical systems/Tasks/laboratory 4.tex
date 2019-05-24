@@ -1,0 +1,72 @@
+
+\documentclass[../Main/main]{subfiles}
+
+\begin{document}
+
+\laboratory{ $ Linear maps $ }
+{
+	\proposition{ $ Real sequence of order 2 $ }{
+	\letbe
+	{
+		p,q \in \R.
+		\all{ a,b \in \R }
+		{
+			\be{ x_0 }{ a }.
+			\be{ x_1 }{ b }.
+			\all{ n \in \N }
+			{
+				\be{x_{n+2}}{ px_{n+1} + q_{x_n}}
+			}
+		}
+		
+	}
+	\study
+	{
+		\limit{ \frac{ x_n }{ x_{n+1} } }{ n }
+	}
+	\start
+	{
+		\C\1
+		$Consider:$.
+		A = \Matrix{ p,q.1,0 }.
+		A \Matrix{ x_{n+1} . x_n } = \Matrix{ x_{n+2} . x_{n+1} }.
+		
+		$Eigenvalue analysis where $ q = -\frac{ p^2 }{ 2 }:.
+		\chi_A(t) = t^2 - \trace{ A }t + \det(A) = t^2 - pt + \frac{ p^2 }{ 2 }.
+		\sigma( A ) = \set{ \lambda \in \C \with \chi_A(\lambda) = 0 } = \set{ \frac{ p }{ 2 } }.
+
+		\be{ \lambda }{ \frac{ p }{ 2 } }.
+		E_\lambda(A) = \kernel{ A - \lambda \1 } = \set{ (x,y) \in \R^2 \with x=\lambda y }.
+		\dim(A) = 2 \logicAnd \sigma(A) = \set{ \lambda } \logicAnd \gamma_A(\lambda) = 1 \imp A $ no diagonalizable $.
+
+		$Jordan form:$.
+		\be{ J }{ \Matrix{ \lambda, 1 . 0, \lambda } }.
+		J^n = \Matrix{ \lambda^n, n\lambda^{n-1} . 0, \lambda^n }.
+		\be{ v_2 }{ \Matrix{ 1.0 } }, \s \s\be{ v_1 }{ (A - \lambda \1)v_2 } = \Matrix{ p - \lambda. 1 } = \Matrix{ \lambda. 1 }.
+
+		\be{ C }{ (v_1|v_2) = \Matrix{ \lambda, 1. 1,0 } }.
+		C^{-1} = \Matrix{ 0,1.1,-\lambda }.
+		A = CJC^{-1} \imp A^n = CJ^nC^{-1} = \Matrix{ (n+1)\lambda^n, -n\lambda^{n+1}. n\lambda^{n-1}, (1-n)\lambda^n }.
+
+		$Sequence analysis:$.
+		\all{ a,b \in \R }
+		{
+			\Matrix{ x_{n+1}.x_n } = A^n \Matrix{ b. a } = \Matrix{ -n\lambda^{n+1} a + (n+1)\lambda^n b. (1-n)\lambda^n a + n \lambda^{n-1}b}.
+
+			\limit{ \frac{ x_n }{ x_{n+1} } }{ n } = \limit{ \frac{ \lambda^{n-1}(bn + (1-n)\lambda a) }{ \lambda^{n-1}(-n\lambda^2a + (n+1)\lambda b) } }{ n } =.
+
+			\limit{ \frac{ (b-\lambda a)n + \lambda a }{ (\lambda b - \lambda^2a)n + \lambda b  } }{ n } = \frac{ 1 }{ \lambda } = \frac{ 2 }{ p }
+		}.
+
+		$Graphical interpretation:$.
+
+		$Let be $ l $ the line that passes through the origin and $ \Matrix{ x_{n+1}. x_n }.
+		$ The slope of $ l $ is $ \frac{ x_{n+1} }{ x_n }.
+		\limit{ \frac{ x_{n+1} }{ x_n } }{ n } = \limit{ \left(\frac{ x_n }{ x_{n+1} }\right)^{-1} }{ n } = \lambda.
+		$the slope of $ l $ approaches the slope of $ E_\lambda(A) $ as n increases$. 
+		$The orbit of $ \Matrix{ x_{n+1}. x_n } $ is tangent to the eigenvectors line$
+	}}
+}
+
+
+\end{document}

@@ -1,0 +1,381 @@
+\unit{ $Power Series$ }
+{
+	\introduction{ $ Power Series $ }
+
+	\proposition{ $Cauchy-Hadamard theorem$ }
+	{
+	\letbe
+	{
+		\sumatory{ a_nf_n }{ n }[ 0 ] $ power series $.
+		D $ domain of convergence of $ \sumatory{ a_nx^n }{ n }[ 0 ].
+		R $ radius of convergence of $ \sumatory{ a_nf_n }{ n }[ 0 ] 
+	}
+	\holds
+	{
+		\all{ x \in \R }[ |x| < R ]
+		{
+			x \in D
+		}.
+
+		\all{ x \in \R }[ |x| > R ]
+		{
+			x \in D^c
+		}.
+
+		\all{ r \in \R }[ |r| < R ]
+		{
+			\sumatory{ a_nx^n }{ n }[ 0 ] $ uniformly convergent over $ [-r,r]
+		}
+	}
+	\demonstration
+	{
+		$ Follow 2 steps $.
+		
+		\step{ 1 }{ $ Apply the root criterion $ }
+		{
+			\all{ x \in \R }
+			{
+				\sqrt[n]{|a_nx^n|} = |x|\sqrt[n]{|a_n|} = \frac{|x|}{R}.
+
+				$ Separate 2 cases: $.
+				
+				\case{ |x| < R }
+				{
+					\sqrt[n]{|a_nx^n|} < 1.
+					$ root criterion $ \imp x \in D
+				}
+				\case{ |x| > R }
+				{
+					\sqrt[n]{|a_nx^n|} > 1.
+					$ root criterion $ \imp x \in D^c
+				}
+			}
+		}.
+		
+		\step{ 2 }{ $ Apply Weierstrass' M Criterion $ }
+		{
+			\all{ r \in \R }[ r < R ]
+			{
+				\all{ n \in \N }
+				{
+					\be{ f_n(x) }{ a_nx^n }.
+
+ 					\be{ M_n }{ a_nr^n }.
+
+ 					|f_n| \leq M_n 
+				}.
+
+				$step 1$ \imp M_n $ convergent $.
+
+				$M Criterion$ \imp \sumatory{ a_nx^n }{ n }[ 0 ] $ uniformly convergent over $ [-r,r]
+			}
+		}
+	}}
+
+
+
+	\proposition{ $Abel's Theorem$ }
+	{	
+	\letbe
+	{
+		\sumatory{ a_nx^n }{ n }[ 0 ] $ power series $.
+		R $ radius of convergency of $ \sumatory{ a_nx^n }{ n }[ 0 ] $ power series $
+	}
+	\holds
+	{
+		\sumatory{ a_nR^n }{ n }[ 0 ] $ convergent $ \imp \sumatory{ a_nx^n }{ n }[ 0 ] $ uniformly convergent over $ [0,R].
+		\sumatory{ a_n(-R)^n }{ n }[ 0 ] $ convergent $ \imp \sumatory{ a_nx^n }{ n }[ 0 ] $ uniformly convergent over $ [-R,0]
+	}
+	\demonstration
+	{
+		\all{ n \in \N }
+		{
+			\be{ S_n }{ \sumatory{ a_kR^k }{ k }[ n ] } \in \R.
+
+			\all{ m \in \N }[ m \geq n ]
+			{
+			  	\be{ S_n^m }{ \sumatory{ a_kx^k }{ k }[ n ][ m ] } 
+			}
+		}.
+
+		\all{ x \in [0,R] }
+		{
+			\ex{ \lambda \in [0,1] }{ x = \lambda R }
+		}.
+
+		\sumatory{ a_nR^n }{ n }[ 0 ] $ convergent $ \imp \all{ \eps \in \R^+ }
+		{
+			\ex{ n_0 \in \N }{ \all{ n \in \N }[ n \geq n_0 ]
+			{
+				| S_n | < \frac{\eps}{2}
+			
+
+			|S_n^m| = |\sumatory{ a_k\lambda^kR^k }{ k }[ n ][ m ]| = .
+
+			= | \sumatory{ (S_k - S_{k+1})\lambda^k }{ k }[ n ][ m ] | = .
+
+			= | S_n\lambda^n + \sumatory{ [S_k(\lambda^k - \lambda^{k-1})  }{ k }[ n+1 ][ m ] + S_{m+1}\lambda^m \leq .
+
+			\leq \frac{\eps}{2}[ \lambda^n + \sumatory{ |\lambda^k - \lambda^{k-1}|  }{ k }[ n+1 ][ m ] + \lambda^m] \leq .
+
+			\leq \frac{\eps}{2}[ \lambda^n + \sumatory{ (\lambda^{k-1} - \lambda^k)  }{ k }[ n+1 ][ m ] + \lambda^m] \leq \lambda^n\eps \leq \eps
+
+			} 
+			}.
+		}.}}
+
+
+
+	\proposition{ $Superior Limit Lemma$ }
+	{
+	\letbe
+	{
+		\succesion{ a_n }{ n } \subset \R \suchthat \superiorlimit{ a_n }{ n } = a.
+		\succesion{ b_n }{ n } \subset \R \suchthat \limit{ b_n }{ n } = b > 0
+	}
+	\holds
+	{
+		\superiorlimit{ a_nb_n }{ n } = ab
+	}
+	\demonstration
+	{
+		$Sandwitch $ \superiorlimit{ a_nb_n }{ n } $ with $ ab $ :$.
+		
+		\lowerbound
+		{
+			\ex{ \succesion{ a_{n_k} }{ k } \partialsuccesion \succesion{ a_n }{ n } }{ \limit{ a_{n_k} }{ k } = a}.
+
+			\limit{ a_{n_k}b_{n_k} }{ k } = ab.
+
+			ab \leq \superiorlimit{ a_nb_n }{ n }
+		}.
+		
+		\upperbound
+		{
+			\be{ c }{ \superiorlimit{ a_nb_n }{ n } } \in \closed{\R}.
+
+			\ex{ \succesion{ a_{n_k}b_{n_k} }{ k } \partialsuccesion \succesion{ a_nb_n }{ n } }{ \limit{ a_{n_k}b_{n_k} }{ k } = c }.
+
+			\limit{ a_{n_k} }{ k } = \frac{\limit{ a_{n_k}b_{n_k} }{ k }}{ \limit{ b_{n_k} }{ k } } = \frac{c}{b}.
+
+			\frac{c}{b} \leq a \imp c \leq ab \imp \superiorlimit{ a_nb_n }{ n } \leq ab 
+		}.
+		
+	}}
+
+
+
+	\proposition{ $Diferentiability of Power Series$ }
+	{	
+	\letbe
+	{
+		\sumatory{ a_nx^n }{ n }[ 0 ] $ power series $.
+		R $ radius of convergence of $ \sumatory{ a_nx^n }{ n }[ 0 ].
+		f $ associated function of $ \sumatory{ a_nx^n }{ n }[ 0 ]
+	}
+	\holds
+	{
+		f $ differentiable over $ ((-R,R)).
+
+		\all{ x \in (-R,R) }
+		{
+			f'(x) = \sumatory{ a_nnx^{n-1} }{ n }[ 0 ]
+		}
+	}
+	\demonstration
+	{
+		$ Follow 2 steps $.
+		
+		\step{ 1 }{ $ Calculate radius of convergence $ }
+		{
+			\frac{1}{R'} = \superiorlimit{ \sqrt[n]{|a_nn|} }{ n } = \sqrt[n]{|n|} \superiorlimit{ \sqrt[n]{|a_n|} }{ n } = \frac{1}{R}.
+
+			R' = R.
+		}.
+		
+		\step{ 2 }{	$ Apply UCD theorem $ }
+		{
+			\all{ r \in \R }[ |r| < R ]
+			{
+				\sumatory{ a_nnx^{n-1} }{ n }[ 0 ] $ uc over $ [-r,r].
+
+				$UCD$ \imp f $ derivable $ \logicand \all{ x \in (-R,R) }
+				{
+					f'(x) = \sumatory{ \partialderivative{x} a_nx^n }{ n }[ 0 ].
+
+					f'(x) = \sumatory{ a_nnx^{n-1} }{ n }[ 0 ]
+				}
+			}.
+		}
+	}}
+
+
+
+	\proposition{ $Integrability of Power Series$ }
+	{	
+	\letbe
+	{
+		\sumatory{ a_nx^n }{ n }[ 0 ] $ power series $.
+		f $ associated function of $ \sumatory{ a_nx^n }{ n }[ 0 ].
+		R_f $ radius of convergence of $ \sumatory{ a_nx^n }{ n }[ 0 ]
+		
+	}
+	\holds
+	{
+		f \in \riemann{(-R,R)}.
+
+		\all{ x \in (-R,R) }
+		{
+			\integral{ f(x) }{ dx }{ 0 }[ x ] = \sumatory{ \frac{a_n}{n+1}x^{n+1} }{ n }[ 0 ]
+		}
+	}
+	\demonstration
+	{
+		$ Follow 2 steps $.
+		
+		\step{ 1 }{ $ Calculate radius of convergence $ }
+		{
+			\be{ R' }{ $ radius of convergence of $ \sumatory{ \frac{a_n}{n+1} x^{n+1} }{ n }[ 0 ] } \in \closed{\R} .
+
+			\frac{1}{R'} = \superiorlimit{ \sqrt[n]{\frac{|a_n|}{n+1}} }{ n } = \sqrt[n]{\frac{1}{n+1}} \superiorlimit{ \sqrt[n]{|a_n|} }{ n } = \frac{1}{R}.
+
+			R' = R.
+		}.
+		
+		\step{ 2 }{	$ Apply UCI theorem $ }
+		{
+			\all{ r \in \R }[ |r| < R ]
+			{
+				\sumatory{ \frac{a_n}{n+1} x^{n+1} }{ n }[ 0 ] $ uc over $ [-r,r].
+
+				$UCI$ \imp f \in \riemann{(-R,R)} \logicand \all{ x \in (-R,R) }
+				{
+					\integral{ f(x) }{ dx }{ 0 }[ x ] = \sumatory{ \integral{ f(x) }{ dx }{ 0 }[ x ] a_nx^n }{ n }[ 0 ].
+
+					\integral{ f(x) }{ dx }{ 0 }[ x ] = \sumatory{ \frac{a_n}{n+1} x^{n+1} }{ n }[ 0 ]
+				}
+			}
+		}
+	}}
+
+
+
+	\proposition{ $Exponential Properties$ }
+	{	
+	\holds
+	{
+		exp \in C^{\infty}(\R).
+
+		exp' = exp.
+
+		exp(a+b) = exp(a) + exp(b).
+
+		exp > 0.
+
+		exp $ increasing $.
+
+		exp(a) = exp(1)^a.
+
+		\all{ n \in \N }
+		{
+			exp(-x)x^n \convergesto 0
+		} 
+	}
+	\demonstration
+	{
+		$ Follow 7 steps $.
+		
+		\step{ 1 }{ exp \in C^{\infty}(\R) }
+		{
+			R = \limit{ \frac{(n+1)!}{n!} }{ n } = \limit{ n+1 }{ n } = \infty
+		}.
+		
+		\step{ 2 }{ exp' = exp }
+		{
+			$UCD theorem$ \imp \all{ x \in \R }
+			{
+				exp'(x) = \sumatory{ \frac{n}{n!}x^{n-1} }{ n }[ 1 ] = .
+
+				= \sumatory{ \frac{1}{(n-1)!}x^{n-1} }{ n }[ 1 ]\sumatory{ \frac{1}{n!}x^n }{ n }[ 0 ] = exp(x)
+			}
+		}.
+
+		\step{ 3 }{ exp(a+b) = exp(a)exp(b) }
+		{
+
+			$Exponential lemma$ \imp exp(a)exp(b) = \sumatory{ \sumatory{ \frac{1}{k!}a^k }{ k }[ 0 ][ n ] \frac{1}{(n-k)!} b^{n-k}	}{ n }[ 0 ] = .
+
+			= \sumatory{ \frac{1}{n!} \sumatory{ \frac{n!}{k!(n-k)!}a^kb^{n-k} }{ k }[ 0 ][ n ] }{ n }[ 0 ] = .
+
+			= \sumatory{ \frac{1}{n!} \sumatory{ \combinatory{n}{ k } a^kb^{n-k} }{ k }[ 0 ][ n ] }{ n }[ 0 ] = .
+
+			= \sumatory{ \frac{1}{n!}(a+b)^n }{ n }[ 0 ] = exp(a+b)
+		}.
+
+		\step{ 4 }{ exp > 0 }
+		{
+			exp(0) = 1.
+
+			\all{ x \in \R }[ x \geq 0 ]
+			{
+				exp(x) > 0.
+
+				exp(-x)exp(x) = exp(0) = 1.
+
+				exp(-x) = \frac{1}{exp(x)} > 0
+			}
+		}.
+
+		\step{ 5 }{ exp $ increasing $ }
+		{
+			exp' = exp > 0.
+		}.
+
+		\step{ 6 }{ exp(a) = exp(1)^a }
+		{
+			\all{ n \in \N }
+			{
+				$step 3$ \imp exp(n) = exp(1)^n 
+			}.
+
+			\all{ z \in \Z }[ z < 0 ]
+			{
+				\ex{ n \in \N }{ z = -n }.
+
+				exp(z) = exp(-n) = \frac{1}{exp(n)} = exp(1)^{-n} = exp(1)^z
+			}.
+
+			\all{ q \in \Q }[ q \geq 0 ]
+			{
+				\ex{ n,m \in \N }{ q = \frac{n}{m} }.
+
+				n = qm.
+
+				exp(n) = exp(qm) = exp(\sumatory{ q }{ i }[ 1 ][ m ]) = exp(q)^m.
+
+				exp(q) = exp(n)^{\frac{1}{m}} = exp(1)^{\frac{n}{m}} = exp(1)^q
+			}.
+
+			\all{ r \in \R }
+			{
+				exp $ continuous over $ \R \imp exp(r) = \limit{ exp(1)^q }{ q }[ r ] = exp(1)^r
+			}
+		}.
+
+		\step{ 7 }{ exp(-x)x^n \convergesto 0 }
+		{
+			\all{ n \in \N }
+			{
+				\all{ x \in \R }[ x \geq 0 ]
+				{
+					exp(x) > \frac{ x^{n+1} }{ (n+1)! }.
+
+					0 < exp(-x)x^n < \frac{ (n+1)! }{ x^{n+1} }.
+
+					$Sandwitch theorem$ \imp exp(-x)x^n \convergesto 0
+				}
+			}
+		}
+
+	}}
+}

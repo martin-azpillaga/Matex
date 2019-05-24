@@ -1,0 +1,170 @@
+
+\documentclass[../Main/main]{subfiles}
+
+
+\begin{document}
+
+
+\unit{ $ Holomorphic functions $ }
+{
+	
+	\example{ $ Conjugation $ }
+	{
+		\letbe
+		{
+			\definedFunction{ \bar{a} }{ \C }{ \C }{ z }{ \bar{z} }
+		}
+		\isNot{ \bar{a} }{ $ holomorphic $ }
+		{
+			u_x = 1.
+			u_y = 0.
+			v_x = 0.
+			v_y = -1.
+
+			\all{ z \in \C }
+			{
+				-1 \neq 1 \imp f $ not holomorphic in $ z
+			}
+		}
+	}
+
+
+	\example{ $ Quadratic norm $ }
+	{
+		\letbe
+		{
+			\definedFunction{ f }{ \C }{ \C }{ z }{ |z|^2 }.
+			f_{\R^2} $ component decomposition of f $
+		}
+		\is{ f }{ $ holomorphic in $ 0 }
+		{
+			f $ differentiable in $ \R^2 $ polinomial $.
+			\all{ z \in \C }
+			{
+				u_x(x,y) = 2x.
+				u_y(x,y) = 2y.
+				v_x(x,y) = 0.
+				v_y(x,y) = 0.
+
+				u_x = v_y \ifandonlyif x = 0.
+				u_y = -v_x \ifandonlyif y = 0.
+
+				f $ holomorphic function in $ z \ifandonlyif z = 0
+			}
+		}
+	}
+
+
+	\example{ $ Non preserving angles function $ }
+	{
+		\letbe
+		{
+			f(z) = z^2
+		}
+		\is{ f }{ $ conform in $ \R \nonzero }
+		{
+			f(\set{ (x,0) \in \C \with x > 0 }) = \set{ (x,0) \in \C \with x > 0 }.
+			f(\set{ (x,0) \in \C \with x < 0 }) = \set{ (x,0) \in \C \with x > 0 }.
+
+			ang(A,B) = \pi \neq 0 = ang(f(A),f(B))
+		}
+	}
+
+
+	\example{ $ Exponential $ }
+	{
+		\letbe
+		{
+			a \as 0.
+			c_n \as \frac{ 1 }{ n }
+		}
+		\is{ \summation{ c_n(z-a)^n }{ n }[ 0 ] }{ $ convergent in D1 $ }
+		{
+			\limit{ \frac{ |c_n| }{ |c_{n+1}| } }{ n } = \limit{ \frac{ n+1 }{ n } }{ n } = 1 \imp R = 1.
+
+			$CH$ \imp D(0,1) $ convergent $.
+
+			\C \setminus D(0,1) $ divergent $.
+
+			f' = f
+		}
+	}
+
+
+	\example{ $ Geometric series $ }
+	{
+		\letbe
+		{
+			a \as 0.
+			c_n : 0
+		}
+		\is{ \sum{ z^n }{ n }[ 0 ] }{ $ convergent in $ \D }
+		{
+			R = \frac{ c_n }{ c_{n+1} } = 1
+		}
+		\holds
+		{
+			\sum{ z^n }{ n }[ 0 ] = \frac{ 1 }{ 1-z }.
+			\sum{ nz^{n-1} }{ n }[ 0 ] = \frac{ 1 }{ (1-z)^2 }.
+			\sum{ \frac{ z^{n+1} }{ n+1 } }{ n }[ 0 ] = - \log( 1-z )
+		}
+		\demonstration
+		{
+			\all{ z \in \D }
+			{
+				\sum{ z^n }{ n }[ 0 ] $ geometric series $.
+				\sum{ z^n }{ n }[ 0 ] = \frac{ 1 }{ 1-z }
+			}.
+
+			II $ differentiating $.
+
+			III $ integrating $
+		}
+	}
+	
+	
+	\example{ $ Series not centered in 0 $ }
+	{
+		\letbe
+		{
+			a \as i.
+			c_n \as \frac{ n+1 }{ 5^{n+1} }
+		}
+		\is{ item }{ $ a/an entity $ }
+		{
+			\sum{ \frac{ n(z-i)^{n-1} }{ 5^n } }{ n }[ 1 ].
+
+			 = \frac{ 1 }{ 5 } \sum{ n \frac{ z-i }{ 5 }^{n-1} }{ n }[ 1 ] = \frac{ 1 }{ 5 } \sum{ nu^{n-1} }{ n }[ 1 ].
+
+			 S(u) = \tilde{S'}(u).
+
+			 \tilde{S}(u) = \frac{ 1 }{ 5 } \sum{ u^n }{ n }[ 1 ] = \frac{ u }{ 5(1-u) }.
+
+			 S(u) = \frac{ 1 }{ 5(1-u)^2 }.
+
+			 S(z) = \frac{ 5 }{ (5+i-z)^2 } $ over $ D(i,5).
+
+
+		}
+	}
+	
+	
+	\example{ $ Radius of convergence without quotient test $ }
+	{
+		\letbe
+		{
+			\sum{ \frac{ (-1)^n }{ n(n+1) }(z-2)^{n(n+1)} }{ n }[ 1 ]
+		}
+		\is{ R }{ $ a/an entity $ }
+		{
+			\limit{ c_n }{ c_{n+1} } \nexists.
+
+			\limit{ \frac{ 1 }{ n(n+1) }^{\frac{ 1 }{ n(n+1) }} }{ n } = 1.
+
+			$ ignore zeros $.
+		}
+	}
+}
+
+
+\end{document}

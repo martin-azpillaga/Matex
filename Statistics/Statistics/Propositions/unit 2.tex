@@ -1,0 +1,141 @@
+
+\documentclass[../Main/main]{subfiles}
+
+
+\begin{document}
+
+
+\unit{ $ Punctual estimation $ }
+{
+	\introduction
+	{ 
+		$introduction\\$ 
+	}
+
+	
+	\proposition{ $ Neyman \& Fisher's factorization theorem $ }
+	{
+		\letbe
+		{
+			( \Omega, \Ac, \Pc ) $ k-D statistical model parametrized by $ \Theta.
+			\function{ L }{ \Omega \times \Theta }{ \R } $ likelihood function of $ ( \Omega, \Ac, \Pc ).
+			( M, \Sigma ) $ measurable space $.
+			\function{ X }{ \Omega }{ M } $ random variable $.
+			\function{ T }{ M }{ \R^k } $ statistic $
+		}
+		\holds
+		{
+			T $ sufficient $ \ifandonlyif 
+			\ex{ \function{ \Lambda }{ \R^m \times \Theta }{ \R^+ }, \function{ h }{ \Omega }{ \R^k } }
+			{
+				\all{ x \in \Omega }
+				{
+					\all{ \theta \in \Theta }
+					{
+						L(x,\theta) = \Lambda( T(x), \theta )h(x)
+					}
+				}
+			}
+		}
+	}
+
+
+	\proposition{ $ Cramer-Rao's inequality $ }
+	{
+		\letbe
+		{
+			$ same conditions of above $.
+			T \in \chi_F.
+			$ regular model $.
+			E_\theta T = g(\theta)		
+		}
+		\holds
+		{
+			Var_\theta ( T ) \geq \frac{ g'(\theta)^2 }{ I(\theta) }
+		}
+		\demonstration
+		{
+			|E( \partialderivative{ \log( L(x,\theta) )(T(x)-g(\theta) }{ \theta }| \leq \sqrt{ E_\theta( \partialderivative{ \log( L(x,\theta) ) }{ \theta })^2 E_\theta(T(x)-g(\theta))^2} = \sqrt{ I(\theta)Var_\theta T } .
+
+			E( \partialderivative{ \log( L(x,\theta) )(T(x)g(\theta) }{ \theta } = E_\theta(\partialderivative{ \log( L(x,\theta)T(x) ) }{ \theta } - g(\theta)E_\theta(\partialderivative{ \log( L(x,\theta) ) }{ \theta } = E_\theta(\partialderivative{ \log( L(x,\theta)T(x) ) }{ \theta }.
+
+			\integral{ \partialderivative{ \log( L(x,\theta) ) }{ \theta }T(x) L(x,\theta) }{ dx }{ \Omega } = \integral{ \frac{ 1 }{ L(x,\theta) }\partialderivative{ L(x,\theta) }{ \theta }T(x)L(x,\theta) }{ dx }{ \Omega }.
+
+			|g'(\theta)| \leq \sqrt{ I(\theta)Var_\theta(T) }.
+
+			g'(\theta)^2 \leq I(\theta)Var_\theta(T)
+		}
+	}
+	
+	
+	
+	
+	
+	\proposition{ $ Efficient estimators are UMV $ }
+	{
+		\letbe
+		{
+			statements.
+		}
+		\holds
+		{
+			then, holds.
+		}
+		\demonstration
+		{
+			demonstration.
+		}
+	}
+	
+	
+	\proposition{ $ Characterization of efficient estimators $ }
+	{
+		\letbe
+		{
+			$ mismas condiciones $
+		}
+		\holds
+		{
+			T $ efficient $ \ifandonlyif \ex{ \lambda(\theta) }
+			{
+				\lambda(\theta) \partialderivative{ \log( L(x,\theta) }{ \theta } = T(x) - g(\theta) P_\theta-qs
+			}
+		}
+		\demonstration
+		{
+			$ no demonstration $
+		}
+	}
+	
+	
+	\proposition{ $ Observation $ }
+	{
+		\letbe
+		{
+			$ mismas condiciones $
+		}
+		\holds
+		{
+			
+		}
+		\demonstration
+		{
+			\lambda'(\theta)\log( L(x,\theta) ) + \lambda(\theta)\partialderivative{ \log( L(x,\theta) ) }{ \theta^2 } = - g'(\theta).
+
+			E[*] = E_\theta(\lambda(\theta)\partialderivative{ \log( L(x,\theta) ) }{ \theta }) + \lambda(\theta)E_\theta( \partialderivative{ \log( L(x,\theta) ) }{ \theta^2 }) = 0 - g'(\theta).
+			\lambda(\theta)I(\theta) = g'(\theta).
+			I(\theta) = \frac{ g'(\theta) }{ \lambda(\theta) }
+		}
+	}
+	
+	
+	
+	
+	
+	
+	si existe un estimador que da la igualdad entonces es UMV
+
+}
+
+
+\end{document}

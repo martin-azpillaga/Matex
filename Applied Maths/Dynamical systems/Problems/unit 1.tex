@@ -1,0 +1,130 @@
+
+\documentclass[../Main/main]{subfiles}
+
+
+\begin{document}
+
+
+\unit{ $ One-dimensional discrete dynamical system $ }
+{
+	\introduction
+	{ 
+		$introduction\\$ 
+	}
+
+	\problem{ $ Decreasing function orbits $ }
+	{
+		\letbe
+		{
+			declarations.
+		}
+		\showthat
+		{
+			statements.
+		}
+		\demonstration
+		{
+			f $ corta en un punto $.
+
+			f $ decreasing $ \imp f^2 $ increasing $.
+
+			f^{2n} \convergesto $ fixed point of $ f
+		}
+	}
+	
+	
+	\problem{ $ 9. Periodic points $ }
+	{
+		\letbe
+		{
+			\definedFunction{ f }{ \R \times \R^+ }{ \R }{ (x,r) }{ r \frac{ x }{ 1 + x^2 } }
+		}
+		\study
+		{
+			$Periodic points of $ f
+		}
+		\demonstration
+		{
+			\step{ $ Graphical analysis $ }
+			{
+				f $ odd $.
+
+				f $ has 2 extrema in $ \pm 1.
+
+				f \convergesto 0
+			}.
+
+
+			\step{ $ Fixed points $ }
+			{
+				f(x) = x \ifandonlyif x = \pm \sqrt{ r - 1 }.
+
+				f'(\pm \sqrt{ r - 1 })  = \frac{ 2 - r }{ r }
+			}.
+
+			\step{ $ n-periodic points $ }
+			{
+				f^n(x) = x 
+			}
+		}
+	}
+
+
+	\problem{ $ 10. Global orbit analysis $ }
+	{
+		\letbe
+		{
+			\function{ f }{ \R^+ }{ \R^+ } \in \C^{\infty}.
+			f(0) = 0.
+			p \in \R^+ \nonzero \suchthat f'(p) \geq 0.
+			f' $ decreasing $
+		}
+		\showthat
+		{
+			\all{ x \in \R^+ \nonzero }
+			{
+				f^n(x) \convergesto p
+			}
+		}
+		\demonstration
+		{
+			f' $ decreasing $ \imp f'' < 0 \imp f $ concave $.
+
+			f $ positive $ \imp f $ has no extrema $ \imp f' > 0 \imp f $ increasing $.
+
+
+			f $ has only one fixed point $.
+
+			$Suppose 2 fixed points $: p,p'.
+
+			IVT \imp \ex{ c \in (0,p') }
+			{
+				f'(c) = 1
+			}.
+
+			f'(p) < 1 \imp p $ attractive $
+
+			IVT \imp $ dont exist more fixed points $ \imp f'(c') = 1 \nleq 1.
+
+			\all{ x \in (0,p) }
+			{
+				f(x) > x
+			}.
+
+			\all{ x \in \R }[ x > p ]
+			{
+				f(x) < x
+			}.
+
+			f $ increasing $ \imp f([0,p]) = [0,p].
+			f $ increasing $ \imp f([p,\infty)) \subset [p,\infty).
+
+			$ convergence tests $ \imp $OK$
+		}
+	}
+
+	
+}
+
+
+\end{document}

@@ -1,0 +1,619 @@
+\unit{ $ Metric Function Succesions $ }
+{
+	\introduction
+	{ 
+		$ The punctual limit of functions does not inherit \\
+		the properties of the original functions such as \\
+		continuity, differentiability and integrability. \\
+		Thats why an uniform limit is defined.
+		$
+	}
+
+	\proposition{ $Inclusion of uniformly convergent mfs' in punctually convergent mfs'$ }
+	{	
+	\letbe
+	{
+		\succesion{ f_n }{ n } \subset \functionspace{ A_1 }{ A_2 } $ uniformly convergent $.
+		f \in \functionspace{ A_1 }{ A_2 } \suchthat f_n \convergesuniformlyto f
+	}
+	\holds
+	{
+		\succesion{ f_n }{ n } \subset \functionspace{ A_1 }{ A_2 } $ punctually convergent $
+	}
+	\demonstration
+	{
+		\all{ x \in A_1 }
+		{
+			\all{ \eps \in \R^+ }
+			{
+				\ex{ n_0 \in \N }{ \all{ n \in \N }[ n \geq n_0 ]
+				{
+					f_n(x) - f(x) < \eps \imp \limit{ f_n(x) }{ n } = f(x)
+				} }
+			}
+		}
+
+		f_n \convergesto f
+	}}
+
+
+
+	\proposition{ $Characterization of uniformly convergent real function succesions by uniformly Cauchy function succesions$ }
+	{
+	\letbe
+	{
+		\succesion{ f_n }{ n } \subset \functionspace{ A_1 }{ \R } $ real function succesion $
+	}
+	\holds
+	{
+		f_n \convergesuniformlyto f \ifandonlyif f_n $ uniformly Cauchy $
+	}
+	\demonstration
+	{
+		\rightway
+		{
+			\all{ \eps \in \R^+ }
+			{
+				\all{ x \in A_1 }
+				{
+					\ex{ n_0 \in \N }{ \all{ n \in \N }[ n \geq n_0 ]
+					{
+						|f_n(x) - f(x)| < \frac{\eps}{2}
+					}.
+
+					\all{ n,m \in \N }[ n,m \geq n_0 ]
+					 {
+					 	|f_n(x) - f_m(x)| \leq |f_n(x) - f(x)| + |f(x) - f_m(x)| < \eps
+					 } }
+				}
+			}.
+
+			\succesion{ f_n }{ n } $ uniformly Cauchy $
+		}
+		\leftway
+		{
+			$ Follow 2 steps $.
+			
+			\step{ 1 }{ $ found $ f }
+			{
+				\all{ x \in A_1 }
+				{
+					\succesion{ f_n(x) }{ n } $ Cauchy $.
+
+					\succesion{ f_n(x) }{ n } \subset \R \imp \succesion{ f_n(x) }{ n } $ convergent $
+				}.
+
+				\definedfunction{ f }{ A_1 }{ \R }{ x }{ \limit{ f_n(x) }{ b } }
+			}.
+			
+			\step{ 2 }{ f_n \convergesuniformlyto f }
+			{
+				\all{ \eps \in \R^+ }
+				{
+					\all{ x \in A_1 }
+					{
+						\ex{ n_0 \in \N }{ \all{ n,m \in \N }[ n,m \geq n_0 ]
+						{
+						|f_n(x) - f_m(x)| < \eps.
+
+						\limit{ |f_n(x) - f_m(x)| }{ m } \leq \eps.
+
+						|f_n(x) - f(x)| \leq \eps
+						} }
+					}
+				}
+			}
+		}
+	}}
+
+
+
+	\proposition{ $WeierStrass' M Test$ }
+	{	
+	\letbe
+	{
+		\succesion{ f_n }{ n } \subset \functionspace{ A_1 }{ \R } $ real function succesion $ \suchthat \all{ n \in \N }
+		{
+			\ex{ M_n \in \R }{ \sup_{A_1} f_n < M_n }
+		}
+	}
+	\holds
+	{
+		\sumatory{ M_n }{ n }[ 1 ] $ convergent $ \imp \sumatory{ f_n }{ n }[ 1 ] $ uniformly convergent $
+	}
+	\demonstration
+	{
+		\all{ n \in \N }
+		{
+			|f_n(x)| < M_n
+		}.
+
+		\sumatory{ f_n }{ n }[ 1 ] $ absolutely punctually convergent $.
+
+		\ex{ f \in \functionspace{ A_1 }{ \R } }{ f_n \convergesto f }.
+
+		\all{ \eps \in \R^+ }
+		{
+			\ex{ n_0 \in \N }{ \all{ k \in \N }[ k \geq n_0 ]
+			{
+				\sumatory{ M_n }{ n }[ k ] < \eps.
+
+				|f(x) - \sumatory{ f_n(x) }{ n }[ 1 ][ k - 1 ]| = |\sumatory{ f_n(x) }{ n }[ k ]| \leq \sumatory{ |f_n(x)| }{ n }[ k ] \leq.
+
+				\leq \sumatory{ M_n }{ n }[ k ] < \eps
+			} }
+		}
+	}}
+
+
+
+	\proposition{ $Inheritance of Continuity by uniform continuity$ }
+	{	
+	\letbe
+	{
+		A_1,A_2 $ metric spaces $.
+		a \in A_1.
+		\succesion{ f_n }{ n } \subset \functionspace{ A_1 }{ A_2 } $ metric function succesion $ \suchthat \all{ n \in \N }
+		{
+			f_n $ continuous in $ a
+		}.
+		f \in \functionspace{ A_1 }{ A_2 } \suchthat f_n \convergesuniformlyto f
+	}
+	\holds
+	{
+		f $ continuous in $ a
+	}
+	\demonstration
+	{
+		\all{ \eps \in \R^+ }
+		{
+			\ex{ n_0 \in \N }{ \all{ n \in \N }[ n \geq n_0 ]
+			{
+				\all{ x \in A_1 }
+				{
+					d(f_n(x),f(x)) < \frac{\eps}{3}
+				}
+			}}.
+
+			\ex{ \delta \in \R^+ }{ \all{ x \in A_1 }[ d(x,a) < \delta ]
+			{
+				d(f_{n_0}(x),f_{n_0}(a)) < \frac{\eps}{3}.
+
+				d(f(x),f(a)) \leq .
+				\leq d(f(x),f_{n_0}(x))+d(f_{n_0}(x), f_{n_0}(a))+ d(f_{n_0}(a),f(a)) < \eps
+			}
+			}
+		}
+	}}
+
+
+
+	\proposition{ $Inheritance of Integrability by uniform continuity$ }
+	{
+	\letbe
+	{
+		\succesion{ f_n }{ n } \subset \riemann([a,b]).
+		f \in \functionspace{ \R }{ \R } \suchthat f_n \convergesuniformlyto f
+	}
+	\holds
+	{
+		f \in \riemann([a,b]).
+		\limit{ \integral{ f_n(x) }{ dx }{ a }[ b ] }{ n } = \integral{ f(x) }{ dx }{ a }[ b ]
+	}
+	\demonstration
+	{
+		\all{ n \in \N }
+		{
+			\be{ \eps_n }{ \sup_{x\in[a,b]} |f_n(x) - f(x)| } \in \R 
+		}.
+
+		\eps_n \convergesto 0.
+
+		\all{ n \in \N }
+		{
+			f_n - \eps_n \leq f \leq f_n + \eps_n.
+
+			f_n - \eps_n, f_n + \eps_n \in \riemann{[a,b]}.
+
+			\integral{ f_n - \eps_n }{ dx }{ a }[ b ] = \underline{\integral{ f_n - \eps_n }{ dx }{ a }[ b ]} \leq \underline{\integral{ f }{ dx }{ a }[ b ]} \leq \overline{\integral{ f }{ dx }{ a }[ b ]} \leq.
+
+			\leq \overline{\integral{ f_n + \eps_n }{ dx }{ a }[ b ]} \leq \integral{ f_n + \eps_n }{ dx }{ a }[ b ].
+
+			\integral{ f_n }{ dx }{ a }[ b ] - \eps_n(b-a) \leq \underline{\integral{ f }{ dx }{ a }[ b ]} \leq \overline{ \integral{ f }{ dx }{ a }[ b ]} \leq \integral{ f_n }{ dx }{ a }[ b ]+ \eps_n(b-a).
+
+			| \overline{ \integral{ f }{ dx }{ a }[ b ]} - \underline{ \integral{ f }{ dx }{ a }[ b ]} | 
+
+			\leq 2 \eps_n(b-a) \convergesto 0.
+
+			\overline{ \integral{ f }{ dx }{ a }[ b ] } = \underline{ \integral{ f }{ dx }{ a }[ b ]} \imp f \in \riemann{[a,b]}.
+
+			\step{2}{ $ Existency of $ \limit{ \integral{ f }{ dx }{ a }[ b ] }{ n } }
+			{
+				*\integral{ f_n }{ dx }{ a }[ b ] - \eps_n(b-a) \leq \integral{ f }{ dx }{ a }[ b ] \leq \integral{ f_n }{ dx }{ a }[ b ] + \eps_n(b-a).
+
+				\integral{ f }{ dx }{ a }[ b ] - \eps_n(b-a) \leq \integral{ f_n }{ dx }{ a }[ b ] \leq \integral{ f }{ dx }{ a }[ b ] + \eps_n(b-a).
+
+				$Sandwitch theorem$ \imp \exists \limit{ \integral{ f_n }{ dx }{ a }[ b ] }{ n } = \integral{ f }{ dx }{ a }[ b ]
+			}	
+		}.
+	}}
+
+
+
+	\proposition{ $Uniform Continuity and Derivation$ }
+	{	
+	\letbe
+	{
+		\succesion{ f_n }{ n } \subset C^1([a,b]).
+		x_0 \in [a,b] \suchthat \succesion{ f_n(x_0) }{ n } $ convergent $.
+		\succesion{ f'_n }{ n } $ uniformly convergent $
+	}
+	\holds
+	{
+		\ex{ f \in C^1([a,b]) }{ f_n \convergesuniformlyto f }.
+
+		f'_n \convergesto f'
+	}
+	\demonstration
+	{
+		$ Follow 3 steps $.
+		
+		\step{ 1 }{ $ Apply Medium Value Theorem $ }
+		{
+			\all{ \eps \in \R^+ }
+			{
+				\ex{ n_0 \in \N }{ \all{ n,m \in \N }[ n \geq n_0 ]
+				{
+					| f_n(x_0) - f_m(x_0) | < \frac{\eps}{2}
+				} }.
+
+				\ex{ n_1 \in \N }{ \all{ n,m \in \N }[ n,m \geq n_1 ]
+				{
+					\all{ t \in [a,b] }
+					{
+						|f'_n(t) - f'_m(t)| < \frac{\eps}{2(b-a)}
+					}
+				} }.
+
+				$Medium Value Theorem$ \imp \exists \zeta \in (a,b) \suchthat .
+
+				|(f_n-f_m)(x) - (f_n-f_m)(t)| = |(f_n-f_m)'(\zeta)||t-x| \leq \frac{\eps}{2} .
+
+				|f_n(x) - f_m(x)| \leq |(f_n-f_m)(x) - (f_n-f_m)(x_0)| + |(f_n-f_m)(x_0) - (f_n-f_m)(x)| < \eps.
+
+				
+			}.
+
+			\succesion{ f_n }{ n } \subset \R $ uniformly Cauchy $ \imp $ uniformly convergent $.
+
+			\ex{ f \in \functionspace{ [a,b] }{ \R } }{ f_n \convergesuniformlyto f }
+
+		}.
+		
+		\step{ 2 }{ $ Define $ \phi_n $ and $ \phi }
+		{
+			\definedfunction{ \phi_n }{ [a,b] }{ \R }{ x }{ \multiple[ \{ ]
+			{
+				\frac{f_n(t) - f_n(x)}{t-x}, t \neq x.
+
+				f'_n(t), t = x 
+			} }.
+
+			\definedfunction{ \phi }{ [a,b] }{ \R }{ x }{ \multiple[ \{ ]
+			{
+				\frac{f_n(t) - f_n(x)}{t-x}, t \neq x.
+
+				\limit{ f'_n(t) }{ n }, t = x
+			} }.
+
+			\all{ n \in \N }
+			{
+				\phi_n $ continuous over $ [a,b]
+			}
+		}.
+
+		\step{ 3 }{ \phi_n $ uniformly Cauchy $ }
+		{
+			$ Separate 2 cases: $.
+			
+			\case{ t \neq x }
+			{
+				|\phi_n(x) - \phi_m(x)| = | \frac{|(f_n(t)-f_m(x))-(f_n(t)-f_m(x))|}{|t-x|} \leq \frac{ \eps }{ 2(b-a) }
+			}.
+			\case{ t = x }
+			{
+				|\phi_n(x) - \phi_m(x)| = | f'_n(x) - f'_m(x) |.
+
+				f'_n $ uniformly convergent $ \imp \leq \frac{\eps}{2(b-a)}
+			}.
+
+			\all{ \eps \in \R^+ }
+			{
+				\ex{ n_2 \in \N }{ \all{ n,m \in \N }
+				{
+					|\phi_n(t) - \phi_m(t)| < \eps
+				} }.
+			}.
+
+			\succesion{ \phi_n }{ n } \subset \R $ uniformly Cauchy $ \imp $ uniformly convergent $.
+
+			\limit{ \phi_n(t) }{ n } = \phi(t) \imp \phi_n \convergesuniformlyto \phi.
+
+			\phi $ continuous over $ [a,b] \imp f $ differentiable over $ [a,b].
+
+			f'_n(x) = \limit{ f'_n(x) }{ n }
+		}
+	}}
+
+
+
+	\proposition{ $Inheritance of boundness by uniform continuity$ }
+	{	
+	\letbe
+	{
+		A \subset \R
+		\succesion{ f_n }{ n } \subset \functionspace{ A }{ \R } $ metric function succesion $ \suchthat \all{ n \in \N }
+		{
+			f_n $ bounded $
+		}.
+		
+		f \in \functionspace{ A }{ \R } \suchthat f_n \convergesuniformlyto f
+
+	}
+	\holds
+	{
+		f $ bounded $
+	}
+	\demonstration
+	{
+		\ex{ \succesion{ M_n }{ n } \subset \R }{ \all{ n \in \N }
+		{
+			|f_n(x)| \leq M_n
+		} }.
+
+		\all{ \eps \in \R^+ }
+		{
+			\ex{ n_0 \in \N }{ \all{ n \in \N }[ n \geq n_0 ]
+			{
+				|f_n(x) - f(x)| < \eps.
+
+				|f(x)| \leq |f(x) - f_{n_0}(x)| + |f_{n_0}(x)| < \eps + M_{n_0}
+			} }
+		}
+	}}
+
+
+
+	\proposition{ $Criterion where punctually convergent function succesions are uniformly convergent$ }
+	{
+	\letbe
+	{
+		A $ metric space $.
+		K $ compact over $ A.
+		\succesion{ f_n }{ n } \subset \functionspace{ K }{ \R } $ real function succesion $ \suchthat \all{ n \in \N }
+		{
+			f_n $ continuous over $ K.
+			f_{n+1} < f_n
+		}.
+		f \in \functionspace{ K }{ \R } \suchthat f $ continuous over $ K \logicand f_n \convergesto f
+	}
+	\holds
+	{
+		f_n \convergesuniformlyto f
+	}
+	\demonstration
+	{
+		\all{ n \in \N }
+		{
+			\be{ g_n }{ f_n - f } \in \functionspace{ K }{ \R }.
+
+			g_n $ continuous over $ K.
+
+			g_n \convergesto 0.
+
+			g_{n+1} \leq g_n
+		}.
+
+		\all{ \eps \in \R^+ }
+		{
+			\all{ n \in \N }
+			{
+				\be{ K_n }{ \set{ x \in K }[ g_n(x) \geq 0 ] }.
+
+				K_n = g_n^{-1}([\eps,\infty)) \imp K_n $ closed $.
+
+				K_n \subset K \imp K_n $ compact $.
+
+				\all{ x \in \intersection{ K_n }{ n }[ 0 ] }
+				{
+				 	g_n(x) \geq \eps.
+
+				 	\limit{ g_n(x) }{ n } \geq \eps > 0 !!!
+				}.
+
+				\intersection{ K_n }{ n }[ 0 ] = \emptyset.
+
+				$Finite intersection property$ \imp .
+
+				\imp \ex{ \family{ K_m }{ m }[ 1 ][ r ] \subset \family{ K_n }{ n }[ 0 ] }{ \intersection{ K_m }{ m }[ 1 ][ r ] = \emptyset }.
+
+				K_{n+1} \subset K_n \imp K_r = \emptyset.
+
+				\all{ x \in K }
+				{
+					g_r(x) < \eps.
+
+				}
+
+				\ex{ r \in \N }{ \all{ r' \in \N }[ r' \geq r ]
+				{
+					|g_{r'}| < \eps
+				} }
+
+
+			}
+		}.
+
+		g_n \convergesuniformlyto 0 \imp f_n \convergesuniformlyto f.
+
+
+	}}
+
+
+
+	\proposition{ $Weierstrass' Aproximation Theorem$ }
+	{	
+	\letbe
+	{
+		a,b \in \R.
+		f \Cc( [a,b] )
+	}
+	\holds
+	{
+		\ex{ \succesion{ P_n }{ n } \subset \functionspace{ [a,b] }{ \R } $ polynomials $ }{ P_n \convergesuniformlyto f }
+	}
+	\demonstration
+	{
+		$ Follow 5 steps $.
+		
+		\step{ 1 }{ $ Reduce to [0,1] $ }
+		{
+			\definedfunction{ \phi }{ [0,1] }{ [a,b] }{ x }{ a+(b-a)x }
+		}.
+		
+		\step{ 2 }{ $ Reduce to $ f(0) = 0 $ and $ f(1) = 0 }
+		{
+			\definedfunction{ g }{ [0,1] }{ \R }{ x }{ f(x) - f(0) - x[f(1)-f(0)] }.
+
+			g $ continuous over $ [0,1].
+
+			g(0) = 0 \logicand g(1) = 0.
+
+			f - g $ polynomial $.
+
+			P_n \convergesuniformlyto g \imp P_n + (f-g) \convergesuniformlyto f  
+		}.
+
+		\step{ 3 }{ $ extend $ f $ to uniformly continuous over $ \R }
+		{
+			\definedfunction{ f }{ \R }{ \R }{ x }{ \multiple[ \{ ]
+			{
+				f(x), x \in [0,1].
+
+				0, x \nin [0,1] 
+			} }.
+
+			f $ continuous over $ (0,1) \subset [-5,5] \imp f $ uniformly continuous over $ [-5,5].
+
+			f = 0 $ over $ \R \setminus [-5,5] \imp f $ uniformly continuous over $ \R \setminus [-5,5].
+
+			f $ uniformly continuous over $ \R
+		}.
+
+		\step{ 4 }{ $ Define polynomial $ P_n }
+		{
+			\all{ n \in \N }
+			{
+				\be{ P_n }{ \integral{ f(x+t)Q_n(t) }{ dt }{ -1 }[ 1 ] }.
+
+				\all{ x \in [0,1] }
+				{
+				 	x+t \in [0,1] \imp t \in [-x,1-x]
+				}.
+
+				\be{ u }{ x+t } \in [0,1]
+
+				P_n(x) = \integral{ f(u)Q_n(u-x) }{ du }{ 0 }[ 1 ] = .
+
+				= c_n \integral{ f(u)(1-(u-x)^2)^n }{ du }{ 0 }[ 1 ] = .
+
+				= Rc_n \integral{ f(u)a_j(u) }{ du }{ 0 }[ 1 ] = .
+
+				= Rc_nC $ polynomial $
+			}
+		}.
+
+		\step{ 5 }{ P_n \convergesuniformlyto f }
+		{
+			|P_n(x)-f(x)| = .
+
+			= | \integral{ f(x+t)Q_n(t) }{ dt }{ -1 }[ 1 ] - f(x)| = .
+
+			\integral{ Q_n(t) }{ dt }{ -1 }[ 1 ] = 1 \imp = | \integral{ (f(x+t)-f(x))Q_n(t) }{ dt }{ -1 }[ 1 ] | \leq .
+
+			Q_n > 0 \imp \leq \integral{ |f(x+t)-f(x)|Q_n(t) }{ dt }{ -1 }[ 1 ].
+
+			\all{ \delta \in (0,1) }
+			{
+				\be{ I_{\delta,n} }{ \integral{ |f(x+t)-f(x)|Q_n(t) }{ dt }{ -1 }[ -\delta ] }.
+
+				\be{ II_{\delta,n} }{ \integral{ |f(x+t)-f(x)|Q_n(t) }{ dt }{ -\delta }[ \delta ]}.
+
+				\be{ III_{\delta,n} }{ \integral{ |f(x+t)-f(x)|Q_n(t) }{ dt }{ \delta }[ 1 ] }.
+
+				f $ continuous over $ [-5,5] \imp f $ bounded over $ [-5,5].
+
+				f = 0 $ over $ \R \setminus [-5,5] \imp f $ bounded over $ \R \setminus [-5,5].
+
+				f $ bounded over $ \R \imp \ex{ M \in \R }{ |f| \leq M }.
+
+				I_{\delta,n} \leq 2M \integral{ Q_n(t) }{ dt }{ -1 }[ \delta ].
+
+				\limit{ I_{\delta,n} }{ n } = 2M \limit{ \integral{ Q_n(t) }{ dt }{ -1 }[ \delta ] }{ n }.
+
+				$UCI theorem$ \imp \limit{ I_{\delta,n} }{ n } = \integral{ \limit{ Q_n(t) }{ n } }{ dt }{ -1 }[ \delta ] = 0.
+
+				\ex{ n_0 \in \N }{ \all{ n \in \N }[ n \geq n_0 ]
+				{
+					I_{\delta,n} < \frac{\eps}{3}.
+
+					III_{\delta,n} < \frac{\eps}{3}
+				} }.
+
+				II_{\delta,n} \leq \frac{\eps}{3} \integral{ Q_n(t) }{ dt }{ -\delta }[ \delta ] \leq \frac{\eps}{3} \integral{ Q_n(t) }{ dt }{ -1 }[ 1 ] \leq \frac{\eps}{3}.
+			}
+
+			\integral{ |f(x+t)-f(x)|Q_n(t) }{ dt }{ -1 }[ 1 ] < \eps.
+
+			P_n \convergesuniformlyto f
+		}
+	}}
+
+
+
+	\proposition{ $Dirichlet's Criterion$ }
+	{	
+	\letbe
+	{
+		\succesion{ f_n }{ n } \subset \functionspace{ \R }{ \R } \suchthat \sup_x \sup_N \sumatory{ f_n(x) }{ n }[ 1 ][ N ] \in \R.
+		\succesion{ g_n }{ n } \subset \functionspace{ \R }{ \R } \suchthat g_n \convergesuniformlyto 0 \logicand \all{ n \in \N }
+		{
+			g_{n+1} < g_n
+		}
+	}
+	\holds
+	{
+		\sumatory{ f_ng_n }{ n }[ 1 ] $ uniformly convergent $
+	}
+	\demonstration
+	{
+		\all{ k \in \N }
+		{
+			\be{ F_k }{ \sumatory{ f_n }{ n }[ 1 ][ k ] }.
+
+			|\sumatory{ f_k(x)g_k(x) }{ k }[ n ][ m ] | = | \sumatory{ (F_k - F_{k-1}(x)g_k(x) }{ k }[ n ][ m ] | = .
+
+			= | \sumatory{ F_kg_k(x) }{ k }[ n ][ m ] - \sumatory{ F_k(x)g_{k+1}(x) }{ k }[ n-1 ][ m-1 ] | = .
+
+			= | \sumatory{ F_k(x)(g_k(x) - g_{k+1}(x)) }{ k }[ n ][ m-1 ] + F_m(x)g_m(x) - F_{n-1}(x)g_n(x) |.
+
+			$bound f $ \imp \leq K(\sumatory{ |g_k(x) - g_{k+1}(x)| }{ k }[ n ][ m-1 ]  + |g_m(x)| + |g_n(x)|).
+
+			g_n \convergesto 0 \imp \leq K(\sumatory{ g_k(x) - g_{k+1}(x) }{ k }[ n ] + g_m(x) + g_n(x)) = .
+
+			= 2Kg_n(x) \convergesto 0
+
+
+		}
+	}}
+}

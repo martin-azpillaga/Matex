@@ -1,0 +1,75 @@
+
+\documentclass[../Main/main]{subfiles}
+
+
+\begin{document}
+
+
+\unit{ $ Punctual Estimations $ }
+{
+	\introduction
+	{ 
+		$introduction\\$ 
+	}
+
+	\definition{ $ UMV $ }
+	{
+		\letbe
+		{
+			statements.
+		}
+		\then{ item }{ $ a/an entity $ }
+		{
+			conditions.
+		}
+		\denote
+		{
+			property \as notation.
+		}
+	}
+	
+	
+	\definition{ $ Same conditions $ }
+	{
+		\letbe
+		{
+			( \Omega, \Ac, \Pc ) $ parametric statistical model $.
+			\function{ X }{ \Omega }{ \R } $ random variable $.
+			\Theta \subset \R $ interval $.
+			\chi_F $ real estimator with integrable quadratic $.
+		}
+		\then{ item }{ $ a/an entity $ }
+		{
+			\all{ \theta \in \Theta }
+			{
+				\ex{ \function{ h }{ \R }{ \R } }
+				{
+					h \geq 0.
+					h $ integrable $.
+					\ex{ \Uc \subset \R }
+					{
+						\theta \in \Uc.
+						|T(x) \partialderivative{ L(x,\theta) }{ \theta }| \leq h
+					}
+				}
+			}
+		}
+	}
+
+
+	\definition{ $ Efficient $ }
+	{
+		\letbe
+		{
+			$mismas condiciones$
+		}
+		\then{ T }{ $ efficient $ }
+		{
+			Var_\theta T = \frac{ g'(\theta)^2 }{ I(\theta) }
+		}
+	}
+
+}
+
+
+\end{document}

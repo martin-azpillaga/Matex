@@ -1,0 +1,137 @@
+
+\documentclass[../Main/main]{subfiles}
+
+
+\begin{document}
+
+
+\unit{ $ Statistical models \& Statistics $ }
+{
+	\introduction
+	{ 
+		$introduction\\$ 
+	}
+
+	\definition{ $ Statistical model $ }
+	{
+		\letbe
+		{
+			\Omega $ set $.
+			\Ac $ sigma-algebra over $ \Omega.
+			\Pc \subset \functionSpace{ \Omega }{ [0,1] }
+		}
+		\then{ ( \Omega, \Ac, \Pc ) }{ $ a statistical model $ }
+		{
+			\all{ P \in \Pc }
+			{
+				(\Omega,\Ac,P) $ probability space $
+			}
+		}
+	}
+	
+
+
+	\definition{ $ Parametrization $ }
+	{
+		\letbe
+		{
+			( \Omega, \Ac, \Pc ) $ statistical model $.
+			\Theta \subset \R^d
+		}
+		\then{ ( \Omega, \Ac, \Pc ) }{ $ parametrized by $ \Theta $ $ }
+		{
+			\Pc = \family*{ P_\theta }{ \theta \in \Theta }
+		}
+		\denote
+		{
+			( \Omega, \Ac, \Pc ) \as ( \Omega, \Ac, \family*{ P_\theta }{ \theta \in \Theta }) $ d-D statistical model $
+		}
+	}
+	
+	
+	\definition{ $ Likelihood function $ }
+	{
+		\letbe
+		{
+			( \Omega, \Ac, \family*{ P_\theta }{ \theta \in \Theta }) $ d-D statistical model $
+		}
+		\name{ $ likelihood function of $ ( \Omega, \Ac, \Pc ) }
+		{
+			\definedFunction{ L6 }{ \Omega \times \Theta }{ [0,1] }{ (x,\theta) }{ P_\theta(x) }
+		}
+	}
+	
+
+
+	\definition{ $ Exponential model $ }
+	{
+		\letbe
+		{
+			( \Omega, \Ac, \family*{ P_\theta }{ \theta \in \Theta }) $ d-D statistical model $.
+			L $ likelihood function of $ ( \Omega, \Ac, \Pc )
+		}
+		\then{ ( \Omega, \Ac, \Pc ) }{ $ exponential $ }
+		{
+			\ex{ \family{ f_i }{ i }[ 0 ][ r ] \subset \functionSpace{ \Omega }{ \R } }
+			{
+				\all{ i \in \indexes{ 0 }{ r } }
+				{
+					f_i $ measurable $
+				}
+			}.
+			\ex{ \family{ \phi_i }{ i }[ 0 ][ r ] \subset \functionSpace{ \Theta }{ \R } }
+			{
+				\all{ x \in \Omega }
+				{
+					\all{ \theta \in \Theta }
+					{
+						L( x, \theta ) = \exp( \summation{ f_i(x)\phi_i(\theta) }{ i }[ 1 ][ r ] + f(x) + \phi(\theta) )
+					}
+				}
+			}	
+		}
+		
+	}
+	
+	
+	\definition{ $ Statistic $ }
+	{
+		\letbe
+		{
+			( \Omega, \Ac, \family*{ P_\theta }{ \theta \in \Theta }) $ d-D statistical model $.
+			\function{ f }{ (\Omega, \Ac) }{ (\R^m,\B(\R^m)) }
+		}
+		\then{ f }{ $ a statistic $ }
+		{
+			f $ measurable $
+		}
+	}
+	
+	
+	\definition{ $ Sufficiency $ }
+	{
+		\letbe
+		{
+			( \Omega, \Ac, \family*{ P_\theta }{ \theta \in \Theta }) $ d-D statistical model $.
+			( M, \Sigma ) $ measurable space $.
+			\function{ X }{ M }{ \Omega } $ random variable $.
+			\function{ T }{ \Omega }{ \R^m } $ statistic $
+		}
+		\then{ T }{ $ sufficient $ }
+		{
+			\all{ \theta_1,\theta_2 \in \Theta }
+			{
+				\all{ x \in M }
+				{
+				 	\all{ t \in \R^m }
+				 	{
+				 		P_{\theta_1}(X = x \with T \circ X = t ) = P_{\theta_2}( X = x \with T \circ X = t )
+				 	}
+				}
+			}
+		}
+	}
+}
+
+
+\end{document}

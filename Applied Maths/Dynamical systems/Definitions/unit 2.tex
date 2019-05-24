@@ -1,0 +1,53 @@
+
+\documentclass[../Main/main]{subfiles}
+
+
+\begin{document}
+
+\unit{ $ Linear dynamical systems $ }
+{
+	
+	\thread{ $ Linear $ }
+	{
+		\letbe
+		{
+			( \R^n, f ) $ euclidean functional dynamical system $
+		}
+		\then{ ( \R^n, f ) }{ $ linear $ }
+		{
+			\ex{ A \in \matrixSpace{ \R } }
+			{
+				\all{ x \in \R^n }
+				{
+					f(x) = Ax
+				}
+			}
+		}
+	}
+
+	\thread{ $ Invariant curve $ }
+	{
+		\letbe
+		{
+			\gamma $ differentiable curve $.
+			p \in \R^n
+		}
+		\then{ \gamma }{ $ invariant $ }
+		{
+			\all{ x \in \gamma* }
+			{
+				o(x) \subset \gamma*
+			}
+		}
+		\then{ \gamma }{ $ converges to $ p }
+		{
+			\all{ x \in \gamma* }
+			{
+				o(x) \convergesto p
+			}
+		}
+	}
+
+}
+
+\end{document}

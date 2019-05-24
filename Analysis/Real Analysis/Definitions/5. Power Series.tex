@@ -1,0 +1,88 @@
+\unit{ $Power Series$ }
+{
+	\introduction{ $ introduction $ }
+
+	\definition{ $Power Series$ }
+	{
+	\letbe
+	{
+		\succesion{ a_n }{ n } \subset \R.
+		\succesion{ f_n }{ n } \subset \functionspace{ \R }{ \R }	
+	}
+	\then{ \sumatory{ a_nf_n }{ n }[ 1 ] }{ $a power series$ }
+	{
+		\ex{ a \in \R }{ \all{ n \in \N }
+		{
+			\all{ x \in \R }
+			{
+				f_n(x) = (x-a)^n
+			}
+		}}
+	}
+	}
+
+
+
+	\definition{ $Domain of Convergence$ }
+	{
+	\letbe
+	{
+		\sumatory{ a_nf_n }{ n }[ 1 ] $ power series $
+	}
+	\call{ $domain of convergence of $ \sumatory{ a_nf_n }{ n }[ 1 ] }
+	{
+		\set{ x \in \R }[ \sumatory{ a_nf_n }{ n }[ 1 ] $ convergent in $ x ]
+	}
+	\denote
+	{
+		D
+	}
+
+
+
+	\definition{ $Radius of Convergence$ }
+	{
+	\letbe
+	{
+		\sumatory{ a_nf_n }{ n }[ 1 ] $ power series $
+	}
+	\call{ $radius of convergence of $ \sumatory{ a_nf_n }{ n }[ 1 ] }
+	{
+		\frac{1}{\superiorlimit{ \sqrt[n]{|a_n|} }{ n }}
+	}
+	\denote
+	{
+		\frac{1}{\superiorlimit{ \sqrt[n]{|a_n|} }{ n }} \as R
+	}	
+	}
+
+
+
+	\definition{ $Associated function$ }
+	{
+	\letbe
+	{
+		\sumatory{ a_nf_n }{ n }[ 1 ] $ power series $.
+		D $ convergency domain of $ \sumatory{ a_nf_n }{ n }[ 1 ]
+	}
+	\call{ $associated function of $ \sumatory{ a_nf_n }{ n }[ 1 ] }
+	{
+		\definedfunction{ f }{ D }{ \R }{ x }{ \sumatory{ a_nf_n(x) }{ n }[ 1 ] }
+	}
+	}
+
+
+
+	\definition{ $Exponential Function$ }
+	{
+	\call{ $exponential function $  }
+	{
+		$ associated function of $ \sumatory{ \frac{ x^n }{ n! } }{ n }[ 1 ]
+	}
+	\denote
+	{
+		$ associated function of $ \sumatory{ \frac{ x^n }{ n! } }{ n }[ 1 ] \as exp
+		
+	}
+	}
+}

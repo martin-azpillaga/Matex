@@ -1,0 +1,154 @@
+
+\documentclass[../Main/main]{subfiles}
+
+
+\begin{document}
+
+
+\unit{ $ 2-D linear dynamical systems $ }
+{
+
+	\proposition{ $ Invariance of stability over orbits $ }
+	{
+		\letbe
+		{
+			( M, \N, f ) $ functional dynamical system $.
+			x \in M
+		}
+		\holds
+		{
+			\all{ x' \in o(x) }
+			{
+				\chi(x') = \chi(x)
+			}
+		}
+		\demonstration
+		{
+			$ Follow 2 steps $.
+			
+			\steps{ 1 }{ $falta$ }
+			{
+				rows.
+			}.
+			
+			\steps{ 2 }{ $attractiveness$ }
+			{
+				\chi(x) = -1.
+
+				\ex{ \epsilon \in \R^+ }
+				{
+					x \in B_{\epsilon}(x) \imp f^{2n}(x) \convergesto x
+				}.
+
+				f \in \Cc^0(M) \imp \ex{ \epsilon_1 \in \R^+ }
+				{
+					f(B_{\epsilon_1}(x_1)) \subset B_{\epsilon}(x)
+				}.
+
+				x \in B_{\epsilon_1}(x_1) \imp f(x) \in B_{\epsilon}(x) \imp f^{2n-1}(f(x)) \convergesto x.
+
+				$falta$
+			}
+		}
+	}
+	
+	
+	
+	
+	
+	\proposition{ $ Linear property $ }
+	{
+		\letbe
+		{
+			( M, \N, f ) $ linear dynamical system $
+		}
+		\holds
+		{
+			\all{ a,b \in \R }
+			{
+				\all{ x,y \in M }
+				{
+					f(ax+by) = af(x) + bf(y)
+				}
+			}
+			
+		}
+		\demonstration
+		{
+			$matrius$
+		}
+	}
+
+
+	\proposition{ $ Fixed points of linear applications $ }
+	{
+		\letbe
+		{
+			( M, \N, f ) $ linear dynamical system $
+		}
+		\holds
+		{
+			0 \in \fixed(f)
+		}
+		\demonstration
+		{
+			demonstration.
+		}
+	}
+
+
+	
+	
+	
+	\proposition{ $ Jordan form of 2-D real linear maps $ }
+	{
+		\letbe
+		{
+			A \in \Mc_{2 \times 2}(\R).
+			\chi_A(t) $ characteristic polynomial of $ A
+		}
+		\holds
+		{
+			\ex{ \beta $ base of $ K }
+			{
+				\begin{cases}
+				A = \lambda, 0, 0, \mu & \#Z(\chi_A(t))=2\\
+				A = \lambda, 1, 0, \lambda & \#Z(\chi_A(t))=1\\
+				A = \alpha, \beta, -\beta, \alpha & \#Z(\chi_A(t))=0
+				\end{cases}
+			}
+		}
+		\demonstration
+		{
+			demonstration.
+		}
+	}
+	
+	
+	\proposition{ $ Topology of 2-D real linear maps $ }
+	{
+		\letbe
+		{
+			A \in \Mc_{2 \times 2}(\R).
+			\lambda \neq \mu $ eigenvalues of $ A
+		}
+		\holds
+		{
+			\abs{ \lambda }, \abs{ \mu } < 1 \imp (0,0) $ attractive $.
+			\abs{ \lambda } > \abs{ \mu } \imp $ tangent to y = 0$.
+			\abs{ \mu } > \abs{ \lambda } \imp $ tangent to x = 0$.
+			\abs{ \mu } = \abs{ \lambda } \imp $ only invariant lines $..
+
+			\abs{ \lambda }, \abs{ \mu } > 1 \imp (0,0) $ repulsive $.
+			$ equivalent to other case $
+		}
+		\demonstration
+		{
+			demonstration.
+		}
+	}
+
+}
+
+
+\end{document}

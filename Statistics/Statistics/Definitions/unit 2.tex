@@ -1,0 +1,155 @@
+
+\documentclass[../Main/main]{subfiles}
+
+
+\begin{document}
+
+
+\unit{ $ Information \& Decision $ }
+{
+
+	\definition{ $ Regularity $ }
+	{
+		\letbe
+		{
+			( \Omega, \Ac, \family*{ P_\theta }{ \theta \in \Theta }) $ 1-D {\bf real} statistical model $.
+			L $ likelihood function of $ ( \Omega, \Ac, \family*{ P_\theta }{ \theta \in \Theta })
+		}
+		\then{ ( \Omega, \Ac, \family*{ P_\theta }{ \theta \in \Theta }) }{ $ regular $ }
+		{
+			\Theta $ open $.
+			\all{ \theta_1,\theta_2 \in \Theta }
+			{
+				\set{ x \in \Omega \with L(x,\theta_1) = 0 } = \set{ x \in \Omega \with L(x,\theta_2) = 0 }
+			}.
+			\all{ \theta \in \Theta }
+			{
+				\ex{ \function{ f }{ \Omega }{ \R^+ } }
+				{
+					\ex{ \Ec_\theta \subset \Theta }
+					{
+						\Ec_\theta $ neighborhood of $ \theta.
+						\all{ \theta' \in \Ec_\theta }
+						{
+							\abs{ \partialderivative{ \log( L(x,\theta) ) }{ \theta } } \vee \abs{ { \partialderivative{ \log( L(x,\theta) ) }{ \theta^2 } }{ \theta } } \leq f(x)
+						}
+					}
+				}
+			}.
+			\all{ \theta \in \Theta }
+			{
+				\expectedValue{ x }{ \abs{ \partialderivative{ \log( L(x,\theta) ) }{ \theta } }^2 } $ finite $
+			}
+		}
+	}
+	
+	
+	\definition{ $ Fisher's information $ }
+	{
+		\letbe
+		{
+			( \Omega, \Ac, \family*{ P_\theta }{ \theta \in \Theta }) $ 1-D regular statistical model $.
+			L $ likelihood function of $ ( \Omega, \Ac, \family*{ P_\theta }{ \theta \in \Theta })
+		}
+		\name{ $ Fisher's information of $ ( \Omega, \Ac, \family*{ P_\theta }{ \theta \in \Theta }) }
+		{
+			\definedFunction{ f }{ \Theta }{ \R }{ \theta }{ \expectedValue{ x }{ \abs{ \log( L(x,\theta) ) }^2 } }
+		}
+		\denote
+		{
+			f(\theta) \as I_F(\theta)
+		}
+	}
+	
+
+	\definition{ $ Kullback's information $ }
+	{
+		\letbe
+		{
+			( \Omega, \Ac, \family*{ P_\theta }{ \theta \in \Theta }) $ d-D statistical model $
+		}
+		\name{ $ Kullback's information of $ ( \Omega, \Ac, \family*{ P_\theta }{ \theta \in \Theta }) }
+		{
+			\definedFunction{ f }{ \Theta^2 }{ \R }{ (\theta_1,\theta_2) }{ \expectedValue{ \theta_2 }{ \log( \frac{ L(x,\theta_1) }{ L(x,\theta_2) } ) } }
+		}
+		\denote
+		{
+			f((\theta_1,\theta_2)) \as I_K(\theta_1 \with \theta_2)
+		}
+	}
+	
+	
+	\definition{ $ Decision $ }
+	{
+		\letbe
+		{
+			( \Omega, \Ac, \family*{ P_\theta }{ \theta \in \Theta }) $ d-D {\bf measurable} statistical model $.
+			(D,\Dc) $ measurable space $.
+			\function{ f }{ \Omega }{ D }
+		}
+		\then{ f }{ $ a decision $ }
+		{
+			f $ measurable $
+		}
+		\denote
+		{
+			\set{ \function{ f }{ \Omega }{ D } \with f $ measurable $ } \as \Xi
+		}
+	}
+	
+
+	\definition{ $ Decision order $ }
+	{
+		\letbe
+		{
+			( \Omega, \Ac, \family*{ P_\theta }{ \theta \in \Theta }) $ d-D {\bf measurable} statistical model $.
+			(D,\Dc) $ measurable space $.
+			\function{ f_1,f_2 }{ \Omega }{ D } $ decisions $
+		}
+		\then{ f_1 }{ $ better than $ f_2 $ $ }
+		{
+			conditions.
+		}
+	}
+	
+	
+	\definition{ $ Loss function $ }
+	{
+		\letbe
+		{
+			( \Omega, \Ac, \family*{ P_\theta }{ \theta \in \Theta }) $ d-D statistical model $.
+			( D, \Dc ) $ measurable space $.
+			\function{ W }{ D \times \Theta }{ \R^+ }
+		}
+		\then{ W }{ $ a loss function $ }
+		{
+			W $ measurable $.
+			\all{ d \in D }[ d $ correct $ ]
+			{
+				W(d,\theta) = 0
+			}.
+			\all{ d_1,d_2 \in D }[ d_1 $ better than $ d_2 ]
+			{
+				W(d_1,\theta) \leq W(d_2,\theta)
+			}
+		}
+	}
+	
+	
+	\definition{ $ Risk function $ }
+	{
+		\letbe
+		{
+			( \Omega, \Ac, \family*{ P_\theta }{ \theta \in \Theta }) $ d-D statistical model $.
+			( D, \Dc ) $ measurable space $.
+			\function{ W }{ D \times \Theta }{ \R^+ } $ loss function $
+		}
+		\name{ $ risk function of $ W }
+		{
+			\definedFunction{ R }{ \Xi \times \Theta }{ \R }{ (\chi,\theta) }{ \expectedValue{ x }{ (W(\chi(x),\theta)) } }
+		}
+	}
+}
+
+
+\end{document}

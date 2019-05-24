@@ -1,0 +1,102 @@
+
+\documentclass[../Main/main]{subfiles}
+
+\begin{document}
+
+
+\unit{ $ Fixed points cardinality $ }
+{
+	\laboratory{ $ Martin Azpillaga $ }
+	{
+		\letbe
+		{
+			\function{ f }{ [0,1] }{ [0,1] } \in \Cc^2([0,1]).
+			f(1) < 1.
+			f'' > 0 \in [0,1]
+		}
+		\showthat
+		{
+			\cardinal{ \set{ x \in [0,1] \with f(x) = x } } = 1
+		}
+		\demonstration
+		{
+			\step{ \cardinal{ \set{ x \in [0,1] \with f(x) = x } } \geq 1 }
+			{
+				
+				\step{ $Case $ f(0) = 0 }
+				{
+					0 $ fixed point $
+				}.
+				\step{ $Case $ f(0) > 0 }
+				{
+					\definedFunction{ g }{ [0,1] }{ [-1,1] }{ x }{ f(x) - x } \in \Cc^2([0,1]).
+
+					g(0) = f(0) - 0 > 0.
+
+					g(1) = f(1) - 1 < 0.
+
+					$Bolzano's theorem: $.
+
+					\ex{ x \in (0,1) }
+					{
+						g(x) = 0.
+
+						f(x) = x
+					}
+				}
+
+
+			}.
+			
+			\step{ \cardinal{ \set{ x \in [0,1] \with f(x) = x } } \leq 1 }
+			{
+				g'' > 0 $ over $ [0,1].
+
+				$Rolle's theorem:$.
+
+				\cardinal{ \set{x \in (0,1) \with g'(x) = 0} } \leq 1.
+
+				\cardinal{ \set{x \in (0,1) \with g(x) = 0} } \leq 2.
+
+				\cardinal{ \set{x \in (0,1) \with f(x) = x} } \leq 2..
+
+
+				f'' > 0 $ over $ [0,1].
+
+				$Monotonicity test:$.
+
+				f' $ increasing in $ [0,1]..
+
+
+
+				\all{ a < b \in [0,1) }[ f(a) = a, f(b) = b ]
+				{
+					$Mean Value Theorem:$.
+
+					\ex{ c \in (a,b) }
+					{
+						f'(c) = \frac{ f(b) - f(a) }{ b-a } = 1
+					}.
+
+					\ex{ d \in (b,1) }
+					{
+						f'(d) = \frac{ f(1) - f(b) }{ 1 - b } < 1
+					}.
+
+					f' $ increasing $ \imp f'(c) < f'(b) < f'(d).
+
+					1 < f'(b) < 1 $ absurd $
+				}				 
+
+			}.
+
+			\conclude \cardinal{ \set{ x \in [0,1] \with f(x) = x } } = 1
+
+		}
+	}
+}
+
+
+
+
+\end{document}
